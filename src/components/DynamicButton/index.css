@@ -35,42 +35,6 @@
     height:5rem;
     border-radius: 10rem;  
 }
-
-.BtnAmarillo, .IconoAmarillo, .CampoAmarillo, .PropiedadAmarillo{
-    background-color: var(--amarillo);
-}
-.BtnBorderNegro, .IconoBorderNegro, .CampoBorderNegro, .PropiedadBorderNegro{
-    border: .3rem solid var(--grisHover);
-}
-.BtnRojo, .IconoRojo, .CampoRojo, .PropiedadRojo{
-    background-color: var(--rojo);
-}
-.BtnGris, .IconoGris, .CampoGris, .PropiedadGris{
-    background-color: var(--gris);
-}
-.BtnVerde, .IconoVerde, .CampoVerde, .PropiedadVerde{
-    background-color: var(--verdeBandera);
-}
-.BtnAzul, .IconoAzul, .CampoAzul, .PropiedadAzul{
-    background-color: var(--azul);
-}
-.BtnBorderGris, .IconoBorderGris, .CampoBorderGris, .PropiedadGris{
-    border: .3rem solid var(--gris);
-    opacity: 50%;
-}
-.BtnMagenta, .IconoMagenta, .CampoMagenta, .PropiedadMagenta{
-    background-color: var(--magenta);
-}
-.BtnAmarillo:hover, .BtnBorderNegro:hover, .BtnRojo:hover, .BtnGris:hover, .BtnVerde:hover, .BtnAzul:hover, .BtnBorderGris:hover, .BtnMagenta:hover, .BtnAmarillo:hover, .IconoAmarillo:hover, .IconoBorderNegro:hover, .IconoRojo:hover, .IconoGris:hover, .IconoVerde:hover, .IconoAzul:hover, .IconoBorderGris:hover, .IconoMagenta:hover, .IconoAmarillo:hover{
-    opacity: 50%;
-    cursor: pointer;
-}
-.CampoMorado{
-    background-color: var(--morado);
-}
-.CampoAqua{
-    background-color: var(--aqua);
-}
 .Icono{
     width: 3rem;
     height: 3rem;
