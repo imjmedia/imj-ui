@@ -1,0 +1,30 @@
+.ClaveCardsDarkMode{
+    font-size: 3rem;
+    margin-bottom: 0;
+    margin-block: 0;
+    text-align: left;
+    color: #B3B3B3;
+}
+.ClaveCards{
+    font-size: 3rem;
+    margin-bottom: 0;
+    margin-block: 0;
+    text-align: left;
+    color: #525252;
+}
+.TipoCardsDarkMode{
+    margin-block: 0;
+    font-size: 1.9rem;
+    font-weight: normal;
+    opacity: .5;
+    text-align: left;
+    color: #B3B3B3;
+}
+.TipoCards{
+    margin-block: 0;
+    font-size: 1.9rem;
+    font-weight: normal;
+    opacity: .5;
+    text-align: left;
+    color: #525252;
+}
