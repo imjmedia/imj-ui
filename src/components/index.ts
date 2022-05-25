@@ -4,3 +4,4 @@ export {default as Inputs}from './Atomos/Inputs';
 export {default as TextField} from './Atomos/TextField';
 export {default as PropertyBtn} from './Atomos/PropertyBtn';
 export {default as TitlesCards}from './Atomos/TitlesCards';
+export {default as PrecioCosto} from './Atomos/PrecioCosto';

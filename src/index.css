@@ -162,3 +162,16 @@ html{
     margin: 0 .5rem;
     text-align: left;
 }
+
+.FontColorRojo{
+    color: var(--rojo);
+}
+.FontColorMagenta{
+    color: var(--magenta);
+}
+.FontColorAzul{
+    color: var(--azul);
+}
+.FontColorAmarillo{
+    color: var(--amarillo);
+}
