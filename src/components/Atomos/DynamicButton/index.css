@@ -1,3 +1,22 @@
+:root{
+    --azul: #126EFA;
+    --azulHover: #003c97;
+    --azulOpaco: #126ffa73;
+    --rojo: #FC3D38;
+    --rojoHover: #8a0500;
+    --aqua: #1CB5B2;
+    --magenta: #D11787;
+    --magentaOpaco: #d117877c;
+    --amarillo:#FCB23B;
+    --amarilloHover:#c97c00;
+    --morado: #874AFA;
+    --verdeLima: #BFEB08;
+    --verdeBandera: #1CBF59;
+    --verdeBanderaHover: #058634;
+    --gris: #525252;
+    --grisHover: #353535;
+}
+
 .BtnChico{
     font-size: 1.5rem;
     font-weight: bold;
