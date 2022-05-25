@@ -1,0 +1,119 @@
+:root{
+    --azul: #126EFA;
+    --azulHover: #003c97;
+    --azulOpaco: #126ffa73;
+    --rojo: #FC3D38;
+    --rojoHover: #8a0500;
+    --aqua: #1CB5B2;
+    --magenta: #D11787;
+    --magentaOpaco: #d117877c;
+    --amarillo:#FCB23B;
+    --amarilloHover:#c97c00;
+    --morado: #874AFA;
+    --verdeLima: #BFEB08;
+    --verdeBandera: #1CBF59;
+    --verdeBanderaHover: #058634;
+    --gris: #525252;
+    --grisHover: #353535;
+}
+
+html{
+    font-size: 62.5%;
+/*     background-color: #1A1A1A; */
+}
+.ModoNocturno html{
+    background-color: #1A1A1A;
+}
+
+*, *:before, :after{
+    box-sizing:inherit;
+}
+.App{
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+/*UTILIDADES*/
+.Flexbox{
+    display:flex;
+    align-items: baseline;
+    justify-content: left;
+}
+.CenterText{
+    text-align: center;
+}
+
+.PaddingTopBottom1{
+    padding: 1rem 0;
+}
+.Columnas2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-end;
+}
+.Columnas3{
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.RowPadding1{
+    padding: 1rem 0;
+}
+.RowPadding2{
+    padding: 2rem 0;
+}
+.FlexCards{
+    display: flex;
+    max-width: 90vw;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.CardsPaddings{
+    padding: 3rem;
+}
+.Contenedor{
+    max-width: 90%;
+    margin: auto;
+}
+.NoMargin{
+    margin: 0 auto;
+}
+.Padding2{
+    padding: 0rem 2rem;
+}
+.PaddingBottomMedio{
+    padding-bottom: .5rem;
+}
+.AlignRight{
+    text-align: right;
+}
+.AlignLeft{
+    text-align: left;
+}
+.ColumnasCards{
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.JustifyCenter {
+    justify-content: center;
+}
+.PaddingTop2{
+    padding-top: 2rem;
+}
+.Absolute{
+    position: absolute;
+}
+.Top90{
+    top: 90%;
+}
+.Left25{
+    left: 25%;
+}

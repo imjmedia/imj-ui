@@ -18,7 +18,7 @@ interface LogoProps{
     logo: 'Imj' | 'Obp' | 'ByImj'
     modo?: string | any
 }
-export const Logo = (props:LogoProps) => {
+const Logo = (props:LogoProps) => {
     const logo = props.logo
     switch (logo) {
         case 'Imj':

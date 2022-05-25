@@ -1,0 +1,39 @@
+.Inputs input{
+    border-radius: 0 0 1.5rem 1.5rem;
+    border: .3rem solid;
+    background-color: transparent;
+    color: #B3B3B3;
+    border-top: 0;
+    text-align: center;
+    width:90%;
+    height: 2rem;
+    font-size: 1.5rem;
+    margin: .5rem 0;
+    padding-bottom: .5rem;
+}
+.Inputs input::placeholder{
+    opacity: 50%;
+}
+.BordeRojo input{
+    border-color:var(--rojo);
+}
+.BordeAzul input{
+    border-color:var(--azul);
+}
+.BordeMagenta input{
+    border-color:var(--magenta);
+}
+.BordeAmarillo input{
+    border-color:var(--amarillo);
+}
+.InputLeft input{
+    border-radius: 0 0 0 1.5rem;
+}
+.InputLeft input{
+    border-radius: 0 0 0 1.5rem;
+    padding-bottom: .5rem;
+    
+}
+.InputRight input{
+    border-radius: 0 0 1.5rem 0;
+}
