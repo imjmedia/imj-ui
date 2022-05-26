@@ -14,13 +14,14 @@ export const getColorMedio = (tipoMedio:any) => {
 }
 
 interface PrecioCostoProps{
-    type?: 'precio' | 'costo' | 'precioCosto';
+    type: 'precio' | 'costo' | 'precioCosto';
     tipoMedio?: string | any;
     precio?: number | any;
     costo?: number | any;
 }
 const PrecioCosto = (props:PrecioCostoProps) => {
-    switch (props.type) {
+    const type = props.type
+    switch (type) {
         case 'precio':
             return(
                 <div className={"PrecioCards AlignLeft FontColor"+getColorMedio(props.tipoMedio)}>

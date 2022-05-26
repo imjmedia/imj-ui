@@ -14,10 +14,10 @@ const getModo = (modo:any) => {
 }
 interface AsideProps{
     /*Modal PROPS*/
-    show: boolean | any;
-    children: any;
-    handleClose: () => void;
-    typeModal: 'Graficas' | 'Previsualizar' | any;
+    show?: boolean | any;
+    children?: any;
+    handleClose?: () => void;
+    typeModal?: 'Graficas' | 'Previsualizar' | any;
     tipoCard?: 'abcSitios' | 'inventarioComercial' | 'visualizadorPauta' | 'rutasImj';
     modo?: string | any;
 
