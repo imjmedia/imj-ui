@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import DynamicButton from '../../Atomos/DynamicButton';
-import GraficasCardsFront from '../../Moleculas/GraficasCards';
-import PrevisualizarCards from '../../Moleculas/PrevisualizarCards';
+import GraficasCardsFront from '../GraficasCards';
+import PrevisualizarCards from '../PrevisualizarCards';
 import '../../../index.css';
 import './index.css';
 
