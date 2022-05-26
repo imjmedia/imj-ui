@@ -16,3 +16,4 @@ export {default as CardsRecorrido} from './Organismos/CardsRecorrido';
 export {default as CardsVisualizaPauta}from './Organismos/CardsVisualizaPauta';
 export {default as CardsInventarioProveedores} from './Organismos/CardsInventarioProveedores';
 export {default as CardsRutasIMJ} from './Organismos/CardsRutasImj';
+export {default as Cards} from './Organismos/Cards';
