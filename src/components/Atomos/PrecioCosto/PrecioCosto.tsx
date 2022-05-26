@@ -1,6 +1,7 @@
 import React from "react";
-import './index.css'
 import '../../../index.css'
+import './index.css'
+
 
 export const getColorMedio = (tipoMedio:any) => {
     switch (tipoMedio) {

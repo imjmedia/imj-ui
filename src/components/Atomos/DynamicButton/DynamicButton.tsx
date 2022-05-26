@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import './index.css';
 import '../../../index.css';
+import './index.css';
+
 
 const graficas =require ('./IMG/botones/graficas.svg') as string;
 const arrastrar =require ("./IMG/botones/arrastrar.svg")as string;
