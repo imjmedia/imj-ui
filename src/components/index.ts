@@ -10,6 +10,7 @@ export {default as CardsPorcentajes} from './Moleculas/CardsPorcentajes';
 export {default as GraficasCardsFront} from './Moleculas/GraficasCards';
 export {default as PrevisualizarCards} from './Moleculas/PrevisualizarCards';
 export {default as Aside} from './Moleculas/Aside';
-export{default as CardsAbcSitios} from './Organismos/CardsAbcSitios';
+export {default as CardsAbcSitios} from './Organismos/CardsAbcSitios';
 export {default as CardsInventarioComercial} from './Organismos/CardsInventarioComercial';
 export {default as CardsRecorrido} from './Organismos/CardsRecorrido';
+export {default as CardsVisualizaPauta}from './Organismos/CardsVisualizaPauta';
