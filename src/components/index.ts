@@ -14,3 +14,4 @@ export {default as CardsAbcSitios} from './Organismos/CardsAbcSitios';
 export {default as CardsInventarioComercial} from './Organismos/CardsInventarioComercial';
 export {default as CardsRecorrido} from './Organismos/CardsRecorrido';
 export {default as CardsVisualizaPauta}from './Organismos/CardsVisualizaPauta';
+export {default as CardsInventarioProveedores} from './Organismos/CardsInventarioProveedores';
