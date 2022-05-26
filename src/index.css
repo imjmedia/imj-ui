@@ -175,3 +175,25 @@ html{
 .FontColorAmarillo{
     color: var(--amarillo);
 }
+
+.BorderBottomRojo{
+    border-bottom: .1rem solid var(--rojo);
+    width:95%;
+    margin: 0 auto;
+}.BorderBottomMagenta{
+    border-bottom: .1rem solid var(--magenta);
+    width:95%;
+    margin: 0 auto;
+}.BorderBottomAzul{
+    border-bottom: .1rem solid var(--azul);
+    width:95%;
+    margin: 0 auto;
+}.BorderBottomAmarillo{
+    border-bottom: .1rem solid var(--amarillo);
+    width:95%;
+    margin: 0 auto;
+}.BorderBottomGris{
+    border-bottom: .1rem solid var(--gris);
+    width:95%;
+    margin: 0 auto;
+}

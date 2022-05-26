@@ -7,3 +7,4 @@ export {default as TitlesCards}from './Atomos/TitlesCards';
 export {default as PrecioCosto} from './Atomos/PrecioCosto';
 export {default as PieGraphics}from './Atomos/PieGraphics';
 export {default as CardsPorcentajes}from './Organismos/CardsPorcentajes';
+export {default as GraficasCardsFront} from './Organismos/GraficasCards';
