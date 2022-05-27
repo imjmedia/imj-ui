@@ -17,6 +17,8 @@ jobs:
           node-version: 16
       - run: npm ci
       - run: npm rollup
+    env:
+      NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       
   publish-gpr:
     needs: build
