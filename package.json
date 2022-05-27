@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Components Library",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/imjmedia"
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "rollup": "rollup -c"
