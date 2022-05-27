@@ -11,15 +11,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@latest
+      - uses: actions/setup-node@latest
         with:
           node-version: 16
       - run: npm ci
       - run: npm rollup
     env:
       NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      
+
   publish-gpr:
     needs: build
     runs-on: ubuntu-latest
