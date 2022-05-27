@@ -32,7 +32,6 @@
     "chart.js": "^3.8.0",
     "react-chartjs-2": "^4.1.0"
   },
-  "npmName": "imj-ui",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/imjmedia/imj-ui.git"
