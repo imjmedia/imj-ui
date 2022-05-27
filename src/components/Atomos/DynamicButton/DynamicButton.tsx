@@ -156,4 +156,5 @@ const DynamicButton = (props:DynaButtProps) => {
         }
     }
 }
+
 export default DynamicButton;
