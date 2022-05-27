@@ -1,7 +1,10 @@
 {
-  "name": "@guapuken/template-react-component-library-imj.git",
+  "name": "@imjmedia/imj-ui.git",
   "version": "0.0.1",
-  "description": "React component library",
+  "description": "Components Library",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/imjmedia"
+  },
   "scripts": {
     "rollup": "rollup -c"
   },
