@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '14.x'
       - run: npm ci
-      
+      - run: npm run rollup --if-present
     env:
       NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
@@ -35,6 +35,5 @@ jobs:
           scope: "@imjmedia"
       - run: npm ci
       - run: npm publish
-      - run: npm run rollup --if-present
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
