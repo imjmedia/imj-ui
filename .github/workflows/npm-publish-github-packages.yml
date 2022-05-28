@@ -15,9 +15,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: |
-          npm ci
-          npm run rollup
+      - run: npm ci
+      - run: npm run rollup
     env:
       NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
