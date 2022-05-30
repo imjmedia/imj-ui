@@ -1,1 +1,1 @@
-export {default} from './CardsRecorrido';
+export {default as CardsRecorrido} from './CardsRecorrido';
