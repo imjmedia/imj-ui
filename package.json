@@ -32,6 +32,7 @@
     "chart.js": "^3.8.0",
     "postcss": "^8.4.14",
     "react-chartjs-2": "^4.1.0",
+    "rollup-plugin-copy": "^3.4.0",
     "tslib": "^2.4.0"
   },
   "repository": {
