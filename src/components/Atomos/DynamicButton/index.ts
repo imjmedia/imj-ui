@@ -1,1 +1,1 @@
-export {default} from './DynamicButton';
+export { default } from "./DynamicButton";

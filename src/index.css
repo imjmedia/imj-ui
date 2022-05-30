@@ -1,197 +1,251 @@
-:root{
-    --azul: #126EFA;
-    --azulHover: #003c97;
-    --azulOpaco: #126ffa73;
-    --rojo: #FC3D38;
-    --rojoHover: #8a0500;
-    --aqua: #1CB5B2;
-    --magenta: #D11787;
-    --magentaOpaco: #d117877c;
-    --amarillo:#FCB23B;
-    --amarilloHover:#c97c00;
-    --morado: #874AFA;
-    --verdeLima: #BFEB08;
-    --verdeBandera: #1CBF59;
-    --verdeBanderaHover: #058634;
-    --gris: #525252;
-    --grisHover: #353535;
+:root {
+  --azul: #126efa;
+  --azulHover: #003c97;
+  --azulOpaco: #126ffa73;
+  --rojo: #fc3d38;
+  --rojoHover: #8a0500;
+  --aqua: #1cb5b2;
+  --magenta: #d11787;
+  --magentaOpaco: #d117877c;
+  --amarillo: #fcb23b;
+  --amarilloHover: #c97c00;
+  --morado: #874afa;
+  --verdeLima: #bfeb08;
+  --verdeBandera: #1cbf59;
+  --verdeBanderaHover: #058634;
+  --gris: #525252;
+  --grisHover: #353535;
 }
 
-html{
-    font-size: 62.5%;
-/*     background-color: #1A1A1A; */
+html {
+  font-size: 62.5%;
+  /*     background-color: #1A1A1A; */
 }
-.ModoNocturno html{
-    background-color: #1A1A1A;
-}
-
-*, *:before, :after{
-    box-sizing:inherit;
-}
-.App{
-    font-family: 'Open Sans', sans-serif;
+.ModoNocturno html {
+  background-color: #1a1a1a;
 }
 
+*,
+*:before,
+:after {
+  box-sizing: inherit;
+}
+.App {
+  font-family: "Open Sans", sans-serif;
+}
 
 /*UTILIDADES*/
-.Flexbox{
-    display:flex;
-    align-items: baseline;
-    justify-content: left;
+.Flexbox {
+  display: flex;
+  align-items: baseline;
+  justify-content: left;
 }
-.CenterText{
-    text-align: center;
+.CenterText {
+  text-align: center;
 }
 
-.PaddingTopBottom1{
-    padding: 1rem 0;
+.PaddingTopBottom1 {
+  padding: 1rem 0;
 }
-.Columnas2{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: flex-end;
+.Columnas2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: flex-end;
 }
-.Columnas3{
-    max-width: 90%;
-    width: 100%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.Columnas3 {
+  max-width: 90%;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
-.RowPadding1{
-    padding: 1rem 0;
+.RowPadding1 {
+  padding: 1rem 0;
 }
-.RowPadding2{
-    padding: 2rem 0;
+.RowPadding2 {
+  padding: 2rem 0;
 }
-.FlexCards{
-    display: flex;
-    max-width: 90vw;
-    margin: 0 auto;
-    justify-content: center;
-    flex-wrap: wrap;
+.FlexCards {
+  display: flex;
+  max-width: 90vw;
+  margin: 0 auto;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.CardsPaddings{
-    padding: 3rem;
+.CardsPaddings {
+  padding: 3rem;
 }
-.Contenedor{
-    max-width: 90%;
-    margin: auto;
+.Contenedor {
+  max-width: 90%;
+  margin: auto;
 }
-.NoMargin{
-    margin: 0 auto;
+.NoMargin {
+  margin: 0 auto;
 }
-.Padding2{
-    padding: 0rem 2rem;
+.Padding2 {
+  padding: 0rem 2rem;
 }
-.PaddingBottomMedio{
-    padding-bottom: .5rem;
+.PaddingBottomMedio {
+  padding-bottom: 0.5rem;
 }
-.AlignRight{
-    text-align: right;
+.AlignRight {
+  text-align: right;
 }
-.AlignLeft{
-    text-align: left;
+.AlignLeft {
+  text-align: left;
 }
-.ColumnasCards{
-    width: 90vw;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.ColumnasCards {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .JustifyCenter {
-    justify-content: center;
+  justify-content: center;
 }
-.PaddingTop2{
-    padding-top: 2rem;
+.PaddingTop2 {
+  padding-top: 2rem;
 }
-.Absolute{
-    position: absolute;
+.Absolute {
+  position: absolute;
 }
-.Top90{
-    top: 90%;
+.Top90 {
+  top: 90%;
 }
-.Left25{
-    left: 25%;
-}
-
-
-.BtnAmarillo, .IconoAmarillo, .CampoAmarillo, .PropiedadAmarillo{
-    background-color: var(--amarillo);
-}
-.BtnBorderNegro, .IconoBorderNegro, .CampoBorderNegro, .PropiedadBorderNegro{
-    border: .3rem solid var(--grisHover);
-}
-.BtnRojo, .IconoRojo, .CampoRojo, .PropiedadRojo{
-    background-color: var(--rojo);
-}
-.BtnGris, .IconoGris, .CampoGris, .PropiedadGris{
-    background-color: var(--gris);
-}
-.BtnVerde, .IconoVerde, .CampoVerde, .PropiedadVerde{
-    background-color: var(--verdeBandera);
-}
-.BtnAzul, .IconoAzul, .CampoAzul, .PropiedadAzul{
-    background-color: var(--azul);
-}
-.BtnBorderGris, .IconoBorderGris, .CampoBorderGris, .PropiedadGris{
-    border: .3rem solid var(--gris);
-    opacity: 50%;
-}
-.BtnMagenta, .IconoMagenta, .CampoMagenta, .PropiedadMagenta{
-    background-color: var(--magenta);
-}
-.BtnAmarillo:hover, .BtnBorderNegro:hover, .BtnRojo:hover, .BtnGris:hover, .BtnVerde:hover, .BtnAzul:hover, .BtnBorderGris:hover, .BtnMagenta:hover, .BtnAmarillo:hover, .IconoAmarillo:hover, .IconoBorderNegro:hover, .IconoRojo:hover, .IconoGris:hover, .IconoVerde:hover, .IconoAzul:hover, .IconoBorderGris:hover, .IconoMagenta:hover, .IconoAmarillo:hover{
-    opacity: 50%;
-    cursor: pointer;
-}
-.CampoMorado{
-    background-color: var(--morado);
-}
-.CampoAqua{
-    background-color: var(--aqua);
-}
-.CampoRojo, .CampoMorado, .CampoAqua, .CampoAmarillo, .CampoAzul, .CampoBorderGris, .CampoBorderNegro, .CampoGris, .CampoMagenta, .CampoVerde{
-    color: #fff;
-    border-radius: .5rem;
-    opacity: 100%;
-    padding: .2rem 1.5rem;
-    margin: 0 .5rem;
-    text-align: left;
+.Left25 {
+  left: 25%;
 }
 
-.FontColorRojo{
-    color: var(--rojo);
+.BtnAmarillo,
+.IconoAmarillo,
+.CampoAmarillo,
+.PropiedadAmarillo {
+  background-color: var(--amarillo);
 }
-.FontColorMagenta{
-    color: var(--magenta);
+.BtnBorderNegro,
+.IconoBorderNegro,
+.CampoBorderNegro,
+.PropiedadBorderNegro {
+  border: 0.3rem solid var(--grisHover);
 }
-.FontColorAzul{
-    color: var(--azul);
+.BtnRojo,
+.IconoRojo,
+.CampoRojo,
+.PropiedadRojo {
+  background-color: var(--rojo);
 }
-.FontColorAmarillo{
-    color: var(--amarillo);
+.BtnGris,
+.IconoGris,
+.CampoGris,
+.PropiedadGris {
+  background-color: var(--gris);
+}
+.BtnVerde,
+.IconoVerde,
+.CampoVerde,
+.PropiedadVerde {
+  background-color: var(--verdeBandera);
+}
+.BtnAzul,
+.IconoAzul,
+.CampoAzul,
+.PropiedadAzul {
+  background-color: var(--azul);
+}
+.BtnBorderGris,
+.IconoBorderGris,
+.CampoBorderGris,
+.PropiedadGris {
+  border: 0.3rem solid var(--gris);
+  opacity: 50%;
+}
+.BtnMagenta,
+.IconoMagenta,
+.CampoMagenta,
+.PropiedadMagenta {
+  background-color: var(--magenta);
+}
+.BtnAmarillo:hover,
+.BtnBorderNegro:hover,
+.BtnRojo:hover,
+.BtnGris:hover,
+.BtnVerde:hover,
+.BtnAzul:hover,
+.BtnBorderGris:hover,
+.BtnMagenta:hover,
+.BtnAmarillo:hover,
+.IconoAmarillo:hover,
+.IconoBorderNegro:hover,
+.IconoRojo:hover,
+.IconoGris:hover,
+.IconoVerde:hover,
+.IconoAzul:hover,
+.IconoBorderGris:hover,
+.IconoMagenta:hover,
+.IconoAmarillo:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
+.CampoMorado {
+  background-color: var(--morado);
+}
+.CampoAqua {
+  background-color: var(--aqua);
+}
+.CampoRojo,
+.CampoMorado,
+.CampoAqua,
+.CampoAmarillo,
+.CampoAzul,
+.CampoBorderGris,
+.CampoBorderNegro,
+.CampoGris,
+.CampoMagenta,
+.CampoVerde {
+  color: #fff;
+  border-radius: 0.5rem;
+  opacity: 100%;
+  padding: 0.2rem 1.5rem;
+  margin: 0 0.5rem;
+  text-align: left;
 }
 
-.BorderBottomRojo{
-    border-bottom: .1rem solid var(--rojo);
-    width:95%;
-    margin: 0 auto;
-}.BorderBottomMagenta{
-    border-bottom: .1rem solid var(--magenta);
-    width:95%;
-    margin: 0 auto;
-}.BorderBottomAzul{
-    border-bottom: .1rem solid var(--azul);
-    width:95%;
-    margin: 0 auto;
-}.BorderBottomAmarillo{
-    border-bottom: .1rem solid var(--amarillo);
-    width:95%;
-    margin: 0 auto;
-}.BorderBottomGris{
-    border-bottom: .1rem solid var(--gris);
-    width:95%;
-    margin: 0 auto;
+.FontColorRojo {
+  color: var(--rojo);
+}
+.FontColorMagenta {
+  color: var(--magenta);
+}
+.FontColorAzul {
+  color: var(--azul);
+}
+.FontColorAmarillo {
+  color: var(--amarillo);
+}
+
+.BorderBottomRojo {
+  border-bottom: 0.1rem solid var(--rojo);
+  width: 95%;
+  margin: 0 auto;
+}
+.BorderBottomMagenta {
+  border-bottom: 0.1rem solid var(--magenta);
+  width: 95%;
+  margin: 0 auto;
+}
+.BorderBottomAzul {
+  border-bottom: 0.1rem solid var(--azul);
+  width: 95%;
+  margin: 0 auto;
+}
+.BorderBottomAmarillo {
+  border-bottom: 0.1rem solid var(--amarillo);
+  width: 95%;
+  margin: 0 auto;
+}
+.BorderBottomGris {
+  border-bottom: 0.1rem solid var(--gris);
+  width: 95%;
+  margin: 0 auto;
 }

@@ -1,1 +1,1 @@
-export {default} from './CardsVisualizaPauta';
+export { default } from "./CardsVisualizaPauta";

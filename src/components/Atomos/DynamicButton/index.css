@@ -1,61 +1,61 @@
-:root{
-    --azul: #126EFA;
-    --azulHover: #003c97;
-    --azulOpaco: #126ffa73;
-    --rojo: #FC3D38;
-    --rojoHover: #8a0500;
-    --aqua: #1CB5B2;
-    --magenta: #D11787;
-    --magentaOpaco: #d117877c;
-    --amarillo:#FCB23B;
-    --amarilloHover:#c97c00;
-    --morado: #874AFA;
-    --verdeLima: #BFEB08;
-    --verdeBandera: #1CBF59;
-    --verdeBanderaHover: #058634;
-    --gris: #525252;
-    --grisHover: #353535;
+:root {
+  --azul: #126efa;
+  --azulHover: #003c97;
+  --azulOpaco: #126ffa73;
+  --rojo: #fc3d38;
+  --rojoHover: #8a0500;
+  --aqua: #1cb5b2;
+  --magenta: #d11787;
+  --magentaOpaco: #d117877c;
+  --amarillo: #fcb23b;
+  --amarilloHover: #c97c00;
+  --morado: #874afa;
+  --verdeLima: #bfeb08;
+  --verdeBandera: #1cbf59;
+  --verdeBanderaHover: #058634;
+  --gris: #525252;
+  --grisHover: #353535;
 }
 
-.BtnChico{
-    font-size: 1.5rem;
-    font-weight: bold;
-    min-width: 11rem;
-    text-align: center;
-    color: #fff;
-    display: inline-block;
-    border-radius: 1rem;
+.BtnChico {
+  font-size: 1.5rem;
+  font-weight: bold;
+  min-width: 11rem;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  border-radius: 1rem;
 }
-.BtnChico p{
-    margin-block: 0;
-    padding: .5rem 0;
-
+.BtnChico p {
+  margin-block: 0;
+  padding: 0.5rem 0;
 }
-.BtnChicoBorderNegro, .BtnChicoBorderGris{
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 0 2rem;
-    display: inline-block;
-    border-radius: 1rem;   
+.BtnChicoBorderNegro,
+.BtnChicoBorderGris {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0 2rem;
+  display: inline-block;
+  border-radius: 1rem;
 }
-.BtnChicoBorderGris{
-    color: var(--gris);
+.BtnChicoBorderGris {
+  color: var(--gris);
 }
-.BtnChicoBorderNegro{
-    color: var(--grisHover);
+.BtnChicoBorderNegro {
+  color: var(--grisHover);
 }
-.BtnMediano{
-    width: 4rem;
-    height:4rem;
-    border-radius: 1rem;
+.BtnMediano {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
 }
-.BtnGrande{
-    width: 5rem;
-    height:5rem;
-    border-radius: 10rem;  
+.BtnGrande {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 10rem;
 }
-.Icono{
-    width: 3rem;
-    height: 3rem;
-    border-radius: .5rem;
+.Icono {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
 }

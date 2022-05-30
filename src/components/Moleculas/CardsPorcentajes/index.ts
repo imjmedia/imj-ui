@@ -1,1 +1,1 @@
-export {default} from './CardsPorcentajes';
+export { default } from "./CardsPorcentajes";

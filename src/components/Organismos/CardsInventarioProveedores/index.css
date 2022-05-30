@@ -1,60 +1,60 @@
-.EncabezadoCard{
-    max-width: 90%;
-    padding-top: .5rem;
-    margin:auto auto;
-    padding-bottom: 1rem;
+.EncabezadoCard {
+  max-width: 90%;
+  padding-top: 0.5rem;
+  margin: auto auto;
+  padding-bottom: 1rem;
 }
-.DireccionCards{
-    padding: 1.5rem 0 0 0;
+.DireccionCards {
+  padding: 1.5rem 0 0 0;
 }
-.MedidasCards{
-    justify-content: left;
-    max-width: 100%;
-    margin: 1rem 0  1rem 0;
-    text-align: left;
+.MedidasCards {
+  justify-content: left;
+  max-width: 100%;
+  margin: 1rem 0 1rem 0;
+  text-align: left;
 }
-.PropiedadCardsPosition3{
-    position: absolute;
-    left: 5%;
-    top: 85%; 
+.PropiedadCardsPosition3 {
+  position: absolute;
+  left: 5%;
+  top: 85%;
 }
-.CardsPaddings{
-    padding: 3rem;
+.CardsPaddings {
+  padding: 3rem;
 }
-.CardAsideFlex{
-    display: flex;
+.CardAsideFlex {
+  display: flex;
 }
-.ContenedorCards{
-    width: 35rem;
-    height: 36rem;
-    position: relative;
+.ContenedorCards {
+  width: 35rem;
+  height: 36rem;
+  position: relative;
 }
-.CardInventarioProveedores{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    transform: rotateY(0deg);
-    transform-style: preserve-3d;
-    transition: 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
-    background-color: #fff;
-    border-radius: 2rem;
-    box-shadow: -.5rem .5rem 2rem #cdcdcd ;
+.CardInventarioProveedores {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  transition: 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+  background-color: #fff;
+  border-radius: 2rem;
+  box-shadow: -0.5rem 0.5rem 2rem #cdcdcd;
 }
-.CardInventarioProveedoresDarkMode{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    transform: rotateY(0deg);
-    transform-style: preserve-3d;
-    transition: 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
-    background-color: #333333;
-    border-radius: 2rem;
-    box-shadow: -.5rem .5rem 2rem #252525 ;
+.CardInventarioProveedoresDarkMode {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  transition: 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+  background-color: #333333;
+  border-radius: 2rem;
+  box-shadow: -0.5rem 0.5rem 2rem #252525;
 }
-.EtiquetaIdentificacion{
-    position: relative;
-    top: 18.5%;
-    left: -2rem;
+.EtiquetaIdentificacion {
+  position: relative;
+  top: 18.5%;
+  left: -2rem;
 }

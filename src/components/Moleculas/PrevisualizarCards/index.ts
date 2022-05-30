@@ -1,1 +1,1 @@
-export {default} from './PrevisualizarCards';
+export { default } from "./PrevisualizarCards";

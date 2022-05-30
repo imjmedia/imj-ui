@@ -1,1 +1,1 @@
-export {default} from './TitlesCards';
+export { default } from "./TitlesCards";

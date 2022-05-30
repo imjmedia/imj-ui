@@ -1,1 +1,1 @@
-export {default} from './PieGraphics';
+export { default } from "./PieGraphics";

@@ -1,1 +1,1 @@
-export {default}from './CardsInventarioComercial';
+export { default } from "./CardsInventarioComercial";

@@ -1,111 +1,113 @@
-:root{
-    --azul: #126EFA;
-    --azulHover: #003c97;
-    --azulOpaco: #126ffa73;
-    --rojo: #FC3D38;
-    --rojoHover: #8a0500;
-    --aqua: #1CB5B2;
-    --magenta: #D11787;
-    --magentaOpaco: #d117877c;
-    --amarillo:#FCB23B;
-    --amarilloHover:#c97c00;
-    --morado: #874AFA;
-    --verdeLima: #BFEB08;
-    --verdeBandera: #1CBF59;
-    --verdeBanderaHover: #058634;
-    --gris: #525252;
-    --grisHover: #353535;
+:root {
+  --azul: #126efa;
+  --azulHover: #003c97;
+  --azulOpaco: #126ffa73;
+  --rojo: #fc3d38;
+  --rojoHover: #8a0500;
+  --aqua: #1cb5b2;
+  --magenta: #d11787;
+  --magentaOpaco: #d117877c;
+  --amarillo: #fcb23b;
+  --amarilloHover: #c97c00;
+  --morado: #874afa;
+  --verdeLima: #bfeb08;
+  --verdeBandera: #1cbf59;
+  --verdeBanderaHover: #058634;
+  --gris: #525252;
+  --grisHover: #353535;
 }
 
-.ContenedorGraficasCardsDarkMode{
-    width: 80rem;
-    height: 55rem;
-    background-color: #333333;
-    border-radius: 2rem;
-    box-shadow: -.5rem .5rem 2rem #252525;
-    position: absolute;
-    left: 27vw;
-    top: -27rem;
-    text-align: center;
+.ContenedorGraficasCardsDarkMode {
+  width: 80rem;
+  height: 55rem;
+  background-color: #333333;
+  border-radius: 2rem;
+  box-shadow: -0.5rem 0.5rem 2rem #252525;
+  position: absolute;
+  left: 27vw;
+  top: -27rem;
+  text-align: center;
 }
-.ContenedorGraficasCards{
-    width: 80rem;
-    height: 55rem;
-    background-color: #fff;
-    border-radius: 2rem;
-    box-shadow: -.5rem .5rem 2rem #cdcdcd;
-    position: absolute;
-    left: 27vw;
-    top: -27rem;
-    text-align: center;
+.ContenedorGraficasCards {
+  width: 80rem;
+  height: 55rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  box-shadow: -0.5rem 0.5rem 2rem #cdcdcd;
+  position: absolute;
+  left: 27vw;
+  top: -27rem;
+  text-align: center;
 }
-.ContenedorGraficasCards .EncabezadoCard h2,.ContenedorGraficasCardsDarkMode .EncabezadoCard h2{
-    margin-left: -2.5rem;
-    margin-bottom: -1.50rem;
+.ContenedorGraficasCards .EncabezadoCard h2,
+.ContenedorGraficasCardsDarkMode .EncabezadoCard h2 {
+  margin-left: -2.5rem;
+  margin-bottom: -1.5rem;
 }
-.ContenedorGraficasCards .Columnas2,.ContenedorGraficasCardsDarkMode .Columnas2 {
-    margin-bottom: .8rem;
+.ContenedorGraficasCards .Columnas2,
+.ContenedorGraficasCardsDarkMode .Columnas2 {
+  margin-bottom: 0.8rem;
 }
-.EncabezadoCard{
-    max-width: 90%;
-    padding-top: .5rem;
-    margin:auto auto;
-    padding-bottom: 1rem;
+.EncabezadoCard {
+  max-width: 90%;
+  padding-top: 0.5rem;
+  margin: auto auto;
+  padding-bottom: 1rem;
 }
-.Columnas3ModGraficas{
-    max-width: 95%;
-    width: 100%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items:center;
-}
-
-.ContenedorPieDeGrafica span, .ContenedorPieDeGraficaDarkMode span{
-    text-align: center;
-    font-size: 1.2rem;
-}
-.ContenedorPieDeGrafica p,.ContenedorPieDeGraficaDarkMode p{
-    color: #B3B3B3;
-    font-size: 1.2rem;
-    padding-top: 1rem;
+.Columnas3ModGraficas {
+  max-width: 95%;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
 }
 
-.ContenedorPieDeGraficaDarkMode{
-    max-width: 90%;
-    margin: 0 auto;
-    padding: 0 0 1rem 0;
-    background-color: #333333;
-    border-radius: 2rem;
-    box-shadow: -0.5rem 0.5rem 2rem #252525;
+.ContenedorPieDeGrafica span,
+.ContenedorPieDeGraficaDarkMode span {
+  text-align: center;
+  font-size: 1.2rem;
 }
-.ContenedorPieDeGrafica{
-    max-width: 90%;
-    margin: 0 auto;
-    padding: 0 0 1rem 0;
-    background-color: #fff;
-    border-radius: 2rem;
-    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
+.ContenedorPieDeGrafica p,
+.ContenedorPieDeGraficaDarkMode p {
+  color: #b3b3b3;
+  font-size: 1.2rem;
+  padding-top: 1rem;
 }
 
-.CamposGraficas{
-    display: grid;
-    width: 100%;
-    margin: 0 auto;
-    grid-template-columns: repeat(2, 1fr);
+.ContenedorPieDeGraficaDarkMode {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0 0 1rem 0;
+  background-color: #333333;
+  border-radius: 2rem;
+  box-shadow: -0.5rem 0.5rem 2rem #252525;
 }
-.CamposGraficas span:not(:last-of-type){
-    margin-bottom: .5rem;
-    
+.ContenedorPieDeGrafica {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0 0 1rem 0;
+  background-color: #fff;
+  border-radius: 2rem;
+  box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
 }
-.CamposGraficas span:last-of-type{
-    grid-column: 1/3;
-    
+
+.CamposGraficas {
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr);
 }
-.CamposGraficas span{
-/*     width: 70%; */
-    margin: auto;
-    opacity: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
+.CamposGraficas span:not(:last-of-type) {
+  margin-bottom: 0.5rem;
+}
+.CamposGraficas span:last-of-type {
+  grid-column: 1/3;
+}
+.CamposGraficas span {
+  /*     width: 70%; */
+  margin: auto;
+  opacity: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }

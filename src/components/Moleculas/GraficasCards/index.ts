@@ -1,1 +1,1 @@
-export {default} from './GraficasCards';
+export { default } from "./GraficasCards";

@@ -1,18 +1,21 @@
-.PrecioCards p, .CostoCards p{
-    font-size: 1.5rem;
-    margin-block:0;
-    padding-top: .5rem;
+.PrecioCards p,
+.CostoCards p {
+  font-size: 1.5rem;
+  margin-block: 0;
+  padding-top: 0.5rem;
 }
-.PrecioCards h2, .CostoCards h2{
-    font-size: 2.5rem;
-    margin-block:0;
+.PrecioCards h2,
+.CostoCards h2 {
+  font-size: 2.5rem;
+  margin-block: 0;
 }
-.PrecioCards, .CostoCards{
-    text-align: center;
+.PrecioCards,
+.CostoCards {
+  text-align: center;
 }
-.PrecioCards{
-    margin-left:1rem;
+.PrecioCards {
+  margin-left: 1rem;
 }
-.CostoCards{
-    margin-right: 1rem;
+.CostoCards {
+  margin-right: 1rem;
 }

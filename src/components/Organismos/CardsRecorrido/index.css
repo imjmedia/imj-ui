@@ -1,121 +1,127 @@
-.ContenedorCardsRecorrido{
-    width: 35rem;
-    height: 55rem;
-    position: relative;
-    margin: 2rem;
+.ContenedorCardsRecorrido {
+  width: 35rem;
+  height: 55rem;
+  position: relative;
+  margin: 2rem;
 }
-.CardRecorridoDarkMode{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    transform: rotateY(0deg);
-    transform-style: preserve-3d;
-    transition: 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
-    background-color: #EFEFEF;
-    border-radius: 2rem;
-    box-shadow: -.5rem .5rem 2rem #252525 ;
+.CardRecorridoDarkMode {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  transition: 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+  background-color: #efefef;
+  border-radius: 2rem;
+  box-shadow: -0.5rem 0.5rem 2rem #252525;
 }
-.CardRecorrido{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    transform: rotateY(0deg);
-    transform-style: preserve-3d;
-    transition: 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
-    background-color: #fff;
-    border-radius: 2rem;
-    box-shadow: -.5rem .5rem 2rem #cdcdcd ;
-}
-
-.CardFrontRecorrido{
-    transform: rotateY(0deg);
-}
-.CardBackRecorrido{
-    transform: rotateY(180deg);
-}
-.ContenedorCardsRecorrido:hover > .CardFrontRecorrido{
-    transform: rotateY(-180deg);
-}
-.ContenedorCardsRecorrido:hover > .CardBackRecorrido{
-    transform: rotateY(0deg);
-}
-.ImageCardRecorrido img{
-    height: 17.15rem;
-    max-height: auto;
-    width: 31.5rem;
-    max-width: auto;
-    object-fit: cover;
-    margin:1.5rem;
-    border-radius: 2rem;
-    margin-bottom: 0;
-}
-.PropiedadesCardsRecorrido{
-    position: absolute;
-    left: 14%;
-    top: 90%;
-}
-.HombresBackCardsRecorrido img{
-    width: 2.8rem;
-}
-.CampoAzul:only-child, .CampoMagenta:only-child,.CampoRojo:only-child, .CampoMorado:only-child, .CampoVerde:only-child,.CampoAqua:only-child, .CampoAmarillo:only-child{
-    display: block;
-    text-align: center;
-    font-weight: bold;
-    margin-top: -.5rem;
-}
-.MujeresBackCardsRecorrido img{
-    width: 2.8rem;
+.CardRecorrido {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  transition: 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+  background-color: #fff;
+  border-radius: 2rem;
+  box-shadow: -0.5rem 0.5rem 2rem #cdcdcd;
 }
 
-.TotalesPorcentajes{
-    padding-bottom: .5rem;
+.CardFrontRecorrido {
+  transform: rotateY(0deg);
 }
-.PorcentajesIconos{
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    margin-top:1rem;
+.CardBackRecorrido {
+  transform: rotateY(180deg);
 }
-.ContenedorPieDeGraficaRecorrido span{
-    text-align: center;
-    font-size: 1.2rem;
+.ContenedorCardsRecorrido:hover > .CardFrontRecorrido {
+  transform: rotateY(-180deg);
 }
-.ContenedorPieDeGraficaRecorrido p{
-    color: #B3B3B3;
-    font-size: 1.2rem;
-    padding-top: 1rem;
+.ContenedorCardsRecorrido:hover > .CardBackRecorrido {
+  transform: rotateY(0deg);
+}
+.ImageCardRecorrido img {
+  height: 17.15rem;
+  max-height: auto;
+  width: 31.5rem;
+  max-width: auto;
+  object-fit: cover;
+  margin: 1.5rem;
+  border-radius: 2rem;
+  margin-bottom: 0;
+}
+.PropiedadesCardsRecorrido {
+  position: absolute;
+  left: 14%;
+  top: 90%;
+}
+.HombresBackCardsRecorrido img {
+  width: 2.8rem;
+}
+.CampoAzul:only-child,
+.CampoMagenta:only-child,
+.CampoRojo:only-child,
+.CampoMorado:only-child,
+.CampoVerde:only-child,
+.CampoAqua:only-child,
+.CampoAmarillo:only-child {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  margin-top: -0.5rem;
+}
+.MujeresBackCardsRecorrido img {
+  width: 2.8rem;
 }
 
-.ContenedorPieDeGraficaRecorrido{
-    max-width: 90%;
-    margin: 0 auto;
-    padding: 0 0 1rem 0;
-    background-color: #fff;
-    border-radius: 2rem;
-    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
+.TotalesPorcentajes {
+  padding-bottom: 0.5rem;
+}
+.PorcentajesIconos {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.ContenedorPieDeGraficaRecorrido span {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.ContenedorPieDeGraficaRecorrido p {
+  color: #b3b3b3;
+  font-size: 1.2rem;
+  padding-top: 1rem;
 }
 
-.TextOverflowDescription{
-    overflow: hidden; 
-    text-overflow: ellipsis; 
-    display: -webkit-box; 
-    -webkit-line-clamp: 4; /* number of lines to show */ 
-    -webkit-box-orient: vertical;
+.ContenedorPieDeGraficaRecorrido {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0 0 1rem 0;
+  background-color: #fff;
+  border-radius: 2rem;
+  box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
 }
-.PaddingRight1{
-    padding-right: 1rem;
+
+.TextOverflowDescription {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
 }
-.EncabezadoCard{
-    max-width: 90%;
-    padding-top: .5rem;
-    margin:auto auto;
-    padding-bottom: 1rem;
+.PaddingRight1 {
+  padding-right: 1rem;
 }
-.MedidasCards{
-    justify-content: left;
-    max-width: 100%;
-    margin: 1rem 0  1rem 0;
-    text-align: left;
+.EncabezadoCard {
+  max-width: 90%;
+  padding-top: 0.5rem;
+  margin: auto auto;
+  padding-bottom: 1rem;
+}
+.MedidasCards {
+  justify-content: left;
+  max-width: 100%;
+  margin: 1rem 0 1rem 0;
+  text-align: left;
 }

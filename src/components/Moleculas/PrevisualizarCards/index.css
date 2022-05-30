@@ -1,164 +1,182 @@
-.ContenedorCardPrevisualizarDarkMode{
-    height: 61rem;
-    width: 79rem;
-    background-color: #333333;
-    border-radius: 2rem;
-    box-shadow: -0.5rem 0.5rem 2rem #252525;
-    position: fixed;
-    top: 15vh;
-    left:27vw;
+.ContenedorCardPrevisualizarDarkMode {
+  height: 61rem;
+  width: 79rem;
+  background-color: #333333;
+  border-radius: 2rem;
+  box-shadow: -0.5rem 0.5rem 2rem #252525;
+  position: fixed;
+  top: 15vh;
+  left: 27vw;
 }
-.ContenedorCardPrevisualizar{
-    height: 61rem;
-    width: 79rem;
-    background-color: #fff;
-    border-radius: 2rem;
-    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
-    position: fixed;
-    top: 15vh;
-    left:27vw;
+.ContenedorCardPrevisualizar {
+  height: 61rem;
+  width: 79rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
+  position: fixed;
+  top: 15vh;
+  left: 27vw;
 }
-.ImagenCardPrevisualizar img{
-    height: 36.3rem;
-    width: 45.3rem;
-    max-width: auto;
-    max-height: auto;
-    object-fit: cover;
-    margin:1.5rem 0 1.5rem 1.5rem;
-    border-radius: 2rem;
+.ImagenCardPrevisualizar img {
+  height: 36.3rem;
+  width: 45.3rem;
+  max-width: auto;
+  max-height: auto;
+  object-fit: cover;
+  margin: 1.5rem 0 1.5rem 1.5rem;
+  border-radius: 2rem;
 }
-.PorcentajesCardPrevisualizar{
-    padding-top: 1rem;
-    width: 100%;
+.PorcentajesCardPrevisualizar {
+  padding-top: 1rem;
+  width: 100%;
 }
-.FlexboxPrevisualizar{
-    display: flex;
+.FlexboxPrevisualizar {
+  display: flex;
 }
-.TotalPorcentajePrevisualizar{
-    margin-block:0;
-    padding-top: 0rem;
-    padding-bottom: .7rem;
-    font-size: 1.1rem;
-    color: #B3B3B3;
+.TotalPorcentajePrevisualizar {
+  margin-block: 0;
+  padding-top: 0rem;
+  padding-bottom: 0.7rem;
+  font-size: 1.1rem;
+  color: #b3b3b3;
 }
-.FlexboxCamposPrevisualizar{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.FlexboxCamposPrevisualizar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.AfluenciaTitulo{
-    padding-bottom: 1rem;
+.AfluenciaTitulo {
+  padding-bottom: 1rem;
 }
-.AfluenciaTitulo span{
-    font-size: 1rem;
+.AfluenciaTitulo span {
+  font-size: 1rem;
 }
-#CampoPrevisualizar1 span,#CampoPrevisualizar2 span,#CampoPrevisualizar3 span,#CampoPrevisualizar4 span,#CampoPrevisualizar5 span,#CampoPrevisualizar6 span,#CampoPrevisualizar7 span,#CampoPrevisualizar8 span,#CampoPrevisualizar9 span,#CampoPrevisualizar10 span{
-    font-weight: bold;
-    font-size: 1.2rem;
-    padding:.2rem .5rem;
-    width: 7rem;
-    height: 1.3rem;
+#CampoPrevisualizar1 span,
+#CampoPrevisualizar2 span,
+#CampoPrevisualizar3 span,
+#CampoPrevisualizar4 span,
+#CampoPrevisualizar5 span,
+#CampoPrevisualizar6 span,
+#CampoPrevisualizar7 span,
+#CampoPrevisualizar8 span,
+#CampoPrevisualizar9 span,
+#CampoPrevisualizar10 span {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.2rem 0.5rem;
+  width: 7rem;
+  height: 1.3rem;
 }
-.CardAfluenciaPrevisualizarDarkMode{
-    width: 90%;
-    height: 18rem;
-    background-color: #333333;
-    border-radius: 2rem;
-    box-shadow: -0.5rem 0.5rem 2rem #252525;
-    margin-left: 2rem;
-    margin-top: 1rem;
+.CardAfluenciaPrevisualizarDarkMode {
+  width: 90%;
+  height: 18rem;
+  background-color: #333333;
+  border-radius: 2rem;
+  box-shadow: -0.5rem 0.5rem 2rem #252525;
+  margin-left: 2rem;
+  margin-top: 1rem;
 }
-.CardAfluenciaPrevisualizar{
-    width: 90%;
-    height: 18rem;
-    background-color: #fff;
-    border-radius: 2rem;
-    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
-    margin-left: 2rem;
-    margin-top: 1rem;
+.CardAfluenciaPrevisualizar {
+  width: 90%;
+  height: 18rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
+  margin-left: 2rem;
+  margin-top: 1rem;
 }
-.Columnas4{
-    display: flex;
-    justify-content: space-between;
-    max-width: 97%;
-    margin: 0 auto;
+.Columnas4 {
+  display: flex;
+  justify-content: space-between;
+  max-width: 97%;
+  margin: 0 auto;
 }
-.ColumnaCardPrevisualizarDarkMode{
-    width: 18rem;
-    height: 20rem;
-    background-color: #333333;
-    border-radius: 2rem;
-    box-shadow: -0.5rem 0.5rem 2rem #252525;
-    margin-top: 0;
+.ColumnaCardPrevisualizarDarkMode {
+  width: 18rem;
+  height: 20rem;
+  background-color: #333333;
+  border-radius: 2rem;
+  box-shadow: -0.5rem 0.5rem 2rem #252525;
+  margin-top: 0;
 }
-.ColumnaCardPrevisualizar{
-    width: 18rem;
-    height: 20rem;
-    background-color: #fff;
-    border-radius: 2rem;
-    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
-    margin-top: 0;
+.ColumnaCardPrevisualizar {
+  width: 18rem;
+  height: 20rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
+  margin-top: 0;
 }
-.ColumnaCardPrevisualizar span, .ColumnaCardPrevisualizarDarkMode span{
-    font-size: 1.2rem;
-    max-width: 90%;
+.ColumnaCardPrevisualizar span,
+.ColumnaCardPrevisualizarDarkMode span {
+  font-size: 1.2rem;
+  max-width: 90%;
 }
-.ContenedorCardPrevisualizarChico{
-    max-width: 100%;
-    padding-top: .5rem;
-    margin-left: -.5rem;
+.ContenedorCardPrevisualizarChico {
+  max-width: 100%;
+  padding-top: 0.5rem;
+  margin-left: -0.5rem;
 }
-.ColumnaCardPrevisualizar .CampoRojo, .ColumnaCardPrevisualizarDarkMode .CampoRojo{
-    font-size: 1.2rem;
-    padding: .2rem .5rem;
-    margin: 0 .5rem;
+.ColumnaCardPrevisualizar .CampoRojo,
+.ColumnaCardPrevisualizarDarkMode .CampoRojo {
+  font-size: 1.2rem;
+  padding: 0.2rem 0.5rem;
+  margin: 0 0.5rem;
 }
-.ColumnaCardPrevisualizar .PropiedadAmarillo, .ColumnaCardPrevisualizar .Propiedad,.ColumnaCardPrevisualizarDarkMode .PropiedadAmarillo, .ColumnaCardPrevisualizarDarkMode .Propiedad{
-    font-size: 1.2rem;
-    max-width: 90%;
-    margin-left: 1.5rem;
+.ColumnaCardPrevisualizar .PropiedadAmarillo,
+.ColumnaCardPrevisualizar .Propiedad,
+.ColumnaCardPrevisualizarDarkMode .PropiedadAmarillo,
+.ColumnaCardPrevisualizarDarkMode .Propiedad {
+  font-size: 1.2rem;
+  max-width: 90%;
+  margin-left: 1.5rem;
 }
-.TextOverflowDescriptionPrev{
-    overflow: hidden; 
-    text-overflow: ellipsis; 
-    display: -webkit-box; 
-    -webkit-line-clamp: 10; 
-    -webkit-box-orient: vertical;
+.TextOverflowDescriptionPrev {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
 }
-.QrPrevisualizar{
-    max-width:9rem ;
+.QrPrevisualizar {
+  max-width: 9rem;
 }
-.ColumnaCardPrevisualizar .PorcentajesIconos,.ColumnaCardPrevisualizarDarkMode .PorcentajesIconos{
-    font-size: 1.2rem;
-    margin-top: .5rem;
+.ColumnaCardPrevisualizar .PorcentajesIconos,
+.ColumnaCardPrevisualizarDarkMode .PorcentajesIconos {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
 }
-.ColumnaCardPrevisualizar .CampoAzul,.ColumnaCardPrevisualizarDarkMode .CampoAzul{
-    margin-bottom: 1rem;
+.ColumnaCardPrevisualizar .CampoAzul,
+.ColumnaCardPrevisualizarDarkMode .CampoAzul {
+  margin-bottom: 1rem;
 }
-.ContenedorHombresMujeresPrevisualizarDarkMode{
-    width: 90%;
-    height: 9.7rem;
-    background-color: #333333;
-    border-radius: 2rem;
-    box-shadow: -0.5rem 0.5rem 2rem #252525;
-    margin-left: 2rem;
-    margin-top: .7rem; 
+.ContenedorHombresMujeresPrevisualizarDarkMode {
+  width: 90%;
+  height: 9.7rem;
+  background-color: #333333;
+  border-radius: 2rem;
+  box-shadow: -0.5rem 0.5rem 2rem #252525;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
 }
-.ContenedorHombresMujeresPrevisualizar{
-    width: 90%;
-    height: 9.7rem;
-    background-color: #fff;
-    border-radius: 2rem;
-    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
-    margin-left: 2rem;
-    margin-top: .7rem; 
+.ContenedorHombresMujeresPrevisualizar {
+  width: 90%;
+  height: 9.7rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
 }
-.ContenedorHombresMujeresPrevisualizar .PorcentajesIconos span,.ContenedorHombresMujeresPrevisualizarDarkMode .PorcentajesIconos span{
-    font-size: 1rem;
+.ContenedorHombresMujeresPrevisualizar .PorcentajesIconos span,
+.ContenedorHombresMujeresPrevisualizarDarkMode .PorcentajesIconos span {
+  font-size: 1rem;
 }
-.ContenedorHombresMujeresPrevisualizar .PorcentajesIconos,.ContenedorHombresMujeresPrevisualizarDarkMode .PorcentajesIconos{
-    margin-top: 0rem;
+.ContenedorHombresMujeresPrevisualizar .PorcentajesIconos,
+.ContenedorHombresMujeresPrevisualizarDarkMode .PorcentajesIconos {
+  margin-top: 0rem;
 }
-.PaddingTopMedio{
-    padding-top: .5rem;
+.PaddingTopMedio {
+  padding-top: 0.5rem;
 }
