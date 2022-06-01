@@ -2,7 +2,7 @@ export { default as Logo } from "./Atomos/Logo/Logo";
 export { default as DynamicButton } from "./Atomos/DynamicButton/DynamicButton";
 export { default as Inputs } from "./Atomos/Inputs/Inputs";
 export { default as TextField } from "./Atomos/TextField/TextField";
-export { default as ProertyBtn } from "./Atomos/PropertyBtn/ProertyBtn";
+export { default as PropertyBtn } from "./Atomos/PropertyBtn/PropertyBtn";
 export { default as TitlesCards } from "./Atomos/TitlesCards/TitlesCards";
 export { default as PrecioCosto } from "./Atomos/PrecioCosto/PrecioCosto";
 export { default as PieGraphics } from "./Atomos/PieGraphics/PieGraphics";

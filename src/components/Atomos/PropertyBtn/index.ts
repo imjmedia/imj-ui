@@ -1,1 +1,1 @@
-export { default } from "./ProertyBtn";
+export { default } from "./PropertyBtn";
