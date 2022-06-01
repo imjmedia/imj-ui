@@ -203,7 +203,7 @@ html {
 .CampoGris,
 .CampoMagenta,
 .CampoVerde {
-  color: #fff;
+  color: #fff !important;
   border-radius: 0.5rem;
   opacity: 100%;
   padding: 0.2rem 1.5rem;
