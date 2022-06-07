@@ -1,1 +1,2 @@
-export { default } from "./CardsInventarioProveedores";
+export { default as CardsInventarioProveedores } from "./CardsInventarioProveedores";
+
