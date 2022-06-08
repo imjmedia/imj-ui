@@ -1,11 +1,11 @@
 import React from "react";
-import TitlesCards from "../../Atomos/TitlesCards";
-import TextField from "../../Atomos/TextField";
-import PieGraphics from "../../Atomos/PieGraphics";
-import CardsPorcentajes from "../CardsPorcentajes";
+import TitlesCards from "../../Atomos";
+import TextField from "../../Atomos";
+import PieGraphics from "../../Atomos";
 import "../../../index.css";
 import "./index.css";
 import { getColorMedio, getModo } from "../../../utils/utils";
+import CardsPorcentajes from "../CardsPorcentajes/CardsPorcentajes";
 
 interface GraficasCardsProps {
   tipoMedio: "espectacular" | "muro" | "urbanos" | "indoors" | any;

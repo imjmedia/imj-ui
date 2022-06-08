@@ -1,10 +1,10 @@
 import React from "react";
-import TitlesCards from "../../Atomos/TitlesCards";
-import TextField from "../../Atomos/TextField";
-import PropertyBtn from "../../Atomos/PropertyBtn";
-import DynamicButton from "../../Atomos/DynamicButton";
+import TitlesCards from "../../Atomos";
+import TextField from "../../Atomos";
+import PropertyBtn from "../../Atomos";
+import DynamicButton from "../../Atomos";
 import PrecioCosto from "../../Atomos/PrecioCosto";
-import Aside from "../../Moleculas/Aside";
+import { Aside } from "../../Moleculas";
 import "../../../index.css";
 import "./index.css";
 import { getColorMedio, getModo } from "../../../utils/utils";

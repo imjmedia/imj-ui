@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import DynamicButton from "../../Atomos/DynamicButton";
-import GraficasCardsFront from "../GraficasCards";
-import PrevisualizarCards from "../PrevisualizarCards";
+import DynamicButton from "../../Atomos";
+import GraficasCardsFront from "../GraficasCards/GraficasCards";
+import PrevisualizarCards from "../PrevisualizarCards/PrevisualizarCards";
 import "../../../index.css";
 import "./index.css";
 
@@ -13,7 +13,7 @@ const getModo = (modo: any) => {
       return "";
   }
 };
-interface AsideProps {
+export interface AsideProps {
   /*Modal PROPS*/
   show?: boolean | any;
   children?: any;

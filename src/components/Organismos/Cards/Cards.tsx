@@ -1,8 +1,8 @@
 import React from "react";
-import CardsAbcSitios from "../CardsAbcSitios";
-import CardsVisualizaPauta from "../CardsVisualizaPauta";
-import CardsInventarioComercial from "../CardsInventarioComercial";
-import CardsInventarioProveedores from "../CardsInventarioProveedores";
+import CardsAbcSitios from "../CardsAbcSitios/CardsAbcSitios";
+import CardsVisualizaPauta from "../CardsVisualizaPauta/CardsVisualizaPauta";
+import CardsInventarioComercial from "../CardsInventarioComercial/CardsInventarioComercial";
+import CardsInventarioProveedores from "../CardsInventarioProveedores/CardsInventarioProveedores";
 import CardsRutasIMJ from "../CardsRutasImj/CardsRutasImj";
 
 interface CardsProps {

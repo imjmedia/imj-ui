@@ -1,6 +1,6 @@
 import React from "react";
-import TextField from "../../Atomos/TextField";
-import DynamicButton from "../../Atomos/DynamicButton";
+import TextField from "../../Atomos/";
+import DynamicButton from "../../Atomos";
 import "../../../index.css";
 import "./index.css";
 

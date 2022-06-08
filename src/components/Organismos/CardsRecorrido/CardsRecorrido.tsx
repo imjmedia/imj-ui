@@ -1,7 +1,7 @@
 import React from "react";
-import TitlesCards from "../../Atomos/TitlesCards";
-import TextField from "../../Atomos/TextField";
-import PropertyBtn from "../../Atomos/PropertyBtn";
+import TitlesCards from "../../Atomos";
+import TextField from "../../Atomos";
+import PropertyBtn from "../../Atomos";
 import "../../../index.css";
 import "./index.css";
 import { getModo, getColorMedio } from "../../../utils/utils";
