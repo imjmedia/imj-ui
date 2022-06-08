@@ -1,1 +1,1 @@
-export { default } from "./CardsAbcSitios";
+export { default as CardsAbcSitios} from "./CardsAbcSitios";
