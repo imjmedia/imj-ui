@@ -1,1 +1,1 @@
-export {default} from './CardsRutasImj';
+export {default as CardsRutasImj} from './CardsRutasImj';
