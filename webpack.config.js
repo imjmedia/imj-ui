@@ -25,9 +25,7 @@ const banner = `
 module.exports = {
   mode: "production",
   devtool: 'inline-source-map',
-  entry: {
-    "imj-ui": path.resolve(__dirname, 'src/index.ts')
-  },
+  entry: path.resolve(__dirname, 'src/index.ts'),
   output: {
     chunkFilename: '[name].js',
     filename: '[name].js',
