@@ -24,13 +24,16 @@ const banner = `
 
 module.exports = {
   mode: "production",
-  devtool: 'source-map',
-  entry: './src/index.ts',
+  devtool: 'inline-source-map',
+  entry: {
+    "imj-ui": path.resolve(__dirname, 'src/index.ts')
+  },
   output: {
-    filename: 'index.js',
+    chunkFilename: '[name].js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
     library: "imj-ui",
-    libraryTarget: 'umd',
+    libraryTarget: 'commonjs2',
     clean: true
   },
   optimization: {
@@ -105,6 +108,6 @@ module.exports = {
     new webpack.BannerPlugin(banner)
   ],
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   }
 };

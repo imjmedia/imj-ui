@@ -6,8 +6,9 @@ const titleCase = (text: any) => {
   return text[0].toUpperCase() + text.slice(1).toLowerCase();
 };
 
-interface InputsProps {
+export interface InputsProps {
   justify?: "left" | "right" | any;
+  modo?: string | any;
   placeholder?: string | any;
   color?:
     | "Amarillo"
@@ -20,6 +21,24 @@ interface InputsProps {
     | "Morado"
     | any;
   type?: "date" | "aumentoDecremento" | any;
+  clave?: string;
+  title?: string;
+  description?: string;
+  labelColor?: string;
+  property?: string;
+  state?: boolean;
+  size?: string;
+  button?: string;
+  nseA?: string;
+  nseB?: string;
+  nseC?: string;
+  nseD?: string;
+  nseE?: string;
+  edad13?: string;
+  edad18?: string;
+  edad26?: string;
+  edad41?: string;
+  edad55?: string;
 }
 const Inputs = (props: InputsProps) => {
   const justify = props.justify;

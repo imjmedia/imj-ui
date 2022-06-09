@@ -9,7 +9,7 @@ import { getModo, getColorMedio } from "../../../utils/utils";
 const hombres = require("../../../img/iconos/hombres.svg") as string;
 const mujeres = require("../../../img/iconos/mujeres.svg") as string;
 
-interface CardRecorridoProps {
+export interface CardRecorridoProps {
   modo?: string | any;
   imagen?: string | any;
   tipoMedio: "espectacular" | "muro" | "urbanos" | "indoors" | any;

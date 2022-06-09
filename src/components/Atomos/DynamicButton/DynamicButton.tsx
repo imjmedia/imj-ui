@@ -38,7 +38,7 @@ const ubicaciongeografica =
 const hombres = require("../../../img/iconos/hombres.svg") as string;
 const mujeres = require("../../../img/iconos/mujeres.svg") as string;
 
-interface DynaButtProps {
+export interface DynaButtProps {
   type: "buttons" | "icons" | any;
   size?: "Grande" | "Mediano" | "Chico" | any;
   color?:
