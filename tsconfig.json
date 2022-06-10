@@ -1,24 +1,21 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "declaration": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "strict": true,
+    // Default
+    "target": "es5", 
+    "esModuleInterop": true, 
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "outDir": "./dist/",
+    "strict": true, 
+    "skipLibCheck": true,
+
+    // Added
+    "jsx": "react", 
+    "module": "ESNext",  
+    "declaration": true,
+    "declarationDir": "types",
     "sourceMap": true,
-    "noImplicitAny": true,
-    "preserveConstEnums": true,
-    "module": "commonjs",
-    "target": "es5",
-    "jsx": "react",
-  },
-  "include": ["src"],
-  "exclude": ["node_modules"]
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "emitDeclarationOnly": true,
+  }
 }
