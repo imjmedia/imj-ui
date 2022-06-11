@@ -9,6 +9,8 @@ import cleaner from 'rollup-plugin-cleaner';
 import image from '@rollup/plugin-image';
 import dts from "rollup-plugin-dts";
 import { terser } from "rollup-plugin-terser";
+import svg from 'rollup-plugin-svg-import';
+import importAssets from 'rollup-plugin-import-assets';
 
 const packageJson = require("./package.json");
 
@@ -35,6 +37,11 @@ export default [
           './dist/'
         ]
       }),
+      svg({
+        // process SVG to DOM Node or String. Default: false
+        stringify: false
+      }),
+      image({dom: true}),
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
@@ -45,11 +52,21 @@ export default [
         use: ['sass'],
       }),
       babel({ exclude: 'node_modules/**', babelHelpers: 'runtime' }),
+      importAssets({
+        // files to import
+        include: [/\.gif$/i, /\.jpg$/i, /\.png$/i, /\.svg$/i],
+        // files to exclude
+        exclude: [],
+        // copy assets to output folder
+        emitAssets: true,
+        // name pattern for the asset copied
+        fileNames: 'assets/[name]-[hash].[ext]',
+        // public path of the assets
+        publicPath: ''
+    })
       
       
-      
-      image(),
-      terser(),
+      //terser(),
     ],
   },
   {

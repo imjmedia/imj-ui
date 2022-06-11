@@ -1,251 +1,1436 @@
-:root {
-  --azul: #126efa;
-  --azulHover: #003c97;
-  --azulOpaco: #126ffa73;
-  --rojo: #fc3d38;
-  --rojoHover: #8a0500;
-  --aqua: #1cb5b2;
-  --magenta: #d11787;
-  --magentaOpaco: #d117877c;
-  --amarillo: #fcb23b;
-  --amarilloHover: #c97c00;
-  --morado: #874afa;
-  --verdeLima: #bfeb08;
-  --verdeBandera: #1cbf59;
-  --verdeBanderaHover: #058634;
-  --gris: #525252;
-  --grisHover: #353535;
+:root{
+    --azul: #126EFA;
+    --azulHover: #003c97;
+    --azulOpaco: #126ffa73;
+    --rojo: #FC3D38;
+    --rojoHover: #8a0500;
+    --aqua: #1CB5B2;
+    --magenta: #D11787;
+    --magentaOpaco: #d117877c;
+    --amarillo:#FCB23B;
+    --amarilloHover:#c97c00;
+    --morado: #874AFA;
+    --verdeLima: #BFEB08;
+    --verdeBandera: #1CBF59;
+    --verdeBanderaHover: #058634;
+    --gris: #525252;
+    --grisHover: #353535;
 }
 
+/*Estilos Globales*/
 html {
-  font-size: 62.5%;
-  /*     background-color: #1A1A1A; */
+    font-size: 62.5%;
+/*     background-color: #282828; */
 }
-.ModoNocturno html {
-  background-color: #1a1a1a;
+*, *:before, :after{
+    box-sizing:inherit;
 }
 
-*,
-*:before,
-:after {
-  box-sizing: inherit;
+.App{
+    font-family: 'Open Sans', sans-serif;
 }
-.App {
-  font-family: "Open Sans", sans-serif;
+.AppDarkMode{
+    background-color: #282828;
+    font-family: 'Open Sans', sans-serif;  
 }
+
+a{
+    text-decoration: none;
+}
+
+
+
 
 /*UTILIDADES*/
-.Flexbox {
-  display: flex;
-  align-items: baseline;
-  justify-content: left;
+.Flexbox{
+    display:flex;
+    align-items: baseline;
+    justify-content: left;
 }
-.CenterText {
-  text-align: center;
+.CenterText{
+    text-align: center;
 }
 
-.PaddingTopBottom1 {
-  padding: 1rem 0;
+.PaddingTopBottom1{
+    padding: 1rem 0;
 }
-.Columnas2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: flex-end;
+.Columnas2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-end;
 }
-.Columnas3 {
-  max-width: 90%;
-  width: 100%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.Columnas3{
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
-.RowPadding1 {
-  padding: 1rem 0;
+.RowPadding1{
+    padding: 1rem 0;
 }
-.RowPadding2 {
-  padding: 2rem 0;
+.RowPadding2{
+    padding: 2rem 0;
 }
-.FlexCards {
-  display: flex;
-  max-width: 90vw;
-  margin: 0 auto;
-  justify-content: center;
-  flex-wrap: wrap;
+.FlexCards{
+    display: flex;
+    max-width: 90vw;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-.CardsPaddings {
-  padding: 3rem;
+.CardsPaddings{
+    padding: 2rem;
 }
-.Contenedor {
-  max-width: 90%;
-  margin: auto;
+.Contenedor{
+    max-width: 90%;
+    margin: auto;
 }
-.NoMargin {
-  margin: 0 auto;
+.NoMargin{
+    margin: 0 auto;
 }
-.Padding2 {
-  padding: 0rem 2rem;
+.Padding2{
+    padding: 0rem 2rem;
 }
-.PaddingBottomMedio {
-  padding-bottom: 0.5rem;
+.PaddingBottomMedio{
+    padding-bottom: .5rem;
 }
-.AlignRight {
-  text-align: right;
+.AlignRight{
+    text-align: right;
 }
-.AlignLeft {
-  text-align: left;
+.AlignLeft{
+    text-align: left;
 }
-.ColumnasCards {
-  width: 90vw;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.ColumnasCards{
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .JustifyCenter {
-  justify-content: center;
+    justify-content: center;
 }
-.PaddingTop2 {
-  padding-top: 2rem;
+.PaddingTop2{
+    padding-top: 2rem;
 }
-.Absolute {
-  position: absolute;
+.Absolute{
+    position: absolute;
 }
-.Top90 {
-  top: 90%;
+.Top90{
+    top: 90%;
 }
-.Left25 {
-  left: 25%;
-}
-
-.BtnAmarillo,
-.IconoAmarillo,
-.CampoAmarillo,
-.PropiedadAmarillo {
-  background-color: var(--amarillo);
-}
-.BtnBorderNegro,
-.IconoBorderNegro,
-.CampoBorderNegro,
-.PropiedadBorderNegro {
-  border: 0.3rem solid var(--grisHover);
-}
-.BtnRojo,
-.IconoRojo,
-.CampoRojo,
-.PropiedadRojo {
-  background-color: var(--rojo);
-}
-.BtnGris,
-.IconoGris,
-.CampoGris,
-.PropiedadGris {
-  background-color: var(--gris);
-}
-.BtnVerde,
-.IconoVerde,
-.CampoVerde,
-.PropiedadVerde {
-  background-color: var(--verdeBandera);
-}
-.BtnAzul,
-.IconoAzul,
-.CampoAzul,
-.PropiedadAzul {
-  background-color: var(--azul);
-}
-.BtnBorderGris,
-.IconoBorderGris,
-.CampoBorderGris,
-.PropiedadGris {
-  border: 0.3rem solid var(--gris);
-  opacity: 50%;
-}
-.BtnMagenta,
-.IconoMagenta,
-.CampoMagenta,
-.PropiedadMagenta {
-  background-color: var(--magenta);
-}
-.BtnAmarillo:hover,
-.BtnBorderNegro:hover,
-.BtnRojo:hover,
-.BtnGris:hover,
-.BtnVerde:hover,
-.BtnAzul:hover,
-.BtnBorderGris:hover,
-.BtnMagenta:hover,
-.BtnAmarillo:hover,
-.IconoAmarillo:hover,
-.IconoBorderNegro:hover,
-.IconoRojo:hover,
-.IconoGris:hover,
-.IconoVerde:hover,
-.IconoAzul:hover,
-.IconoBorderGris:hover,
-.IconoMagenta:hover,
-.IconoAmarillo:hover {
-  opacity: 50%;
-  cursor: pointer;
-}
-.CampoMorado {
-  background-color: var(--morado);
-}
-.CampoAqua {
-  background-color: var(--aqua);
-}
-.CampoRojo,
-.CampoMorado,
-.CampoAqua,
-.CampoAmarillo,
-.CampoAzul,
-.CampoBorderGris,
-.CampoBorderNegro,
-.CampoGris,
-.CampoMagenta,
-.CampoVerde {
-  color: #fff !important;
-  border-radius: 0.5rem;
-  opacity: 100%;
-  padding: 0.2rem 1.5rem;
-  margin: 0 0.5rem;
-  text-align: left;
+.Left25{
+    left: 25%;
 }
 
-.FontColorRojo {
-  color: var(--rojo);
+
+
+
+/*Botones e íconos*/
+.BtnChico{
+    font-size: 1.5rem;
+    font-weight: bold;
+    min-width: 11rem;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    border-radius: 1rem;
 }
-.FontColorMagenta {
-  color: var(--magenta);
+.BtnChico p{
+    margin-block: 0;
+    padding: .5rem 0;
+
 }
-.FontColorAzul {
-  color: var(--azul);
+.BtnChicoBorderNegro, .BtnChicoBorderGris{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0 2rem;
+    display: inline-block;
+    border-radius: 1rem;   
 }
-.FontColorAmarillo {
-  color: var(--amarillo);
+.BtnChicoBorderGris{
+    color: var(--gris);
+}
+.BtnChicoBorderNegro{
+    color: var(--grisHover);
+}
+.BtnMediano{
+    width: 4rem;
+    height:4rem;
+    border-radius: 1rem;
+}
+.BtnGrande{
+    width: 5rem;
+    height:5rem;
+    border-radius: 10rem;  
 }
 
-.BorderBottomRojo {
-  border-bottom: 0.1rem solid var(--rojo);
-  width: 95%;
-  margin: 0 auto;
+.BtnAmarillo, .IconoAmarillo, .CampoAmarillo, .PropiedadAmarillo{
+    background-color: var(--amarillo);
 }
-.BorderBottomMagenta {
-  border-bottom: 0.1rem solid var(--magenta);
-  width: 95%;
-  margin: 0 auto;
+.BtnBorderNegro, .IconoBorderNegro, .CampoBorderNegro, .PropiedadBorderNegro{
+    border: .3rem solid var(--grisHover);
 }
-.BorderBottomAzul {
-  border-bottom: 0.1rem solid var(--azul);
-  width: 95%;
-  margin: 0 auto;
+.BtnRojo, .IconoRojo, .CampoRojo, .PropiedadRojo{
+    background-color: var(--rojo);
 }
-.BorderBottomAmarillo {
-  border-bottom: 0.1rem solid var(--amarillo);
-  width: 95%;
-  margin: 0 auto;
+.BtnGris, .IconoGris, .CampoGris, .PropiedadGris{
+    background-color: var(--gris);
 }
-.BorderBottomGris {
-  border-bottom: 0.1rem solid var(--gris);
-  width: 95%;
-  margin: 0 auto;
+.BtnVerde, .IconoVerde, .CampoVerde, .PropiedadVerde{
+    background-color: var(--verdeBandera);
 }
+.BtnAzul, .IconoAzul, .CampoAzul, .PropiedadAzul{
+    background-color: var(--azul);
+}
+.BtnBorderGris, .IconoBorderGris, .CampoBorderGris, .PropiedadGris{
+    border: .3rem solid var(--gris);
+    opacity: 50%;
+}
+.BtnMagenta, .IconoMagenta, .CampoMagenta, .PropiedadMagenta{
+    background-color: var(--magenta);
+}
+.BtnAmarillo:hover, .BtnBorderNegro:hover, .BtnRojo:hover, .BtnGris:hover, .BtnVerde:hover, .BtnAzul:hover, .BtnBorderGris:hover, .BtnMagenta:hover, .BtnAmarillo:hover, .IconoAmarillo:hover, .IconoBorderNegro:hover, .IconoRojo:hover, .IconoGris:hover, .IconoVerde:hover, .IconoAzul:hover, .IconoBorderGris:hover, .IconoMagenta:hover, .IconoAmarillo:hover{
+    opacity: 50%;
+    cursor: pointer;
+}
+.CampoMorado{
+    background-color: var(--morado);
+}
+.CampoAqua{
+    background-color: var(--aqua);
+}
+.Icono{
+    width: 3rem;
+    height: 3rem;
+    border-radius: .5rem;
+}
+
+
+
+
+/*Inputs*/
+.Inputs input{
+    border-radius: 0 0 1.5rem 1.5rem;
+    border: .3rem solid;
+    background-color: transparent;
+    color: #B3B3B3;
+    border-top: 0;
+    text-align: center;
+    width:90%;
+    height: 2rem;
+    font-size: 1.5rem;
+    margin: .5rem 0;
+    padding-bottom: .5rem;
+}
+.Inputs input::placeholder{
+    opacity: 50%;
+}
+.InputSelect{
+    border-radius: 0 0 1.5rem 1.5rem;
+    border: .3rem solid;
+    background-color: transparent;
+    color: #B3B3B3;
+    border-top: 0;
+    text-align: center;
+    width:90%;
+    height: 2rem;
+    font-size: 1.5rem;
+    margin: .5rem 0;
+    padding-bottom: .5rem;
+}
+.BordeRojo input, .InputSelectRojo{
+    border-color:var(--rojo);
+}
+.BordeAzul input , .InputSelectAzul{
+    border-color:var(--azul);
+}
+.BordeMagenta input , .InputSelectMagenta{
+    border-color:var(--magenta);
+}
+.BordeAmarillo input , .InputSelectAmarillo{
+    border-color:var(--amarillo);
+}
+.InputLeft input{
+    border-radius: 0 0 0 1.5rem;
+}
+.InputLeft input{
+    border-radius: 0 0 0 1.5rem;
+    padding-bottom: .5rem;
+    
+}
+.InputRight input{
+    border-radius: 0 0 1.5rem 0;
+}
+
+
+
+
+/*Campos Descriptivos*/
+.CampoDescriptivo span{
+    width: 95%;
+    font-size: 1.5rem;
+    text-align: left;
+}
+.CampoTituloDarkMode{
+    font-weight: bold;
+    opacity: 100%;
+    font-size: 1.2rem;
+    text-align: left;
+    color: #B3B3B3;
+}
+.CampoTitulo{
+    font-weight: bold;
+    opacity: 100%;
+    font-size: 1.2rem;
+    text-align: left;
+    color: #525252;
+}
+
+.CampoDescripcionDarkMode{
+    font-size: 1.5rem;
+    font-weight: normal;
+    opacity: 75%;
+    text-align: left;
+    color: #B3B3B3;
+}
+.CampoDescripcion{
+    font-size: 1.5rem;
+    font-weight: normal;
+    opacity: 75%;
+    text-align: left;
+    color: #525252;
+}
+.CampoDescriptivo{
+    margin: .2rem 0 0 1.5rem;
+    text-align: left;
+}
+.CampoRojo, .CampoMorado, .CampoAqua, .CampoAmarillo, .CampoAzul, .CampoBorderGris, .CampoBorderNegro, .CampoGris, .CampoMagenta, .CampoVerde{
+    color: #fff;
+    border-radius: .5rem;
+    opacity: 100%;
+    padding: .2rem 1.5rem;
+    margin: 0 .5rem;
+    text-align: left;
+}
+
+
+
+
+/*BOTONES DE PROPIEDADES ACTIVAS O INACTIVAS*/
+.PropiedadRojo, .PropiedadAmarillo, .PropiedadAzul, .PropiedadBorderGris, .PropiedadBorderNegro, .PropiedadGris, .PropiedadMagenta, .PropiedadVerde{
+    color: #fff;
+    border-radius: .5rem;
+    min-width: 8.5rem;
+    margin: .5rem auto;
+    text-align: center;
+    padding: .5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.Propiedad{
+    background-color: var(--gris);
+    color: #fff;
+    border-radius: .5rem;
+    min-width: 8.5rem;
+    margin: .5rem auto;
+    text-align: center;
+    padding: .5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: .3;
+    margin-bottom: .5rem;
+}
+
+
+
+
+/*Titulos Cards*/
+.ClaveCardsDarkMode{
+    font-size: 3rem;
+    margin-bottom: 0;
+    margin-block: 0;
+    text-align: left;
+    color: #B3B3B3;
+}
+.ClaveCards{
+    font-size: 3rem;
+    margin-bottom: 0;
+    margin-block: 0;
+    text-align: left;
+    color: #525252;
+}
+.TipoCardsDarkMode{
+    margin-block: 0;
+    font-size: 1.9rem;
+    font-weight: normal;
+    opacity: .5;
+    text-align: left;
+    color: #B3B3B3;
+}
+.TipoCards{
+    margin-block: 0;
+    font-size: 1.9rem;
+    font-weight: normal;
+    opacity: .5;
+    text-align: left;
+    color: #525252;
+}
+
+
+
+
+/*Cards*/
+.ContenedorCards{
+    width: 35rem;
+    height: 36rem;
+    position: relative;
+}
+
+.CardDarkMode{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transition: 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+    background-color: #333333;
+    border-radius: 2rem 0 0 2rem;
+    box-shadow: -.5rem .5rem 2rem #252525 ;
+}
+.Card{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transition: 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+    background-color: #fff;
+    border-radius: 2rem 0 0 2rem;
+    box-shadow: -.5rem .5rem 2rem #cdcdcd ;
+}
+.CardInventarioProveedores{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transition: 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: -.5rem .5rem 2rem #cdcdcd ;
+}
+.CardInventarioProveedoresDarkMode{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transition: 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+    background-color: #333333;
+    border-radius: 2rem;
+    box-shadow: -.5rem .5rem 2rem #252525 ;
+}
+.CardFront{
+    transform: rotateY(0deg);
+}
+.CardBack{
+    transform: rotateY(180deg);
+}
+.ContenedorCards:hover > .CardFront{
+    transform: rotateY(-180deg);
+}
+.ContenedorCards:hover > .CardBack{
+    transform: rotateY(0deg);
+}
+.EncabezadoCard{
+    max-width: 90%;
+    padding-top: .5rem;
+    margin:auto auto;
+    padding-bottom: 1rem;
+}
+.DireccionCards{
+    padding: 1.5rem 0 0 0;
+}
+
+.MedidasCards{
+    justify-content: left;
+    max-width: 100%;
+    margin: 1rem 0  1rem 0;
+    text-align: left;
+}
+
+.BorderBottomRojo{
+    border-bottom: .1rem solid var(--rojo);
+    width:95%;
+    margin: 0 auto;
+}.BorderBottomMagenta{
+    border-bottom: .1rem solid var(--magenta);
+    width:95%;
+    margin: 0 auto;
+}.BorderBottomAzul{
+    border-bottom: .1rem solid var(--azul);
+    width:95%;
+    margin: 0 auto;
+}.BorderBottomAmarillo{
+    border-bottom: .1rem solid var(--amarillo);
+    width:95%;
+    margin: 0 auto;
+}.BorderBottomGris{
+    border-bottom: .1rem solid var(--gris);
+    width:95%;
+    margin: 0 auto;
+}
+.FechaCreacion{
+    text-align: center;
+    opacity: .5;
+}
+.IconoUbicacionGeografica{
+    padding-left: 1.5rem;
+    padding-top: .5rem;
+}
+
+
+.PrecioCards p, .CostoCards p{
+    font-size: 1.5rem;
+    margin-block:0;
+    padding-top: .5rem;
+}
+.PrecioCards h2, .CostoCards h2{
+    font-size: 2.5rem;
+    margin-block:0;
+}
+.PrecioCards, .CostoCards{
+    text-align: center;
+}
+.PrecioCards{
+    margin-left:1rem;
+}
+.CostoCards{
+    margin-right: 1rem;
+}
+
+
+.DescripcionCards{
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    text-align: left;
+}
+.TitleDescriptionCards{
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1.2rem;
+}
+.CostoCards{
+    opacity: .7;
+}
+.FontColorRojo{
+    color: var(--rojo);
+}
+.FontColorMagenta{
+    color: var(--magenta);
+}
+.FontColorAzul{
+    color: var(--azul);
+}
+.FontColorAmarillo{
+    color: var(--amarillo);
+}
+.PrecioCostoPosition{
+    position: absolute;
+    left: 10%;
+    top: 80%;
+}
+.CardRutasImj .PropiedadVerde{
+    width: 8.5rem; position: absolute;
+    left: 35%;
+    top: 85%;
+}
+.PropiedadCardsPosition1{
+    position: absolute;
+    top: 85%;
+    left: 35%
+}
+.PropiedadCardsPosition3{
+    position: absolute;
+    left: 5%;
+    top: 85%; 
+}
+.EtiquetaIdentificacion{
+    position: relative;
+    top: 18.5%;
+    left: -2rem;
+}
+
+/*BOTONES ASIDE*/
+.AsideCardsDarkMode{
+    width: 9rem;
+    height: 36rem;
+    border-radius:0 2rem 2rem 0;
+    background-color:#333333;
+    box-shadow: -.5rem .5rem 2rem #252525 ;
+}
+.AsideCards{
+    width: 9rem;
+    height: 36rem;
+    border-radius:0 2rem 2rem 0;
+    background-color:#fff;
+    box-shadow: -.5rem .5rem 1rem #cdcdcd ;
+}
+.BotonAside:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+.CardAsideFlex{
+    display: flex;
+}
+.ContenedorBotonesAside{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+/*Cards Gráficas*/
+.ContenedorGraficasCardsDarkMode{
+    width: 80rem;
+    height: 55rem;
+    background-color: #333333;
+    border-radius: 2rem;
+    box-shadow: -.5rem .5rem 2rem #252525;
+    position: absolute;
+    left: 27vw;
+    top: -27rem;
+    text-align: center;
+}
+.ContenedorGraficasCards{
+    width: 80rem;
+    height: 55rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: -.5rem .5rem 2rem #cdcdcd;
+    position: absolute;
+    left: 27vw;
+    top: -27rem;
+    text-align: center;
+}
+.InicioFinCards{
+    position: absolute;
+    left: 5%;
+    top:60%;
+    margin: 0 auto;
+    max-width: 90%;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.CampoFechaInicioFin{
+    width: 100%;
+    text-align: left;
+}
+.CampoFechaInicioFin span{
+    font-size: 1.5rem;
+}
+.DescuentoCards{
+    position: absolute;
+    margin: 0 auto;
+    max-width: 90%;
+    left: 5%;    
+    top:80%;
+}
+.DescuentoCards .CampoTitulo span{
+    text-align: left;
+}
+
+
+/*HEADERS*/
+.Header{
+    position: fixed;
+    background-color: #fff;
+    z-index: 1;
+    max-height: 18rem;
+    top: 0;
+    box-shadow: -.5rem .5rem 3rem #cdcdcd38;
+}
+.HeaderDarkMode{
+    position: fixed;
+    background-color: #282828;
+    z-index: 1;
+    max-height: 18rem;
+    top: 0;
+}
+.BarraPrincipalHeaderContainer{
+    background-color: var(--amarillo);
+    height: 12rem;
+}
+.BarraPrincipalHeader img{
+    max-height: 8.5rem;
+}
+.BarraPrincipalHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;    
+}
+.BarraPrincipalHeaderContainer h1{
+    text-align: center;
+    position: relative;
+    top: -85%;
+    font-size: 4rem;
+    font-weight: lighter;
+    color: #fff;
+}
+.BarraSuperiorHeader p{
+    font-size: 2rem;
+    margin-block: 0;
+    padding: 1rem 0;
+    text-align: right;
+    font-weight: lighter;
+}
+.BarraSuperiorHeader span{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-block: 0;
+    padding: 1rem 0;
+    text-align: right;
+}
+.BotonesAsideVisualiza{
+    position: fixed;
+    right: 10.5rem;
+    top: 30vh;
+}
+
+
+
+.modal{
+    position:fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);   
+}
+.modal-main {
+    position:fixed;
+    width: 100vw;
+    height: 100vh;
+    top:50vh;
+    left:0;
+}  
+.display-block {
+    display: block;
+}
+  
+.display-none {
+    display: none;
+}
+
+.IconoCerrarModalPrevisualizar{
+    transform: translate(131rem, -33rem);
+    cursor: pointer;
+    z-index: 0;
+}
+.IconoCerrarModalGraficas{
+    transform: translate(125rem, -25rem);
+    cursor: pointer;
+    z-index: 0;
+}
+
+.GraficasCards{
+    width: 24rem;
+}
+
+.CardsPorcentajes p, .CardsPorcentajesDarkMode p{
+    font-size: 1rem;
+    margin-block: 0;
+    padding-top: 0;
+    padding-bottom: .2rem;
+    color: #B3B3B3;
+}
+.CardsPorcentajesDarkMode{
+    margin-top: 1rem;
+    width: 25rem;
+    background-color: #333333;
+    border-radius: 2rem;
+    box-shadow: -.5rem .5rem 2rem #252525;
+    min-height: 20rem;
+    height: 45rem;
+}
+.CardsPorcentajes{
+    margin-top: 1rem;
+    width: 25rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: -.5rem .5rem 1rem #cdcdcd;
+    min-height: 20rem;
+    height: 45rem;
+}
+.CardPorcentajesHombresMujeres div{
+    margin: 0 auto;
+}
+.CardPorcentajesHombresMujeres p{
+    font-size: 1.1rem;
+}
+.Columnas3ModGraficas{
+    max-width: 95%;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items:center;
+}
+
+.CamposGraficas{
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+}
+.CamposGraficas span:not(:last-of-type){
+    margin-bottom: .5rem;
+    
+}
+.CamposGraficas span:last-of-type{
+    grid-column: 1/3;
+    
+}
+.CamposGraficas span{
+/*     width: 70%; */
+    margin: auto;
+    opacity: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.ContenedorPieDeGrafica span, .ContenedorPieDeGraficaDarkMode span{
+    text-align: center;
+    font-size: 1.2rem;
+}
+.ContenedorPieDeGrafica p,.ContenedorPieDeGraficaDarkMode p{
+    color: #B3B3B3;
+    font-size: 1.2rem;
+    padding-top: 1rem;
+}
+
+.ContenedorPieDeGraficaDarkMode{
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 0 1rem 0;
+    background-color: #333333;
+    border-radius: 2rem;
+    box-shadow: -0.5rem 0.5rem 2rem #252525;
+}
+.ContenedorPieDeGrafica{
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 0 1rem 0;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
+}
+
+.ContenedorGraficasCards .EncabezadoCard h2,.ContenedorGraficasCardsDarkMode .EncabezadoCard h2{
+    margin-left: -2.5rem;
+    margin-bottom: -1.50rem;
+}
+.ContenedorGraficasCards .Columnas2,.ContenedorGraficasCardsDarkMode .Columnas2 {
+    margin-bottom: .8rem;
+}
+
+/*CardsRecorridos*/
+.ContenedorCardsRecorrido{
+    width: 35rem;
+    height: 55rem;
+    position: relative;
+    margin: 2rem;
+}
+.CardRecorridoDarkMode{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transition: 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+    background-color: #EFEFEF;
+    border-radius: 2rem;
+    box-shadow: -.5rem .5rem 2rem #252525 ;
+}
+.CardRecorrido{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transition: 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: -.5rem .5rem 2rem #cdcdcd ;
+}
+
+.CardFrontRecorrido{
+    transform: rotateY(0deg);
+}
+.CardBackRecorrido{
+    transform: rotateY(180deg);
+}
+.ContenedorCardsRecorrido:hover > .CardFrontRecorrido{
+    transform: rotateY(-180deg);
+}
+.ContenedorCardsRecorrido:hover > .CardBackRecorrido{
+    transform: rotateY(0deg);
+}
+.ImageCardRecorrido img{
+    height: 17.15rem;
+    max-height: auto;
+    width: 31.5rem;
+    max-width: auto;
+    object-fit: cover;
+    margin:1.5rem;
+    border-radius: 2rem;
+    margin-bottom: 0;
+}
+.PropiedadesCardsRecorrido{
+    position: absolute;
+    left: 14%;
+    top: 90%;
+}
+.HombresBackCardsRecorrido img{
+    width: 2.8rem;
+}
+.CampoAzul:only-child, .CampoMagenta:only-child,.CampoRojo:only-child, .CampoMorado:only-child, .CampoVerde:only-child,.CampoAqua:only-child, .CampoAmarillo:only-child{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin-top: -.5rem;
+}
+.MujeresBackCardsRecorrido img{
+    width: 2.8rem;
+}
+
+.TotalesPorcentajes{
+    padding-bottom: .5rem;
+}
+.PorcentajesIconos{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top:1rem;
+}
+.ContenedorPieDeGraficaRecorrido span{
+    text-align: center;
+    font-size: 1.2rem;
+}
+.ContenedorPieDeGraficaRecorrido p{
+    color: #B3B3B3;
+    font-size: 1.2rem;
+    padding-top: 1rem;
+}
+
+.ContenedorPieDeGraficaRecorrido{
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 0 1rem 0;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
+}
+
+.TextOverflowDescription{
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    display: -webkit-box; 
+    -webkit-line-clamp: 4; /* number of lines to show */ 
+    -webkit-box-orient: vertical;
+}
+.PaddingRight1{
+    padding-right: 1rem;
+}
+
+
+
+/*PREVISUALIZAR CARDS*/
+.ContenedorCardPrevisualizarDarkMode{
+    height: 61rem;
+    width: 79rem;
+    background-color: #333333;
+    border-radius: 2rem;
+    box-shadow: -0.5rem 0.5rem 2rem #252525;
+    position: fixed;
+    top: 15vh;
+    left:27vw;
+}
+
+
+
+.ContenedorGeneralPrevisualizarCards{
+    width: 80rem;
+    height: 71rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
+    margin-left:27vw;
+    position: fixed;
+    top: 10vh;
+    left:3vw;
+}
+.GridPrevisualizarCards{
+    max-width: 95%;
+    max-height: 95%;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding-top: 1.8rem;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.ImagenPrevisualizarCards img{
+    object-fit: cover;
+    height: 97%;
+    width: 100%;
+    border-radius: 2rem;
+}
+.ImagenPrevisualizarCards{
+    grid-column: 1/6;
+    grid-row: 1/3;
+}
+.PorcentajesNseEdadPrevisualizarCards{
+    grid-column: 6/9;
+    grid-row: 1/3;
+}
+.TituloPrevisualizarCard{
+    grid-column: 1/3;
+    width: 90%;
+    margin: 0 auto;
+}
+.TitlesCardsPrevisualizar .ClaveCards {
+    font-size: 2.5rem;
+}
+.CampoPorcentajesPrevisualizarCards{
+    padding-top:.5rem;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+}
+.ContenidoPrevisualiarCards{
+    grid-column: 1/9;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd7e;
+}
+.ContenedorContenidoPrevisualizarCards{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding-top: 1.5rem;
+    min-height: 90%;
+}
+.PorcentajesPrevisualizarCards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+
+
+.PieDeGraficaPrev.GraficasCards{
+    max-width: 15rem;
+}
+.ContenedorCardPrevisualizar{
+    height: 61rem;
+    width: 79rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
+    position: fixed;
+    top: 15vh;
+    left:27vw;
+}
+.ImagenCardPrevisualizar img{
+    height: 36.3rem;
+    width: 45.3rem;
+    max-width: auto;
+    max-height: auto;
+    object-fit: cover;
+    margin:1.5rem 0 1.5rem 1.5rem;
+    border-radius: 2rem;
+}
+.PorcentajesCardPrevisualizar{
+    padding-top: 1rem;
+    width: 100%;
+}
+.FlexboxPrevisualizar{
+    display: flex;
+}
+.TotalPorcentajePrevisualizar{
+    margin-block:0;
+    padding-top: 0rem;
+    padding-bottom: .7rem;
+    font-size: 1.1rem;
+    color: #B3B3B3;
+}
+.FlexboxCamposPrevisualizar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.AfluenciaTitulo{
+    padding-bottom: 1rem;
+}
+.AfluenciaTitulo span{
+    font-size: 1rem;
+}
+#CampoPrevisualizar1 span,#CampoPrevisualizar2 span,#CampoPrevisualizar3 span,#CampoPrevisualizar4 span,#CampoPrevisualizar5 span,#CampoPrevisualizar6 span,#CampoPrevisualizar7 span,#CampoPrevisualizar8 span,#CampoPrevisualizar9 span,#CampoPrevisualizar10 span{
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding:.2rem .5rem;
+    width: 7rem;
+    height: 1.3rem;
+}
+.CardAfluenciaPrevisualizarDarkMode{
+    width: 90%;
+    height: 18rem;
+    background-color: #333333;
+    border-radius: 2rem;
+    box-shadow: -0.5rem 0.5rem 2rem #252525;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+.CardAfluenciaPrevisualizar{
+    width: 90%;
+    height: 18rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+/* .Columnas4{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+} */
+.Columnas4{
+    display: flex;
+    justify-content: space-between;
+    max-width: 97%;
+    margin: 0 auto;
+}
+.ColumnaCardPrevisualizarDarkMode{
+    width: 18rem;
+    height: 20rem;
+    background-color: #333333;
+    border-radius: 2rem;
+    box-shadow: -0.5rem 0.5rem 2rem #252525;
+    margin-top: 0;
+}
+.ColumnaCardPrevisualizar{
+    width: 18rem;
+    height: 20rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
+    margin-top: 0;
+}
+.ColumnaCardPrevisualizar span, .ColumnaCardPrevisualizarDarkMode span{
+    font-size: 1.2rem;
+    max-width: 90%;
+}
+.ContenedorCardPrevisualizarChico{
+    max-width: 100%;
+    padding-top: .5rem;
+    margin-left: -.5rem;
+}
+.ColumnaCardPrevisualizar .CampoRojo, .ColumnaCardPrevisualizarDarkMode .CampoRojo{
+    font-size: 1.2rem;
+    padding: .2rem .5rem;
+    margin: 0 .5rem;
+}
+.ColumnaCardPrevisualizar .PropiedadAmarillo, .ColumnaCardPrevisualizar .Propiedad,.ColumnaCardPrevisualizarDarkMode .PropiedadAmarillo, .ColumnaCardPrevisualizarDarkMode .Propiedad{
+    font-size: 1.2rem;
+    max-width: 90%;
+    margin-left: 1.5rem;
+}
+.TextOverflowDescriptionPrev{
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    display: -webkit-box; 
+    -webkit-line-clamp: 10; /* number of lines to show */ 
+    -webkit-box-orient: vertical;
+}
+.QrPrevisualizar{
+    max-width:9rem ;
+}
+.ColumnaCardPrevisualizar .PorcentajesIconos,.ColumnaCardPrevisualizarDarkMode .PorcentajesIconos{
+    font-size: 1.2rem;
+    margin-top: .5rem;
+}
+.ColumnaCardPrevisualizar .CampoAzul,.ColumnaCardPrevisualizarDarkMode .CampoAzul{
+    margin-bottom: 1rem;
+}
+.ContenedorHombresMujeresPrevisualizarDarkMode{
+    width: 90%;
+    height: 9.7rem;
+    background-color: #333333;
+    border-radius: 2rem;
+    box-shadow: -0.5rem 0.5rem 2rem #252525;
+    margin-left: 2rem;
+    margin-top: .7rem; 
+}
+.ContenedorHombresMujeresPrevisualizar{
+    width: 90%;
+    height: 9.7rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
+    margin-left: 2rem;
+    margin-top: .7rem; 
+}
+.ContenedorHombresMujeresPrevisualizar .PorcentajesIconos span,.ContenedorHombresMujeresPrevisualizarDarkMode .PorcentajesIconos span{
+    font-size: 1rem;
+}
+.ContenedorHombresMujeresPrevisualizar .PorcentajesIconos,.ContenedorHombresMujeresPrevisualizarDarkMode .PorcentajesIconos{
+    margin-top: 0rem;
+}
+.PaddingTopMedio{
+    padding-top: .5rem;
+}
+
+
+.MenuPrincipal{
+    display: flex;
+    max-width: 90%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 7rem;
+}
+.HeaderBarraPrincipal, .HeaderBarraPrincipalDarkMode{
+    min-width: 100vw;
+    justify-items: center;
+    margin: 0 auto;
+}
+
+.HeaderBarraPrincipal p, .HeaderBarraPrincipalDarkMode p{
+    text-align: right;
+    padding-right: 5%;
+    color: var(--amarillo);
+    font-weight: normal;
+    font-size: 1.5rem;
+    margin-block: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.HeaderBarraMenuPrincipalDarkMode{
+    max-height: 11rem;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+.HeaderBarraMenuPrincipal{
+    max-height: 11rem;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+.HeaderBarraMenuPrincipal img, .HeaderBarraMenuPrincipalDarkMode img{
+    max-height: 9rem;
+    padding-top: 1rem;
+}
+.SeccionPagina h2{
+    position: absolute;
+    text-align: center;
+    left: 50vw;
+    font-weight: lighter;
+    font-size: 2.5rem;
+    top:auto;
+    color: #525252;
+}
+.SeccionPaginaDarkMode h2{
+    position: absolute;
+    text-align: center;
+    left: 50vw;
+    font-weight: lighter;
+    font-size: 2.5rem;
+    top:auto;
+    color: #B3B3B3;
+}
+
+
+
+
+.ContenedorFormularioVisualizaPautaDarkMode{
+    width: 100%;
+    height: 100%;
+    max-width: 145rem;
+    max-height: 40rem;
+    background-color: #333333;
+    border-radius: 2rem;
+    box-shadow: -0.5rem 0.5rem 2rem #252525;
+    margin: 0 auto;
+}
+.ContenedorFormularioVisualizaPauta{
+    width: 100%;
+    height: 100%;
+    max-width: 145rem;
+    max-height: 40rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
+    margin: 0 auto;
+
+}
+.ContenedorFormularioVisualizaPautaDarkMode .Columnas3,.ContenedorFormularioVisualizaPauta .Columnas3{
+    min-height: 40rem;
+    min-width: 95%;
+}
+.TituloSeccionVisualizaPautaDarkMode h2{
+    font-size: 2.5rem;
+    font-weight: lighter;
+    text-align: right;
+    color: #fff;
+    padding-top: -2rem;
+}
+.TituloSeccionVisualizaPauta h2{
+    font-size: 2.5rem;
+    font-weight: lighter;
+    text-align: right;
+    color: #525252;
+    padding-top: -2rem;
+}
+#VisualizaPauta{
+    opacity: 100%;
+    font-weight: 700;
+}
+#MapaVisualizaPauta{
+    opacity: 30%;
+    font-weight: 100;
+}
+.FlexboxVisualizaPauta{
+    display: flex;
+    justify-content: space-between;
+    min-width: 5rem;
+    margin: 0 auto;
+    text-align: center;
+    width: 100rem;
+    margin-top: -6rem;
+}
+
+.Rows3{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    min-height: 100%;
+}
+.Responsable{
+    grid-row: 2/3;
+    justify-content: center;
+    padding-left: 5%;
+}
+.Campaña, .Responsable, .Empresa, .EleccionColor{
+    margin: auto 0;
+    padding-left: 5%;
+}
+.ContenedorFormularioVisualizaPauta .Columnas3 .CampoTitulo{
+    font-size: 2rem;
+    color: #525252;
+}
+.ContenedorFormularioVisualizaPautaDarkMode .Columnas3 .CampoTitulo{
+    font-size: 2rem;
+    color: #B3B3B3;
+}
+.JustifyLeft {
+    text-align: left;
+}
+.NombreEmpresa{
+    padding-left: 5%;
+    opacity: 100%;
+    color: #fff;
+}
+.NombreEmpresa span{
+    opacity: 75%;
+    color: #B3B3B3;
+}
+.ColorPicker input[type = "color"]{
+    display: block;
+    width: 80%;
+    border-radius: 1rem;
+    background-color: #B3B3B3;
+    margin: 0 auto;
+    margin-top: .5rem;
+    border-color: transparent;
+    border-image: none;
+    cursor: pointer;
+}
+.ColorSelect{
+    margin: auto 0;
+}
+.ColorElegido{
+    min-height: 2.2rem;
+    border-radius: 1rem;
+    margin-top: .5rem;
+    width: 80%;
+    border: .5rem solid #B3B3B3;
+}
+.InicioFinVisualiza{
+    margin: auto 0;
+    min-width: 100%;
+    padding-left: 1rem;
+}
+.SelectFileVisualiza input[type = "file"]{
+    color: #B3B3B3;
+    border: .3rem solid #b3b3b3;
+    display: block;
+    width: 100%;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+.SelectFileVisualiza{
+    margin: auto 0;
+    text-align: center;
+}
+.LogotipoVisualia img{
+    max-height: 10rem;
+    min-width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+.ContenedorFormularioVisualizaPauta .Rows3 .Columnas2{
+    align-items: center;
+}
+
+
+.AsideBotonesVisualiza div{
+    margin-top: 2rem;
+}
+.AsideBotonesVisualiza{
+    position: fixed;
+    top: 25vh;
+    right: 8rem;
+}
+
+
+.EtiquetaVisualizaPauta{
+    font-size: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    color: #b3b3b3;
+    border-bottom: .2rem solid #B3B3B3;
+    max-width: 140rem;
+    width: 145rem;
+    margin: 0 auto;
+    padding-top: 2rem;
+    opacity: 50%;
+}
+
