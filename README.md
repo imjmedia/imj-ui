@@ -34,17 +34,14 @@
 
 <h3>Instalar el proyecto</h3>
 <p>1._ Crear un archivo .nmprc con el contenido:
-<br>@imjmedia:registry=https://npm.pkg.github.com
-registry=https://registry.npmjs.org
-//npm.pkg.github.com/:_authToken=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
+<br> Proporcionado por el administrador
 </p>
 <p>2._ Ejecutar npm install @imjmedia/imj-ui@0.0.16 en el proyecto en el que se quiera usar la libreria</p>
 
 <p>3._Se usan los componentes como cualquier libreria
 <br>import { CardsRecorrido } from '@imjmedia/imj-ui'</p>
 
-<p>Para trabajar en el proyecto directamente se debe clonar: 
-<br>https://github.com/imjmedia/imj-ui.git</p>
+
 
 
 <h3>Colaboradores</h3>
