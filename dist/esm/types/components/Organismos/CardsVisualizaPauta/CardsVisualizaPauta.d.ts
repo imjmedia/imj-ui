@@ -1,8 +1,8 @@
 /// <reference types="react" />
-import "../../../index.css";
-import "./index.css";
+import '../../../index.css';
+export declare const getColorMedio: (tipoMedio: any) => "Amarillo" | "Azul" | "Rojo" | "Magenta" | "Gris";
 interface CardsVisualizaPautaProps {
-    tipoMedio: "espectacular" | "muro" | "urbanos" | "indoors" | any;
+    tipoMedio: 'espectacular' | 'muro' | 'urbanos' | 'indoors' | any;
     clave?: string | any;
     tipo?: string | any;
     direccion?: string | any;
@@ -48,7 +48,7 @@ interface CardsVisualizaPautaProps {
     acabados?: string | any;
     estadoImplementaciones?: true | false;
     material?: string | any;
-    iluminacion?: "Si" | "No" | any;
+    iluminacion?: 'Si' | 'No' | any;
     vista?: string | any;
     nicho?: string | any;
     imagen?: any;

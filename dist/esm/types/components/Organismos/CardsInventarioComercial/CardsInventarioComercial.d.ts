@@ -1,21 +1,24 @@
 /// <reference types="react" />
-import "../../../index.css";
-import "./index.css";
+import '../../../index.css';
+export declare const getColorMedio: (tipoMedio: any) => "Amarillo" | "Azul" | "Rojo" | "Magenta" | "Gris";
 interface CardsInventarioComercialProps {
-    tipoMedio: "espectacular" | "muro" | "urbanos" | "indoors" | any;
+    show?: boolean | any;
+    children?: any;
+    handleClose?: () => void;
+    tipoMedio: 'espectacular' | 'muro' | 'urbanos' | 'indoors' | any;
     clave?: string | any;
     tipo?: string | any;
     direccion?: string | any;
     ubicacion?: string | any;
-    vista?: "Natural" | "Cruzada";
+    vista?: 'Natural' | 'Cruzada';
     ancho?: number | any;
     alto?: number | any;
-    implementaciones?: "Si" | "No";
+    implementaciones?: 'Si' | 'No';
     estadoActivo?: true | false;
     longitud?: number | any;
     latitud?: number | any;
-    iluminacion?: "Si" | "No";
-    bloqueado?: "Si" | "No";
+    iluminacion?: 'Si' | 'No';
+    bloqueado?: 'Si' | 'No';
     nicho?: string | any;
     material?: string | any;
     descripcion?: string | any;

@@ -1,13 +1,13 @@
 /// <reference types="react" />
-import "../../../index.css";
-import "./index.css";
-export interface AsideProps {
+import '../../../index.css';
+interface AsideProps {
     show?: boolean | any;
     children?: any;
-    handleClose?: () => void;
-    typeModal?: "Graficas" | "Previsualizar" | any;
-    tipoCard?: "abcSitios" | "inventarioComercial" | "visualizadorPauta" | "rutasImj";
+    typeModal?: 'Graficas' | 'Previsualizar' | any;
+    tipoCard?: 'abcSitios' | 'inventarioComercial' | 'visualizadorPauta' | 'rutasImj';
     modo?: string | any;
+    onClick?: () => void;
+    handleClose?: () => void;
     tipoMedio?: string | any;
     clave?: string | any;
     proveedor?: string | any;
@@ -58,6 +58,10 @@ export interface AsideProps {
     estadoImplementaciones?: boolean;
     descripcion?: string | any;
     qr?: any;
+    editarAct?: any;
+    onClickCarrito?: any;
+    onClickPdf?: any;
+    onClickVaciar?: any;
 }
 declare const Aside: (props: AsideProps) => JSX.Element;
 export default Aside;

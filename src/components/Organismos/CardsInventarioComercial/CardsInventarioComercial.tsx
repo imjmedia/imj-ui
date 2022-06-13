@@ -5,7 +5,6 @@ import PropertyBtn from '../../Atomos/PropertyBtn';
 import DynamicButton from '../../Atomos/DynamicButton';
 import Aside from '../../Moleculas/Aside';
 import '../../../index.css';
-import './index.css';
 
 const getModo = (modo:any) => {
     switch (modo) {

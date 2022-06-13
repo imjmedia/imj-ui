@@ -1,6 +1,5 @@
 /// <reference types="react" />
-import "../../../index.css";
-import "./index.css";
+import '../../../index.css';
 interface TitlesCardsProps {
     clave?: string | any;
     type?: string | any;

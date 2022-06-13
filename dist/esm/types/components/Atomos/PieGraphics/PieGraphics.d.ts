@@ -1,9 +1,8 @@
 /// <reference types="react" />
-import "../../../index.css";
-import "./index.css";
+import '../../../index.css';
 interface PieGraphicsProps {
     modo?: string | any;
-    type: "edad" | "nse";
+    type?: 'nse' | 'edad';
     nseA?: number | any;
     nseB?: number | any;
     nseC?: number | any;
@@ -16,5 +15,5 @@ interface PieGraphicsProps {
     edad55?: number | any;
 }
 export declare const mode: (modo: any) => "#333333" | "#fff";
-declare const PieGraphics: (props: PieGraphicsProps) => JSX.Element;
+export declare const PieGraphics: (props: PieGraphicsProps) => JSX.Element;
 export default PieGraphics;

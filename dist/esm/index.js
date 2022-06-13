@@ -2487,76 +2487,115 @@ function requireReact_development () {
 
 var React = /*@__PURE__*/getDefaultExportFromCjs(react.exports);
 
-var graficas = require("../../img/botones/graficas.svg");
-var arrastrar = require("../../img/botones/arrastrar.svg");
-var busqueda = require("../../img/botones/busqueda.svg");
-var carrito = require("../../img/botones/carrito.svg");
-var circulo = require("../../img/botones/circulo.svg");
-var descargar = require("../../img/botones/descargar.svg");
-var editar = require("../../img/botones/editar.svg");
-var excel = require("../../img/botones/excel.svg");
-var guardar = require("../../img/botones/guardar.svg");
-var kml = require("../../img/botones/kml.svg");
-var pauta = require("../../img/botones/pauta.svg");
-var pdf = require("../../img/botones/pdf.svg");
-var previsualizar = require("../../img/botones/previsualizar.svg");
-var trafico = require("../../img/botones/trafico.svg");
-var vaciar = require("../../img/botones/vaciar.svg");
-var menu = require("../../img/botones/menu.svg");
-var menuDarkMode = require("../../img/botones/menuDarkMode.svg");
+var Imj = require("../../Img/Logos/Imj.svg");
+var Obp = require("../../Img/Logos/Obp.svg");
+var ByImj = require("../../Img/Logos/ByImj.svg");
+var ByImjDarkMode = require("../../Img/Logos/ByImjDarkMode.svg");
+var ImjDarkMode = require("../../Img/Logos/ImjDarkMode.svg");
+var ObpDarkMode = require("../../Img/Logos/ObpDarkMode.svg");
+var getModo$c = function (modo) {
+    switch (modo) {
+        case 'Dark': return ('DarkMode');
+        default: return '';
+    }
+};
+var Logo = function (props) {
+    var logo = props.logo;
+    switch (logo) {
+        case 'Imj':
+            if (getModo$c(props.modo) === 'DarkMode') {
+                return React.createElement("img", { src: ImjDarkMode, alt: "" });
+            }
+            else {
+                return React.createElement("img", { src: Imj, alt: "" });
+            }
+        case 'Obp':
+            if (getModo$c(props.modo) === 'DarkMode') {
+                return React.createElement("img", { src: ObpDarkMode, alt: "" });
+            }
+            else {
+                return React.createElement("img", { src: Obp, alt: "" });
+            }
+        case 'ByImj':
+            if (getModo$c(props.modo) === 'DarkMode') {
+                return React.createElement("img", { src: ByImjDarkMode, alt: "" });
+            }
+            else {
+                return React.createElement("img", { src: ByImj, alt: "" });
+            }
+        default: return React.createElement(React.Fragment, null);
+    }
+};
+
+var graficas = require('./IMG/botones/graficas.svg');
+var arrastrar = require("./IMG/botones/arrastrar.svg");
+var busqueda = require("./IMG/botones/busqueda.svg");
+var carrito = require("./IMG/botones/carrito.svg");
+var circulo = require("./IMG/botones/circulo.svg");
+var descargar = require("./IMG/botones/descargar.svg");
+var editar = require("./IMG/botones/editar.svg");
+var excel = require("./IMG/botones/excel.svg");
+var guardar = require("./IMG/botones/guardar.svg");
+var kml = require("./IMG/botones/kml.svg");
+var pauta = require("./IMG/botones/pauta.svg");
+var pdf = require("./IMG/botones/pdf.svg");
+var previsualizar = require("./IMG/botones/previsualizar.svg");
+var trafico = require("./IMG/botones/trafico.svg");
+var vaciar = require("./IMG/botones/vaciar.svg");
+var menu = require("./IMG/botones/menu.svg");
+require("./IMG/botones/menuDarkMode.svg");
 /*importación de Íconos*/
-var bloqueado = require("../../img/iconos/bloqueado.svg");
-var cerrar = require("../../img/iconos/cerrar.svg");
-var etiqueta = require("../../img/iconos/etiqueta.svg");
-var etiquetaAzul = require("../../img/iconos/etiquetaAzul.svg");
-var etiquetaAmarillo = require("../../img/iconos/etiquetaAmarillo.svg");
-var etiquetaRojo = require("../../img/iconos/etiquetaRojo.svg");
-var etiquetaMagenta = require("../../img/iconos/etiquetaMagenta.svg");
-var iluminacion = require("../../img/iconos/iluminacion.svg");
-var material = require("../../img/iconos/material.svg");
-var nicho = require("../../img/iconos/nicho.svg");
-var ubicaciongeografica = require("../../img/iconos/ubicaciongeografica.svg");
-var hombres$2 = require("../../img/iconos/hombres.svg");
-var mujeres$2 = require("../../img/iconos/mujeres.svg");
+var bloqueado = require("./IMG/iconos/bloqueado.svg");
+var cerrar = require("./IMG/iconos/cerrar.svg");
+var etiqueta = require("./IMG/iconos/etiqueta.svg");
+var etiquetaAzul = require("./IMG/iconos/etiquetaAzul.svg");
+var etiquetaAmarillo = require("./IMG/iconos/etiquetaAmarillo.svg");
+var etiquetaRojo = require("./IMG/iconos/etiquetaRojo.svg");
+var etiquetaMagenta = require("./IMG/iconos/etiquetaMagenta.svg");
+var iluminacion = require("./IMG/iconos/iluminacion.svg");
+var material = require("./IMG/iconos/material.svg");
+var nicho = require("./IMG/iconos/nicho.svg");
+var ubicaciongeografica = require("./IMG/iconos/ubicaciongeografica.svg");
+var hombres$2 = require("./IMG/iconos/hombres.svg");
+var mujeres$2 = require("./IMG/iconos/mujeres.svg");
 var DynamicButton = function (props) {
     function titleCase(text) {
-        return text[0].toUpperCase() + text.slice(1).toLowerCase();
+        return (text[0].toUpperCase() + text.slice(1).toLowerCase());
     }
     function retornoButtonComponent() {
-        if (type === "buttons") {
-            return buttons;
+        if (type === 'buttons') {
+            return (buttons);
         }
         else {
-            return icons;
+            return (icons);
         }
     }
     var data = {
         size: titleCase(props.size),
         button: props.button,
-        color: titleCase(props.color),
+        color: titleCase(props.color)
     };
-    var type = props.type;
+    var type = (props.type);
     var arregloEtiqueta = "etiqueta" + data.color;
     var _a = react.exports.useState([]), buttons = _a[0], setButtons = _a[1];
     var InitButtons = function () {
         var tmpBtn = [];
-        tmpBtn["arrastrar"] = arrastrar;
-        tmpBtn["busqueda"] = busqueda;
-        tmpBtn["carrito"] = carrito;
-        tmpBtn["circulo"] = circulo;
-        tmpBtn["descargar"] = descargar;
-        tmpBtn["editar"] = editar;
-        tmpBtn["excel"] = excel;
-        tmpBtn["guardar"] = guardar;
-        tmpBtn["kml"] = kml;
-        tmpBtn["pauta"] = pauta;
-        tmpBtn["pdf"] = pdf;
-        tmpBtn["previsualizar"] = previsualizar;
-        tmpBtn["trafico"] = trafico;
-        tmpBtn["vaciar"] = vaciar;
-        tmpBtn["graficas"] = graficas;
-        tmpBtn["menu"] = menu;
-        tmpBtn["menuDarkMode"] = menuDarkMode;
+        tmpBtn['arrastrar'] = arrastrar;
+        tmpBtn['busqueda'] = busqueda;
+        tmpBtn['carrito'] = carrito;
+        tmpBtn['circulo'] = circulo;
+        tmpBtn['descargar'] = descargar;
+        tmpBtn['editar'] = editar;
+        tmpBtn['excel'] = excel;
+        tmpBtn['guardar'] = guardar;
+        tmpBtn['kml'] = kml;
+        tmpBtn['pauta'] = pauta;
+        tmpBtn['pdf'] = pdf;
+        tmpBtn['previsualizar'] = previsualizar;
+        tmpBtn['trafico'] = trafico;
+        tmpBtn['vaciar'] = vaciar;
+        tmpBtn['graficas'] = graficas;
+        tmpBtn['menu'] = menu;
         setButtons(tmpBtn);
     };
     react.exports.useEffect(function () {
@@ -2565,19 +2604,19 @@ var DynamicButton = function (props) {
     var _b = react.exports.useState([]), icons = _b[0], setIcons = _b[1];
     var InitIcons = function () {
         var tmpIcon = [];
-        tmpIcon["ubicaciongeografica"] = ubicaciongeografica;
-        tmpIcon["iluminacion"] = iluminacion;
-        tmpIcon["bloqueado"] = bloqueado;
-        tmpIcon["nicho"] = nicho;
-        tmpIcon["material"] = material;
-        tmpIcon["cerrar"] = cerrar;
-        tmpIcon["etiqueta"] = etiqueta;
-        tmpIcon["etiquetaAzul"] = etiquetaAzul;
-        tmpIcon["etiquetaAmarillo"] = etiquetaAmarillo;
-        tmpIcon["etiquetaMagenta"] = etiquetaMagenta;
-        tmpIcon["etiquetaRojo"] = etiquetaRojo;
-        tmpIcon["hombres"] = hombres$2;
-        tmpIcon["mujeres"] = mujeres$2;
+        tmpIcon['ubicaciongeografica'] = ubicaciongeografica;
+        tmpIcon['iluminacion'] = iluminacion;
+        tmpIcon['bloqueado'] = bloqueado;
+        tmpIcon['nicho'] = nicho;
+        tmpIcon['material'] = material;
+        tmpIcon['cerrar'] = cerrar;
+        tmpIcon['etiqueta'] = etiqueta;
+        tmpIcon['etiquetaAzul'] = etiquetaAzul;
+        tmpIcon['etiquetaAmarillo'] = etiquetaAmarillo;
+        tmpIcon['etiquetaMagenta'] = etiquetaMagenta;
+        tmpIcon['etiquetaRojo'] = etiquetaRojo;
+        tmpIcon['hombres'] = hombres$2;
+        tmpIcon['mujeres'] = mujeres$2;
         setIcons(tmpIcon);
     };
     react.exports.useEffect(function () {
@@ -2586,24 +2625,24 @@ var DynamicButton = function (props) {
     var TypeButton = function (props) {
         var buttonComponent = retornoButtonComponent()[props.name];
         if (buttonComponent === undefined) {
-            return React.createElement(React.Fragment, null);
+            return (React.createElement(React.Fragment, null));
         }
         else {
-            return React.createElement("img", { src: buttonComponent, alt: "" });
+            return (React.createElement("img", { src: buttonComponent, alt: "" }));
         }
     };
-    if (type === "buttons") {
-        if (data.size === "Chico") {
-            return (React.createElement("div", { className: "Btn" + data.size + " Btn" + data.color },
+    if (type === 'buttons') {
+        if (data.size === 'Chico') {
+            return (React.createElement("div", { className: "Btn" + data.size + " Btn" + data.color, onClick: props.onClick },
                 React.createElement("p", null, data.button)));
         }
         else {
-            return (React.createElement("div", { className: "Btn" + data.size + " Btn" + data.color },
+            return (React.createElement("div", { className: 'Btn' + data.size + " Btn" + data.color, onClick: props.onClick },
                 React.createElement(TypeButton, { name: data.button })));
         }
     }
     else {
-        if (data.button === "etiqueta") {
+        if (data.button === 'etiqueta') {
             return (React.createElement("div", { className: "Icono" },
                 React.createElement("img", { src: icons[arregloEtiqueta], alt: "" })));
         }
@@ -2614,100 +2653,138 @@ var DynamicButton = function (props) {
     }
 };
 
-var titleCase = function (text) {
-    return text[0].toUpperCase() + text.slice(1).toLowerCase();
-};
 var Inputs = function (props) {
+    function titleCase(text) {
+        return (text[0].toUpperCase() + text.slice(1).toLowerCase());
+    }
     var justify = props.justify;
     var placeholder = props.placeholder;
     var color = titleCase(props.color);
     var type = props.type;
     var SwitchType = function (type) {
         switch (type) {
-            case "date":
-                return "date";
-            case "aumentoDecremento":
-                return "number";
-            default:
-                return "text";
+            case 'date': return ('date');
+            case 'aumentoDecremento': return ('number');
+            default: return ('text');
         }
     };
     var SwitchJustify = function (type) {
         switch (justify) {
-            case "left":
+            case 'left':
                 return (React.createElement("div", { className: "Inputs InputLeft Borde" + color },
-                    React.createElement("input", { type: SwitchType(type), placeholder: placeholder || "Ingresa" })));
-            case "right":
+                    React.createElement("input", { type: SwitchType(type), placeholder: placeholder || 'Ingresa' })));
+            case 'right':
                 return (React.createElement("div", { className: "Inputs InputRight Borde" + color },
-                    React.createElement("input", { type: SwitchType(type), placeholder: placeholder || "Ingresa" })));
+                    React.createElement("input", { type: SwitchType(type), placeholder: placeholder || 'Ingresa' })));
             default:
                 return (React.createElement("div", { className: "Inputs Borde" + color },
-                    React.createElement("input", { type: SwitchType(type), placeholder: placeholder || "Ingresa" })));
+                    React.createElement("input", { type: SwitchType(type), placeholder: placeholder || 'Ingresa' })));
         }
     };
     if (type === undefined) {
-        return React.createElement(React.Fragment, null);
+        return (React.createElement(React.Fragment, null));
     }
     else {
-        return SwitchJustify(type);
+        return (SwitchJustify(type));
     }
 };
 
-var getColorMedio$1 = function (tipoMedio) {
-    switch (tipoMedio) {
-        case "espectacular":
-            return "Rojo";
-        case "urbanos":
-            return "Magenta";
-        case "muro":
-            return "Azul";
-        case "indoors":
-            return "Amarillo";
-        default:
-            return "Gris";
-    }
-};
-var getModo$4 = function (modo) {
+var getModo$b = function (modo) {
     switch (modo) {
-        case "Dark":
-            return "DarkMode";
-        default:
-            return "";
+        case 'Dark': return ('DarkMode');
+        default: return '';
+    }
+};
+var TextField = function (props) {
+    var text = {
+        type: props.type,
+        title: props.title,
+        description: props.description,
+        labelColor: props.labelColor
+    };
+    switch (text.type) {
+        case 'title':
+            return (React.createElement("span", { className: "CampoTitulo" + getModo$b(props.modo) }, text.title));
+        case 'description':
+            if (text.labelColor === undefined || null) {
+                return (React.createElement("span", { className: "CampoDescripcion" + getModo$b(props.modo) }, text.description));
+            }
+            else {
+                return (React.createElement("span", { className: "CampoDescripcion" + getModo$b(props.modo) + " " + "Campo" + text.labelColor }, text.description));
+            }
+        case 'titleAndDescription':
+            if (text.labelColor === undefined || null) {
+                return (React.createElement("div", { className: "CampoDescriptivo" },
+                    React.createElement("span", { className: "CampoTitulo" + getModo$b(props.modo) }, text.title),
+                    React.createElement("span", { className: "CampoDescripcion" + getModo$b(props.modo) }, text.description)));
+            }
+            else {
+                return (React.createElement("div", { className: "CampoDescriptivo" },
+                    React.createElement("span", { className: "CampoTitulo" + getModo$b(props.modo) }, text.title),
+                    React.createElement("span", { className: "CampoDescripcion" + getModo$b(props.modo) + " " + "Campo" + text.labelColor }, text.description)));
+            }
+        default: return React.createElement(React.Fragment, null);
     }
 };
 
-var Imj = require("../../../img/logos/Imj.svg");
-var Obp = require("../../../img/logos/Obp.svg");
-var ByImj = require("../../../img/logos/ByImj.svg");
-var ByImjDarkMode = require("../../../img/logos/ByImjDarkMode.svg");
-var ImjDarkMode = require("../../../img/logos/ImjDarkMode.svg");
-var ObpDarkMode = require("../../../img/logos/ObpDarkMode.svg");
-var Logo = function (props) {
-    var logo = props.logo;
-    switch (logo) {
-        case "Imj":
-            if (getModo$4(props.modo) === "DarkMode") {
-                return React.createElement("img", { src: ImjDarkMode, alt: "" });
-            }
-            else {
-                return React.createElement("img", { src: Imj, alt: "" });
-            }
-        case "Obp":
-            if (getModo$4(props.modo) === "DarkMode") {
-                return React.createElement("img", { src: ObpDarkMode, alt: "" });
-            }
-            else {
-                return React.createElement("img", { src: Obp, alt: "" });
-            }
-        case "ByImj":
-            if (getModo$4(props.modo) === "DarkMode") {
-                return React.createElement("img", { src: ByImjDarkMode, alt: "" });
-            }
-            else {
-                return React.createElement("img", { src: ByImj, alt: "" });
-            }
+var PropertyBtn = function (props) {
+    function titleCase(text) {
+        return (text[0].toUpperCase() + text.slice(1).toLowerCase());
+    }
+    var property = props.property;
+    var color = titleCase(props.color);
+    var state = props.state;
+    if (state === true) {
+        return (React.createElement("div", { className: "Propiedad" + color }, property));
+    }
+    else {
+        return (React.createElement("div", { className: "Propiedad" }, property));
+    }
+};
+
+var getModo$a = function (modo) {
+    switch (modo) {
+        case 'Dark': return ('DarkMode');
+        default: return '';
+    }
+};
+var TitlesCards = function (props) {
+    var clave = props.clave;
+    var type = props.type;
+    return (React.createElement("div", null,
+        React.createElement("h2", { className: "ClaveCards" + getModo$a(props.modo) }, clave),
+        React.createElement("h3", { className: "TipoCards" + getModo$a(props.modo) }, type)));
+};
+
+var getColorMedio$8 = function (tipoMedio) {
+    switch (tipoMedio) {
+        case 'espectacular': return ('Rojo');
+        case 'urbanos': return ('Magenta');
+        case 'muro': return ('Azul');
+        case 'indoors': return ('Amarillo');
+        default: return ('Gris');
+    }
+};
+var PrecioCosto = function (props) {
+    switch (props.type) {
+        case 'precio':
+            return (React.createElement("div", { className: "PrecioCards AlignLeft FontColor" + getColorMedio$8(props.tipoMedio) },
+                React.createElement("p", null, "Precio:"),
+                React.createElement("h2", null, '$' + (props.precio || '0') + '.00')));
+        case 'costo':
+            return (React.createElement("div", { className: "CostoCards AlignRight FontColor" + getColorMedio$8(props.tipoMedio) },
+                React.createElement("p", null, "Costo:"),
+                React.createElement("h2", null, '$' + (props.costo || '0') + '.00')));
+        case 'precioCosto':
+            return (React.createElement("div", { className: "Columnas2 FontColor" + getColorMedio$8(props.tipoMedio) },
+                React.createElement("div", { className: "CostoCards" },
+                    React.createElement("p", null, "Costo:"),
+                    React.createElement("h2", null, '$' + (props.costo || '0') + '.00')),
+                React.createElement("div", { className: "PrecioCards" },
+                    React.createElement("p", null, "Precio:"),
+                    React.createElement("h2", null, '$' + (props.precio || '0') + '.00'))));
         default:
-            return React.createElement(React.Fragment, null);
+            return (React.createElement("div", null));
     }
 };
 
@@ -15143,10 +15220,8 @@ const Pie = /* #__PURE__ */ createTypedChart('pie', PieController);
 Chart$1.register(ArcElement, plugin_tooltip, plugin_legend);
 var mode = function (modo) {
     switch (modo) {
-        case "Dark":
-            return "#333333";
-        default:
-            return "#fff";
+        case 'Dark': return ('#333333');
+        default: return ('#fff');
     }
 };
 var PieGraphics = function (props) {
@@ -15164,13 +15239,15 @@ var PieGraphics = function (props) {
                         props.edad55,
                     ],
                     backgroundColor: [
-                        "#126EFA",
-                        "#FC3D38",
-                        "#1CB5B2",
-                        "#D11787",
-                        "#FCB23B",
+                        '#126EFA',
+                        '#FC3D38',
+                        '#1CB5B2',
+                        '#D11787',
+                        '#FCB23B'
                     ],
-                    borderColor: [mode(props.modo)],
+                    borderColor: [
+                        mode(props.modo),
+                    ],
                     borderWidth: 3,
                 },
             ],
@@ -15183,15 +15260,23 @@ var PieGraphics = function (props) {
             labels: [],
             datasets: [
                 {
-                    data: [props.nseA, props.nseB, props.nseC, props.nseD, props.nseE],
-                    backgroundColor: [
-                        "#126EFA",
-                        "#FC3D38",
-                        "#1CB5B2",
-                        "#D11787",
-                        "#FCB23B",
+                    data: [
+                        props.nseA,
+                        props.nseB,
+                        props.nseC,
+                        props.nseD,
+                        props.nseE,
                     ],
-                    borderColor: [mode(props.modo)],
+                    backgroundColor: [
+                        '#126EFA',
+                        '#FC3D38',
+                        '#1CB5B2',
+                        '#D11787',
+                        '#FCB23B'
+                    ],
+                    borderColor: [
+                        mode(props.modo),
+                    ],
                     borderWidth: 3,
                 },
             ],
@@ -15200,343 +15285,230 @@ var PieGraphics = function (props) {
             React.createElement(Pie, { data: data })));
     };
     switch (type) {
-        case "edad":
+        case 'edad':
             return (React.createElement(React.Fragment, null,
-                React.createElement(GraficasEdad, { type: "edad", modo: props.modo, edad13: props.edad13, edad18: props.edad18, edad26: props.edad26, edad41: props.edad41, edad55: props.edad55 })));
-        case "nse":
-            return (React.createElement(GraficasNse, { type: "nse", modo: props.modo, nseA: props.nseA, nseB: props.nseB, nseC: props.nseC, nseD: props.nseD, nseE: props.nseE }));
+                React.createElement(GraficasEdad, { modo: props.modo, edad13: props.edad13, edad18: props.edad18, edad26: props.edad26, edad41: props.edad41, edad55: props.edad55 })));
+        case 'nse':
+            return (React.createElement(GraficasNse, { modo: props.modo, nseA: props.nseA, nseB: props.nseB, nseC: props.nseC, nseD: props.nseD, nseE: props.nseE }));
         default:
-            return React.createElement(React.Fragment, null);
+            return (React.createElement(React.Fragment, null));
     }
 };
 
-var getColorMedio = function (tipoMedio) {
-    switch (tipoMedio) {
-        case "espectacular":
-            return "Rojo";
-        case "urbanos":
-            return "Magenta";
-        case "muro":
-            return "Azul";
-        case "indoors":
-            return "Amarillo";
-        default:
-            return "Gris";
-    }
-};
-var PrecioCosto = function (props) {
-    var type = props.type;
-    switch (type) {
-        case "precio":
-            return (React.createElement("div", { className: "PrecioCards AlignLeft FontColor" + getColorMedio(props.tipoMedio) },
-                React.createElement("p", null, "Precio:"),
-                React.createElement("h2", null, "$" + (props.precio || "0") + ".00")));
-        case "costo":
-            return (React.createElement("div", { className: "CostoCards AlignRight FontColor" + getColorMedio(props.tipoMedio) },
-                React.createElement("p", null, "Costo:"),
-                React.createElement("h2", null, "$" + (props.costo || "0") + ".00")));
-        case "precioCosto":
-            return (React.createElement("div", { className: "Columnas2 FontColor" + getColorMedio(props.tipoMedio) },
-                React.createElement("div", { className: "CostoCards" },
-                    React.createElement("p", null, "Costo:"),
-                    React.createElement("h2", null, "$" + (props.costo || "0") + ".00")),
-                React.createElement("div", { className: "PrecioCards" },
-                    React.createElement("p", null, "Precio:"),
-                    React.createElement("h2", null, "$" + (props.precio || "0") + ".00"))));
-    }
-};
-
-var PropertyBtn = function (props) {
-    function titleCase(text) {
-        return text[0].toUpperCase() + text.slice(1).toLowerCase();
-    }
-    var property = props.property;
-    var color = titleCase(props.color);
-    var state = props.state;
-    if (state === true) {
-        return React.createElement("div", { className: "Propiedad" + color }, property);
-    }
-    else {
-        return React.createElement("div", { className: "Propiedad" }, property);
-    }
-};
-
-var getModo$3 = function (modo) {
+var getModo$9 = function (modo) {
     switch (modo) {
-        case "Dark":
-            return "DarkMode";
-        default:
-            return "";
-    }
-};
-var TextField = function (props) {
-    var text = {
-        type: props.type,
-        title: props.title,
-        description: props.description,
-        labelColor: props.labelColor,
-    };
-    switch (text.type) {
-        case "title":
-            return (React.createElement("span", { className: "CampoTitulo" + getModo$3(props.modo) }, text.title));
-        case "description":
-            if (text.labelColor === undefined || null) {
-                return (React.createElement("span", { className: "CampoDescripcion" + getModo$3(props.modo) }, text.description));
-            }
-            else {
-                return (React.createElement("span", { className: "CampoDescripcion" +
-                        getModo$3(props.modo) +
-                        " " +
-                        "Campo" +
-                        text.labelColor }, text.description));
-            }
-        case "titleAndDescription":
-            if (text.labelColor === undefined || null) {
-                return (React.createElement("div", { className: "CampoDescriptivo" },
-                    React.createElement("span", { className: "CampoTitulo" + getModo$3(props.modo) }, text.title),
-                    React.createElement("span", { className: "CampoDescripcion" + getModo$3(props.modo) }, text.description)));
-            }
-            else {
-                return (React.createElement("div", { className: "CampoDescriptivo" },
-                    React.createElement("span", { className: "CampoTitulo" + getModo$3(props.modo) }, text.title),
-                    React.createElement("span", { className: "CampoDescripcion" +
-                            getModo$3(props.modo) +
-                            " " +
-                            "Campo" +
-                            text.labelColor }, text.description)));
-            }
-        default:
-            return React.createElement(React.Fragment, null);
-    }
-};
-
-var getModo$2 = function (modo) {
-    switch (modo) {
-        case "Dark":
-            return "DarkMode";
-        default:
-            return "";
-    }
-};
-var TitlesCards = function (props) {
-    var clave = props.clave;
-    var type = props.type;
-    return (React.createElement("div", null,
-        React.createElement("h2", { className: "ClaveCards" + getModo$2(props.modo) }, clave),
-        React.createElement("h3", { className: "TipoCards" + getModo$2(props.modo) }, type)));
-};
-
-var getModo$1 = function (modo) {
-    switch (modo) {
-        case "Dark":
-            return "DarkMode";
-        default:
-            return "";
+        case 'Dark': return ('DarkMode');
+        default: return '';
     }
 };
 var CardsPorcentajes = function (props) {
-    return (React.createElement("div", { className: "CardsPorcentajes" + getModo$1(props.modo) },
+    return (React.createElement("div", { className: "CardsPorcentajes" + getModo$9(props.modo) },
         React.createElement("div", { className: "Contenedor RowPadding1" },
             React.createElement("div", { className: "PaddingBottomMedio" },
-                React.createElement(Inputs, { modo: props.modo, type: "title", title: "Alcance:" })),
+                React.createElement(TextField, { modo: props.modo, type: 'title', title: 'Alcance:' })),
             React.createElement("div", { className: "PaddingBottomMedio Block" },
-                React.createElement(Inputs, { modo: props.modo, type: "description", description: (props.alcance || "0") + "%", labelColor: "Rojo" })),
+                React.createElement(TextField, { modo: props.modo, type: 'description', description: props.alcance + '%', labelColor: 'Rojo' })),
             React.createElement("p", { className: "PaddingBottomMedio" }, "Porcentaje de personas alcanzadas dentro del universo poblacional total de la plaza"),
             React.createElement("div", { className: "PaddingBottomMedio" },
-                React.createElement(Inputs, { modo: props.modo, type: "title", title: "Frecuencia:" })),
+                React.createElement(TextField, { modo: props.modo, type: 'title', title: 'Frecuencia:' })),
             React.createElement("div", { className: "PaddingBottomMedio" },
-                React.createElement(Inputs, { modo: props.modo, type: "description", description: (props.frecuencia || "0") + "%", labelColor: "Azul" })),
+                React.createElement(TextField, { modo: props.modo, type: 'description', description: props.frecuencia + '%', labelColor: 'Azul' })),
             React.createElement("p", { className: "PaddingBottomMedio" }, "N\u00FAmero promedio de veces que estuvo un grupo de personas en un mismo periodo de tiempo y ubicados dentro del radio del espacio urbano"),
             React.createElement("div", { className: "PaddingBottomMedio" },
-                React.createElement(Inputs, { modo: props.modo, type: "title", title: "Total de usuario:" })),
+                React.createElement(TextField, { modo: props.modo, type: 'title', title: 'Total de usuario:' })),
             React.createElement("div", { className: "PaddingBottomMedio" },
-                React.createElement(Inputs, { modo: props.modo, type: "description", description: props.totalUsuarios || "0", labelColor: "Morado" })),
+                React.createElement(TextField, { modo: props.modo, type: 'description', description: props.totalUsuarios, labelColor: 'Morado' })),
             React.createElement("p", { className: "PaddingBottomMedio" }, "Es el n\u00FAmero de personas que pasaron circulando por un sitio, sin duplicidad."),
             React.createElement("div", { className: "PaddingBottomMedio" },
-                React.createElement(Inputs, { modo: props.modo, type: "title", title: "Total de impactos:" })),
+                React.createElement(TextField, { modo: props.modo, type: 'title', title: 'Total de impactos:' })),
             React.createElement("div", { className: "PaddingBottomMedio" },
-                React.createElement(Inputs, { modo: props.modo, type: "description", description: props.totalImpactos || "0", labelColor: "Verde" })),
-            React.createElement("p", { className: "PaddingBottomMedio" },
-                " ",
-                "Son los Totales de usuarios multiplicados por la frecuencia."),
+                React.createElement(TextField, { modo: props.modo, type: 'description', description: props.totalImpactos, labelColor: 'Verde' })),
+            React.createElement("p", { className: "PaddingBottomMedio" }, " Son los Totales de usuarios multiplicados por la frecuencia."),
             React.createElement("div", { className: "Columnas2 CardPorcentajesHombresMujeres" },
                 React.createElement("div", { className: "PorcentajesHombres" },
-                    React.createElement(Inputs, { type: "icons", button: "hombres", color: "transparent", size: "grande" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "description", description: (props.porcentajeHombres || "0") + "%", labelColor: "Azul" }),
+                    React.createElement(DynamicButton, { type: 'icons', button: 'hombres', color: 'transparent', size: 'grande' }),
+                    React.createElement(TextField, { modo: props.modo, type: 'description', description: props.porcentajeHombres + '%', labelColor: 'Azul' }),
                     React.createElement("p", null,
                         " ",
-                        "Hombres: " + (props.numeroHombres || "0"))),
+                        'Hombres: ' + props.numeroHombres)),
                 React.createElement("div", { className: "PorcentajesMujeres" },
-                    React.createElement(Inputs, { type: "icons", size: "grande", button: "mujeres", color: "transparent" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "description", description: (props.porcentajeMujeres || "0") + "%", labelColor: "Magenta" }),
+                    React.createElement(DynamicButton, { type: 'icons', size: 'grande', button: 'mujeres', color: 'transparent' }),
+                    React.createElement(TextField, { modo: props.modo, type: 'description', description: props.porcentajeMujeres + '%', labelColor: 'Magenta' }),
                     React.createElement("p", null,
                         " ",
-                        "Mujeres: " + (props.numeroMujeres || "0")))),
+                        'Mujeres: ' + props.numeroMujeres))),
             React.createElement("p", { className: "PaddingBottomMedio" }, "*Datos actualizados mensualmente"))));
 };
 
+var getModo$8 = function (modo) {
+    switch (modo) {
+        case 'Dark': return ('DarkMode');
+        default: return '';
+    }
+};
+var getColorMedio$7 = function (tipoMedio) {
+    switch (tipoMedio) {
+        case 'espectacular': return ('Rojo');
+        case 'urbanos': return ('Magenta');
+        case 'muro': return ('Azul');
+        case 'indoors': return ('Amarillo');
+        default: return ('Gris');
+    }
+};
 var GraficasCardsFront = function (props) {
-    return (React.createElement("div", { className: "ContenedorGraficasCards" + getModo$4(props.modo) },
+    return (React.createElement("div", { className: "ContenedorGraficasCards" + getModo$8(props.modo) },
         React.createElement("div", { className: "EncabezadoCard" },
-            React.createElement(Inputs, { modo: props.modo, clave: props.clave || "undefined" })),
-        React.createElement("div", { className: "Columnas2 BorderBottom" + getColorMedio$1(props.tipoMedio) },
-            React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Proveedor: ", description: props.proveedor || "undefined" }),
-            React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Clave del Proveedor: ", description: props.claveProveedor || "undefined" })),
+            React.createElement(TitlesCards, { modo: props.modo, clave: props.clave || 'undefined' })),
+        React.createElement("div", { className: "Columnas2 BorderBottom" + getColorMedio$7(props.tipoMedio) },
+            React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Proveedor: ', description: props.proveedor || 'undefined' }),
+            React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Clave del Proveedor: ', description: props.claveProveedor || 'undefined' })),
         React.createElement("div", { className: "Columnas3ModGraficas NoMargin Witdh100" },
             React.createElement("div", { className: "PieDeGrafica" },
-                React.createElement(Inputs, { type: "nse", modo: props.modo, nseA: props.nseA || "0", nseB: props.nseB || "0", nseC: props.nseC || "0", nseD: props.nseD || "0", nseE: props.nseE || "0" }),
-                React.createElement("div", { className: "ContenedorPieDeGrafica" + getModo$4(props.modo) },
-                    React.createElement("p", { className: "TituloGrafica" },
-                        " ",
-                        "Afluencia por Nivel Socio Econ\u00F3mico"),
+                React.createElement(PieGraphics, { type: 'nse', modo: props.modo, nseA: props.nseA || '0', nseB: props.nseB || '0', nseC: props.nseC || '0', nseD: props.nseD || '0', nseE: props.nseE || '0' }),
+                React.createElement("div", { className: "ContenedorPieDeGrafica" + getModo$8(props.modo) },
+                    React.createElement("p", { className: "TituloGrafica" }, " Afluencia por Nivel Socio Econ\u00F3mico"),
                     React.createElement("div", { className: "CamposGraficas" },
-                        React.createElement(Inputs, { modo: props.modo, type: "description", description: "NSE A: " + (props.totalNseA || "0"), labelColor: "Azul" }),
-                        React.createElement(Inputs, { modo: props.modo, type: "description", description: "NSE B: " + (props.totalNseB || "0"), labelColor: "Rojo" }),
-                        React.createElement(Inputs, { modo: props.modo, type: "description", description: "NSE C: " + (props.totalNseC || "0"), labelColor: "Aqua" }),
-                        React.createElement(Inputs, { modo: props.modo, type: "description", description: "NSE D: " + (props.totalNseD || "0"), labelColor: "Magenta" }),
-                        React.createElement(Inputs, { modo: props.modo, type: "description", description: "NSE E: " + (props.totalNseE || "0"), labelColor: "Amarillo" })))),
+                        React.createElement(TextField, { modo: props.modo, type: 'description', description: 'NSE A: ' + (props.totalNseA || '0'), labelColor: 'Azul' }),
+                        React.createElement(TextField, { modo: props.modo, type: 'description', description: 'NSE B: ' + (props.totalNseB || '0'), labelColor: 'Rojo' }),
+                        React.createElement(TextField, { modo: props.modo, type: 'description', description: 'NSE C: ' + (props.totalNseC || '0'), labelColor: 'Aqua' }),
+                        React.createElement(TextField, { modo: props.modo, type: 'description', description: 'NSE D: ' + (props.totalNseD || '0'), labelColor: 'Magenta' }),
+                        React.createElement(TextField, { modo: props.modo, type: 'description', description: 'NSE E: ' + (props.totalNseE || '0'), labelColor: 'Amarillo' })))),
             React.createElement("div", { className: "PieDeGrafica" },
-                React.createElement(Inputs, { type: "edad", modo: props.modo, edad13: props.edad13 || "0", edad18: props.edad18 || "0", edad26: props.edad26 || "0", edad41: props.edad41 || "0", edad55: props.edad55 || "0" }),
-                React.createElement("div", { className: "ContenedorPieDeGrafica" + getModo$4(props.modo) },
+                React.createElement(PieGraphics, { type: 'edad', modo: props.modo, edad13: props.edad13 || '0', edad18: props.edad18 || '0', edad26: props.edad26 || '0', edad41: props.edad41 || '0', edad55: props.edad55 || '0' }),
+                React.createElement("div", { className: "ContenedorPieDeGrafica" + getModo$8(props.modo) },
                     React.createElement("p", { className: "TituloGrafica" }, " Afluencia por Grupo de edad"),
                     React.createElement("div", { className: "CamposGraficas" },
-                        React.createElement(Inputs, { modo: props.modo, type: "description", description: "13-17: " + props.totalEdad13 || "0", labelColor: "Azul" }),
-                        React.createElement(Inputs, { modo: props.modo, type: "description", description: "18-25: " + props.totalEdad18 || "0", labelColor: "Rojo" }),
-                        React.createElement(Inputs, { modo: props.modo, type: "description", description: "26-40: " + props.totalEdad26 || "0", labelColor: "Aqua" }),
-                        React.createElement(Inputs, { modo: props.modo, type: "description", description: "41-55: " + props.totalEdad41 || "0", labelColor: "Magenta" }),
-                        React.createElement(Inputs, { modo: props.modo, type: "description", description: "55 o +: " + props.totalEdad55 || "0", labelColor: "Amarillo" })))),
+                        React.createElement(TextField, { modo: props.modo, type: 'description', description: '13-17: ' + props.totalEdad13 || '0', labelColor: 'Azul' }),
+                        React.createElement(TextField, { modo: props.modo, type: 'description', description: '18-25: ' + props.totalEdad18 || '0', labelColor: 'Rojo' }),
+                        React.createElement(TextField, { modo: props.modo, type: 'description', description: '26-40: ' + props.totalEdad26 || '0', labelColor: 'Aqua' }),
+                        React.createElement(TextField, { modo: props.modo, type: 'description', description: '41-55: ' + props.totalEdad41 || '0', labelColor: 'Magenta' }),
+                        React.createElement(TextField, { modo: props.modo, type: 'description', description: '55 o +: ' + props.totalEdad55 || '0', labelColor: 'Amarillo' })))),
             React.createElement(CardsPorcentajes, { modo: props.modo, alcance: props.alcance, frecuencia: props.frecuencia, totalUsuarios: props.totalUsuarios, totalImpactos: props.totalImpactos, porcentajeHombres: props.porcentajeHombres, numeroHombres: props.numeroHombres, porcentajeMujeres: props.porcentajeMujeres, numeroMujeres: props.numeroMujeres }))));
 };
 
-var noImage = require("../../../img/img/noImage.jpg");
-var noQr = require("../../../img/img/noQr.png");
-var hombres$1 = require("../../../img/iconos/hombres.svg");
-var mujeres$1 = require("../../../img/iconos/mujeres.svg");
+var noImage$2 = require('../../../Img/Img/noImage.jpg');
+//const noQr = require('../../../Img/Img/noQr.png') as string;
+var hombres$1 = require('../../../Img/Iconos/hombres.jpg');
+var mujeres$1 = require('../../../Img/Iconos/mujeres.jpg');
+/* ASIGNADO DE COLOR */
+var getColorMedio$6 = function (tipoMedio) {
+    switch (tipoMedio) {
+        case 'espectacular': return ('Rojo');
+        case 'urbanos': return ('Magenta');
+        case 'muro': return ('Azul');
+        case 'indoors': return ('Amarillo');
+        default: return ('Gris');
+    }
+};
 var PrevisualizarCards = function (props) {
-    return (React.createElement("div", { className: "ContenedorCardPrevisualizar" + getModo$4(props.modo) },
-        React.createElement("div", { className: "FlexboxPrevisualizar" },
-            React.createElement("div", { className: "ImagenCardPrevisualizar" },
-                React.createElement("img", { src: props.imagen || noImage, alt: "" })),
-            React.createElement("div", { className: "PorcentajesCardPrevisualizar" },
-                React.createElement("div", { className: "EncabezadoCard BorderBottom" + getColorMedio$1(props.tipoMedio) },
-                    React.createElement(Inputs, { modo: props.modo, clave: props.clave || "undefined", type: props.tipo || "undefined" })),
-                React.createElement("div", { className: "CardAfluenciaPrevisualizar" + getModo$4(props.modo) },
-                    React.createElement("div", { className: "AfluenciaTitulo" },
-                        React.createElement(Inputs, { modo: props.modo, type: "description", description: "Afluencia por Nivel Socio Econ\u00F3mico" })),
-                    React.createElement("div", { className: "FlexboxCamposPrevisualizar" },
-                        React.createElement("div", { className: "CampoPorcentajesPrevisualizar" },
-                            React.createElement("div", { id: "CampoPrevisualizar1" },
-                                React.createElement(Inputs, { modo: props.modo, type: "description", description: "NSE A: " + ((props.nseA || 0) + "%"), labelColor: "Azul" })),
-                            React.createElement("p", { className: "TotalPorcentajePrevisualizar" }, props.totalNseA || 0)),
-                        React.createElement("div", { className: "CampoPorcentajesPrevisualizar" },
-                            React.createElement("div", { id: "CampoPrevisualizar2" },
-                                React.createElement(Inputs, { modo: props.modo, type: "description", description: "NSE B: " + (props.nseB || 0) + "%", labelColor: "Rojo" })),
-                            React.createElement("p", { className: "TotalPorcentajePrevisualizar" }, props.totalNseB || 0)),
-                        React.createElement("div", { className: "CampoPorcentajesPrevisualizar" },
-                            React.createElement("div", { id: "CampoPrevisualizar3" },
-                                React.createElement(Inputs, { modo: props.modo, type: "description", description: "NSE C: " + (props.nseC || 0) + "%", labelColor: "Aqua" })),
-                            React.createElement("p", { className: "TotalPorcentajePrevisualizar" }, props.totalNseC || 0)),
-                        React.createElement("div", { className: "CampoPorcentajesPrevisualizar" },
-                            React.createElement("div", { id: "CampoPrevisualizar4" },
-                                React.createElement(Inputs, { modo: props.modo, type: "description", description: "NSE D: " + (props.nseD || 0) + "%", labelColor: "Magenta" })),
-                            React.createElement("p", { className: "TotalPorcentajePrevisualizar" }, props.totalNseD || 0)),
-                        React.createElement("div", { className: "CampoPorcentajesPrevisualizar" },
-                            React.createElement("div", { id: "CampoPrevisualizar5" },
-                                React.createElement(Inputs, { modo: props.modo, type: "description", description: "NSE E: " + (props.nseE || 0) + "%", labelColor: "Amarillo" })),
-                            React.createElement("p", { className: "TotalPorcentajePrevisualizar" }, props.totalNseE || 0))),
-                    React.createElement("div", { className: "AfluenciaTitulo" },
-                        React.createElement(Inputs, { modo: props.modo, type: "description", description: "Afluencia por Rango de Edad" })),
-                    React.createElement("div", { className: "FlexboxCamposPrevisualizar" },
-                        React.createElement("div", { className: "CampoPorcentajesPrevisualizar" },
-                            React.createElement("div", { id: "CampoPrevisualizar6" },
-                                React.createElement(Inputs, { modo: props.modo, type: "description", description: "13-17: " + (props.edad13 || 0) + "%", labelColor: "Azul" })),
-                            React.createElement("p", { className: "TotalPorcentajePrevisualizar" }, props.totalEdad13 || 0)),
-                        React.createElement("div", { className: "CampoPorcentajesPrevisualizar" },
-                            React.createElement("div", { id: "CampoPrevisualizar7" },
-                                React.createElement(Inputs, { modo: props.modo, type: "description", description: "18-25: " + (props.edad18 || 0) + "%", labelColor: "Rojo" })),
-                            React.createElement("p", { className: "TotalPorcentajePrevisualizar" }, props.totalEdad18 || 0)),
-                        React.createElement("div", { className: "CampoPorcentajesPrevisualizar" },
-                            React.createElement("div", { id: "CampoPrevisualizar8" },
-                                React.createElement(Inputs, { modo: props.modo, type: "description", description: "26-40: " + (props.edad26 || 0) + "%", labelColor: "Aqua" })),
-                            React.createElement("p", { className: "TotalPorcentajePrevisualizar" }, props.totalEdad26 || 0)),
-                        React.createElement("div", { className: "CampoPorcentajesPrevisualizar" },
-                            React.createElement("div", { id: "CampoPrevisualizar9" },
-                                React.createElement(Inputs, { modo: props.modo, type: "description", description: "41-55: " + (props.edad41 || 0) + "%", labelColor: "Magenta" })),
-                            React.createElement("p", { className: "TotalPorcentajePrevisualizar" }, props.totalEdad41 || 0)),
-                        React.createElement("div", { className: "CampoPorcentajesPrevisualizar" },
-                            React.createElement("div", { id: "CampoPrevisualizar10" },
-                                React.createElement(Inputs, { modo: props.modo, type: "description", description: "55-+: " + (props.edad55 || 0) + "%", labelColor: "Amarillo" })),
-                            React.createElement("p", { className: "TotalPorcentajePrevisualizar" }, props.totalEdad55 || 0)))),
-                React.createElement("div", { className: "ContenedorHombresMujeresPrevisualizar" + getModo$4(props.modo) },
-                    React.createElement("div", { className: "Columnas2 Contenedor PaddingTopMedio" },
-                        React.createElement("div", { className: "HombresBackCardsRecorrido" },
-                            React.createElement("div", { className: "PorcentajesIconos" },
-                                React.createElement("img", { src: hombres$1, alt: "" }),
-                                React.createElement("div", { className: "TotalesPorcentajes" },
-                                    React.createElement(Inputs, { modo: props.modo, type: "description", description: props.numeroHombres || 0 }))),
-                            React.createElement("div", { className: "Width100 CenterText" },
-                                React.createElement(Inputs, { modo: props.modo, type: "description", description: (props.porcentajeHombres || 0) + "%", labelColor: "Azul" }))),
-                        React.createElement("div", { className: "MujeresBackCardsRecorrido" },
-                            React.createElement("div", { className: "PorcentajesIconos" },
-                                React.createElement("img", { src: mujeres$1, alt: "" }),
-                                React.createElement("div", { className: "TotalesPorcentajes" },
-                                    React.createElement(Inputs, { modo: props.modo, type: "description", description: props.numeroMujeres || 0 }))),
-                            React.createElement("div", { className: "Width100" },
-                                React.createElement(Inputs, { modo: props.modo, type: "description", description: (props.porcentajeMujeres || 0) + "%", labelColor: "Magenta" })))),
-                    React.createElement("div", { className: "Columnas2 Contenedor" },
-                        React.createElement("div", { className: "CamposBackCardsRecorrido" },
-                            React.createElement("div", { className: "PorcentajesIconos" },
-                                React.createElement("div", { className: "TotalesPorcentajes" },
-                                    React.createElement(Inputs, { modo: props.modo, type: "description", description: "Usuarios: " + (props.totalUsuarios || 0) }))),
-                            React.createElement("div", { className: "Width100 CenterText" },
-                                React.createElement(Inputs, { modo: props.modo, type: "description", description: (props.porcentajeUsuarios || 0) + "%", labelColor: "Morado" }))),
-                        React.createElement("div", { className: "CamposBackCardsRecorrido" },
-                            React.createElement("div", { className: "PorcentajesIconos" },
-                                React.createElement("div", { className: "TotalesPorcentajes" },
-                                    React.createElement(Inputs, { modo: props.modo, type: "description", description: "Impactos: " + (props.totalImpactos || 0) }))),
-                            React.createElement("div", { className: "Width100" },
-                                React.createElement(Inputs, { modo: props.modo, type: "description", description: (props.porcentajeImpactos || 0) + "%", labelColor: "Azul" }))))))),
-        React.createElement("div", { className: "Columnas4" },
-            React.createElement("div", { className: "ColumnaCardPrevisualizar" + getModo$4(props.modo) },
-                React.createElement("div", { className: "ContenedorCardPrevisualizarChico" },
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Direci\u00F3n: ", description: props.direccion || "undefined" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Colonia: ", description: props.colonia || "undefined" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Cd. Edo: ", description: props.cdEdo || "undefined" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Vialidad: ", description: props.vialidad || "undefined" }))),
-            React.createElement("div", { className: "ColumnaCardPrevisualizar" + getModo$4(props.modo) },
-                React.createElement("div", { className: "ContenedorCardPrevisualizarChico" },
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Medidas: ", description: (props.ancho || 0) + "m x " + (props.alto || 0) + "m", labelColor: getColorMedio$1(props.tipoMedio) }),
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Material: ", description: props.material || "undefined" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Acabado: ", description: props.acabados || "undefined" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Iluminaci\u00F3n: ", description: props.iluminacion || "undefined", labelColor: getColorMedio$1(props.tipoMedio) }),
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Tipo de Vista: ", description: props.vista || "undefined" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Nicho: ", description: props.nicho || "undefined" }),
-                    React.createElement(Inputs, { property: "Imp. especiales", state: props.estadoImplementaciones || "undefined", color: "amarillo" }))),
-            React.createElement("div", { className: "ColumnaCardPrevisualizar" + getModo$4(props.modo) },
-                React.createElement("div", { className: "ContenedorCardPrevisualizarChico TextOverflowDescriptionPrev" },
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Referencias: ", description: props.descripcion || "undefined" }))),
-            React.createElement("div", { className: "ColumnaCardPrevisualizar" + getModo$4(props.modo) },
-                React.createElement("div", { className: "CamposBackCardsRecorrido" },
-                    React.createElement("div", { className: "PorcentajesIconos" },
-                        React.createElement("div", { className: "TotalesPorcentajes" },
-                            React.createElement(Inputs, { modo: props.modo, type: "description", description: "Alcance:" }))),
-                    React.createElement("div", { className: "Width100 CenterText" },
-                        React.createElement(Inputs, { modo: props.modo, type: "description", description: (props.alcance || 0) + "%", labelColor: "Rojo" }))),
-                React.createElement("div", { className: "CamposBackCardsRecorrido" },
-                    React.createElement("div", { className: "PorcentajesIconos" },
-                        React.createElement("div", { className: "TotalesPorcentajes" },
-                            React.createElement(Inputs, { modo: props.modo, type: "description", description: "Frecuencia:" }))),
-                    React.createElement("div", { className: "Width100" },
-                        React.createElement(Inputs, { modo: props.modo, type: "description", description: (props.frecuencia || 0) + "%", labelColor: "Azul" }))),
-                React.createElement("img", { src: props.qr || noQr, alt: "", className: "QrPrevisualizar" })))));
+    return (React.createElement("div", { className: "ContenedorGeneralPrevisualizarCards" },
+        React.createElement("div", { className: "GridPrevisualizarCards" },
+            React.createElement("div", { className: "ImagenPrevisualizarCards" },
+                React.createElement("img", { src: props.imagen || noImage$2, alt: "" })),
+            React.createElement("div", { className: "PorcentajesNseEdadPrevisualizarCards" },
+                React.createElement("div", { className: "TituloPrevisualizarCard" },
+                    React.createElement("div", { className: "BorderBottom" + getColorMedio$6(props.tipoMedio), style: { paddingTop: '3.5rem' } },
+                        React.createElement("div", { className: "TitlesCardsPrevisualizar" },
+                            React.createElement(TitlesCards, { clave: props.clave || 'undefined', type: props.tipo || 'undefined' }))),
+                    React.createElement("p", { style: { fontSize: '1.2rem', textAlign: 'center', fontWeight: 'bold' } }, "Afluencia por nivel sociecon\u00F3mico"),
+                    React.createElement("div", { className: "CampoPorcentajesPrevisualizarCards" },
+                        React.createElement("div", null,
+                            React.createElement("div", { style: { paddingTop: '.5rem' } },
+                                React.createElement(TextField, { type: 'description', description: 'NSE A: ' + ((props.nseA || '0') + '%'), labelColor: 'Azul' })),
+                            React.createElement(TextField, { type: 'title', title: props.totalNseA || '0' })),
+                        React.createElement("div", null,
+                            React.createElement("div", { style: { paddingTop: '.5rem' } },
+                                React.createElement(TextField, { type: 'description', description: 'NSE B: ' + ((props.nseB || '0') + '%'), labelColor: 'Rojo' })),
+                            React.createElement(TextField, { type: 'title', title: props.totalNseB || '0' })),
+                        React.createElement("div", null,
+                            React.createElement("div", { style: { paddingTop: '.5rem' } },
+                                React.createElement(TextField, { type: 'description', description: 'NSE C: ' + ((props.nseC || '0') + '%'), labelColor: 'Aqua' })),
+                            React.createElement(TextField, { type: 'title', title: props.totalNseC || '0' })),
+                        React.createElement("div", null,
+                            React.createElement("div", { style: { paddingTop: '.5rem' } },
+                                React.createElement(TextField, { type: 'description', description: 'NSE D: ' + ((props.nseD || '0') + '%'), labelColor: 'Magenta' })),
+                            React.createElement(TextField, { type: 'title', title: props.totalNseD || '0' })),
+                        React.createElement("div", { style: { gridColumn: '1/3' } },
+                            React.createElement("div", { style: { paddingTop: '.5rem' } },
+                                React.createElement(TextField, { type: 'description', description: 'NSE E: ' + ((props.nseE || '0') + '%'), labelColor: 'Amarillo' })),
+                            React.createElement(TextField, { type: 'title', title: props.totalNseE || '0' }))),
+                    React.createElement("p", { style: { fontSize: '1.2rem', textAlign: 'center', fontWeight: 'bold' } }, "Afluencia por rango de edad"),
+                    React.createElement("div", { className: "CampoPorcentajesPrevisualizarCards" },
+                        React.createElement("div", null,
+                            React.createElement("div", { style: { paddingTop: '.5rem' } },
+                                React.createElement(TextField, { type: 'description', description: '13-17: ' + ((props.edad13 || '0') + '%'), labelColor: 'Azul' })),
+                            React.createElement(TextField, { type: 'title', title: props.totalEdad13 || '0' })),
+                        React.createElement("div", null,
+                            React.createElement("div", { style: { paddingTop: '.5rem' } },
+                                React.createElement(TextField, { type: 'description', description: '18-25: ' + ((props.edad18 || '0') + '%'), labelColor: 'Rojo' })),
+                            React.createElement(TextField, { type: 'title', title: props.totalEdad18 || '0' })),
+                        React.createElement("div", null,
+                            React.createElement("div", { style: { paddingTop: '.5rem' } },
+                                React.createElement(TextField, { type: 'description', description: '26-40: ' + ((props.edad26 || '0') + '%'), labelColor: 'Aqua' })),
+                            React.createElement(TextField, { type: 'title', title: props.totalEdad26 || '0' })),
+                        React.createElement("div", null,
+                            React.createElement("div", { style: { paddingTop: '.5rem' } },
+                                React.createElement(TextField, { type: 'description', description: '41-55: ' + ((props.edad41 || '0') + '%'), labelColor: 'Magenta' })),
+                            React.createElement(TextField, { type: 'title', title: props.totalEdad41 || '0' })),
+                        React.createElement("div", { style: { gridColumn: '1/3' } },
+                            React.createElement("div", { style: { paddingTop: '.5rem' } },
+                                React.createElement(TextField, { type: 'description', description: '55 o +: ' + ((props.edad55 || '0') + '%'), labelColor: 'Amarillo' })),
+                            React.createElement(TextField, { type: 'title', title: props.totalEdad55 || '0' }))))),
+            React.createElement("div", { className: "ContenidoPrevisualiarCards" },
+                React.createElement("div", { className: "ContenedorContenidoPrevisualizarCards" },
+                    React.createElement("div", { className: "InfoUbicacionPrevisualizarCards" },
+                        React.createElement("div", { className: "TextOverflowDescription" },
+                            React.createElement(TextField, { type: 'titleAndDescription', title: 'Direcci\u00F3n: ', description: props.direccion || 'undefined' })),
+                        React.createElement(TextField, { type: 'titleAndDescription', title: 'Colonia: ', description: props.colonia || 'undefined' }),
+                        React.createElement(TextField, { type: 'titleAndDescription', title: 'Cd. y Edo.: ', description: props.cdEdo || 'undefined' }),
+                        React.createElement(TextField, { type: 'titleAndDescription', title: 'Vialidad: ', description: props.vialidad || 'undefined' })),
+                    React.createElement("div", { className: "InfoDescriptivaPrevisualizarCards" },
+                        React.createElement(TextField, { type: 'titleAndDescription', title: 'Medidas: ', description: (props.ancho || '0') + 'm x ' + (props.alto || 0) + 'm', labelColor: getColorMedio$6(props.tipoMedio) }),
+                        React.createElement(TextField, { type: 'titleAndDescription', title: 'Material: ', description: props.material || 'undefined' }),
+                        React.createElement(TextField, { type: 'titleAndDescription', title: 'Acabados: ', description: props.acabados || 'undefined' }),
+                        React.createElement(TextField, { type: 'titleAndDescription', title: 'iluminaci\u00F3n: ', description: props.iluminacion || '?' }),
+                        React.createElement(TextField, { type: 'titleAndDescription', title: 'Vista: ', description: props.vista || '?' }),
+                        React.createElement(TextField, { type: 'titleAndDescription', title: 'Nicho: ', description: props.nicho || '?' }),
+                        React.createElement(TextField, { type: 'titleAndDescription', title: 'Imp. especiales: ', description: props.implementaciones || '?', labelColor: getColorMedio$6(props.tipoMedio) })),
+                    React.createElement("div", { className: "PorcentajesPrevisualizarCards", style: { maxWidth: '97%', alignItems: 'center' } },
+                        React.createElement("div", { className: "PorcentajeHombresPrevisualizaCards" },
+                            React.createElement("div", { style: { display: 'flex', marginBottom: '-.8rem' } },
+                                React.createElement("img", { src: hombres$1, alt: "", style: { maxHeight: '2.8rem', marginBottom: '-1rem' } }),
+                                React.createElement("p", null,
+                                    "Hombres: ",
+                                    props.numeroHombres || '0')),
+                            React.createElement("div", { style: { display: 'block' } },
+                                React.createElement(TextField, { type: 'description', description: (props.porcentajeHombres || '0') + '%', labelColor: 'Azul' }))),
+                        React.createElement("div", { className: "PorcentajeMujeresPrevisualizaCards" },
+                            React.createElement("div", { style: { display: 'flex', marginBottom: '-.8rem' } },
+                                React.createElement("img", { src: mujeres$1, alt: "", style: { maxHeight: '2.8rem' } }),
+                                React.createElement("p", null,
+                                    "Mujeres: ",
+                                    props.numeroMujeres || '0')),
+                            React.createElement("div", { style: { paddingTop: '.5rem', display: 'block' } },
+                                React.createElement(TextField, { type: 'description', description: (props.porcentajeMujeres || '0') + '%', labelColor: 'Magenta' }))),
+                        React.createElement("div", { className: "PorcentajeAlcancePrevisualizaCards" },
+                            React.createElement(TextField, { type: 'title', title: 'Alcance', labelColor: 'Azul' }),
+                            React.createElement("div", { style: { paddingTop: '.5rem', display: 'block' } },
+                                React.createElement(TextField, { type: 'description', description: (props.alcance || '0') + '%', labelColor: 'Rojo' }))),
+                        React.createElement("div", { className: "PorcentajeFrecuenciaPrevisualizaCards" },
+                            React.createElement(TextField, { type: 'title', title: 'Frecuencia' }),
+                            React.createElement("div", { style: { paddingTop: '.5rem', display: 'block' } },
+                                React.createElement(TextField, { type: 'description', description: (props.frecuencia || '0') + '%', labelColor: 'Azul' }))),
+                        React.createElement("div", { className: "PorcentajeUsuariosPrevisualizaCards" },
+                            React.createElement(TextField, { type: 'title', title: 'Usuarios' }),
+                            React.createElement("div", { style: { paddingTop: '.5rem', display: 'block' } },
+                                React.createElement(TextField, { type: 'description', description: (props.porcentajeUsuarios || '0') + '%', labelColor: 'Morado' }))),
+                        React.createElement("div", { className: "PorcentajeImpactosPrevisualizaCards" },
+                            React.createElement(TextField, { type: 'title', title: 'Impactos' }),
+                            React.createElement("div", { style: { paddingTop: '.5rem', display: 'block' } },
+                                React.createElement(TextField, { type: 'description', description: (props.porcentajeImpactos || '0') + '%', labelColor: 'Verde' })))))))));
 };
 
-var getModo = function (modo) {
+var getModo$7 = function (modo) {
     switch (modo) {
-        case "Dark":
-            return "DarkMode";
-        default:
-            return "";
+        case 'Dark': return ('DarkMode');
+        default: return '';
     }
 };
 var Modal = function (_a) {
@@ -15546,315 +15518,266 @@ var Modal = function (_a) {
     return (React.createElement("div", { className: showHideClassName },
         React.createElement("section", { className: "modal-main" },
             children,
-            React.createElement("div", { onClick: handleClose, className: "IconoCerrarModal" + type },
-                React.createElement(Inputs, { type: "icons", size: "grande", button: "cerrar", color: "transparent" })))));
+            React.createElement("div", { onClick: handleClose, className: 'IconoCerrarModal' + type },
+                React.createElement(DynamicButton, { type: 'icons', size: 'grande', button: 'cerrar', color: 'transparent' })))));
 };
 var Aside = function (props) {
     var _a = react.exports.useState(false), showPrevisualizar = _a[0], setShowPrevisualizar = _a[1];
-    var showModalPrevisualizar = function () {
-        setShowPrevisualizar(true);
-    };
-    var hideModalPrevisualizar = function () {
-        setShowPrevisualizar(false);
-    };
-    var _b = react.exports.useState(false), showGraficas = _b[0], setShowGraficas = _b[1];
-    var showModalGraficas = function () {
-        setShowGraficas(true);
-    };
-    var hideModalGraficas = function () {
-        setShowGraficas(false);
-    };
+    var showModalPrevisualizar = function () { setShowPrevisualizar(true); };
+    var hideModalPrevisualizar = function () { setShowPrevisualizar(false); };
+    var _b = react.exports.useState(false); _b[0]; _b[1];
     var tipoCard = props.tipoCard;
-    function verGraficas() {
-        return (React.createElement(React.Fragment, null,
-            React.createElement(Modal, { show: showGraficas, handleClose: hideModalGraficas, typeModal: "Graficas", tipoCard: props.tipoCard },
-                React.createElement(GraficasCardsFront, { modo: props.modo, tipoMedio: props.tipoMedio, clave: props.clave, proveedor: props.proveedor, claveProveedor: props.claveProveedor, alcance: props.alcance, frecuencia: props.frecuencia, totalUsuarios: props.totalUsuarios, totalImpactos: props.totalImpactos, porcentajeHombres: props.porcentajeHombres, numeroHombres: props.numeroHombres, porcentajeMujeres: props.porcentajeMujeres, numeroMujeres: props.numeroMujeres, nseA: props.nseA, nseB: props.nseB, nseC: props.nseC, nseD: props.nseD, nseE: props.nseE, totalNseA: props.totalNseA, totalNseB: props.totalNseB, totalNseC: props.totalNseC, totalNseD: props.totalNseD, totalNseE: props.totalNseE, edad13: props.edad13, edad18: props.edad18, edad26: props.edad26, edad41: props.edad41, edad55: props.edad55, totalEdad13: props.totalEdad13, totalEdad18: props.totalEdad18, totalEdad26: props.totalEdad26, totalEdad41: props.totalEdad41, totalEdad55: props.totalEdad55 })),
-            React.createElement("div", { onClick: showModalGraficas },
-                React.createElement(Inputs, { type: "buttons", button: "graficas", size: "grande", color: "gris" }))));
-    }
+    /*     function verGraficas(props:AsideProps){
+            return(
+                <>
+                <Modal show={showGraficas} handleClose={hideModalGraficas} typeModal={'Graficas'} tipoCard={props.tipoCard}>
+                    <GraficasCardsFront
+                        modo={props.modo}
+                        tipoMedio = {props.tipoMedio}
+                        clave = {props.clave}
+                        proveedor = {props.proveedor}
+                        claveProveedor = {props.claveProveedor}
+                        alcance = {props.alcance}
+                        frecuencia = {props.frecuencia}
+                        totalUsuarios = {props.totalUsuarios}
+                        totalImpactos = {props.totalImpactos}
+                        porcentajeHombres = {props.porcentajeHombres}
+                        numeroHombres = {props.numeroHombres}
+                        porcentajeMujeres = {props.porcentajeMujeres}
+                        numeroMujeres = {props.numeroMujeres}
+                        nseA = {props.nseA}
+                        nseB = {props.nseB}
+                        nseC = {props.nseC}
+                        nseD = {props.nseD}
+                        nseE = {props.nseE}
+                        totalNseA = {props.totalNseA}
+                        totalNseB = {props.totalNseB}
+                        totalNseC = {props.totalNseC}
+                        totalNseD = {props.totalNseD}
+                        totalNseE = {props.totalNseE}
+                        edad13 = {props.edad13}
+                        edad18 = {props.edad18}
+                        edad26 = {props.edad26}
+                        edad41 = {props.edad41}
+                        edad55 = {props.edad55}
+                        totalEdad13 = {props.totalEdad13}
+                        totalEdad18 = {props.totalEdad18}
+                        totalEdad26 = {props.totalEdad26}
+                        totalEdad41 = {props.totalEdad41}
+                        totalEdad55 = {props.totalEdad55}
+                    />
+                </Modal>
+                <div onClick={showModalGraficas}>
+                    <DynamicButton
+                        type = 'buttons'
+                        button ='graficas'
+                        size = 'grande'
+                        color = 'gris'
+                    />
+                </div>
+                </>
+            )
+        } */
+    //Comentado porque no se está utilizando la función
     function abrirPrevisualizar() {
         return (React.createElement(React.Fragment, null,
-            React.createElement(Modal, { show: showPrevisualizar, handleClose: hideModalPrevisualizar, typeModal: "Previsualizar", tipoCard: props.tipoCard },
-                React.createElement(PrevisualizarCards, { modo: props.modo, imagen: props.imagen, tipoMedio: props.tipoMedio, clave: props.clave, tipo: props.tipo, nseA: props.nseA, totalNseA: props.totalNseA, nseB: props.nseB, totalNseB: props.totalNseB, nseC: props.nseC, totalNseC: props.totalNseC, nseD: props.nseD, totalNseD: props.totalNseD, nseE: props.nseE, totalNseE: props.totalNseE, edad13: props.edad13, edad18: props.edad18, edad26: props.edad26, edad41: props.edad41, edad55: props.edad55, totalEdad13: props.totalEdad13, totalEdad18: props.totalEdad18, totalEdad26: props.totalEdad26, totalEdad41: props.totalEdad41, totalEdad55: props.totalEdad55, numeroHombres: props.numeroHombres, porcentajeHombres: props.porcentajeHombres, numeroMujeres: props.numeroMujeres, porcentajeMujeres: props.porcentajeMujeres, totalUsuarios: props.totalUsuarios, porcentajeUsuarios: props.porcentajeUsuarios, totalImpactos: props.totalImpactos, porcentajeImpactos: props.porcentajeImpactos, direccion: props.direccion, colonia: props.colonia, cdEdo: props.cdEdo, vialidad: props.vialidad, ancho: props.ancho, alto: props.alto, material: props.material, acabados: props.acabados, iluminacion: props.iluminacion, vista: props.vista, nicho: props.nicho, estadoImplementaciones: props.estadoImplementaciones, descripcion: props.descripcion, alcance: props.alcance, frecuencia: props.frecuencia, qr: props.qr })),
+            React.createElement(Modal, { show: showPrevisualizar, handleClose: hideModalPrevisualizar, typeModal: 'Previsualizar', tipoCard: props.tipoCard },
+                React.createElement(PrevisualizarCards, { modo: props.modo, imagen: props.imagen, tipoMedio: props.tipoMedio, clave: props.clave, tipo: props.tipo, nseA: props.nseA, totalNseA: props.totalNseA, nseB: props.nseB, totalNseB: props.totalNseB, nseC: props.nseC, totalNseC: props.totalNseC, nseD: props.nseD, totalNseD: props.totalNseD, nseE: props.nseE, totalNseE: props.totalNseE, edad13: props.edad13, edad18: props.edad18, edad26: props.edad26, edad41: props.edad41, edad55: props.edad55, totalEdad13: props.totalEdad13, totalEdad18: props.totalEdad18, totalEdad26: props.totalEdad26, totalEdad41: props.totalEdad41, totalEdad55: props.totalEdad55, numeroHombres: props.numeroHombres, porcentajeHombres: props.porcentajeHombres, numeroMujeres: props.numeroMujeres, porcentajeMujeres: props.porcentajeMujeres, porcentajeUsuarios: props.porcentajeUsuarios, porcentajeImpactos: props.porcentajeImpactos, direccion: props.direccion, colonia: props.colonia, cdEdo: props.cdEdo, vialidad: props.vialidad, ancho: props.ancho, alto: props.alto, material: props.material, acabados: props.acabados, iluminacion: props.iluminacion, vista: props.vista, alcance: props.alcance, frecuencia: props.frecuencia })),
             React.createElement("div", { onClick: showModalPrevisualizar },
-                React.createElement(Inputs, { type: "buttons", button: "previsualizar", size: "grande", color: "verde" }))));
+                React.createElement(DynamicButton, { type: 'buttons', button: 'previsualizar', size: 'grande', color: 'verde' }))));
     }
+    function vaciar() { return (alert('funciona Vaciar')); } //MODIFICAR FUNCIÓN
+    function descargarPdf() { return (alert('funciona Descargar pdf')); } //MODIFICAR FUNCIÓN
+    function agregarCarrito() { return (alert('funciona agregar al carrito')); } //MODIFICAR FUNCIÓN
+    function editar() { return (alert('funciona editar')); } //MODIFICAR FUNCIÓN
     switch (tipoCard) {
-        case "abcSitios" :
-            return (React.createElement("div", { className: "AsideCards" + getModo(props.modo) },
+        case 'abcSitios' :
+            return (React.createElement("div", { className: "AsideCards" + getModo$7(props.modo) },
                 React.createElement("div", { className: "ContenedorBotonesAside" },
                     React.createElement("div", { className: "BotonAside" }, abrirPrevisualizar()),
                     React.createElement("div", { className: "BotonAside" },
-                        React.createElement(Inputs, { type: "buttons", button: "pdf", size: "grande", color: "rojo" })),
+                        React.createElement(DynamicButton, { type: 'buttons', button: 'pdf', size: 'grande', color: 'rojo', onClick: function () { return descargarPdf(); } })),
                     React.createElement("div", { className: "BotonAside" },
-                        React.createElement(Inputs, { type: "buttons", button: "carrito", size: "grande", color: "amarillo" })),
-                    React.createElement("div", { className: "BotonAside" }, verGraficas()))));
-        case "visualizadorPauta":
-            if (props.tipoMedio === "espectacular" || props.tipoMedio === "muro") {
-                return (React.createElement("div", { className: "AsideCards" + getModo(props.modo) },
+                        React.createElement(DynamicButton, { type: 'buttons', button: 'carrito', size: 'grande', color: 'amarillo', onClick: function () { return agregarCarrito(); } })),
+                    " ")));
+        case 'visualizadorPauta':
+            if (props.tipoMedio === 'espectacular' || props.tipoMedio === 'muro') {
+                return (React.createElement("div", { className: "AsideCards" + getModo$7(props.modo) },
                     React.createElement("div", { className: "ContenedorBotonesAside" },
                         React.createElement("div", { className: "BotonAside" }, abrirPrevisualizar()),
                         React.createElement("div", { className: "BotonAside" },
-                            React.createElement(Inputs, { type: "buttons", button: "vaciar", size: "grande", color: "rojo" })))));
+                            React.createElement(DynamicButton, { type: 'buttons', button: 'vaciar', size: 'grande', color: 'rojo', onClick: function () { return vaciar(); } })))));
             }
             else {
-                return (React.createElement("div", { className: "AsideCards" + getModo(props.modo) },
+                return (React.createElement("div", { className: "AsideCards" + getModo$7(props.modo) },
                     React.createElement("div", { className: "ContenedorBotonesAside" },
-                        React.createElement("div", { className: "BotonAside" },
-                            React.createElement(Inputs, { type: "buttons", button: "vaciar", size: "grande", color: "rojo" })))));
+                        React.createElement("div", { className: "BotonAside", onClick: props.onClickVaciar },
+                            React.createElement(DynamicButton, { type: 'buttons', button: 'vaciar', size: 'grande', color: 'rojo', onClick: function () { return vaciar(); } })))));
             }
-        case "rutasImj":
-            return (React.createElement("div", { className: "AsideCards" + getModo(props.modo) },
+        case 'rutasImj':
+            return (React.createElement("div", { className: "AsideCards" + getModo$7(props.modo) },
                 React.createElement("div", { className: "ContenedorBotonesAside" },
                     React.createElement("div", { className: "BotonAside" }, abrirPrevisualizar()),
                     React.createElement("div", { className: "BotonAside" },
-                        React.createElement(Inputs, { type: "buttons", button: "editar", size: "grande", color: "amarillo" })),
+                        React.createElement(DynamicButton, { type: 'buttons', button: 'editar', size: 'grande', color: 'amarillo', onClick: function () { return editar(); } })),
                     React.createElement("div", { className: "BotonAside" },
-                        React.createElement(Inputs, { type: "buttons", button: "vaciar", size: "grande", color: "rojo" })))));
+                        React.createElement(DynamicButton, { type: 'buttons', button: 'vaciar', size: 'grande', color: 'rojo', onClick: function () { return vaciar(); } })))));
         default:
             return React.createElement(React.Fragment, null);
     }
 };
 
+/*ASIGNADO DE COLOR*/
+var getModo$6 = function (modo) {
+    switch (modo) {
+        case 'Dark': return ('DarkMode');
+        default: return '';
+    }
+};
+/* ASIGNADO DE COLOR */
+var getColorMedio$5 = function (tipoMedio) {
+    switch (tipoMedio) {
+        case 'espectacular': return ('Rojo');
+        case 'urbanos': return ('Magenta');
+        case 'muro': return ('Azul');
+        case 'indoors': return ('Amarillo');
+        default: return ('Gris');
+    }
+};
 var CardsAbcSitios = function (props) {
     var Front = function (props) {
         return (React.createElement("div", null,
-            React.createElement("div", { className: "EncabezadoCard BorderBottom" + getColorMedio$1(props.tipoMedio) },
-                React.createElement(Inputs, { modo: props.modo, clave: props.clave || "undefined", type: props.tipo || "undefned" })),
+            React.createElement("div", { className: "EncabezadoCard BorderBottom" + getColorMedio$5(props.tipoMedio) },
+                React.createElement(TitlesCards, { modo: props.modo, clave: props.clave || 'undefined', type: props.tipo || 'undefned' })),
             React.createElement("div", { className: "InformacionCard" },
                 React.createElement("div", { className: "DireccionCards" },
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Direcci\u00F3n: ", description: props.direccion || "undefined" })),
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Direcci\u00F3n: ', description: props.direccion || 'undefined' })),
                 React.createElement("div", { className: "Columnas2 RowPadding1" },
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Ubicaci\u00F3n: ", description: props.ubicacion || "undefined" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Vista: ", description: props.vista || "undefined" })),
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Ubicaci\u00F3n: ', description: props.ubicacion || 'undefined' }),
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Vista: ', description: props.vista || 'undefined' })),
                 React.createElement("div", { className: "Flexbox MedidasCards" },
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Medidas: ", description: (props.ancho || "0") + "m x " + (props.alto || "0") + "m", labelColor: getColorMedio$1(props.tipoMedio) })),
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Medidas: ', description: (props.ancho || '0') + 'm x ' + (props.alto || '0') + 'm', labelColor: getColorMedio$5(props.tipoMedio) })),
                 React.createElement("div", { className: "RowPadding1" },
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Implementaciones especiales: ", description: props.implementaciones || "?", labelColor: getColorMedio$1(props.tipoMedio) })),
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Implementaciones especiales: ', description: props.implementaciones || '?', labelColor: getColorMedio$5(props.tipoMedio) })),
                 React.createElement("div", { className: "PropiedadCardsPosition1" },
-                    React.createElement(Inputs, { property: "Activo", color: "verde", state: props.estadoActivo || false })))));
+                    React.createElement(PropertyBtn, { property: 'Activo', color: 'verde', state: props.estadoActivo || false })))));
     };
     var Back = function (props) {
         return (React.createElement("div", null,
-            React.createElement("div", { className: "EncabezadoCard BorderBottom" + getColorMedio$1(props.tipoMedio) },
-                React.createElement(Inputs, { modo: props.modo, clave: props.clave || "undefined", type: props.tipo || "undefined" })),
+            React.createElement("div", { className: "EncabezadoCard BorderBottom" + getColorMedio$5(props.tipoMedio) },
+                React.createElement(TitlesCards, { modo: props.modo, clave: props.clave || 'undefined', type: props.tipo || 'undefined' })),
             React.createElement("div", { className: "Columnas2" },
                 React.createElement("div", { className: "PaddingTopBottom1" },
                     React.createElement("div", { className: "IconoUbicacionGeografica" },
-                        React.createElement(Inputs, { type: "icons", button: "ubicaciongeografica", size: "grande", color: "amarillo" })),
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Longitud: ", description: props.longitud || "0" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Latitud: ", description: props.latitud || "0" })),
+                        React.createElement(DynamicButton, { type: 'icons', button: 'ubicaciongeografica', size: 'grande', color: 'amarillo' })),
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Longitud: ', description: props.longitud || '0' }),
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Latitud: ', description: props.latitud || '0' })),
                 React.createElement("div", { className: "PaddingTopBottom1" },
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Iluminacion: ", description: props.iluminacion || "?" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Bloqueado: ", description: props.bloqueado || "?" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Nicho: ", description: props.nicho || "?" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Material: ", description: props.material || "undefined" }))),
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Iluminacion: ', description: props.iluminacion || '?' }),
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Bloqueado: ', description: props.bloqueado || '?' }),
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Nicho: ', description: props.nicho || '?' }),
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Material: ', description: props.material || 'undefined' }))),
             React.createElement("div", null,
                 React.createElement("div", { className: "TitleDescriptionCards" },
-                    React.createElement(Inputs, { modo: props.modo, type: "title", title: "Descripcion:" })),
+                    React.createElement(TextField, { modo: props.modo, type: 'title', title: 'Descripcion:' })),
                 React.createElement("div", { className: "DescripcionCards TextOverflowDescription" },
-                    React.createElement(Inputs, { modo: props.modo, type: "description", description: props.descripcion || "undefined" }))),
+                    React.createElement(TextField, { modo: props.modo, type: 'description', description: props.descripcion || 'undefined' }))),
             React.createElement("div", { className: "PrecioCostoPosition" },
-                React.createElement(PrecioCosto, { type: "precioCosto", precio: props.precio || "0", costo: props.costo || "0", tipoMedio: props.tipoMedio }))));
+                React.createElement(PrecioCosto, { type: 'precioCosto', precio: props.precio || '0', costo: props.costo || '0', tipoMedio: props.tipoMedio }))));
     };
     return (React.createElement("div", { className: "CardsPaddings" },
         React.createElement("div", { className: "CardAsideFlex" },
             React.createElement("div", { className: "ContenedorCards" },
-                React.createElement("div", { className: "CardFront Card" + getModo$4(props.modo) },
+                React.createElement("div", { className: "CardFront Card" + getModo$6(props.modo) },
                     React.createElement(Front, { modo: props.modo, tipoMedio: props.tipoMedio, clave: props.clave, tipo: props.tipo, direccion: props.direccion, ubicacion: props.ubicacion, vista: props.vista, estadoActivo: props.estadoActivo, implementaciones: props.implementaciones, alto: props.alto, ancho: props.ancho })),
-                React.createElement("div", { className: "CardBack Card" + getModo$4(props.modo) },
+                React.createElement("div", { className: "CardBack Card" + getModo$6(props.modo) },
                     React.createElement(Back, { modo: props.modo, tipoMedio: props.tipoMedio, clave: props.clave, tipo: props.tipo, longitud: props.longitud, latitud: props.latitud, iluminacion: props.iluminacion, bloqueado: props.bloqueado, nicho: props.nicho, material: props.material, descripcion: props.descripcion, precio: props.precio, costo: props.costo })),
                 React.createElement("div", { className: "EtiquetaIdentificacion" },
-                    React.createElement(Inputs, { type: "icons", size: "grande", button: "etiqueta", color: getColorMedio$1(props.tipoMedio) }))),
-            React.createElement(Aside, { modo: props.modo, tipoCard: "abcSitios", tipoMedio: props.tipoMedio, clave: props.clave, proveedor: props.proveedor, claveProveedor: props.claveProveedor, alcance: props.alcance, frecuencia: props.frecuencia, totalUsuarios: props.totalUsuarios, totalImpactos: props.totalImpactos, porcentajeHombres: props.porcentajeHombres, numeroHombres: props.numeroHombres, porcentajeMujeres: props.porcentajeMujeres, numeroMujeres: props.numeroMujeres, nseA: props.nseA, nseB: props.nseB, nseC: props.nseC, nseD: props.nseD, nseE: props.nseE, totalNseA: props.totalNseA, totalNseB: props.totalNseB, totalNseC: props.totalNseC, totalNseD: props.totalNseD, totalNseE: props.totalNseE, edad13: props.edad13, edad18: props.edad18, edad26: props.edad26, edad41: props.edad41, edad55: props.edad55, totalEdad13: props.totalEdad13, totalEdad18: props.totalEdad18, totalEdad26: props.totalEdad26, totalEdad41: props.totalEdad41, totalEdad55: props.totalEdad55, tipo: props.tipo, porcentajeUsuarios: props.porcentajeUsuarios, porcentajeImpactos: props.porcentajeImpactos, direccion: props.direccion, colonia: props.colonia, cdEdo: props.cdEdo, vialidad: props.vialidad, ancho: props.ancho, alto: props.alto, material: props.material, acabados: props.acabados, iluminacion: props.iluminacion, vista: props.vista, nicho: props.nicho, estadoImplementaciones: props.estadoImplementaciones, descripcion: props.descripcion, imagen: props.imagen, qr: props.qr }))));
+                    React.createElement(DynamicButton, { type: 'icons', size: 'grande', button: 'etiqueta', color: getColorMedio$5(props.tipoMedio) }))),
+            React.createElement(Aside, { modo: props.modo, tipoCard: 'abcSitios', tipoMedio: props.tipoMedio, clave: props.clave, proveedor: props.proveedor, claveProveedor: props.claveProveedor, alcance: props.alcance, frecuencia: props.frecuencia, totalUsuarios: props.totalUsuarios, totalImpactos: props.totalImpactos, porcentajeHombres: props.porcentajeHombres, numeroHombres: props.numeroHombres, porcentajeMujeres: props.porcentajeMujeres, numeroMujeres: props.numeroMujeres, nseA: props.nseA, nseB: props.nseB, nseC: props.nseC, nseD: props.nseD, nseE: props.nseE, totalNseA: props.totalNseA, totalNseB: props.totalNseB, totalNseC: props.totalNseC, totalNseD: props.totalNseD, totalNseE: props.totalNseE, edad13: props.edad13, edad18: props.edad18, edad26: props.edad26, edad41: props.edad41, edad55: props.edad55, totalEdad13: props.totalEdad13, totalEdad18: props.totalEdad18, totalEdad26: props.totalEdad26, totalEdad41: props.totalEdad41, totalEdad55: props.totalEdad55, tipo: props.tipo, porcentajeUsuarios: props.porcentajeUsuarios, porcentajeImpactos: props.porcentajeImpactos, direccion: props.direccion, colonia: props.colonia, cdEdo: props.cdEdo, vialidad: props.vialidad, ancho: props.ancho, alto: props.alto, material: props.material, acabados: props.acabados, iluminacion: props.iluminacion, vista: props.vista, nicho: props.nicho, estadoImplementaciones: props.estadoImplementaciones, descripcion: props.descripcion, imagen: props.imagen, qr: props.qr }))));
 };
 
-var CardsVisualizaPauta = function (props) {
-    var Front = function (props) {
-        if (props.tipoMedio === "espectacular" || props.tipoMedio === "muro") {
-            return (React.createElement("div", null,
-                React.createElement("div", { className: "EncabezadoCard BorderBottom" + getColorMedio$1(props.tipoMedio) },
-                    React.createElement(Inputs, { modo: props.modo, clave: props.clave || "undefined", type: props.tipo || "undefined" })),
-                React.createElement("div", { className: "InformacionCard" },
-                    React.createElement("div", { className: "DireccionCards" },
-                        React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Direcci\u00F3n: ", description: props.direccion || "undefined" })),
-                    React.createElement("div", { className: "Flexbox MedidasCards RowPadding2" },
-                        React.createElement("div", null,
-                            React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Medidas: ", description: props.ancho + "m x " + props.alto + "m", labelColor: getColorMedio$1(props.tipoMedio) }))),
-                    React.createElement("div", { className: "InicioFinCards " },
-                        React.createElement("div", { className: "CampoFechaInicioFin" },
-                            React.createElement(Inputs, { modo: props.modo, type: "title", title: "Fecha de inicio" }),
-                            React.createElement(Inputs, { type: "date", justify: "left", color: getColorMedio$1(props.tipoMedio) })),
-                        React.createElement("div", { className: "CampoFechaInicioFin" },
-                            React.createElement(Inputs, { modo: props.modo, type: "title", title: "Fecha de fin" }),
-                            React.createElement(Inputs, { type: "date", justify: "right", color: getColorMedio$1(props.tipoMedio) }))),
-                    React.createElement("div", { className: "DescuentoCards Columnas2" },
-                        React.createElement("div", { className: "CampoFechaInicioFin" },
-                            React.createElement(Inputs, { modo: props.modo, type: "title", title: "Descuento" }),
-                            React.createElement(Inputs, { type: "aumentoDecremento", color: getColorMedio$1(props.tipoMedio) })),
-                        React.createElement("div", { className: "FontColor" + getColorMedio$1(props.tipoMedio) },
-                            React.createElement(PrecioCosto, { type: "precio", tipoMedio: props.tipoMedio, precio: props.precio || "0" }))),
-                    React.createElement("div", { className: "RowPadding1" }))));
-        }
-        else {
-            return (React.createElement(React.Fragment, null,
-                React.createElement("div", { className: "EncabezadoCard BorderBottom" + getColorMedio$1(props.tipoMedio) },
-                    React.createElement(Inputs, { modo: props.modo, clave: props.clave || "undefined", type: props.tipo || "undefined" })),
-                React.createElement("div", { className: "PaddingBottomMedio" }),
-                React.createElement("div", { className: "TitleDescriptionCards" },
-                    React.createElement(Inputs, { modo: props.modo, type: "title", title: "Descripci\u00F3n: " })),
-                React.createElement("div", { className: "DescripcionCards TextOverflowDescription" },
-                    React.createElement(Inputs, { modo: props.modo, type: "description", description: props.descripcion || "undefined" })),
-                React.createElement("div", { className: "InicioFinCards Columnas2" },
-                    React.createElement("div", null,
-                        React.createElement(Inputs, { modo: props.modo, type: "description", description: "Fecha de inicio" }),
-                        React.createElement(Inputs, { type: "date", justify: "left", color: getColorMedio$1(props.tipoMedio) })),
-                    React.createElement("div", null,
-                        React.createElement(Inputs, { modo: props.modo, type: "description", description: "Fecha de fin" }),
-                        React.createElement(Inputs, { type: "date", justify: "left", color: getColorMedio$1(props.tipoMedio) }))),
-                React.createElement("div", { className: "DescuentoCards Columnas2" },
-                    React.createElement("div", null,
-                        React.createElement(Inputs, { modo: props.modo, type: "description", description: "Descuento" }),
-                        React.createElement(Inputs, { type: "aumentoDecremento", color: getColorMedio$1(props.tipoMedio) })),
-                    React.createElement("div", { className: "FontColor" + getColorMedio$1(props.tipoMedio) },
-                        React.createElement(PrecioCosto, { type: "precio", precio: props.precio || "0" })))));
-        }
-    };
-    return (React.createElement("div", { className: "CardsPaddings" },
-        React.createElement("div", { className: "CardAsideFlex" },
-            React.createElement("div", { className: "ContenedorCards" },
-                React.createElement("div", { className: "Card" + getModo$4(props.modo) },
-                    React.createElement(Front, { modo: props.modo, tipoMedio: props.tipoMedio, clave: props.clave, tipo: props.tipo, direccion: props.direccion, alto: props.alto, ancho: props.ancho, precio: props.precio, descripcion: props.descripcion })),
-                React.createElement("div", { className: "EtiquetaIdentificacion" },
-                    React.createElement(Inputs, { type: "icons", size: "grande", button: "etiqueta", color: getColorMedio$1(props.tipoMedio) }))),
-            React.createElement(Aside, { modo: props.modo, tipoCard: "visualizadorPauta", tipoMedio: props.tipoMedio, clave: props.clave, proveedor: props.proveedor, claveProveedor: props.claveProveedor, alcance: props.alcance, frecuencia: props.frecuencia, totalUsuarios: props.totalUsuarios, totalImpactos: props.totalImpactos, porcentajeHombres: props.porcentajeHombres, numeroHombres: props.numeroHombres, porcentajeMujeres: props.porcentajeMujeres, numeroMujeres: props.numeroMujeres, nseA: props.nseA, nseB: props.nseB, nseC: props.nseC, nseD: props.nseD, nseE: props.nseE, edad13: props.edad13, edad18: props.edad18, edad26: props.edad26, edad41: props.edad41, edad55: props.edad55, totalNseA: props.totalNseA, totalNseB: props.totalNseB, totalNseC: props.totalNseC, totalNseD: props.totalNseD, totalNseE: props.totalNseE, totalEdad13: props.totalEdad13, totalEdad18: props.totalEdad18, totalEdad26: props.totalEdad26, totalEdad41: props.totalEdad41, totalEdad55: props.totalEdad55, imagen: props.imagen, tipo: props.tipo, porcentajeUsuarios: props.porcentajeUsuarios, porcentajeImpactos: props.porcentajeImpactos, direccion: props.direccion, colonia: props.colonia, cdEdo: props.cdEdo, vialidad: props.vialidad, ancho: props.ancho, alto: props.alto, material: props.material, acabados: props.acabados, iluminacion: props.iluminacion, vista: props.vista, nicho: props.nicho, estadoImplementaciones: props.estadoImplementaciones, descripcion: props.descripcion, qr: props.qr }))));
+var getModo$5 = function (modo) {
+    switch (modo) {
+        case 'Dark': return ('DarkMode');
+        default: return '';
+    }
 };
-
+var getColorMedio$4 = function (tipoMedio) {
+    switch (tipoMedio) {
+        case 'espectacular': return ('Rojo');
+        case 'urbanos': return ('Magenta');
+        case 'muro': return ('Azul');
+        case 'indoors': return ('Amarillo');
+        default: return ('Gris');
+    }
+};
 var CardsInventarioComercial = function (props) {
     var Front = function (props) {
         return (React.createElement("div", null,
-            React.createElement("div", { className: "EncabezadoCard BorderBottom" + getColorMedio$1(props.tipoMedio) },
-                React.createElement(Inputs, { modo: props.modo, clave: props.clave || "undefined", type: props.tipo || "undefined" })),
+            React.createElement("div", { className: "EncabezadoCard BorderBottom" + getColorMedio$4(props.tipoMedio) },
+                React.createElement(TitlesCards, { modo: props.modo, clave: props.clave || 'undefined', type: props.tipo || 'undefined' })),
             React.createElement("div", { className: "InformacionCard" },
                 React.createElement("div", { className: "DireccionCards" },
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Direcci\u00F3n: ", description: props.direccion || "undefined" })),
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Direcci\u00F3n: ', description: props.direccion || 'undefined' })),
                 React.createElement("div", { className: "Columnas2 RowPadding1" },
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Ubicaci\u00F3n: ", description: props.ubicacion || "undefined" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Vista: ", description: props.vista || "undefined" })),
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Ubicaci\u00F3n: ', description: props.ubicacion || 'undefined' }),
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Vista: ', description: props.vista || 'undefined' })),
                 React.createElement("div", { className: "Flexbox MedidasCards" },
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Medidas: ", description: props.ancho + "m x " + props.alto + "m", labelColor: getColorMedio$1(props.tipoMedio) })),
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Medidas: ', description: props.ancho + 'm x ' + props.alto + 'm', labelColor: getColorMedio$4(props.tipoMedio) })),
                 React.createElement("div", { className: "RowPadding1" },
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Implementaciones especiales: ", description: props.implementaciones || "?", labelColor: getColorMedio$1(props.tipoMedio) })),
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Implementaciones especiales: ', description: props.implementaciones || '?', labelColor: getColorMedio$4(props.tipoMedio) })),
                 React.createElement("div", { className: "PropiedadCardsPosition1" },
-                    React.createElement(Inputs, { property: "Activo", color: "verde", state: props.estadoActivo || false })))));
+                    React.createElement(PropertyBtn, { property: 'Activo', color: 'verde', state: props.estadoActivo || false })))));
     };
     return (React.createElement("div", { className: "CardsPaddings" },
         React.createElement("div", { className: "CardAsideFlex" },
             React.createElement("div", { className: "ContenedorCards" },
-                React.createElement("div", { className: "Card" + getModo$4(props.modo) },
+                React.createElement("div", { className: "Card" + getModo$5(props.modo) },
                     React.createElement(Front, { modo: props.modo, tipoMedio: props.tipoMedio, clave: props.clave, tipo: props.tipo, direccion: props.direccion, ubicacion: props.ubicacion, vista: props.vista, estadoActivo: props.estadoActivo, implementaciones: props.implementaciones, alto: props.alto, ancho: props.ancho })),
                 React.createElement("div", { className: "EtiquetaIdentificacion" },
-                    React.createElement(Inputs, { type: "icons", size: "grande", button: "etiqueta", color: getColorMedio$1(props.tipoMedio) }))),
-            React.createElement(Aside, { modo: props.modo, tipoCard: "abcSitios", tipoMedio: props.tipoMedio, clave: props.clave, proveedor: props.proveedor, claveProveedor: props.claveProveedor, alcance: props.alcance, frecuencia: props.frecuencia, totalUsuarios: props.totalUsuarios, totalImpactos: props.totalImpactos, porcentajeHombres: props.porcentajeHombres, numeroHombres: props.numeroHombres, porcentajeMujeres: props.porcentajeMujeres, numeroMujeres: props.numeroMujeres, nseA: props.nseA, nseB: props.nseB, nseC: props.nseC, nseD: props.nseD, nseE: props.nseE, edad13: props.edad13, edad18: props.edad18, edad26: props.edad26, edad41: props.edad41, edad55: props.edad55, totalNseA: props.totalNseA, totalNseB: props.totalNseB, totalNseC: props.totalNseC, totalNseD: props.totalNseD, totalNseE: props.totalNseE, totalEdad13: props.totalEdad13, totalEdad18: props.totalEdad18, totalEdad26: props.totalEdad26, totalEdad41: props.totalEdad41, totalEdad55: props.totalEdad55, imagen: props.imagen, tipo: props.tipo, porcentajeUsuarios: props.porcentajeUsuarios, porcentajeImpactos: props.porcentajeImpactos, direccion: props.direccion, colonia: props.colonia, cdEdo: props.cdEdo, vialidad: props.vialidad, ancho: props.ancho, alto: props.alto, material: props.material, acabados: props.acabados, iluminacion: props.iluminacion, vista: props.vista, nicho: props.nicho, estadoImplementaciones: props.estadoImplementaciones, descripcion: props.descripcion, qr: props.qr }))));
+                    React.createElement(DynamicButton, { type: 'icons', size: 'grande', button: 'etiqueta', color: getColorMedio$4(props.tipoMedio) }))),
+            React.createElement(Aside, { modo: props.modo, tipoCard: 'abcSitios', tipoMedio: props.tipoMedio, clave: props.clave, proveedor: props.proveedor, claveProveedor: props.claveProveedor, alcance: props.alcance, frecuencia: props.frecuencia, totalUsuarios: props.totalUsuarios, totalImpactos: props.totalImpactos, porcentajeHombres: props.porcentajeHombres, numeroHombres: props.numeroHombres, porcentajeMujeres: props.porcentajeMujeres, numeroMujeres: props.numeroMujeres, nseA: props.nseA, nseB: props.nseB, nseC: props.nseC, nseD: props.nseD, nseE: props.nseE, edad13: props.edad13, edad18: props.edad18, edad26: props.edad26, edad41: props.edad41, edad55: props.edad55, totalNseA: props.totalNseA, totalNseB: props.totalNseB, totalNseC: props.totalNseC, totalNseD: props.totalNseD, totalNseE: props.totalNseE, totalEdad13: props.totalEdad13, totalEdad18: props.totalEdad18, totalEdad26: props.totalEdad26, totalEdad41: props.totalEdad41, totalEdad55: props.totalEdad55, imagen: props.imagen, tipo: props.tipo, porcentajeUsuarios: props.porcentajeUsuarios, porcentajeImpactos: props.porcentajeImpactos, direccion: props.direccion, colonia: props.colonia, cdEdo: props.cdEdo, vialidad: props.vialidad, ancho: props.ancho, alto: props.alto, material: props.material, acabados: props.acabados, iluminacion: props.iluminacion, vista: props.vista, nicho: props.nicho, estadoImplementaciones: props.estadoImplementaciones, descripcion: props.descripcion, qr: props.qr }))));
 };
 
-var CardsInventarioProveedores = function (props) {
-    var Front = function (props) {
-        return (React.createElement("div", null,
-            React.createElement("div", { className: "EncabezadoCard BorderBottom" + getColorMedio$1(props.tipoMedio) },
-                React.createElement(Inputs, { modo: props.modo, clave: props.clave || "undefined", type: props.tipo || "undefined" })),
-            React.createElement("div", { className: "InformacionCard" },
-                React.createElement("div", { className: "DireccionCards" },
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Direcci\u00F3n: ", description: props.direccion || "undefined" })),
-                React.createElement("div", { className: "Columnas2 RowPadding1" },
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Ubicaci\u00F3n: ", description: props.ubicacion || "undefined" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Vista: ", description: props.vista || "undefined" })),
-                React.createElement("div", { className: "Flexbox MedidasCards" },
-                    React.createElement("div", null,
-                        React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Medidas: ", description: (props.ancho || "0") + "m x " + (props.alto || "0") + "m", labelColor: getColorMedio$1(props.tipoMedio) }))),
-                React.createElement("div", { className: "RowPadding1" },
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Implementaciones especiales: ", description: props.implementaciones || "?", labelColor: getColorMedio$1(props.tipoMedio) })),
-                React.createElement("div", { className: "PropiedadCardsPosition3 Columnas3" },
-                    React.createElement(Inputs, { property: "Activo", color: "verde", state: props.estadoActivo || false }),
-                    React.createElement(Inputs, { property: "Bloqueado", color: "rojo", state: props.estadoBloqueado || false }),
-                    React.createElement(Inputs, { property: "Iluminaci\u00F3n", color: "amarillo", state: props.estadoIluminacion || false })))));
-    };
-    return (React.createElement("div", { className: "CardsPaddings" },
-        React.createElement("div", { className: "CardAsideFlex" },
-            React.createElement("div", { className: "ContenedorCards" },
-                React.createElement("div", { className: "CardInventarioProveedores" + getModo$4(props.modo) },
-                    React.createElement(Front, { modo: props.modo, tipoMedio: props.tipoMedio, clave: props.clave, tipo: props.tipo, direccion: props.direccion, ubicacion: props.ubicacion, vista: props.vista, estadoActivo: props.estadoActivo, estadoBloqueado: props.estadoBloqueado, estadoIluminacion: props.estadoIluminacion, implementaciones: props.implementaciones, alto: props.alto, ancho: props.ancho })),
-                React.createElement("div", { className: "EtiquetaIdentificacion" },
-                    React.createElement(Inputs, { type: "icons", size: "grande", button: "etiqueta", color: getColorMedio$1(props.tipoMedio) }))))));
-};
-
-var CardsRutasIMJ = function (props) {
-    var Front = function (props) {
-        return (React.createElement("div", null,
-            React.createElement("div", { className: "EncabezadoCard BorderBottom" + getColorMedio$1(props.tipoMedio) },
-                React.createElement(Inputs, { modo: props.modo, clave: props.ruta || "undefined", type: "Id: " + (props.id || "undefined") })),
-            React.createElement("div", { className: "InformacionCard" },
-                React.createElement("div", { className: "DireccionCards" },
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Clave: ", description: props.clave || "undefined" })),
-                React.createElement("div", { className: "RowPadding1" },
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Inicio: ", description: props.inicioRuta || "undefined" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Destino: ", description: props.destinoRuta || "undefined" })),
-                React.createElement("div", { className: "RowPadding1" },
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Ubicaci\u00F3n: ", description: props.ubicacion || "undefined" })),
-                React.createElement("div", { className: "RowPadding1" },
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Kilometraje: ", description: props.kilometraje || "0", labelColor: getColorMedio$1(props.tipoMedio) })),
-                React.createElement("div", { className: "PropiedadCardsPosition CardRutasImj" },
-                    React.createElement(Inputs, { property: "Activo", color: "verde", state: props.estadoActivo || false })))));
-    };
-    return (React.createElement("div", { className: "CardsPaddings" },
-        React.createElement("div", { className: "CardAsideFlex" },
-            React.createElement("div", { className: "ContenedorCards" },
-                React.createElement("div", { className: "Card" + getModo$4(props.modo) },
-                    React.createElement(Front, { modo: props.modo, tipoMedio: props.tipoMedio, ruta: props.ruta, id: props.id, clave: props.clave, inicioRuta: props.inicioRuta, destinoRuta: props.destinoRuta, ubicacion: props.ubicacion, kilometraje: props.kilometraje, estadoActivo: props.estadoActivo })),
-                React.createElement("div", { className: "EtiquetaIdentificacion" },
-                    React.createElement(Inputs, { type: "icons", size: "grande", button: "etiqueta", color: getColorMedio$1(props.tipoMedio) }))),
-            React.createElement(Aside, { modo: props.modo, tipoCard: "rutasImj", tipoMedio: props.tipoMedio }))));
-};
-
-var Cards = function (props) {
-    var modo = "";
-    var tipoCard = props.tipoCard;
-    switch (tipoCard) {
-        case "abcSitios":
-            return (React.createElement(CardsAbcSitios, { modo: modo, tipoCard: props.tipoCard, tipoMedio: props.tipoMedio, clave: props.clave, tipo: props.tipo, direccion: props.direccion, ubicacion: props.ubicacion, vista: props.vista, ancho: props.ancho, alto: props.alto, implementaciones: props.implementaciones, estadoActivo: props.estadoActivo, longitud: props.longitud, latitud: props.latitud, iluminacion: props.iluminacion, bloqueado: props.bloqueado, nicho: props.nicho, material: props.material, descripcion: props.descripcion, precio: props.precio, costo: props.costo, proveedor: props.proveedor, claveProveedor: props.claveProveedor, alcance: props.alcance, frecuencia: props.frecuencia, totalUsuarios: props.totalUsuarios, totalImpactos: props.totalImpactos, porcentajeHombres: props.porcentajeHombres, numeroHombres: props.numeroHombres, porcentajeMujeres: props.porcentajeMujeres, numeroMujeres: props.numeroMujeres, nseA: props.nseA, nseB: props.nseB, nseC: props.nseC, nseD: props.nseD, nseE: props.nseE, edad13: props.edad13, edad18: props.edad18, edad26: props.edad26, edad41: props.edad41, edad55: props.edad55, totalEdad13: props.totalEdad13, totalEdad18: props.totalEdad18, totalEdad26: props.totalEdad26, totalEdad41: props.totalEdad41, totalEdad55: props.totalEdad55, totalNseA: props.totalNseA, totalNseB: props.totalNseB, totalNseC: props.totalNseC, totalNseD: props.totalNseD, totalNseE: props.totalNseE, porcentajeUsuarios: props.porcentajeUsuarios, porcentajeImpactos: props.porcentajeImpactos, colonia: props.colonia, cdEdo: props.cdEdo, vialidad: props.cdEdo, acabados: props.acabados, estadoImplementaciones: props.estadoImplementaciones, imagen: props.imagen, qr: props.qr }));
-        case "visualizadorPauta":
-            return (React.createElement(CardsVisualizaPauta, { modo: modo, tipoMedio: props.tipoMedio, clave: props.clave, tipo: props.tipo, direccion: props.direccion, ancho: props.ancho, alto: props.alto, precio: props.precio, descripcion: props.descripcion, proveedor: props.proveedor, claveProveedor: props.claveProveedor, alcance: props.alcance, frecuencia: props.frecuencia, totalUsuarios: props.totalUsuarios, totalImpactos: props.totalImpactos, porcentajeHombres: props.porcentajeHombres, numeroHombres: props.numeroHombres, porcentajeMujeres: props.porcentajeMujeres, numeroMujeres: props.numeroMujeres, nseA: props.nseA, nseB: props.nseB, nseC: props.nseC, nseD: props.nseD, nseE: props.nseE, edad13: props.edad13, edad18: props.edad18, edad26: props.edad26, edad41: props.edad41, edad55: props.edad55, totalEdad13: props.totalEdad13, totalEdad18: props.totalEdad18, totalEdad26: props.totalEdad26, totalEdad41: props.totalEdad41, totalEdad55: props.totalEdad55, totalNseA: props.totalEdad55, totalNseB: props.totalNseB, totalNseC: props.totalNseC, totalNseD: props.totalNseD, totalNseE: props.totalNseE, porcentajeUsuarios: props.porcentajeUsuarios, porcentajeImpactos: props.porcentajeImpactos, colonia: props.colonia, cdEdo: props.cdEdo, vialidad: props.vialidad, acabados: props.acabados, estadoImplementaciones: props.estadoImplementaciones, material: props.estadoImplementaciones, iluminacion: props.iluminacion, vista: props.vista, nicho: props.nicho, imagen: props.imagen, qr: props.qr }));
-        case "inventarioComercial":
-            return (React.createElement(CardsInventarioComercial, { modo: modo, tipoMedio: props.tipoMedio, clave: props.clave, tipo: props.tipo, direccion: props.direccion, ubicacion: props.ubicacion, vista: props.vista, ancho: props.ancho, alto: props.alto, implementaciones: props.implementaciones, estadoActivo: props.estadoActivo, longitud: props.longitud, latitud: props.latitud, iluminacion: props.iluminacion, bloqueado: props.bloqueado, nicho: props.nicho, material: props.material, descripcion: props.descripcion, precio: props.precio, costo: props.costo, proveedor: props.proveedor, claveProveedor: props.claveProveedor, alcance: props.alcance, frecuencia: props.frecuencia, totalUsuarios: props.totalUsuarios, totalImpactos: props.totalImpactos, porcentajeHombres: props.porcentajeHombres, numeroHombres: props.numeroHombres, porcentajeMujeres: props.porcentajeMujeres, numeroMujeres: props.numeroMujeres, nseA: props.nseA, nseB: props.nseB, nseC: props.nseC, nseD: props.nseD, nseE: props.nseE, edad13: props.edad13, edad18: props.edad18, edad26: props.edad26, edad41: props.edad41, edad55: props.edad55, totalEdad13: props.totalEdad13, totalEdad18: props.totalEdad18, totalEdad26: props.totalEdad26, totalEdad41: props.totalEdad41, totalEdad55: props.totalEdad55, totalNseA: props.totalNseA, totalNseB: props.totalNseB, totalNseC: props.totalNseC, totalNseD: props.totalNseD, totalNseE: props.totalNseE, porcentajeUsuarios: props.porcentajeUsuarios, porcentajeImpactos: props.porcentajeImpactos, colonia: props.colonia, cdEdo: props.cdEdo, vialidad: props.cdEdo, acabados: props.acabados, estadoImplementaciones: props.estadoImplementaciones, imagen: props.imagen, qr: props.qr }));
-        case "inventarioProveedores":
-            return (React.createElement(CardsInventarioProveedores, { modo: modo, tipoMedio: props.tipoMedio, clave: props.clave, tipo: props.tipo, direccion: props.direccion, vista: props.vista, ubicacion: props.ubicacion, ancho: props.ancho, alto: props.alto, implementaciones: props.implementaciones, estadoActivo: props.estadoActivo, estadoBloqueado: props.estadoBloqueado, estadoIluminacion: props.estadoIluminacion }));
-        case "rutasImj":
-            return (React.createElement(CardsRutasIMJ, { modo: modo, estadoActivo: props.estadoActivo, tipoMedio: props.tipoMedio, ruta: props.ruta, id: props.id, clave: props.clave, ubicacion: props.ubicacion, inicioRuta: props.inicioRuta, destinoRuta: props.destinoRuta, kilometraje: props.kilometraje }));
+var hombres = require('../../../Img/Iconos/hombres.jpg');
+var mujeres = require('../../../Img/Iconos/mujeres.jpg');
+var noImage$1 = require('../../../Img/Img/noImage.jpg');
+var getModo$4 = function (modo) {
+    switch (modo) {
+        case 'Dark': return ('DarkMode');
+        default: return '';
     }
 };
-
-var hombres = require("../../../img/iconos/hombres.svg");
-var mujeres = require("../../../img/iconos/mujeres.svg");
+var getColorMedio$3 = function (tipoMedio) {
+    switch (tipoMedio) {
+        case 'espectacular': return ('Rojo');
+        case 'urbanos': return ('Magenta');
+        case 'muro': return ('Azul');
+        case 'indoors': return ('Amarillo');
+        default: return ('Gris');
+    }
+};
 var CardsRecorrido = function (props) {
     var Front = function (props) {
         return (React.createElement("div", { className: "CardFrontRecorrido CardRecorrido" + getModo$4(props.modo) },
             React.createElement("div", { className: "ImageCardRecorrido" },
-                React.createElement("img", { src: props.imagen, alt: "" })),
-            React.createElement("div", { className: "EncabezadoCard BorderBottom" + getColorMedio$1(props.tipoMedio) },
-                React.createElement(Inputs, { modo: props.modo, clave: props.clave || "undefined", type: props.tipo || "undefined" })),
+                React.createElement("img", { src: props.imagen || noImage$1, alt: "" })),
+            React.createElement("div", { className: "EncabezadoCard BorderBottom" + getColorMedio$3(props.tipoMedio) },
+                React.createElement(TitlesCards, { modo: props.modo, clave: props.clave || 'undefined', type: props.tipo || 'undefined' })),
             React.createElement("div", { className: "ContenidoCardsRecorrido" },
-                React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Direcci\u00F3n: ", description: props.direccion || "undefined" }),
+                React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Direcci\u00F3n: ', description: props.direccion || 'undefined' }),
                 React.createElement("div", { className: "Columnas2" },
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Ubicaci\u00F3n: ", description: props.ubicacion || "undefined" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Vista: ", description: props.vista || "?" })),
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Ubicaci\u00F3n: ', description: props.ubicacion || 'undefined' }),
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Vista: ', description: props.vista || '?' })),
                 React.createElement("div", { className: "Flexbox MedidasCards" },
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Medidas: ", description: (props.ancho || "0") + "m x " + (props.alto || "0") + "m", labelColor: getColorMedio$1(props.tipoMedio) })),
-                React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Material: ", description: props.material || "undefined" }),
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Medidas: ', description: (props.ancho || '0') + 'm x ' + (props.alto || '0') + 'm', labelColor: getColorMedio$3(props.tipoMedio) })),
+                React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Material: ', description: props.material || 'undefined' }),
                 React.createElement("div", { className: "TextOverflowDescription PaddingRight1" },
-                    React.createElement(Inputs, { modo: props.modo, type: "titleAndDescription", title: "Referencias: ", description: props.descripcion || "undefined" })),
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Referencias: ', description: props.descripcion || 'undefined' })),
                 React.createElement("div", { className: "Columnas2 PropiedadesCardsRecorrido" },
-                    React.createElement(Inputs, { property: "Imp. Especiales", color: "verde", state: props.estadoActivo || false }),
-                    React.createElement(Inputs, { property: "Iluminaci\u00F3n", color: "amarillo", state: props.estadoIluminacion || false })))));
+                    React.createElement(PropertyBtn, { property: 'Imp. Especiales', color: 'verde', state: props.estadoActivo || false }),
+                    React.createElement(PropertyBtn, { property: 'Iluminaci\u00F3n', color: 'amarillo', state: props.estadoIluminacion || false })))));
     };
     var Back = function (props) {
         return (React.createElement("div", { className: "CardBackRecorrido CardRecorrido" + getModo$4(props.modo) },
@@ -15863,64 +15786,377 @@ var CardsRecorrido = function (props) {
                     React.createElement("div", { className: "PorcentajesIconos" },
                         React.createElement("img", { src: hombres, alt: "" }),
                         React.createElement("div", { className: "TotalesPorcentajes" },
-                            React.createElement(Inputs, { modo: props.modo, type: "description", description: props.numeroHombres || "0" }))),
+                            React.createElement(TextField, { modo: props.modo, type: 'description', description: props.numeroHombres || '0' }))),
                     React.createElement("div", { className: "Width100 CenterText" },
-                        React.createElement(Inputs, { modo: props.modo, type: "description", description: props.porcentajeHombres || "0", labelColor: "Azul" }))),
+                        React.createElement(TextField, { modo: props.modo, type: 'description', description: props.porcentajeHombres || '0', labelColor: 'Azul' }))),
                 React.createElement("div", { className: "MujeresBackCardsRecorrido" },
                     React.createElement("div", { className: "PorcentajesIconos" },
                         React.createElement("img", { src: mujeres, alt: "" }),
                         React.createElement("div", { className: "TotalesPorcentajes" },
-                            React.createElement(Inputs, { modo: props.modo, type: "description", description: props.numeroMujeres || "0" }))),
+                            React.createElement(TextField, { modo: props.modo, type: 'description', description: props.numeroMujeres || '0' }))),
                     React.createElement("div", { className: "Width100" },
-                        React.createElement(Inputs, { modo: props.modo, type: "description", description: props.porcentajeMujeres || "0", labelColor: "Magenta" })))),
+                        React.createElement(TextField, { modo: props.modo, type: 'description', description: props.porcentajeMujeres || '0', labelColor: 'Magenta' })))),
             React.createElement("div", { className: "Columnas2 Contenedor" },
                 React.createElement("div", { className: "CamposBackCardsRecorrido" },
                     React.createElement("div", { className: "PorcentajesIconos" },
                         React.createElement("div", { className: "TotalesPorcentajes" },
-                            React.createElement(Inputs, { modo: props.modo, type: "description", description: "Alcance:" }))),
+                            React.createElement(TextField, { modo: props.modo, type: 'description', description: 'Alcance:' }))),
                     React.createElement("div", { className: "Width100 CenterText" },
-                        React.createElement(Inputs, { modo: props.modo, type: "description", description: props.alcance || "0", labelColor: "Rojo" }))),
+                        React.createElement(TextField, { modo: props.modo, type: 'description', description: props.alcance || '0', labelColor: 'Rojo' }))),
                 React.createElement("div", { className: "CamposBackCardsRecorrido" },
                     React.createElement("div", { className: "PorcentajesIconos" },
                         React.createElement("div", { className: "TotalesPorcentajes" },
-                            React.createElement(Inputs, { modo: props.modo, type: "description", description: "Frecuencia:" }))),
+                            React.createElement(TextField, { modo: props.modo, type: 'description', description: 'Frecuencia:' }))),
                     React.createElement("div", { className: "Width100" },
-                        React.createElement(Inputs, { modo: props.modo, type: "description", description: props.frecuencia || "0", labelColor: "Azul" })))),
+                        React.createElement(TextField, { modo: props.modo, type: 'description', description: props.frecuencia || '0', labelColor: 'Azul' })))),
             React.createElement("div", { className: "Columnas2 Contenedor" },
                 React.createElement("div", { className: "CamposBackCardsRecorrido" },
                     React.createElement("div", { className: "PorcentajesIconos" },
                         React.createElement("div", { className: "TotalesPorcentajes" },
-                            React.createElement(Inputs, { modo: props.modo, type: "description", description: "Total de usuarios:" }))),
+                            React.createElement(TextField, { modo: props.modo, type: 'description', description: 'Total de usuarios:' }))),
                     React.createElement("div", { className: "Width100 CenterText" },
-                        React.createElement(Inputs, { modo: props.modo, type: "description", description: props.totalUsuarios || "0", labelColor: "Morado" }))),
+                        React.createElement(TextField, { modo: props.modo, type: 'description', description: props.totalUsuarios || '0', labelColor: 'Morado' }))),
                 React.createElement("div", { className: "CamposBackCardsRecorrido" },
                     React.createElement("div", { className: "PorcentajesIconos" },
                         React.createElement("div", { className: "TotalesPorcentajes" },
-                            React.createElement(Inputs, { modo: props.modo, type: "description", description: "Total de impactos:" }))),
+                            React.createElement(TextField, { modo: props.modo, type: 'description', description: 'Total de impactos:' }))),
                     React.createElement("div", { className: "Width100" },
-                        React.createElement(Inputs, { modo: props.modo, type: "description", description: props.totalImpactos || "0", labelColor: "Azul" })))),
+                        React.createElement(TextField, { modo: props.modo, type: 'description', description: props.totalImpactos || '0', labelColor: 'Azul' })))),
             React.createElement("div", { className: "ContenedorPieDeGraficaRecorrido" },
                 React.createElement("p", { className: "TituloGrafica" }, " Afluencia por Nivel Socio Econ\u00F3mico"),
                 React.createElement("div", { className: "CamposGraficas" },
-                    React.createElement(Inputs, { modo: props.modo, type: "description", description: "NSE A: " + props.totalNseB || "0", labelColor: "Azul" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "description", description: "NSE B: " + props.totalNseB || "0", labelColor: "Rojo" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "description", description: "NSE C: " + props.totalNseC || "0", labelColor: "Aqua" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "description", description: "NSE D: " + props.totalNseD || "0", labelColor: "Magenta" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "description", description: "NSE E: " + props.totalNseE || "0", labelColor: "Amarillo" }))),
+                    React.createElement(TextField, { modo: props.modo, type: 'description', description: 'NSE A: ' + props.totalNseB || '0', labelColor: 'Azul' }),
+                    React.createElement(TextField, { modo: props.modo, type: 'description', description: 'NSE B: ' + props.totalNseB || '0', labelColor: 'Rojo' }),
+                    React.createElement(TextField, { modo: props.modo, type: 'description', description: 'NSE C: ' + props.totalNseC || '0', labelColor: 'Aqua' }),
+                    React.createElement(TextField, { modo: props.modo, type: 'description', description: 'NSE D: ' + props.totalNseD || '0', labelColor: 'Magenta' }),
+                    React.createElement(TextField, { modo: props.modo, type: 'description', description: 'NSE E: ' + props.totalNseE || '0', labelColor: 'Amarillo' }))),
             React.createElement("div", { className: "ContenedorPieDeGraficaRecorrido" },
                 React.createElement("p", { className: "TituloGrafica" }, " Afluencia por Grupo de edad"),
                 React.createElement("div", { className: "CamposGraficas" },
-                    React.createElement(Inputs, { modo: props.modo, type: "description", description: "13-17: " + props.totalEdad13 || "0", labelColor: "Azul" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "description", description: "18-25: " + props.totalEdad18 || "0", labelColor: "Rojo" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "description", description: "26-40: " + props.totalEdad26 || "0", labelColor: "Aqua" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "description", description: "41-55: " + props.totalEdad41 || "0", labelColor: "Magenta" }),
-                    React.createElement(Inputs, { modo: props.modo, type: "description", description: "55 o +: " + props.totalEdad55 || "0", labelColor: "Amarillo" }))),
+                    React.createElement(TextField, { modo: props.modo, type: 'description', description: '13-17: ' + props.totalEdad13 || '0', labelColor: 'Azul' }),
+                    React.createElement(TextField, { modo: props.modo, type: 'description', description: '18-25: ' + props.totalEdad18 || '0', labelColor: 'Rojo' }),
+                    React.createElement(TextField, { modo: props.modo, type: 'description', description: '26-40: ' + props.totalEdad26 || '0', labelColor: 'Aqua' }),
+                    React.createElement(TextField, { modo: props.modo, type: 'description', description: '41-55: ' + props.totalEdad41 || '0', labelColor: 'Magenta' }),
+                    React.createElement(TextField, { modo: props.modo, type: 'description', description: '55 o +: ' + props.totalEdad55 || '0', labelColor: 'Amarillo' }))),
             React.createElement("p", { className: "Absolute Top90 Left25" }, "*Datos actualizados semanalmente")));
     };
     return (React.createElement("div", { className: "ContenedorCardsRecorrido" },
         React.createElement(Front, { modo: props.modo, imagen: props.imagen, tipoMedio: props.tipoMedio, clave: props.clave, tipo: props.tipo, direccion: props.direccion, ubicacion: props.ubicacion, vista: props.vista, ancho: props.ancho, alto: props.alto, material: props.material, descripcion: props.descripcion, estadoActivo: props.estadoActivo, estadoIluminacion: props.estadoIluminacion }),
-        React.createElement(Back, { tipoMedio: props.tipoMedio, modo: props.modo, numeroHombres: props.numeroHombres, porcentajeHombres: props.porcentajeHombres + "%", numeroMujeres: props.numeroMujeres, porcentajeMujeres: props.porcentajeMujeres + "%", alcance: props.alcance + "%", frecuencia: props.frecuencia + "%", totalUsuarios: props.totalUsuarios, totalImpactos: props.totalImpactos, totalNseA: props.totalNseA, totalNseB: props.totalNseB, totalNseC: props.totalNseC, totalNseD: props.totalNseD, totalNseE: props.totalNseE, totalEdad13: props.totalEdad13, totalEdad18: props.totalEdad18, totalEdad26: props.totalEdad26, totalEdad41: props.totalEdad41, totalEdad55: props.totalEdad55 })));
+        React.createElement(Back, { tipoMedio: props.tipoMedio, modo: props.modo, numeroHombres: props.numeroHombres, porcentajeHombres: props.porcentajeHombres + '%', numeroMujeres: props.numeroMujeres, porcentajeMujeres: props.porcentajeMujeres + '%', alcance: props.alcance + '%', frecuencia: props.frecuencia + '%', totalUsuarios: props.totalUsuarios, totalImpactos: props.totalImpactos, totalNseA: props.totalNseA, totalNseB: props.totalNseB, totalNseC: props.totalNseC, totalNseD: props.totalNseD, totalNseE: props.totalNseE, totalEdad13: props.totalEdad13, totalEdad18: props.totalEdad18, totalEdad26: props.totalEdad26, totalEdad41: props.totalEdad41, totalEdad55: props.totalEdad55 })));
 };
 
-export { Aside, Cards, CardsAbcSitios, CardsInventarioComercial, CardsInventarioProveedores, CardsPorcentajes, CardsRecorrido, CardsRutasIMJ as CardsRutasImj, CardsVisualizaPauta, DynamicButton, GraficasCardsFront as GraficasCards, Logo, PieGraphics, PrecioCosto, PrevisualizarCards, PropertyBtn, TextField, TitlesCards };
+/*ASIGNADO DE COLOR*/
+var getModo$3 = function (modo) {
+    switch (modo) {
+        case 'Dark': return ('DarkMode');
+        default: return '';
+    }
+};
+/* ASIGNADO DE COLOR */
+var getColorMedio$2 = function (tipoMedio) {
+    switch (tipoMedio) {
+        case 'espectacular': return ('Rojo');
+        case 'urbanos': return ('Magenta');
+        case 'muro': return ('Azul');
+        case 'indoors': return ('Amarillo');
+        default: return ('Gris');
+    }
+};
+var CardsVisualizaPauta = function (props) {
+    var Front = function (props) {
+        if (props.tipoMedio === 'espectacular' || props.tipoMedio === 'muro') {
+            return (React.createElement("div", null,
+                React.createElement("div", { className: "EncabezadoCard BorderBottom" + getColorMedio$2(props.tipoMedio) },
+                    React.createElement(TitlesCards, { modo: props.modo, clave: props.clave || 'undefined', type: props.tipo || 'undefined' })),
+                React.createElement("div", { className: "InformacionCard" },
+                    React.createElement("div", { className: "DireccionCards" },
+                        React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Direcci\u00F3n: ', description: props.direccion || 'undefined' })),
+                    React.createElement("div", { className: "Flexbox MedidasCards RowPadding2" },
+                        React.createElement("div", null,
+                            React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Medidas: ', description: props.ancho + 'm x ' + props.alto + 'm', labelColor: getColorMedio$2(props.tipoMedio) }))),
+                    React.createElement("div", { className: "InicioFinCards " },
+                        React.createElement("div", { className: "CampoFechaInicioFin" },
+                            React.createElement(TextField, { modo: props.modo, type: 'title', title: 'Fecha de inicio' }),
+                            React.createElement(Inputs, { type: 'date', justify: 'left', color: getColorMedio$2(props.tipoMedio) })),
+                        React.createElement("div", { className: "CampoFechaInicioFin" },
+                            React.createElement(TextField, { modo: props.modo, type: 'title', title: 'Fecha de fin' }),
+                            React.createElement(Inputs, { type: 'date', justify: 'right', color: getColorMedio$2(props.tipoMedio) }))),
+                    React.createElement("div", { className: "DescuentoCards Columnas2" },
+                        React.createElement("div", { className: "CampoFechaInicioFin" },
+                            React.createElement(TextField, { modo: props.modo, type: 'title', title: 'Descuento' }),
+                            React.createElement(Inputs, { type: 'aumentoDecremento', color: getColorMedio$2(props.tipoMedio) })),
+                        React.createElement("div", { className: 'FontColor' + getColorMedio$2(props.tipoMedio) },
+                            React.createElement(PrecioCosto, { type: 'precio', tipoMedio: props.tipoMedio, precio: props.precio || '0' }))),
+                    React.createElement("div", { className: "RowPadding1" }))));
+        }
+        else {
+            return (React.createElement(React.Fragment, null,
+                React.createElement("div", { className: "EncabezadoCard BorderBottom" + getColorMedio$2(props.tipoMedio) },
+                    React.createElement(TitlesCards, { modo: props.modo, clave: props.clave || 'undefined', type: props.tipo || 'undefined' })),
+                React.createElement("div", { className: "PaddingBottomMedio" }),
+                React.createElement("div", { className: "TitleDescriptionCards" },
+                    React.createElement(TextField, { modo: props.modo, type: 'title', title: 'Descripci\u00F3n: ' })),
+                React.createElement("div", { className: "DescripcionCards TextOverflowDescription" },
+                    React.createElement(TextField, { modo: props.modo, type: 'description', description: props.descripcion || 'undefined' })),
+                React.createElement("div", { className: "InicioFinCards Columnas2" },
+                    React.createElement("div", null,
+                        React.createElement(TextField, { modo: props.modo, type: 'description', description: 'Fecha de inicio' }),
+                        React.createElement(Inputs, { type: 'date', justify: 'left', color: getColorMedio$2(props.tipoMedio) })),
+                    React.createElement("div", null,
+                        React.createElement(TextField, { modo: props.modo, type: 'description', description: 'Fecha de fin' }),
+                        React.createElement(Inputs, { type: 'date', justify: 'left', color: getColorMedio$2(props.tipoMedio) }))),
+                React.createElement("div", { className: "DescuentoCards Columnas2" },
+                    React.createElement("div", null,
+                        React.createElement(TextField, { modo: props.modo, type: 'description', description: 'Descuento' }),
+                        React.createElement(Inputs, { type: 'aumentoDecremento', color: getColorMedio$2(props.tipoMedio) })),
+                    React.createElement("div", { className: 'FontColor' + getColorMedio$2(props.tipoMedio) },
+                        React.createElement(PrecioCosto, { type: 'precio', precio: props.precio || '0' })))));
+        }
+    };
+    return (React.createElement("div", { className: "CardsPaddings" },
+        React.createElement("div", { className: "CardAsideFlex" },
+            React.createElement("div", { className: "ContenedorCards" },
+                React.createElement("div", { className: "Card" + getModo$3(props.modo) },
+                    React.createElement(Front, { modo: props.modo, tipoMedio: props.tipoMedio, clave: props.clave, tipo: props.tipo, direccion: props.direccion, alto: props.alto, ancho: props.ancho, precio: props.precio, descripcion: props.descripcion })),
+                React.createElement("div", { className: "EtiquetaIdentificacion" },
+                    React.createElement(DynamicButton, { type: 'icons', size: 'grande', button: 'etiqueta', color: getColorMedio$2(props.tipoMedio) }))),
+            React.createElement(Aside, { modo: props.modo, tipoCard: 'visualizadorPauta', tipoMedio: props.tipoMedio, clave: props.clave, proveedor: props.proveedor, claveProveedor: props.claveProveedor, alcance: props.alcance, frecuencia: props.frecuencia, totalUsuarios: props.totalUsuarios, totalImpactos: props.totalImpactos, porcentajeHombres: props.porcentajeHombres, numeroHombres: props.numeroHombres, porcentajeMujeres: props.porcentajeMujeres, numeroMujeres: props.numeroMujeres, nseA: props.nseA, nseB: props.nseB, nseC: props.nseC, nseD: props.nseD, nseE: props.nseE, edad13: props.edad13, edad18: props.edad18, edad26: props.edad26, edad41: props.edad41, edad55: props.edad55, totalNseA: props.totalNseA, totalNseB: props.totalNseB, totalNseC: props.totalNseC, totalNseD: props.totalNseD, totalNseE: props.totalNseE, totalEdad13: props.totalEdad13, totalEdad18: props.totalEdad18, totalEdad26: props.totalEdad26, totalEdad41: props.totalEdad41, totalEdad55: props.totalEdad55, imagen: props.imagen, tipo: props.tipo, porcentajeUsuarios: props.porcentajeUsuarios, porcentajeImpactos: props.porcentajeImpactos, direccion: props.direccion, colonia: props.colonia, cdEdo: props.cdEdo, vialidad: props.vialidad, ancho: props.ancho, alto: props.alto, material: props.material, acabados: props.acabados, iluminacion: props.iluminacion, vista: props.vista, nicho: props.nicho, estadoImplementaciones: props.estadoImplementaciones, descripcion: props.descripcion, qr: props.qr }))));
+};
+
+var getModo$2 = function (modo) {
+    switch (modo) {
+        case 'Dark': return ('DarkMode');
+        default: return '';
+    }
+};
+var getColorMedio$1 = function (tipoMedio) {
+    switch (tipoMedio) {
+        case 'espectacular': return ('Rojo');
+        case 'urbanos': return ('Magenta');
+        case 'muro': return ('Azul');
+        case 'indoors': return ('Amarillo');
+        default: return ('Gris');
+    }
+};
+var CardsInventarioProveedores = function (props) {
+    var Front = function (props) {
+        return (React.createElement("div", null,
+            React.createElement("div", { className: "EncabezadoCard BorderBottom" + getColorMedio$1(props.tipoMedio) },
+                React.createElement(TitlesCards, { modo: props.modo, clave: props.clave || 'undefined', type: props.tipo || 'undefined' })),
+            React.createElement("div", { className: "InformacionCard" },
+                React.createElement("div", { className: "DireccionCards" },
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Direcci\u00F3n: ', description: props.direccion || 'undefined' })),
+                React.createElement("div", { className: "Columnas2 RowPadding1" },
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Ubicaci\u00F3n: ', description: props.ubicacion || 'undefined' }),
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Vista: ', description: props.vista || 'undefined' })),
+                React.createElement("div", { className: "Flexbox MedidasCards" },
+                    React.createElement("div", null,
+                        React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Medidas: ', description: (props.ancho || '0') + 'm x ' + (props.alto || '0') + 'm', labelColor: getColorMedio$1(props.tipoMedio) }))),
+                React.createElement("div", { className: "RowPadding1" },
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Implementaciones especiales: ', description: props.implementaciones || '?', labelColor: getColorMedio$1(props.tipoMedio) })),
+                React.createElement("div", { className: "PropiedadCardsPosition3 Columnas3" },
+                    React.createElement(PropertyBtn, { property: 'Activo', color: 'verde', state: props.estadoActivo || false }),
+                    React.createElement(PropertyBtn, { property: 'Bloqueado', color: 'rojo', state: props.estadoBloqueado || false }),
+                    React.createElement(PropertyBtn, { property: 'Iluminaci\u00F3n', color: 'amarillo', state: props.estadoIluminacion || false })))));
+    };
+    return (React.createElement("div", { className: "CardsPaddings" },
+        React.createElement("div", { className: "CardAsideFlex" },
+            React.createElement("div", { className: "ContenedorCards" },
+                React.createElement("div", { className: "CardInventarioProveedores" + getModo$2(props.modo) },
+                    React.createElement(Front, { modo: props.modo, tipoMedio: props.tipoMedio, clave: props.clave, tipo: props.tipo, direccion: props.direccion, ubicacion: props.ubicacion, vista: props.vista, estadoActivo: props.estadoActivo, estadoBloqueado: props.estadoBloqueado, estadoIluminacion: props.estadoIluminacion, implementaciones: props.implementaciones, alto: props.alto, ancho: props.ancho })),
+                React.createElement("div", { className: "EtiquetaIdentificacion" },
+                    React.createElement(DynamicButton, { type: 'icons', size: 'grande', button: 'etiqueta', color: getColorMedio$1(props.tipoMedio) }))))));
+};
+
+var getModo$1 = function (modo) {
+    switch (modo) {
+        case 'Dark': return ('DarkMode');
+        default: return '';
+    }
+};
+var getColorMedio = function (tipoMedio) {
+    switch (tipoMedio) {
+        case 'espectacular': return ('Rojo');
+        case 'urbanos': return ('Magenta');
+        case 'muro': return ('Azul');
+        case 'indoors': return ('Amarillo');
+        default: return ('Gris');
+    }
+};
+var CardsRutasIMJ = function (props) {
+    var Front = function (props) {
+        return (React.createElement("div", null,
+            React.createElement("div", { className: "EncabezadoCard BorderBottom" + getColorMedio(props.tipoMedio) },
+                React.createElement(TitlesCards, { modo: props.modo, clave: props.ruta || 'undefined', type: 'Id: ' + (props.id || 'undefined') })),
+            React.createElement("div", { className: "InformacionCard" },
+                React.createElement("div", { className: "DireccionCards" },
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Clave: ', description: props.clave || 'undefined' })),
+                React.createElement("div", { className: "RowPadding1" },
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Inicio: ', description: props.inicioRuta || 'undefined' }),
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Destino: ', description: props.destinoRuta || 'undefined' })),
+                React.createElement("div", { className: "RowPadding1" },
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Ubicaci\u00F3n: ', description: props.ubicacion || 'undefined' })),
+                React.createElement("div", { className: "RowPadding1" },
+                    React.createElement(TextField, { modo: props.modo, type: 'titleAndDescription', title: 'Kilometraje: ', description: props.kilometraje || '0', labelColor: getColorMedio(props.tipoMedio) })),
+                React.createElement("div", { className: "PropiedadCardsPosition CardRutasImj" },
+                    React.createElement(PropertyBtn, { property: 'Activo', color: 'verde', state: props.estadoActivo || false })))));
+    };
+    return (React.createElement("div", { className: "CardsPaddings" },
+        React.createElement("div", { className: "CardAsideFlex" },
+            React.createElement("div", { className: "ContenedorCards" },
+                React.createElement("div", { className: "Card" + getModo$1(props.modo) },
+                    React.createElement(Front, { modo: props.modo, tipoMedio: props.tipoMedio, ruta: props.ruta, id: props.id, clave: props.clave, inicioRuta: props.inicioRuta, destinoRuta: props.destinoRuta, ubicacion: props.ubicacion, kilometraje: props.kilometraje, estadoActivo: props.estadoActivo })),
+                React.createElement("div", { className: "EtiquetaIdentificacion" },
+                    React.createElement(DynamicButton, { type: 'icons', size: 'grande', button: 'etiqueta', color: getColorMedio(props.tipoMedio) }))),
+            React.createElement(Aside, { modo: props.modo, tipoCard: 'rutasImj', tipoMedio: props.tipoMedio }))));
+};
+
+var Cards = function (props) {
+    var modo = '';
+    var tipoCard = props.tipoCard;
+    switch (tipoCard) {
+        case 'abcSitios':
+            return (React.createElement(CardsAbcSitios, { modo: modo, tipoCard: props.tipoCard, tipoMedio: props.tipoMedio, clave: props.clave, tipo: props.tipo, direccion: props.direccion, ubicacion: props.ubicacion, vista: props.vista, ancho: props.ancho, alto: props.alto, implementaciones: props.implementaciones, estadoActivo: props.estadoActivo, longitud: props.longitud, latitud: props.latitud, iluminacion: props.iluminacion, bloqueado: props.bloqueado, nicho: props.nicho, material: props.material, descripcion: props.descripcion, precio: props.precio, costo: props.costo, proveedor: props.proveedor, claveProveedor: props.claveProveedor, alcance: props.alcance, frecuencia: props.frecuencia, totalUsuarios: props.totalUsuarios, totalImpactos: props.totalImpactos, porcentajeHombres: props.porcentajeHombres, numeroHombres: props.numeroHombres, porcentajeMujeres: props.porcentajeMujeres, numeroMujeres: props.numeroMujeres, nseA: props.nseA, nseB: props.nseB, nseC: props.nseC, nseD: props.nseD, nseE: props.nseE, edad13: props.edad13, edad18: props.edad18, edad26: props.edad26, edad41: props.edad41, edad55: props.edad55, totalEdad13: props.totalEdad13, totalEdad18: props.totalEdad18, totalEdad26: props.totalEdad26, totalEdad41: props.totalEdad41, totalEdad55: props.totalEdad55, totalNseA: props.totalNseA, totalNseB: props.totalNseB, totalNseC: props.totalNseC, totalNseD: props.totalNseD, totalNseE: props.totalNseE, porcentajeUsuarios: props.porcentajeUsuarios, porcentajeImpactos: props.porcentajeImpactos, colonia: props.colonia, cdEdo: props.cdEdo, vialidad: props.cdEdo, acabados: props.acabados, estadoImplementaciones: props.estadoImplementaciones, imagen: props.imagen, qr: props.qr }));
+        case 'visualizadorPauta':
+            return (React.createElement(CardsVisualizaPauta, { modo: modo, tipoMedio: props.tipoMedio, clave: props.clave, tipo: props.tipo, direccion: props.direccion, ancho: props.ancho, alto: props.alto, precio: props.precio, descripcion: props.descripcion, proveedor: props.proveedor, claveProveedor: props.claveProveedor, alcance: props.alcance, frecuencia: props.frecuencia, totalUsuarios: props.totalUsuarios, totalImpactos: props.totalImpactos, porcentajeHombres: props.porcentajeHombres, numeroHombres: props.numeroHombres, porcentajeMujeres: props.porcentajeMujeres, numeroMujeres: props.numeroMujeres, nseA: props.nseA, nseB: props.nseB, nseC: props.nseC, nseD: props.nseD, nseE: props.nseE, edad13: props.edad13, edad18: props.edad18, edad26: props.edad26, edad41: props.edad41, edad55: props.edad55, totalEdad13: props.totalEdad13, totalEdad18: props.totalEdad18, totalEdad26: props.totalEdad26, totalEdad41: props.totalEdad41, totalEdad55: props.totalEdad55, totalNseA: props.totalEdad55, totalNseB: props.totalNseB, totalNseC: props.totalNseC, totalNseD: props.totalNseD, totalNseE: props.totalNseE, porcentajeUsuarios: props.porcentajeUsuarios, porcentajeImpactos: props.porcentajeImpactos, colonia: props.colonia, cdEdo: props.cdEdo, vialidad: props.vialidad, acabados: props.acabados, estadoImplementaciones: props.estadoImplementaciones, material: props.estadoImplementaciones, iluminacion: props.iluminacion, vista: props.vista, nicho: props.nicho, imagen: props.imagen, qr: props.qr }));
+        case 'inventarioComercial':
+            return (React.createElement(CardsInventarioComercial, { modo: modo, tipoMedio: props.tipoMedio, clave: props.clave, tipo: props.tipo, direccion: props.direccion, ubicacion: props.ubicacion, vista: props.vista, ancho: props.ancho, alto: props.alto, implementaciones: props.implementaciones, estadoActivo: props.estadoActivo, longitud: props.longitud, latitud: props.latitud, iluminacion: props.iluminacion, bloqueado: props.bloqueado, nicho: props.nicho, material: props.material, descripcion: props.descripcion, precio: props.precio, costo: props.costo, proveedor: props.proveedor, claveProveedor: props.claveProveedor, alcance: props.alcance, frecuencia: props.frecuencia, totalUsuarios: props.totalUsuarios, totalImpactos: props.totalImpactos, porcentajeHombres: props.porcentajeHombres, numeroHombres: props.numeroHombres, porcentajeMujeres: props.porcentajeMujeres, numeroMujeres: props.numeroMujeres, nseA: props.nseA, nseB: props.nseB, nseC: props.nseC, nseD: props.nseD, nseE: props.nseE, edad13: props.edad13, edad18: props.edad18, edad26: props.edad26, edad41: props.edad41, edad55: props.edad55, totalEdad13: props.totalEdad13, totalEdad18: props.totalEdad18, totalEdad26: props.totalEdad26, totalEdad41: props.totalEdad41, totalEdad55: props.totalEdad55, totalNseA: props.totalNseA, totalNseB: props.totalNseB, totalNseC: props.totalNseC, totalNseD: props.totalNseD, totalNseE: props.totalNseE, porcentajeUsuarios: props.porcentajeUsuarios, porcentajeImpactos: props.porcentajeImpactos, colonia: props.colonia, cdEdo: props.cdEdo, vialidad: props.cdEdo, acabados: props.acabados, estadoImplementaciones: props.estadoImplementaciones, imagen: props.imagen, qr: props.qr }));
+        case 'inventarioProveedores':
+            return (React.createElement(CardsInventarioProveedores, { modo: modo, tipoMedio: props.tipoMedio, clave: props.clave, tipo: props.tipo, direccion: props.direccion, vista: props.vista, ubicacion: props.ubicacion, ancho: props.ancho, alto: props.alto, implementaciones: props.implementaciones, estadoActivo: props.estadoActivo, estadoBloqueado: props.estadoBloqueado, estadoIluminacion: props.estadoIluminacion }));
+        case 'rutasImj':
+            return (React.createElement(CardsRutasIMJ, { modo: modo, estadoActivo: props.estadoActivo, tipoMedio: props.tipoMedio, ruta: props.ruta, id: props.id, clave: props.clave, ubicacion: props.ubicacion, inicioRuta: props.inicioRuta, destinoRuta: props.destinoRuta, kilometraje: props.kilometraje }));
+    }
+};
+
+var InputSelect = function (props) {
+    var options = props.options;
+    var option = options.map(function (anOption) { return React.createElement("option", { key: anOption }, anOption); });
+    if (props.options.length > 0) {
+        return (React.createElement("select", { name: "", id: "", value: props.value }, option));
+    }
+    else {
+        return (React.createElement("h5", null, "No hay opciones"));
+    }
+};
+
+var Dropdown = function (props) {
+    var _a = React.useState(""), inputValue = _a[0], setInputValue = _a[1];
+    var onChangeHandler = function (event) {
+        setInputValue(event.target.value);
+    };
+    function titleCase(text) {
+        return (text[0].toUpperCase() + text.slice(1).toLowerCase());
+    }
+    var color = titleCase(props.color);
+    var options = props.options;
+    if (props.options && props.options.length > 0) {
+        return (React.createElement("select", { onChange: onChangeHandler, name: "", id: "", value: inputValue, className: 'InputSelect InputSelect' + color }, options && options.map(function (anOption) { return React.createElement("option", null, anOption); })));
+    }
+    else {
+        return (React.createElement("h5", { style: { fontSize: "1.5rem", marginBlock: ".5rem" } }, "No hay opciones"));
+    }
+};
+
+var noImage = require('../../../Img/Img/noImage.svg');
+/*ASIGNADO DE COLOR*/
+var getModo = function (modo) {
+    switch (modo) {
+        case 'Dark': return ('DarkMode');
+        default: return '';
+    }
+};
+var FormularioVisualizaPauta = function (props) {
+    var _a = react.exports.useState(''), colorElegido = _a[0], setColorElegido = _a[1];
+    var _b = react.exports.useState(''), logotipo = _b[0], setLogotipo = _b[1];
+    return (React.createElement("div", { className: "ContenedorFormularioVisualizaPauta" + getModo(props.modo) },
+        React.createElement("div", { className: "Columnas3" },
+            React.createElement("div", { className: "Rows3" },
+                React.createElement("div", { className: "JustifyLeft Responsable " },
+                    React.createElement(TextField, { type: 'title', title: 'Responsable' }),
+                    React.createElement(Dropdown, { options: props.responsables, color: 'gris' }))),
+            React.createElement("div", { className: "Rows3" },
+                React.createElement("div", { className: "Campa\u00F1a JustifyLeft" },
+                    React.createElement(TextField, { type: 'title', title: 'Campa\u00F1a' }),
+                    React.createElement(Dropdown, { options: props.campanias, color: 'gris' })),
+                React.createElement("div", { className: "Empresa JustifyLeft" },
+                    React.createElement("div", null,
+                        React.createElement(TextField, { type: 'title', title: 'Empresa' })),
+                    React.createElement("div", { className: "NombreEmpresa" },
+                        React.createElement(TextField, { type: 'description', description: props.empresa || 'undefined' }))),
+                React.createElement("div", { className: "Columnas2 ColorSelect" },
+                    React.createElement("div", { className: "JustifyLeft" },
+                        React.createElement(TextField, { type: 'title', title: 'Color' }),
+                        React.createElement("div", { className: "ColorPicker" },
+                            React.createElement("input", { type: "color", onChange: function (e) { return setColorElegido(e.target.value); } }))),
+                    React.createElement("div", { className: "JustifyLeft" },
+                        React.createElement(TextField, { type: 'title', title: 'Color elegido' }),
+                        React.createElement("div", { className: "ColorPicker" },
+                            React.createElement("div", { className: "ColorElegido", style: { backgroundColor: colorElegido } }))))),
+            React.createElement("div", { className: "Rows3" },
+                React.createElement("div", { className: "InicioFinVisualiza Columnas2" },
+                    React.createElement("div", { className: "JustifyLeft " },
+                        React.createElement(TextField, { type: 'title', title: 'Fecha Inicial' }),
+                        React.createElement(Inputs, { type: 'date', color: 'gris' })),
+                    React.createElement("div", { className: "JustifyLeft " },
+                        React.createElement(TextField, { type: 'title', title: 'Fecha Final' }),
+                        React.createElement(Inputs, { type: 'date', color: 'gris' }))),
+                React.createElement("div", { className: "SelectFileVisualiza" },
+                    React.createElement(TextField, { type: 'title', title: 'Logotipo' }),
+                    React.createElement("input", { type: "file", onChange: function (e) { return setLogotipo(e.target.value); } })),
+                React.createElement("div", { className: "InicioFinVisualiza Columnas2" },
+                    React.createElement("div", { className: "JustifyLeft " },
+                        React.createElement("div", { className: "DescuentoVisualizaPauta" },
+                            React.createElement(TextField, { type: 'title', title: 'Descuento' })),
+                        React.createElement("div", { className: "Flexbox" },
+                            React.createElement(Inputs, { type: 'aumentoDecremento', color: 'gris' }),
+                            React.createElement("h2", null, "%"))),
+                    React.createElement("div", { className: "LogotipoVisualia" },
+                        React.createElement("img", { src: logotipo || noImage, alt: "" })))))));
+};
+
+var AsideBotonesVisualizaPauta = function (props) {
+    return (React.createElement("div", { className: "AsideBotonesVisualiza" },
+        React.createElement("div", { onClick: props.onClickDescargar },
+            React.createElement(DynamicButton, { type: 'buttons', button: 'descargar', size: 'grande', color: 'amarillo' })),
+        React.createElement("div", { onClick: props.onClickKml },
+            React.createElement(DynamicButton, { type: 'buttons', button: 'kml', size: 'grande', color: 'azul' })),
+        React.createElement("div", { onClick: props.onClickExcel },
+            React.createElement(DynamicButton, { type: 'buttons', button: 'excel', size: 'grande', color: 'verde' })),
+        React.createElement("div", { onClick: props.onClickPdf },
+            React.createElement(DynamicButton, { type: 'buttons', button: 'pdf', size: 'grande', color: 'rojo' })),
+        React.createElement("div", { onClick: props.onClickVaciar },
+            React.createElement(DynamicButton, { type: 'buttons', button: 'vaciar', size: 'grande', color: 'rojo' })),
+        React.createElement("div", { onClick: props.onClickGuardar },
+            React.createElement(DynamicButton, { type: 'buttons', button: 'guardar', size: 'grande', color: 'azul' }))));
+};
+
+var EtiquetaVisualizaPauta = function (props) {
+    return (React.createElement("div", { className: "EtiquetaVisualizaPauta" },
+        React.createElement("h2", null, props.nombreEtiqueta)));
+};
+
+var Button = function (props) {
+    var medidas = {
+        height: props.height || '30px',
+        color: props.color || '#000',
+        fontSize: props.fontSize || '20px',
+        width: props.width || 'auto'
+    };
+    var click = props.click;
+    return (React.createElement("button", { style: {
+            height: medidas.height,
+            width: medidas.width,
+            backgroundColor: medidas.color,
+            fontSize: medidas.fontSize,
+            display: "inline-block",
+            padding: '0 20px',
+            borderRadius: '15px',
+            border: '0px',
+            color: '#fff',
+            fontWeight: 'lighter',
+            cursor: 'pointer'
+        }, onClick: (click) }, props.legend));
+};
+
+export { Aside, AsideBotonesVisualizaPauta, Button, Cards, CardsAbcSitios, CardsInventarioComercial, CardsInventarioProveedores, CardsPorcentajes, CardsRecorrido, CardsRutasIMJ, CardsVisualizaPauta, Dropdown, DynamicButton, EtiquetaVisualizaPauta, FormularioVisualizaPauta, GraficasCardsFront, InputSelect, Inputs, Logo, PieGraphics, PrecioCosto, PrevisualizarCards, PropertyBtn, TextField, TitlesCards };
 //# sourceMappingURL=index.js.map

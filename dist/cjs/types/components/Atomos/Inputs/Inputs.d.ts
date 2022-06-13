@@ -1,12 +1,12 @@
 /// <reference types="react" />
-import "../../../index.css";
-import "./index.css";
-export interface InputsProps {
-    justify?: "left" | "right" | any;
-    modo?: string | any;
+import '../../../index.css';
+interface InputsProps {
+    justify?: 'left' | 'right' | any;
     placeholder?: string | any;
-    color?: "Amarillo" | "Azul" | "Rojo" | "Verde" | "Magenta" | "Gris" | "Aqua" | "Morado" | any;
-    type?: "date" | "aumentoDecremento" | any;
+    color?: 'Amarillo' | 'Azul' | 'Rojo' | 'Verde' | 'Magenta' | 'Gris' | 'Aqua' | 'Morado' | any;
+    type?: 'date' | 'aumentoDecremento' | any;
+    options?: any;
+    value?: any;
 }
 declare const Inputs: (props: InputsProps) => JSX.Element;
 export default Inputs;

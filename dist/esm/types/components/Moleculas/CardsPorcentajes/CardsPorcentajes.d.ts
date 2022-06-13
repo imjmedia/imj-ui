@@ -1,6 +1,5 @@
 /// <reference types="react" />
-import "../../../index.css";
-import "./index.css";
+import '../../../index.css';
 interface CardsPorcentajesProps {
     alcance?: number | any;
     frecuencia?: number | any;
@@ -12,5 +11,5 @@ interface CardsPorcentajesProps {
     numeroMujeres?: number | any;
     modo?: string | any;
 }
-declare const CardsPorcentajes: (props: CardsPorcentajesProps) => JSX.Element;
+export declare const CardsPorcentajes: (props: CardsPorcentajesProps) => JSX.Element;
 export default CardsPorcentajes;

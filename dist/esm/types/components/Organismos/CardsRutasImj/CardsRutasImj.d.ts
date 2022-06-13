@@ -1,8 +1,8 @@
 /// <reference types="react" />
-import "../../../index.css";
-import "./index.css";
+import '../../../index.css';
+export declare const getColorMedio: (tipoMedio: any) => "Amarillo" | "Azul" | "Rojo" | "Magenta" | "Gris";
 interface CardsRutasIMJProps {
-    tipoMedio: "espectacular" | "muro" | "urbanos" | "indoors" | any;
+    tipoMedio: 'espectacular' | 'muro' | 'urbanos' | 'indoors' | any;
     ruta?: string | any;
     id?: string | any;
     clave?: string | any;

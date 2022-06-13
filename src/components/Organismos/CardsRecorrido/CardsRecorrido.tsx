@@ -6,6 +6,7 @@ import '../../../index.css';
 
 const hombres = require('../../../Img/Iconos/hombres.jpg') as string;
 const mujeres = require('../../../Img/Iconos/mujeres.jpg') as string;
+const noImage = require('../../../Img/Img/noImage.jpg')
 
 const getModo = (modo:any) => {
     switch (modo) {
@@ -65,7 +66,7 @@ export const CardsRecorrido=(props:CardRecorridoProps)=>{
         return(
                 <div className={"CardFrontRecorrido CardRecorrido"+getModo(props.modo)}>
                     <div className="ImageCardRecorrido"> 
-                         <img src={props.imagen || recorrido} alt="" />
+                         <img src={props.imagen || noImage} alt="" />
                     </div>
                     <div className={"EncabezadoCard BorderBottom"+getColorMedio(props.tipoMedio)}>
                         <TitlesCards

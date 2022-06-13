@@ -55,6 +55,8 @@ const PrecioCosto = (props:PrecioCostoProps) => {
                 </div>
             </div>
             )
+        default :
+                return(<div></div>)
     }
 }
 export default PrecioCosto;

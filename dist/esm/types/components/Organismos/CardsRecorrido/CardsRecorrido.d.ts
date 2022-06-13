@@ -1,15 +1,15 @@
 /// <reference types="react" />
-import "../../../index.css";
-import "./index.css";
-export interface CardRecorridoProps {
+import '../../../index.css';
+export declare const getColorMedio: (tipoMedio: any) => "Amarillo" | "Azul" | "Rojo" | "Magenta" | "Gris";
+interface CardRecorridoProps {
     modo?: string | any;
     imagen?: string | any;
-    tipoMedio: "espectacular" | "muro" | "urbanos" | "indoors" | any;
+    tipoMedio: 'espectacular' | 'muro' | 'urbanos' | 'indoors' | any;
     clave?: string | any;
     tipo?: string | any;
     direccion?: string | any;
     ubicacion?: string | any;
-    vista?: "Natural" | "Cruzada";
+    vista?: 'Natural' | 'Cruzada';
     ancho?: number | any;
     alto?: number | any;
     material?: string | any;
@@ -35,5 +35,5 @@ export interface CardRecorridoProps {
     totalNseD?: number | any;
     totalNseE?: number | any;
 }
-declare const CardsRecorrido: (props: CardRecorridoProps) => JSX.Element;
+export declare const CardsRecorrido: (props: CardRecorridoProps) => JSX.Element;
 export default CardsRecorrido;
