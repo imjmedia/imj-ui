@@ -1,38 +1,37 @@
 import React, { useEffect, useState } from "react";
 import '../../../index.css';
 
-
-const graficas =require ('./IMG/botones/graficas.svg') as string;
-const arrastrar =require ("./IMG/botones/arrastrar.svg")as string;
-const busqueda =require ("./IMG/botones/busqueda.svg")as string;
-const carrito =require ("./IMG/botones/carrito.svg")as string;
-const circulo =require ("./IMG/botones/circulo.svg")as string;
-const descargar =require ("./IMG/botones/descargar.svg")as string;
-const editar =require ("./IMG/botones/editar.svg")as string;
-const excel =require ("./IMG/botones/excel.svg")as string;
-const guardar =require ("./IMG/botones/guardar.svg")as string;
-const kml =require ("./IMG/botones/kml.svg")as string;
-const pauta =require ("./IMG/botones/pauta.svg")as string;
-const pdf =require ("./IMG/botones/pdf.svg")as string;
-const previsualizar =require ("./IMG/botones/previsualizar.svg")as string;
-const trafico =require ("./IMG/botones/trafico.svg")as string;
-const vaciar =require ("./IMG/botones/vaciar.svg")as string;
-const menu =require ("./IMG/botones/menu.svg")as string;
-const menuDarkMode =require ("./IMG/botones/menuDarkMode.svg")as string;
+import graficas from "../../Img/Botones/graficas.svg";
+import arrastrar from "../../Img/Botones/arrastrar.svg";
+import busqueda from "../../Img/Botones/busqueda.svg";
+import carrito from "../../Img/Botones/carrito.svg";
+import circulo from "../../Img/Botones/circulo.svg";
+import descargar from "../../Img/Botones/descargar.svg";
+import editar from "../../Img/Botones/editar.svg";
+import excel from "../../Img/Botones/excel.svg";
+import guardar from "../../Img/Botones/guardar.svg";
+import kml from "../../Img/Botones/kml.svg";
+import pauta from "../../Img/Botones/pauta.svg";
+import pdf from "../../Img/Botones/pdf.svg";
+import previsualizar from "../../Img/Botones/previsualizar.svg";
+import trafico from "../../Img/Botones/trafico.svg";
+import vaciar from "../../Img/Botones/vaciar.svg";
+import menu from "../../Img/Botones/menu.svg";
+import menuDarkMode from "../../Img/Botones/menuDarkMode.svg";
 /*importación de Íconos*/
-const bloqueado =require ("./IMG/iconos/bloqueado.svg") as string;
-const cerrar =require ("./IMG/iconos/cerrar.svg") as string;
-const etiqueta =require ("./IMG/iconos/etiqueta.svg") as string;
-const etiquetaAzul =require ("./IMG/iconos/etiquetaAzul.svg") as string;
-const etiquetaAmarillo =require ("./IMG/iconos/etiquetaAmarillo.svg") as string;
-const etiquetaRojo =require ("./IMG/iconos/etiquetaRojo.svg") as string;
-const etiquetaMagenta =require ("./IMG/iconos/etiquetaMagenta.svg") as string;
-const iluminacion =require ("./IMG/iconos/iluminacion.svg") as string;
-const material =require ("./IMG/iconos/material.svg") as string;
-const nicho =require ("./IMG/iconos/nicho.svg") as string;
-const ubicaciongeografica =require ("./IMG/iconos/ubicaciongeografica.svg") as string;
-const hombres =require ("./IMG/iconos/hombres.svg") as string;
-const mujeres =require ("./IMG/iconos/mujeres.svg") as string;
+import bloqueado from "../../Img/iconos/bloqueado.svg";
+import cerrar from "../../Img/iconos/cerrar.svg";
+import etiqueta from "../../Img/iconos/etiqueta.svg";
+import etiquetaAzul from "../../Img/iconos/etiquetaAzul.svg";
+import etiquetaAmarillo from "../../Img/iconos/etiquetaAmarillo.svg";
+import etiquetaRojo from "../../Img/iconos/etiquetaRojo.svg";
+import etiquetaMagenta from "../../Img/iconos/etiquetaMagenta.svg";
+import iluminacion from "../../Img/iconos/iluminacion.svg";
+import material from "../../Img/iconos/material.svg";
+import nicho from "../../Img/iconos/nicho.svg";
+import ubicaciongeografica from "../../Img/iconos/ubicaciongeografica.svg";
+import hombres from "../../Img/iconos/hombres.svg";
+import mujeres from "../../Img/iconos/mujeres.svg";
 
 interface DynaButtProps{
     type: 'buttons' | 'icons' | any;

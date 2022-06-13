@@ -1,11 +1,10 @@
 import React from "react";
-
-const Imj = require("../../Img/Logos/Imj.svg")as string;
-const Obp = require("../../Img/Logos/Obp.svg")as string;
-const ByImj = require("../../Img/Logos/ByImj.svg")as string;
-const ByImjDarkMode = require("../../Img/Logos/ByImjDarkMode.svg")as string;
-const ImjDarkMode = require("../../Img/Logos/ImjDarkMode.svg")as string;
-const ObpDarkMode = require("../../Img/Logos/ObpDarkMode.svg")as string;
+import Imj from '../../Img/Logos/Imj.svg';
+import ByImj from '../../Img/Logos/ByImj.svg';
+import  Obp from "../../Img/Logos/Obp.svg";
+import  ByImjDarkMode from "../../Img/Logos/ByImjDarkMode.svg";
+import  ImjDarkMode from "../../Img/Logos/ImjDarkMode.svg";
+import  ObpDarkMode from "../../Img/Logos/ObpDarkMode.svg";
 
 const getModo = (modo:any) => {
     switch (modo) {

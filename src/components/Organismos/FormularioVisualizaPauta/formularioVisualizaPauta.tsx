@@ -3,7 +3,7 @@ import TextField from "../../Atomos/TextField";
 import Dropdown from '../../Atomos/dropDown';
 import { useState } from "react";
 import Inputs from "../../Atomos/Inputs";
-const noImage = require('../../../Img/Img/noImage.svg')as string;
+import noImage from '../../Img/Img/noImage.svg';
 
 /*ASIGNADO DE COLOR*/
 const getModo = (modo:any) => {

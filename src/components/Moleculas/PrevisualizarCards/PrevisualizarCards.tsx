@@ -4,10 +4,11 @@ import TextField from "../../Atomos/TextField";
 //import PropertyBtn from "../../Atomos/PropertyBtn";
 import '../../../index.css';
 
-const noImage = require('../../../Img/Img/noImage.jpg') as string;
-//const noQr = require('../../../Img/Img/noQr.png') as string;
-const hombres = require('../../../Img/Iconos/hombres.jpg') as string;
-const mujeres = require('../../../Img/Iconos/mujeres.jpg') as string;
+import x from '../../Img'
+import noImage from '../../Img/Img/noImage.jpg';
+//import noQr from '../../Img/Img/noQr.png';
+import hombres from '../../Img/Iconos/hombres.jpg';
+import mujeres from '../../Img/Iconos/mujeres.jpg';
 
 /*ASIGNADO DE COLOR*/
 const getModo = (modo:any) => {
