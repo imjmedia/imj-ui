@@ -33,8 +33,8 @@
 <h3>Colaboradores</h3>
 
 <a href="mailto:jorge.correa@imjmedia.com.mx"> Jorge Correa - Gerente de TI </a><br>
-<a href="mailto:jorge.correa@imjmedia.com.mx">Victor Gálvan - Diseñador UX / UI,</a><br>
-<a href="mailto:jorge.correa@imjmedia.com.mx">Ricardo Ubaldo - Programador web</a>
+<a href="mailto:victor.galvan@imjmedia.com.mx">Victor Gálvan - Diseñador UX / UI,</a><br>
+<a href="mailto:ricardo.ubaldo@imjmedia.com.mx">Ricardo Ubaldo - Programador web</a>
 
 
 
