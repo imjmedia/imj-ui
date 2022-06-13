@@ -4,9 +4,9 @@ import TextField from '../../Atomos/TextField';
 import PropertyBtn from '../../Atomos/PropertyBtn';
 import '../../../index.css';
 
-const hombres = require('../../../Img/Iconos/hombres.jpg') as string;
-const mujeres = require('../../../Img/Iconos/mujeres.jpg') as string;
-const noImage = require('../../../Img/Img/noImage.jpg')
+import hombres from '../../../Img/Iconos/hombres.jpg';
+import mujeres from '../../../Img/Iconos/mujeres.jpg';
+import noImage from '../../../Img/Img/noImage.jpg';
 
 const getModo = (modo:any) => {
     switch (modo) {
