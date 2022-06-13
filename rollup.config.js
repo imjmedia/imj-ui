@@ -44,9 +44,11 @@ export default [
         main: true,
         browser: true,
       }),
+      image(),
+      svgr(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
-      svgr(),
+      
       peerDepsExternal(),
       postcss({
         extract: true,

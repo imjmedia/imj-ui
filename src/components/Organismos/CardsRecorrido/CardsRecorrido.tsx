@@ -4,9 +4,9 @@ import TextField from '../../Atomos/TextField';
 import PropertyBtn from '../../Atomos/PropertyBtn';
 import '../../../index.css';
 
-import hombres from '../../../Img/Iconos/hombres.jpg';
-import mujeres from '../../../Img/Iconos/mujeres.jpg';
-import noImage from '../../../Img/Img/noImage.jpg';
+import hombres from '../../Img/Iconos/hombres.svg';
+import mujeres from '../../Img/Iconos/mujeres.svg';
+import noImage from '../../Img/Img/noImage.jpg';
 
 const getModo = (modo:any) => {
     switch (modo) {

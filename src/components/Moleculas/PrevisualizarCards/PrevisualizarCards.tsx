@@ -4,11 +4,10 @@ import TextField from "../../Atomos/TextField";
 //import PropertyBtn from "../../Atomos/PropertyBtn";
 import '../../../index.css';
 
-import x from '../../Img'
 import noImage from '../../Img/Img/noImage.jpg';
 //import noQr from '../../Img/Img/noQr.png';
-import hombres from '../../Img/Iconos/hombres.jpg';
-import mujeres from '../../Img/Iconos/mujeres.jpg';
+import hombres from '../../Img/Iconos/hombres.svg';
+import mujeres from '../../Img/Iconos/mujeres.svg';
 
 /*ASIGNADO DE COLOR*/
 const getModo = (modo:any) => {
