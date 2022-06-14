@@ -1,13 +1,6 @@
 import React from "react";
 import '../../../index.css';
-
-
-const getModo = (modo:any) => {
-    switch (modo) {
-        case 'Dark': return('DarkMode')
-        default: return ''
-    }
-}
+import { getModo } from "../../../utils/utils";
 
 interface TextFieldProps{
     type: 'title' | 'description' | 'titleAndDescription' | any;

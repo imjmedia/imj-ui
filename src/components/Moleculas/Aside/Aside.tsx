@@ -3,14 +3,8 @@ import DynamicButton from '../../Atomos/DynamicButton';
 //import GraficasCardsFront from '../GraficasCards';
 import PrevisualizarCards from '../PrevisualizarCards';
 import '../../../index.css';
+import { getModo } from "../../../utils/utils";
 
-
-const getModo = (modo:any) => {
-    switch (modo) {
-        case 'Dark': return('DarkMode')
-        default: return ''
-    }
-}
 interface AsideProps{
     /*Modal PROPS*/
     show?: boolean | any;

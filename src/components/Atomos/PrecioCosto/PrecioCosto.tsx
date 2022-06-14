@@ -1,16 +1,6 @@
 import React from "react";
 import '../../../index.css'
-
-
-export const getColorMedio = (tipoMedio:any) => {
-    switch (tipoMedio) {
-        case 'espectacular': return('Rojo')            
-        case 'urbanos': return('Magenta')
-        case 'muro': return('Azul')            
-        case 'indoors': return('Amarillo')
-        default: return('Gris')
-    }
-}
+import { getColorMedio } from "../../../utils/utils";
 
 interface PrecioCostoProps{
     type?: 'precio' | 'costo' | 'precioCosto';

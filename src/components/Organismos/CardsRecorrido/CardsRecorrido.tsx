@@ -7,22 +7,7 @@ import '../../../index.css';
 import hombres from '../../Img/Iconos/hombres.svg';
 import mujeres from '../../Img/Iconos/mujeres.svg';
 import noImage from '../../Img/Img/noImage.jpg';
-
-const getModo = (modo:any) => {
-    switch (modo) {
-        case 'Dark': return('DarkMode')
-        default: return ''
-    }
-}
-export const getColorMedio = (tipoMedio:any) => {
-    switch (tipoMedio) {
-        case 'espectacular': return('Rojo')            
-        case 'urbanos': return('Magenta')
-        case 'muro': return('Azul')            
-        case 'indoors': return('Amarillo')
-        default: return('Gris')
-    }
-}
+import { getColorMedio, getModo } from "../../../utils/utils";
 
 interface CardRecorridoProps{
     modo?: string | any;

@@ -5,23 +5,8 @@ import PropertyBtn from '../../Atomos/PropertyBtn';
 import DynamicButton from '../../Atomos/DynamicButton';
 
 import '../../../index.css';
+import { getColorMedio, getModo } from "../../../utils/utils";
 
-
-const getModo = (modo:any) => {
-    switch (modo) {
-        case 'Dark': return('DarkMode')
-        default: return ''
-    }
-}
-export const getColorMedio = (tipoMedio:any) => {
-    switch (tipoMedio) {
-        case 'espectacular': return('Rojo')            
-        case 'urbanos': return('Magenta')
-        case 'muro': return('Azul')            
-        case 'indoors': return('Amarillo')
-        default: return('Gris')
-    }
-}
 interface CardsInventarioProveedoresProps{
     tipoMedio: 'espectacular' | 'muro' | 'urbanos' | 'indoors' | any; 
     clave?: string | any;

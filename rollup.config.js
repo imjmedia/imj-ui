@@ -52,7 +52,7 @@ export default [
       peerDepsExternal(),
       postcss({
         extract: true,
-        modules: true,
+        modules: false,
         use: ['sass'],
       }),
       babel({ exclude: 'node_modules/**', babelHelpers: 'runtime' }),

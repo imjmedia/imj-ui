@@ -8,24 +8,7 @@ import noImage from '../../Img/Img/noImage.jpg';
 //import noQr from '../../Img/Img/noQr.png';
 import hombres from '../../Img/Iconos/hombres.svg';
 import mujeres from '../../Img/Iconos/mujeres.svg';
-
-/*ASIGNADO DE COLOR*/
-const getModo = (modo:any) => {
-    switch (modo) {
-        case 'Dark': return('DarkMode')
-        default: return ''
-    }
-}
-/* ASIGNADO DE COLOR */
-export const getColorMedio = (tipoMedio:any) => {
-    switch (tipoMedio) {
-        case 'espectacular': return('Rojo')            
-        case 'urbanos': return('Magenta')
-        case 'muro': return('Azul')            
-        case 'indoors': return('Amarillo')
-        default: return('Gris')
-    }
-}
+import { getColorMedio } from "../../../utils/utils";
 
 interface PrevisualizarCardsProps{
     imagen?: any;

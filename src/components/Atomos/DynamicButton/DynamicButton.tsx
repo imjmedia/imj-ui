@@ -33,121 +33,119 @@ import ubicaciongeografica from "../../Img/iconos/ubicaciongeografica.svg";
 import hombres from "../../Img/iconos/hombres.svg";
 import mujeres from "../../Img/iconos/mujeres.svg";
 
-interface DynaButtProps{
+interface DynaButtProps {
     type: 'buttons' | 'icons' | any;
     size?: 'Grande' | 'Mediano' | 'Chico' | any;
     color?: 'Amarillo' | 'Azul' | 'Rojo' | 'Verde' | 'Magenta' | 'Gris' | 'Aqua' | 'Morado' | any;
     button?: 'arrastrar' | 'busqueda' | 'carrito' | 'circulo' | 'descargar' | 'editar' | 'excel' | 'guardar' | 'kml' | 'pauta' | 'pdf' | 'previsualizar' | 'trafico' | 'vaciar' | 'graficas' | 'ubicaciongeografica' | 'iluminacion' | 'bloqueado' | 'nicho' | 'material' | 'cerrar' | 'etiqueta' | 'etiquetaAzul' | 'etiquetaAmarillo' | 'etiquetaMagenta' | 'etiquetaRojo' | 'hombres' | 'mujeres' | any;
     onClick?: any;
 }
+
+interface buttonsArrInterface {
+    [key: string]: string;
+}
+
+const buttonsArr:buttonsArrInterface = {
+    'arrastrar': arrastrar,
+    'busqueda': busqueda,
+    'carrito': carrito,
+    'circulo': circulo,
+    'descargar': descargar,
+    'editar': editar,
+    'excel': excel,
+    'guardar': guardar,
+    'kml': kml,
+    'pauta': pauta,
+    'pdf': pdf,
+    'previsualizar': previsualizar,
+    'trafico': trafico,
+    'vaciar': vaciar,
+    'graficas': graficas,
+    'menu': menu
+}
+
+const iconsArr:buttonsArrInterface ={
+    'ubicaciongeografica': ubicaciongeografica,
+    'iluminacion': iluminacion,
+    'bloqueado': bloqueado,
+    'nicho': nicho,
+    'material': material,
+    'cerrar': cerrar,
+    'etiqueta': etiqueta,
+    'etiquetaAzul': etiquetaAzul,
+    'etiquetaAmarillo': etiquetaAmarillo,
+    'etiquetaMagenta': etiquetaMagenta,
+    'etiquetaRojo': etiquetaRojo,
+    'hombres': hombres,
+    'mujeres': mujeres,
+}
+
 const DynamicButton = (props:DynaButtProps) => {
-    function titleCase(text:any){
-    return (text[0].toUpperCase() + text.slice(1).toLowerCase())
+    
+    const titleCase = (text: any) => {
+        return (text[0].toUpperCase() + text.slice(1).toLowerCase())
     }
-    function retornoButtonComponent(){
-        if (type === 'buttons'){
-            return(
-                buttons 
-            )
-        } else {
-            return(
-                icons 
-            ) 
-        }
-    }
+
     const data = {
-        size: titleCase(props.size),
+        size: titleCase(props.size || 'Chico'),
         button: props.button,
-        color : titleCase(props.color)
+        color: titleCase(props.color || 'Azul')
     }
     const type = (props.type)
-    const arregloEtiqueta:any = "etiqueta"+data.color
+    const arregloEtiqueta: any = "etiqueta" + data.color
 
-    const [buttons, setButtons] = useState([]);
-    const InitButtons =()=> {
-        let tmpBtn:any = [];
-            tmpBtn['arrastrar'] = arrastrar;
-            tmpBtn['busqueda'] = busqueda;
-            tmpBtn['carrito'] = carrito;
-            tmpBtn['circulo'] = circulo;
-            tmpBtn['descargar'] = descargar;
-            tmpBtn['editar'] = editar;
-            tmpBtn['excel'] = excel;
-            tmpBtn['guardar'] = guardar;
-            tmpBtn['kml'] = kml;
-            tmpBtn['pauta'] = pauta;
-            tmpBtn['pdf'] = pdf;
-            tmpBtn['previsualizar'] = previsualizar;
-            tmpBtn['trafico'] = trafico;
-            tmpBtn['vaciar'] = vaciar;
-            tmpBtn['graficas'] = graficas;
-            tmpBtn['menu'] = menu;
-            setButtons(tmpBtn);
+    const retornoButtonComponent = (name:string) => {
+        if (type === 'buttons') {
+            return (
+                buttonsArr[name]
+            )
+        } else {
+            return (
+                iconsArr[name]
+            )
+        }
     }
-    useEffect(()=>{
-        InitButtons()
-    },[])
-
-    const [icons, setIcons] = useState([]);
-    const InitIcons = () => {
-        let tmpIcon:any =[];
-            tmpIcon['ubicaciongeografica'] = ubicaciongeografica;
-            tmpIcon['iluminacion'] = iluminacion;
-            tmpIcon['bloqueado'] = bloqueado;
-            tmpIcon['nicho'] = nicho;
-            tmpIcon['material'] = material;
-            tmpIcon['cerrar'] = cerrar;
-            tmpIcon['etiqueta'] = etiqueta;
-            tmpIcon['etiquetaAzul'] = etiquetaAzul;
-            tmpIcon['etiquetaAmarillo'] = etiquetaAmarillo;
-            tmpIcon['etiquetaMagenta'] = etiquetaMagenta;
-            tmpIcon['etiquetaRojo'] = etiquetaRojo;
-            tmpIcon['hombres'] = hombres;
-            tmpIcon['mujeres'] = mujeres;
-            setIcons(tmpIcon);
-    }
-    useEffect(()=>{
-        InitIcons()
-    },[])
-
-    const TypeButton = (props:any) =>{
-        const buttonComponent = retornoButtonComponent()[props.name];
-        if (buttonComponent === undefined){
+    
+    
+    const TypeButton = (props: any) => {
+        const buttonComponent = retornoButtonComponent(props.name);
+        if (buttonComponent === undefined) {
             return (
                 <></>
             )
         } else {
-            return(
+            return (
                 <img src={buttonComponent} alt="" />
             )
         }
     }
-    if (type === 'buttons'){
-        if (data.size === 'Chico'){
+
+    if (type === 'buttons') {
+        if (data.size === 'Chico') {
             return (
-                <div className={"Btn"+data.size+" Btn"+data.color} onClick={props.onClick}>
+                <div className={"Btn" + data.size + " Btn" + data.color} onClick={props.onClick}>
                     <p>
                         {data.button}
                     </p>
                 </div>
             )
-        }else{       
-            return(
-                <div className={'Btn'+data.size+" Btn"+data.color} onClick={props.onClick}>
-                    <TypeButton name={data.button}/>
+        } else {
+            return (
+                <div className={'Btn' + data.size + " Btn" + data.color} onClick={props.onClick}>
+                    <TypeButton name={data.button} />
                 </div>
             )
         }
     } else {
-        if (data.button==='etiqueta'){
-            return(
+        if (data.button === 'etiqueta') {
+            return (
                 <div className={"Icono"}>
-                    <img src={icons[arregloEtiqueta]} alt="" />
+                    <img src={iconsArr[arregloEtiqueta]} alt="" />
                 </div>
             )
-        } else{       
-            return(
-                <div className={"Icono Icono"+data.color}>
+        } else {
+            return (
+                <div className={"Icono Icono" + data.color}>
                     <TypeButton name={data.button} />
                 </div>
             )

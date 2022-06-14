@@ -6,24 +6,9 @@ import DynamicButton from "../../Atomos/DynamicButton";
 import PrecioCosto from "../../Atomos/PrecioCosto";
 import Aside from "../../Moleculas/Aside";
 import '../../../index.css';
+import { getColorMedio, getModo } from "../../../utils/utils";
 
-/*ASIGNADO DE COLOR*/
-const getModo = (modo:any) => {
-    switch (modo) {
-        case 'Dark': return('DarkMode')
-        default: return ''
-    }
-}
-/* ASIGNADO DE COLOR */
-export const getColorMedio = (tipoMedio:any) => {
-    switch (tipoMedio) {
-        case 'espectacular': return('Rojo')            
-        case 'urbanos': return('Magenta')
-        case 'muro': return('Azul')            
-        case 'indoors': return('Amarillo')
-        default: return('Gris')
-    }
-}
+
 interface CardsAbcSitiosProps{
     show?: boolean | any;
     children?: any;

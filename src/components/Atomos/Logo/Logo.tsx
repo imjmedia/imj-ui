@@ -5,13 +5,8 @@ import  Obp from "../../Img/Logos/Obp.svg";
 import  ByImjDarkMode from "../../Img/Logos/ByImjDarkMode.svg";
 import  ImjDarkMode from "../../Img/Logos/ImjDarkMode.svg";
 import  ObpDarkMode from "../../Img/Logos/ObpDarkMode.svg";
+import { getModo } from "../../../utils/utils";
 
-const getModo = (modo:any) => {
-    switch (modo) {
-        case 'Dark': return('DarkMode')
-        default: return ''
-    }
-}
 
 interface LogoProps{
     logo: 'Imj' | 'Obp' | 'ByImj'

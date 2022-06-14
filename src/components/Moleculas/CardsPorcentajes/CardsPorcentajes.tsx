@@ -2,14 +2,7 @@ import React from "react";
 import TextField from "../../Atomos/TextField";
 import DynamicButton from "../../Atomos/DynamicButton";
 import '../../../index.css';
-
-
-const getModo = (modo:any) => {
-    switch (modo) {
-        case 'Dark': return('DarkMode')
-        default: return ''
-    }
-}
+import { getModo } from "../../../utils/utils";
 
 interface CardsPorcentajesProps{
     alcance?: number | any;
