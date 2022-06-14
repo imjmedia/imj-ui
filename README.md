@@ -11,7 +11,7 @@
  <ul>
   <li><a>Objetivo</a></li>
   <li><a>Descripción del proyecto</a></li>
-  <li><a>Funcionalidades</a></li>
+  <li><a>Estructura</a></li>
   <li><a>Instalar el proyecto</a></li>
   <li><a>Colaboradores</a></li>
   <li><a>Contacto</a></li>
@@ -26,15 +26,29 @@
 <h3>Descripción del proyecto</h3>
 <p>Este proyecto esta bajo la metodologia de diseño atomico.</p>
 
-<h3>Funcionalidades</h3>
+<h3>Estructura </h3>
+
+<img src="https://user-images.githubusercontent.com/91350988/173425591-d4cc4258-1f0f-4ba9-8dd0-4c32ae5c15ee.jpg" width="600px" heigth="600px"/>
+
+
 
 <h3>Instalar el proyecto</h3>
+<p>1._ Crear un archivo .nmprc con el contenido:
+<br> Proporcionado por el administrador
+</p>
+<p>2._ Ejecutar npm install @imjmedia/imj-ui@0.0.16 en el proyecto en el que se quiera usar la libreria</p>
+
+<p>3._Se usan los componentes como cualquier libreria
+<br>import { CardsRecorrido } from '@imjmedia/imj-ui'</p>
+
+
+
 
 <h3>Colaboradores</h3>
 
 <a href="mailto:jorge.correa@imjmedia.com.mx"> Jorge Correa - Gerente de TI </a><br>
-<a href="mailto:jorge.correa@imjmedia.com.mx">Victor Gálvan - Diseñador UX / UI,</a><br>
-<a href="mailto:jorge.correa@imjmedia.com.mx">Ricardo Ubaldo - Programador web</a>
+<a href="mailto:victor.galvan@imjmedia.com.mx">Victor Gálvan - Diseñador UX / UI</a><br>
+<a href="mailto:ricardo.ubaldo@imjmedia.com.mx">Ricardo Ubaldo - Programador web</a>
 
 
 
