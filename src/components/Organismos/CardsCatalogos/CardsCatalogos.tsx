@@ -23,9 +23,9 @@ const CardsCatalogos = (props: CardsCatalogosProps) => {
                     <div className={"CardFront Card" + modoCard}>
                         <Front data={props.data}/>
                     </div>
-                    <div className={"CardBack Card" + modoCard}>
+                    {Back && <div className={"CardBack Card" + modoCard}>
                         <Back data={props.data}/>
-                    </div>
+                    </div>}
                     <div className="EtiquetaIdentificacion">
                         <DynamicButton
                             type='icons'
