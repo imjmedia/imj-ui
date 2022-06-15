@@ -23,4 +23,5 @@ export { default as FormularioVisualizaPauta } from './Organismos/FormularioVisu
 export { default as AsideBotonesVisualizaPauta } from './Organismos/AsideBotonesVisualizaPauta';
 export { default as EtiquetaVisualizaPauta } from './Moleculas/EtiquetaVisualizaPauta';
 export { default as Button } from './Atomos/Button';
-export { default as CardsCatalogos } from './Organismos/CardsCatalogos'
+export { default as CardsCatalogos } from './Organismos/CardsCatalogos';
+export {default as BtnFunction} from './Atomos/btnFunction';

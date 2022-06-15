@@ -15,15 +15,24 @@ const CardsCatalogos = (props: CardsCatalogosProps) => {
     const Front = props.frontItemRenderer;
     const Back = props.backItemRenderer;
     const modoCard = getModo(props.modo || '');
+    const FlipNoFlip = (lado:string) => {
+        if (Front && Back){
+            if (lado === 'front'){ 
+                return('CardFront') 
+            } else { 
+                return ('CardBack') 
+            }                   
+        } else { return ('') }
+    }
 
     return (
         <div className="CardsPaddings">
             <div className="CardAsideFlex">
                 <div className="ContenedorCards">
-                    <div className={"CardFront Card" + modoCard}>
+                    <div className={FlipNoFlip('front') + " Card" + modoCard}>
                         <Front data={props.data}/>
                     </div>
-                    {Back && <div className={"CardBack Card" + modoCard}>
+                    {Back && <div className={FlipNoFlip('back') + " Card" + modoCard}>
                         <Back data={props.data}/>
                     </div>}
                     <div className="EtiquetaIdentificacion">
@@ -31,7 +40,7 @@ const CardsCatalogos = (props: CardsCatalogosProps) => {
                             type='icons'
                             size='grande'
                             button='etiqueta'
-                            color={getColorMedio("Rojo")}
+                            color={getColorMedio("Gris")}
                         />
                     </div>
                 </div>
@@ -39,4 +48,5 @@ const CardsCatalogos = (props: CardsCatalogosProps) => {
         </div>
     )
 }
+
 export default CardsCatalogos;

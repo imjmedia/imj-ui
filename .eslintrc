@@ -1,5 +1,6 @@
 {
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {"requireConfigFile": false},
     "extends": ["eslint:recommended", "airbnb"],
     "plugins": ["import", "react"],
     "env": {
