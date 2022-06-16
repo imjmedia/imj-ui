@@ -5,7 +5,6 @@ import DynamicButton from "../DynamicButton";
 interface BtnFunctionProps{
     onClick?: ()=>void;
 
-    clic?: any;
     color?: 
     'Azul' |
     'Amarillo'|
@@ -31,7 +30,7 @@ interface BtnFunctionProps{
 
 const BtnFunction = (props: BtnFunctionProps) => {
     return(
-        <div onClick={props.clic}>
+        <div onClick={props.onClick}>
             <DynamicButton
                 type='buttons'
                 button={props.button}
