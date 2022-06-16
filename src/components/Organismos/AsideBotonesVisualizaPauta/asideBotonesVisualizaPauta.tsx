@@ -4,12 +4,12 @@ import DynamicButton from '../../Atomos/DynamicButton';
 
 
 interface AsideBotonesVisualizaPautaProps{
-    onClickDescargar?: any;
-    onClickKml?: any;
-    onClickExcel?: any;
-    onClickPdf?: any;
-    onClickVaciar?: any;
-    onClickGuardar?: any;
+    onClickDescargar?: () => void;
+    onClickKml?: () => void;
+    onClickExcel?: () => void;
+    onClickPdf?: () => void;
+    onClickVaciar?: () => void;
+    onClickGuardar?: () => void;
 }
 const AsideBotonesVisualizaPauta =(props:AsideBotonesVisualizaPautaProps)=>{
     return(
