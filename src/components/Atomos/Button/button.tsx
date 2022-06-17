@@ -16,7 +16,7 @@ const Button=(props:ButtonProps)=>{
         fontSize: props.fontSize || '20px',
         width: props.width || 'auto'
     }
-    const click = props.click
+    const click = props.onClick
     return(
         <button 
         style={{

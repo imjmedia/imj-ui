@@ -46,9 +46,7 @@ const CardsCatalogos = (props: CardsCatalogosProps) => {
                         />
                     </div>
                 </div>
-                <div>
-                    {Botones}
-                </div>
+                {Botones}
             </div>
         </div>
     )
@@ -68,16 +66,16 @@ export const asideItemRenderer =(props:asideItemRendererProps)=>{
                     button="vaciar"
                     color="Rojo"
                     onClick={()=>{}}
-                />    
+                />
         )
     }
-    if (Btn != null){
+    if (Btn !== null){
         return(
             <div className={"AsideCards" + modoCard}>
                 <div className="BotonAside">
-                    {Btn.btn1}    
-                </div>       
-            </div> 
+                    {Btn.btn1}
+                </div>
+            </div>
          )
     } else {
         return <></>
