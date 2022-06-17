@@ -25,3 +25,4 @@ export { default as EtiquetaVisualizaPauta } from './Moleculas/EtiquetaVisualiza
 export { default as Button } from './Atomos/Button';
 export { default as CardsCatalogos } from './Organismos/CardsCatalogos';
 export {default as BtnFunction} from './Atomos/btnFunction';
+export {default as AsideItemRenderer} from './Atomos/assideItemRenderer';

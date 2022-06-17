@@ -51,36 +51,6 @@ const CardsCatalogos = (props: CardsCatalogosProps) => {
         </div>
     )
 }
-/* 
-Creo que esto sería lo que va en el archivo externo que retorna el asideItemRenderer:
 
-interface asideItemRendererProps{
-    modo?: 'Dark' | '';
-}
-
-export const asideItemRenderer =(props:asideItemRendererProps)=>{
-    const modoCard = getModo(props.modo || '')
-    const Btn ={
-        btn1: (
-                <BtnFunction
-                    button="vaciar"
-                    color="Rojo"
-                    onClick={()=>{}}
-                />
-        )
-    }
-    if (Btn !== null){
-        return(
-            <div className={"AsideCards" + modoCard}>
-                <div className="BotonAside">
-                    {Btn.btn1}
-                </div>
-            </div>
-         )
-    } else {
-        return <></>
-    }
-}
-*/
 
 export default CardsCatalogos;
