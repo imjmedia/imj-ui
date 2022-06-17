@@ -21,7 +21,9 @@ const AsideItemRenderer =(props:asideItemRendererProps)=>{
     return (
         <div className={"AsideCards" + modoCard}>
             <div className="ContenedorBotonesAside">
-                {botones}
+                <div className="BotonAside">
+                    {boton && boton.map((elemento)=>elemento)}
+                </div>
             </div>
         </div>
     )
