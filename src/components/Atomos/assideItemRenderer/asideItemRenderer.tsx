@@ -5,6 +5,7 @@ interface asideItemRendererProps{
     modo?: 'Dark' | '';
     botones?: any;
     btn?: any;
+    CardH?: string;
 }
 
 const AsideItemRenderer =(props:asideItemRendererProps)=>{
@@ -14,7 +15,7 @@ const AsideItemRenderer =(props:asideItemRendererProps)=>{
     const botones = boton.map((e:any)=>(<div className="BotonAside">{e}</div>))
 
     return (
-        <div className={"AsideCards" + modoCard}>
+        <div className={"AsideCards" + modoCard +" CardHeight" + props.CardH}>
             <div className="ContenedorBotonesAside">
                 <div className="BotonAside">
                     {botones}
