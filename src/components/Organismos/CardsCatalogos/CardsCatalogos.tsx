@@ -11,6 +11,18 @@ interface CardsCatalogosProps {
     modo?: string | any,
     data: any,
     handleClose?: () => void;
+    CardH?: 
+    'S'|
+    'M'|
+    'L'|
+    'XL'|
+    'XXL';
+    CardW?: 
+    'S'|
+    'M'|
+    'L'|
+    'XL'|
+    'XXL';
 }
 const CardsCatalogos = (props: CardsCatalogosProps) => {
     const Botones = props.asideItemRenderer;
@@ -30,7 +42,7 @@ const CardsCatalogos = (props: CardsCatalogosProps) => {
     return (
         <div className="CardsPaddings">
             <div className="CardAsideFlex">
-                <div className="ContenedorCards">
+                <div className={"ContenedorCards CardHeight" +props.CardH + ' CardW'+props.CardW}>
                     <div className={Flip('front') + " Card" + modoCard}>
                         <Front data={props.data}/>
                     </div>

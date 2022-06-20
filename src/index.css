@@ -1434,3 +1434,53 @@ a{
     opacity: 50%;
 }
 
+/*Estilos para las cards genéricas tamaños:
+    Altura:
+        S = 360px
+        M = 400px
+        L = 500px
+        XL = 600px
+        XXL = 700px
+    Ancho:
+        S = 350px
+        M = 400px
+        L = 450px
+        XL = 500px
+        XXL = 550px
+*/
+.CardHeightS{
+    height: 36rem;
+    position: relative;
+}
+.CardHeightM{
+    height: 40rem;
+    position: relative;
+}
+.CardHeightL{
+    height: 50rem;
+    position: relative;
+}
+.CardHeightXL{
+    height: 60rem;
+    position: relative;
+}
+.CardHeightXXL{
+    height: 70rem;
+    position: relative;
+}
+.CardWS{
+    width: 35rem; 
+}
+.CardWM{
+    width: 40rem; 
+}
+.CardWL{
+    width: 45rem; 
+}
+.CardWXL{
+    width: 50rem; 
+}
+.CardWXXL{
+    width: 55rem; 
+}
+
