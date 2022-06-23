@@ -10,6 +10,12 @@ interface CardsCatalogosProps {
     asideItemRenderer?: any;
     modo?: string | any,
     data: any,
+    tipoMedio?:
+        'urbanos' |
+        'espectacular' |
+        'muro' |
+        'indoors' |
+        'undefined';
     handleClose?: () => void;
     CardH?: 
     'S'|
@@ -24,8 +30,9 @@ interface CardsCatalogosProps {
     'XL'|
     'XXL';
 }
-const CardsCatalogos = (props: CardsCatalogosProps) => {
-    const Botones = props.asideItemRenderer;
+
+export const CardsCatalogos =(props:CardsCatalogosProps) =>{
+    const Botones = props.asideItemRenderer
     const Front = props.frontItemRenderer;
     const Back = props.backItemRenderer;
     const modoCard = getModo(props.modo || '');
@@ -38,31 +45,44 @@ const CardsCatalogos = (props: CardsCatalogosProps) => {
             }                   
         } else { return ('') }
     }
-
-    return (
+    const AsideNoAside =()=>{
+        if (Botones) {
+            return 'CardConAside'
+        } else {
+            return 'Card'
+        }
+    }
+    return(
         <div className="CardsPaddings">
-            <div className="CardAsideFlex">
+            <div className="CardAsideFlex">     
                 <div className={"ContenedorCards CardHeight" +props.CardH + ' CardW'+props.CardW}>
-                    <div className={Flip('front') + " Card" + modoCard}>
-                        <Front data={props.data}/>
-                    </div>
-                    {Back && <div className={Flip('back') + " Card" + modoCard}>
-                        <Back data={props.data}/>
+                    {Front && <div className={Flip('front') + " "+AsideNoAside() + modoCard}>
+                        <Front
+                            data={props.data}
+                        />
+                    </div>}
+                    {Back && <div className={Flip('back') + " "+AsideNoAside() + modoCard}>
+                        <Back
+                            data={props.data} 
+                        />
                     </div>}
                     <div className="EtiquetaIdentificacion">
                         <DynamicButton
                             type='icons'
                             size='grande'
                             button='etiqueta'
-                            color={getColorMedio("Gris")}
+                            color={getColorMedio(props.tipoMedio)}
                         />
                     </div>
                 </div>
-                {Botones}
+                <Botones
+                    data={props.data}
+                />
             </div>
         </div>
     )
 }
+
 
 
 export default CardsCatalogos;
