@@ -29,9 +29,11 @@ html {
 .App{
     font-family: 'Open Sans', sans-serif;
 }
-.AppDarkMode{
+.AppDarkMode {
     background-color: #282828;
-    font-family: 'Open Sans', sans-serif;  
+    font-family: 'Open Sans', sans-serif; 
+    height: 100vh;
+    width: 100vw;
 }
 
 a{
@@ -120,6 +122,9 @@ a{
 }
 .Left25{
     left: 25%;
+}
+.FontSize12{
+    font-size: 1.2rem;
 }
 
 
@@ -1490,3 +1495,126 @@ a{
     box-shadow: 18px 18px 36px #bebebe,
                 -18px -18px 36px #fff;
 }
+
+.ModalBody{
+    backdrop-filter: blur(3px);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.ContenedorModal{
+
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: -.5rem .5rem 2rem #cdcdcd ;
+    z-index: 1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.ContenedorModalDarkMode{
+    width: 80rem;
+    height: 61rem;
+    background-color: #333333;
+    border-radius: 2rem;
+    box-shadow: -.5rem .5rem 2rem #252525 ;
+    z-index: 1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.ContenidoModal{
+    position: relative;
+    width: 95% ;
+    height: 95% ;
+    margin: auto;
+    top: -3.5rem;
+}
+.ContenedorSuperiorFicha{
+    min-width: 100%;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.ImagenPrevCards{
+    grid-column: 1 / 6;
+    grid-row: 1/3;
+}
+.ImagenPrevCards img{
+    width: 45.5rem;
+    height: 36.5rem;
+    object-fit: cover;
+    border-radius: 2rem; 
+}
+.InfoSupeDerPrevCards{
+    grid-column: 6/9;
+    grid-row: 1/3;
+}
+.LogoPrevCards img{
+    max-height: 5.5rem;
+    padding-bottom: 0;
+}
+.LogoPrevCards{
+    text-align: left;
+}
+.InfoPorcentajesPrevCards h3{
+    font-weight: 700;
+    margin-block: 0;
+    padding: .7rem 0;
+    text-align: center;
+}
+.InfoPorcentajesPrevCardsDarkMode h3{
+    font-weight: 700;
+    margin-block: 0;
+    padding: .7rem 0;
+    text-align: center;
+    color: #B3B3B3;
+}
+.FontSize12 .CampoDescripcion{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.FontSize12 .CampoDescripcion{
+    margin-top: .5rem;
+}
+.UltimoCampoPrev{
+    grid-column: 1/3;
+}
+.InfoSupeDerPrevCards .EncabezadoCard{
+    padding-top: 0;
+}
+.ContenedorInferiorFicha{
+    grid-column: 1 / 9;
+    height: 18rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: -.5rem .5rem 2rem #cdcdcd ;
+    padding-top: 1rem;
+}
+.ContenedorInferiorFichaDarkMode{
+    grid-column: 1 / 9;
+    height: 18rem;
+    background-color: #333333;
+    border-radius: 2rem;
+    box-shadow: -.5rem .5rem 2rem #252525 ;
+    padding-top: 1rem;
+}
+.ContenedorInferiorFicha .Columnas3{
+    margin: 0 auto;
+    max-width: 100%;
+}
+.ContenedorInferiorFichaDarkMode .Columnas3{
+    margin: 0 auto;
+    max-width: 100%;
+}
+.ContenedorInferiorFichaDarkMode .Columnas3 .Columnas2 p{
+    color: #B3B3B3;
+    text-align: center;
+}
+
+
