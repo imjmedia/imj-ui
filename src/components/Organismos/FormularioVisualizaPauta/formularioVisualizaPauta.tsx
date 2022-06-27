@@ -3,7 +3,7 @@ import TextField from "../../Atomos/TextField";
 import Dropdown from '../../Atomos/dropDown';
 import { useState } from "react";
 import Inputs from "../../Atomos/Inputs";
-import noImage from '../../Img/Img/noImage.jpg';
+import noImagen from '../../Img/Img/noImagen.jpg';
 import { getModo } from "../../../utils/utils";
 
 interface FormularioVisualizaPautaProps{
@@ -127,7 +127,7 @@ const FormularioVisualizaPauta =(props:FormularioVisualizaPautaProps) =>{
                             </div>
                         </div>
                         <div className="LogotipoVisualia">
-                            <img src={logotipo || noImage} alt="" /> 
+                            <img src={logotipo || noImagen} alt="" /> 
                         </div>
                     </div>
                 </div>
