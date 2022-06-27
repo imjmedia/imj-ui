@@ -53,8 +53,8 @@ interface DynaButtProps {
         'Magenta' | 
         'Gris' | 
         'Aqua' | 
-        'Morado' | 
-        any;
+        'Morado' |
+        'none';
 
     button?: 
         'arrastrar' | 
@@ -84,8 +84,7 @@ interface DynaButtProps {
         'etiquetaMagenta' | 
         'etiquetaRojo' | 
         'hombres' | 
-        'mujeres' | 
-        any;
+        'mujeres';
     
     onClick?: 
         any;
@@ -111,7 +110,8 @@ const buttonsArr:buttonsArrInterface = {
     'trafico': trafico,
     'vaciar': vaciar,
     'graficas': graficas,
-    'menu': menu
+    'menu': menu,
+    'cerrar': cerrar,
 }
 
 const iconsArr:buttonsArrInterface ={
@@ -120,7 +120,6 @@ const iconsArr:buttonsArrInterface ={
     'bloqueado': bloqueado,
     'nicho': nicho,
     'material': material,
-    'cerrar': cerrar,
     'etiqueta': etiqueta,
     'etiquetaAzul': etiquetaAzul,
     'etiquetaAmarillo': etiquetaAmarillo,

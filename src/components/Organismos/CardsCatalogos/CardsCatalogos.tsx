@@ -8,7 +8,9 @@ interface CardsCatalogosProps {
     frontItemRenderer: any,
     backItemRenderer?: any,
     asideItemRenderer?: any;
-    modo?: string | any,
+    modo?: 
+        'Dark' |
+        '';
     data: any,
     tipoMedio?:
         'urbanos' |
@@ -16,19 +18,19 @@ interface CardsCatalogosProps {
         'muro' |
         'indoors' |
         'undefined';
-    handleClose?: () => void;
+        handleClose?: () => void;
     CardH?: 
-    'S'|
-    'M'|
-    'L'|
-    'XL'|
-    'XXL';
+        'S'|
+        'M'|
+        'L'|
+        'XL'|
+        'XXL';
     CardW?: 
-    'S'|
-    'M'|
-    'L'|
-    'XL'|
-    'XXL';
+        'S'|
+        'M'|
+        'L'|
+        'XL'|
+        'XXL';
 }
 
 export const CardsCatalogos =(props:CardsCatalogosProps) =>{

@@ -9,7 +9,9 @@ interface BtnFunctionProps{
     'Azul' |
     'Amarillo'|
     'Rojo' |
-    'Verde';
+    'Verde' |
+    'none' |
+    any;
     button?:
     'arrastrar' | 
     'busqueda' | 
@@ -24,7 +26,9 @@ interface BtnFunctionProps{
     'pdf' | 
     'previsualizar' | 
     'trafico' | 
-    'vaciar';
+    'vaciar' |
+    'cerrar' |
+    any;
 }
 
 
