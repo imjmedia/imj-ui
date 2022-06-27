@@ -3,8 +3,8 @@ import TextField from "../../Atomos/TextField";
 import Logo from "../../Atomos/Logo";
 import TitlesCards from "../../Atomos/TitlesCards";
 import {hombres} from '../../Img/Iconos/hombres.svg';
-import {noImage} from '../../Img/Img/noImage.jpg';
 import {mujeres} from '../../Img/Iconos/mujeres.svg';
+import {noImagen} from '../../Img/Img/noImagen.jpg';
 import { getColorMedio, getModo } from "../../../utils/utils";
 import '../../../index.css'
 
@@ -67,7 +67,7 @@ const ModalItemRendererPrevisualizar = (props:ModalItemRendererPrevisualizarProp
         <div>
         <div className="ContenedorSuperiorFicha">
             <div className="ImagenPrevCards">
-                <img src={props.imagen || noImage} alt="" />
+                <img src={props.imagen || noImagen} alt="" />
             </div>
             <div className="InfoSupeDerPrevCards">
                 <div className="LogoPrevCards">
