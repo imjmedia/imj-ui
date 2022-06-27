@@ -470,6 +470,7 @@ a{
 }
 .DireccionCards{
     padding: 1.5rem 0 0 0;
+    max-width: ;
 }
 
 .MedidasCards{
@@ -572,8 +573,9 @@ a{
 }
 .PropiedadCardsPosition3{
     position: absolute;
-    left: 5%;
+    left: 50%;
     top: 85%; 
+    transform:translate(-50%);
 }
 .EtiquetaIdentificacion{
     position: relative;
@@ -723,42 +725,6 @@ a{
     right: 10.5rem;
     top: 30vh;
 }
-
-
-/*MODAL*/
-.modal{
-    position:fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);   
-}
-.modal-main {
-    position:fixed;
-    width: 100vw;
-    height: 100vh;
-    top:50vh;
-    left:0;
-}  
-.display-block {
-    display: block;
-}
-.display-none {
-    display: none;
-}
-.IconoCerrarModalPrevisualizar{
-    transform: translate(137rem, -40rem);
-    cursor: pointer;
-    z-index: 0;
-}
-.IconoCerrarModalGraficas{
-    transform: translate(125rem, -25rem);
-    cursor: pointer;
-    z-index: 0;
-}
-
 
 /*GRAFICAS CARDS*/
 .GraficasCards{
@@ -1503,30 +1469,27 @@ a{
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 .ContenedorModal{
-/*     width: 80rem;
-    height: 61rem; */
     background-color: #fff;
     border-radius: 2rem;
     box-shadow: -.5rem .5rem 2rem #cdcdcd ;
-    z-index: 1;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
 }
 .ContenedorModalDarkMode{
-    width: 80rem;
-    height: 61rem;
     background-color: #333333;
     border-radius: 2rem;
     box-shadow: -.5rem .5rem 2rem #252525 ;
-    z-index: 1;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
 }
 .ContenidoModal{
     position: relative;
@@ -1617,5 +1580,3 @@ a{
     color: #B3B3B3;
     text-align: center;
 }
-
-
