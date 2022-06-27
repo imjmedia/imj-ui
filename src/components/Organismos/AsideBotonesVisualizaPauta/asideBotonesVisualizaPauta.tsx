@@ -19,7 +19,7 @@ const AsideBotonesVisualizaPauta =(props:AsideBotonesVisualizaPautaProps)=>{
                     type='buttons'
                     button='descargar'
                     size='grande'
-                    color = 'amarillo'
+                    color = 'Amarillo'
                 />
             </div>
             <div onClick={props.onClickKml}>
@@ -27,7 +27,7 @@ const AsideBotonesVisualizaPauta =(props:AsideBotonesVisualizaPautaProps)=>{
                     type='buttons'
                     button='kml'
                     size='grande'
-                    color = 'azul'
+                    color = 'Azul'
                 />
             </div>
             <div onClick={props.onClickExcel}>
@@ -35,7 +35,7 @@ const AsideBotonesVisualizaPauta =(props:AsideBotonesVisualizaPautaProps)=>{
                     type='buttons'
                     button='excel'
                     size='grande'
-                    color = 'verde'
+                    color = 'Verde'
                 />
             </div>
             <div onClick={props.onClickPdf}>
@@ -43,7 +43,7 @@ const AsideBotonesVisualizaPauta =(props:AsideBotonesVisualizaPautaProps)=>{
                     type='buttons'
                     button='pdf'
                     size='grande'
-                    color = 'rojo'
+                    color = 'Rojo'
                 />
             </div>
             <div onClick={props.onClickVaciar}>
@@ -51,7 +51,7 @@ const AsideBotonesVisualizaPauta =(props:AsideBotonesVisualizaPautaProps)=>{
                     type='buttons'
                     button='vaciar'
                     size='grande'
-                    color = 'rojo'
+                    color = 'Rojo'
                 />
             </div>
             <div onClick={props.onClickGuardar}>
@@ -59,7 +59,7 @@ const AsideBotonesVisualizaPauta =(props:AsideBotonesVisualizaPautaProps)=>{
                     type='buttons'
                     button='guardar'
                     size='grande'
-                    color = 'azul'
+                    color = 'Azul'
                 />
             </div>
         </div>
