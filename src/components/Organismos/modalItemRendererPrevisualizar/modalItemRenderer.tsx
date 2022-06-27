@@ -61,7 +61,8 @@ interface ModalItemRendererPrevisualizarProps {
     totalUsuarios?: number;
     usuarios?: number;
 }
-export const ModalItemRendererPrevisualizar = (props:ModalItemRendererPrevisualizarProps) =>{
+
+const ModalItemRendererPrevisualizar = (props:ModalItemRendererPrevisualizarProps) =>{
     return(
         <div>
         <div className="ContenedorSuperiorFicha">
@@ -299,3 +300,4 @@ export const ModalItemRendererPrevisualizar = (props:ModalItemRendererPrevisuali
         </div>
     )
 }
+export default ModalItemRendererPrevisualizar;

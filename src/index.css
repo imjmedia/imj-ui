@@ -1505,7 +1505,8 @@ a{
     left: 0;
 }
 .ContenedorModal{
-
+/*     width: 80rem;
+    height: 61rem; */
     background-color: #fff;
     border-radius: 2rem;
     box-shadow: -.5rem .5rem 2rem #cdcdcd ;
