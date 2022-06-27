@@ -6,7 +6,7 @@ import '../../../index.css';
 
 import hombres from '../../Img/Iconos/hombres.svg';
 import mujeres from '../../Img/Iconos/mujeres.svg';
-import noImage from '../../Img/Img/noImage.jpg';
+import noImagen from '../../Img/Img/noImagen.jpg';
 import { getColorMedio, getModo } from "../../../utils/utils";
 
 interface CardRecorridoProps{
@@ -51,7 +51,7 @@ export const CardsRecorrido=(props:CardRecorridoProps)=>{
         return(
                 <div className={"CardFrontRecorrido CardRecorrido"+getModo(props.modo)}>
                     <div className="ImageCardRecorrido"> 
-                         <img src={props.imagen || noImage} alt="" />
+                         <img src={props.imagen || noImagen} alt="" />
                     </div>
                     <div className={"EncabezadoCard BorderBottom"+getColorMedio(props.tipoMedio)}>
                         <TitlesCards
