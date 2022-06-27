@@ -2,8 +2,8 @@ import React from "react";
 import TextField from "../../Atomos/TextField";
 import Logo from "../../Atomos/Logo";
 import TitlesCards from "../../Atomos/TitlesCards";
-import {hombres} from '../../Img/Iconos/hombres.svg';
-import {mujeres} from '../../Img/Iconos/mujeres.svg';
+import hombres from '../../Img/Iconos/hombres.svg';
+import mujeres from '../../Img/Iconos/mujeres.svg';
 import noImagen from '../../Img/Img/noImagen.jpg';
 import { getColorMedio, getModo } from "../../../utils/utils";
 import '../../../index.css'
