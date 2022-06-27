@@ -86,7 +86,7 @@ const Modal = ({handleClose, show, children, typeModal}:AsideProps) => {
                             type = 'icons'
                             size = 'grande'
                             button = 'cerrar'
-                            color = 'transparent'
+                            color = 'none'
                             />                     
                     </div>
                 </section>
@@ -211,7 +211,7 @@ const Aside = (props:AsideProps) => {
                     type = 'buttons'
                     button ='previsualizar'
                     size = 'grande'
-                    color = 'verde'
+                    color = 'Verde'
                 />
             </div>
             </>
@@ -235,7 +235,7 @@ const Aside = (props:AsideProps) => {
                                 type = 'buttons'
                                 button = 'pdf' 
                                 size = 'grande' 
-                                color = 'rojo'
+                                color = 'Rojo'
                                 onClick={()=>descargarPdf()}
                             />
                         </div>
@@ -244,7 +244,7 @@ const Aside = (props:AsideProps) => {
                                 type = 'buttons'
                                 button = 'carrito' 
                                 size = 'grande' 
-                                color = 'amarillo'
+                                color = 'Amarillo'
                                 onClick={()=>agregarCarrito()}
                                 />
                         </div>       
@@ -267,7 +267,7 @@ const Aside = (props:AsideProps) => {
                                     type = 'buttons'
                                     button = 'vaciar' 
                                     size = 'grande' 
-                                    color = 'rojo'
+                                    color = 'Rojo'
                                     onClick={()=>vaciar()}
                                     />
                             </div>
@@ -283,7 +283,7 @@ const Aside = (props:AsideProps) => {
                                     type = 'buttons'
                                     button = 'vaciar' 
                                     size = 'grande' 
-                                    color = 'rojo'
+                                    color = 'Rojo'
                                     onClick={()=>vaciar()}
                                     />
                             </div>
@@ -304,7 +304,7 @@ const Aside = (props:AsideProps) => {
                                 type = 'buttons'
                                 button = 'editar' 
                                 size = 'grande' 
-                                color = 'amarillo'
+                                color = 'Amarillo'
                                 onClick={()=>editar()}
                                 />
                         </div>
@@ -313,7 +313,7 @@ const Aside = (props:AsideProps) => {
                                 type = 'buttons'
                                 button = 'vaciar' 
                                 size = 'grande' 
-                                color = 'rojo'
+                                color = 'Rojo'
                                 onClick={()=>vaciar()}
                                 />
                         </div>       

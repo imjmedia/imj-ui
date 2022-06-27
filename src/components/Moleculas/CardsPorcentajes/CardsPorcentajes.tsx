@@ -96,7 +96,7 @@ export const CardsPorcentajes = (props:CardsPorcentajesProps) => {
                         <DynamicButton
                             type='icons'
                             button = 'hombres'
-                            color = 'transparent'
+                            color = 'none'
                             size = 'grande'
                         />
                         <TextField
@@ -112,7 +112,7 @@ export const CardsPorcentajes = (props:CardsPorcentajesProps) => {
                             type = 'icons'
                             size = 'grande'
                             button = 'mujeres'
-                            color = 'transparent'
+                            color = 'none'
                         />
                         <TextField
                             modo={props.modo} 

@@ -157,7 +157,7 @@ const CardsAbcSitios = (props:CardsAbcSitiosProps) => {
                             type = 'icons'
                             button = 'ubicaciongeografica'
                             size = 'grande'
-                            color = 'amarillo'
+                            color = 'Amarillo'
                         />
                     </div>
                     
