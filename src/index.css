@@ -18,7 +18,7 @@
 }
 
 /*ESTILOS GLOBALES*/
-html {
+html{
     font-size: 62.5%;
 /*     background-color: #282828; */
 }
@@ -50,7 +50,17 @@ a{
 .CenterText{
     text-align: center;
 }
-
+.HorizontalCenterPosition{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+.DispBlock{
+    display: block;
+}
+.Width100{
+    width: 100%;
+}
 .PaddingTopBottom1{
     padding: 1rem 0;
 }
@@ -81,6 +91,12 @@ a{
 }
 .CardsPaddings{
     padding: 2rem;
+}
+.PaddingLeft1{
+    padding-left: 1rem;
+}
+.PaddingRight1{
+    padding-right: 1rem;
 }
 .Contenedor{
     max-width: 90%;
@@ -125,6 +141,9 @@ a{
 }
 .FontSize12{
     font-size: 1.2rem;
+}
+.Index1{
+    z-index: 1;
 }
 
 
@@ -400,7 +419,7 @@ a{
     transition: 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
     background-color: #fff;
     border-radius: 2rem 0 0 2rem;
-    box-shadow: -.5rem .5rem 2rem #cdcdcd ;
+    box-shadow: -.5rem .5rem 2rem #cdcdcd90 ;
 }
 .CardDarkMode{
     width: 100%;
@@ -424,7 +443,7 @@ a{
     transition: 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
     background-color: #fff;
     border-radius: 2rem;
-    box-shadow: -.5rem .5rem 2rem #cdcdcd ;
+    box-shadow: -.5rem .5rem 2rem #cdcdcd90 ;
 }
 .CardInventarioProveedores{
     width: 100%;
@@ -436,7 +455,7 @@ a{
     transition: 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
     background-color: #fff;
     border-radius: 2rem;
-    box-shadow: -.5rem .5rem 2rem #cdcdcd ;
+    box-shadow: -.5rem .5rem 2rem #cdcdcd90 ;
 }
 .CardInventarioProveedoresDarkMode{
     width: 100%;
@@ -558,18 +577,21 @@ a{
 }
 .PrecioCostoPosition{
     position: absolute;
-    left: 10%;
+    left: 50%;
     top: 80%;
+    transform:translate(-50%);
 }
 .CardRutasImj .PropiedadVerde{
     width: 8.5rem; position: absolute;
-    left: 35%;
+    left: 50%;
     top: 85%;
+    transform:translate(-50%);
 }
 .PropiedadCardsPosition1{
     position: absolute;
     top: 85%;
-    left: 35%
+    left: 50%;
+    transform:translate(-50%);
 }
 .PropiedadCardsPosition3{
     position: absolute;
@@ -597,7 +619,7 @@ a{
     height: 36rem;
     border-radius:0 2rem 2rem 0;
     background-color:#fff;
-    box-shadow: -.5rem .5rem 1rem #cdcdcd ;
+    box-shadow: -.5rem .5rem 1rem #cdcdcd90 ;
 }
 .BotonAside:not(:last-of-type) {
     margin-bottom: 2rem;
@@ -631,7 +653,7 @@ a{
     height: 55rem;
     background-color: #fff;
     border-radius: 2rem;
-    box-shadow: -.5rem .5rem 2rem #cdcdcd;
+    box-shadow: -.5rem .5rem 2rem #cdcdcd90;
     position: absolute;
     left: 27vw;
     top: -27rem;
@@ -751,7 +773,7 @@ a{
     width: 25rem;
     background-color: #fff;
     border-radius: 2rem;
-    box-shadow: -.5rem .5rem 1rem #cdcdcd;
+    box-shadow: -.5rem .5rem 1rem #cdcdcd90;
     min-height: 20rem;
     height: 45rem;
 }
@@ -814,7 +836,7 @@ a{
     padding: 0 0 1rem 0;
     background-color: #fff;
     border-radius: 2rem;
-    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
+    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd90;
 }
 .ContenedorGraficasCards .EncabezadoCard h2,.ContenedorGraficasCardsDarkMode .EncabezadoCard h2{
     margin-left: -2.5rem;
@@ -854,7 +876,7 @@ a{
     transition: 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
     background-color: #fff;
     border-radius: 2rem;
-    box-shadow: -.5rem .5rem 2rem #cdcdcd ;
+    box-shadow: -.5rem .5rem 2rem #cdcdcd90 ;
 }
 .CardFrontRecorrido{
     transform: rotateY(0deg);
@@ -919,7 +941,7 @@ a{
     padding: 0 0 1rem 0;
     background-color: #fff;
     border-radius: 2rem;
-    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
+    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd90;
 }
 .TextOverflowDescription{
     overflow: hidden; 
@@ -949,7 +971,7 @@ a{
     height: 71rem;
     background-color: #fff;
     border-radius: 2rem;
-    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
+    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd90;
     margin-left:27vw;
     position: fixed;
     top: 10vh;
@@ -1020,7 +1042,7 @@ a{
     width: 79rem;
     background-color: #fff;
     border-radius: 2rem;
-    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
+    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd90;
     position: fixed;
     top: 15vh;
     left:27vw;
@@ -1080,7 +1102,7 @@ a{
     height: 18rem;
     background-color: #fff;
     border-radius: 2rem;
-    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
+    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd90;
     margin-left: 2rem;
     margin-top: 1rem;
 }
@@ -1103,7 +1125,7 @@ a{
     height: 20rem;
     background-color: #fff;
     border-radius: 2rem;
-    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
+    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd90;
     margin-top: 0;
 }
 .ColumnaCardPrevisualizar span, .ColumnaCardPrevisualizarDarkMode span{
@@ -1156,7 +1178,7 @@ a{
     height: 9.7rem;
     background-color: #fff;
     border-radius: 2rem;
-    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
+    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd90;
     margin-left: 2rem;
     margin-top: .7rem; 
 }
@@ -1249,7 +1271,7 @@ a{
     max-height: 40rem;
     background-color: #fff;
     border-radius: 2rem;
-    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd;
+    box-shadow: -0.5rem 0.5rem 1rem #cdcdcd90;
     margin: 0 auto;
 }
 .ContenedorFormularioVisualizaPautaDarkMode .Columnas3,.ContenedorFormularioVisualizaPauta .Columnas3{
@@ -1474,7 +1496,7 @@ a{
 .ContenedorModal{
     background-color: #fff;
     border-radius: 2rem;
-    box-shadow: -.5rem .5rem 2rem #cdcdcd ;
+    box-shadow: -.5rem .5rem 2rem #cdcdcd90 ;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -1496,7 +1518,7 @@ a{
     width: 95% ;
     height: 95% ;
     margin: auto;
-    top: -3.5rem;
+    top:1.5rem;
 }
 .ContenedorSuperiorFicha{
     min-width: 100%;
@@ -1557,7 +1579,7 @@ a{
     height: 18rem;
     background-color: #fff;
     border-radius: 2rem;
-    box-shadow: -.5rem .5rem 2rem #cdcdcd ;
+    box-shadow: -.5rem .5rem 2rem #cdcdcd90 ;
     padding-top: 1rem;
 }
 .ContenedorInferiorFichaDarkMode{
@@ -1579,4 +1601,55 @@ a{
 .ContenedorInferiorFichaDarkMode .Columnas3 .Columnas2 p{
     color: #B3B3B3;
     text-align: center;
+}
+
+
+.EditarClave{
+    padding-top: 5rem;
+    text-align: center;
+}
+
+.EditarClave input , .EditarClave .InputSelect{
+    min-width: 98%;
+}
+.EditarClave span{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.InputTextField{
+    max-height: 1.5rem;
+    padding: 0;
+    max-width: 100%;
+}
+.FlexTextField .CampoDescriptivo{
+    display: flex;
+    max-width: 100%;
+}
+.FlexTextField .CampoTitulo{
+    width: auto;
+}
+.FlexTextField input{
+    width: 100%;
+}
+.Index1 input{
+    border-radius: 0 0 1rem 1rem;
+    border: .1rem solid var(--gris);
+    border-top: 0;
+    width: 80%;
+    margin: 0 auto;
+    margin-left: 1rem;  
+}
+.Index1  select{
+    border-radius: 0 0 1rem 1rem;
+    border: .1rem solid var(--gris);
+    border-top: 0;
+    max-width: 100%;
+    margin: 0;
+    margin-left: 1rem;
+}
+.FlexTextField .CampoDescriptivo input{
+    display: flex;
+    max-width: 100%;
+    padding-left: 1rem;
 }

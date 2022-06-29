@@ -85,25 +85,27 @@ function ShowModal(props:ModalBtnProps){
 const ModalBtn =(props:ModalBtnProps)=>{
     const [openModal, setOpenModal] = useState(false)
     const ModalRenderer= props.modalItemRenderer
-    return(
-        <div>
-            <BtnFunction
-                button={props.button}
-                color={props.color}
-                onClick={()=>setOpenModal(true)}
-            />
-
-        {openModal && <ModalClean 
-        closeModal={setOpenModal} 
-        data ={()=>{}} 
-        modo={props.modo}
-        width={props.width}
-        height={props.height}
-        modalItemRenderer={()=>(
-            <ModalRenderer data={props.data}/>
-        )}
-        />}
-    </div>
+        return(
+            <div>
+                <BtnFunction
+                    button={props.button}
+                    color={props.color}
+                    onClick={()=>setOpenModal(true)}
+                />
+    
+                {openModal && <ModalClean 
+                    closeModal={setOpenModal} 
+                    data ={()=>{}} 
+                    modo={props.modo}
+                    width={props.width+'rem'}
+                    height={props.height+'rem'}
+                    modalItemRenderer={()=>(
+                    <ModalRenderer 
+                        data={props.data}
+                    />
+                    )}
+                />}
+            </div>
     )  
 }
 

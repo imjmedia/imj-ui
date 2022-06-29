@@ -23,6 +23,7 @@ export { default as CardsRecorrido } from './Organismos/CardsRecorrido';
 export { default as CardsCatalogos } from './Organismos/CardsCatalogos';
 
 export {default as ModalItemRendererPrevisualizar} from './Organismos/modalItemRendererPrevisualizar';
+export {default as ModalITemRendererEditInventarioProveedores} from './Organismos/modalItemRendererEditInventarioProveedores';
 export {default as FrontItemRendererVisualizaPauta} from './Organismos/frontItemRendererVisualizaPauta';
 export {default as FrontItemRendererAbcSitios} from './Organismos/frontItemRendererAbcSitios';
 export {default as BackItemRendererAbcSitios} from './Organismos/backItemRendererAbcSitios';
