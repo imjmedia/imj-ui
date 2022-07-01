@@ -28,6 +28,8 @@ interface BtnFunctionProps{
     'trafico' | 
     'vaciar' |
     'cerrar' |
+    'encendido' |
+    'usuarioNuevo' |
     any;
 }
 

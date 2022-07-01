@@ -17,10 +17,13 @@ import previsualizar from "../../Img/Botones/previsualizar.svg";
 import trafico from "../../Img/Botones/trafico.svg";
 import vaciar from "../../Img/Botones/vaciar.svg";
 import menu from "../../Img/Botones/menu.svg";
+import cerrar from "../../Img/iconos/cerrar.svg";
+import encendido from "../../Img/Botones/encendido.svg"
+import usuarioNuevo from "../../Img/Botones/usuarioNuevo.svg"
 import menuDarkMode from "../../Img/Botones/menuDarkMode.svg";
+
 /*importación de Íconos*/
 import bloqueado from "../../Img/iconos/bloqueado.svg";
-import cerrar from "../../Img/iconos/cerrar.svg";
 import etiqueta from "../../Img/iconos/etiqueta.svg";
 import etiquetaAzul from "../../Img/iconos/etiquetaAzul.svg";
 import etiquetaAmarillo from "../../Img/iconos/etiquetaAmarillo.svg";
@@ -84,7 +87,9 @@ interface DynaButtProps {
         'etiquetaMagenta' | 
         'etiquetaRojo' | 
         'hombres' | 
-        'mujeres';
+        'mujeres'|
+        'encendido' | 
+        'usuarioNuevo';
     
     onClick?: 
         any;
@@ -112,6 +117,8 @@ const buttonsArr:buttonsArrInterface = {
     'graficas': graficas,
     'menu': menu,
     'cerrar': cerrar,
+    'encendido': encendido,
+    'usuarioNuevo': usuarioNuevo
 }
 
 const iconsArr:buttonsArrInterface ={
