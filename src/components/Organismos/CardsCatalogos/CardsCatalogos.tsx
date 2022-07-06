@@ -20,7 +20,8 @@ interface CardsCatalogosProps {
         'indoors' |
         'undefined';
         handleClose?: () => void;
-    CardH?: 
+    CardH?:
+        'XS'|
         'S'|
         'M'|
         'L'|
