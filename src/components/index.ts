@@ -30,3 +30,7 @@ export {default as BackItemRendererAbcSitios} from './Organismos/backItemRendere
 export {default as FrontItemRendererRutasImj} from './Organismos/frontItemRendererRutasImj';
 export {default as FrontItemRendererInventarioProveedores} from './Organismos/frontItemRendererInventarioProveedores';
 
+export {default as ListCatalogos} from './Organismos/listCatalogos/listCatalogos';
+export {default as FrontIdRenderer} from './Organismos/frontIdRenderer';
+export {default as FrontInfoSitioRenderer} from './Organismos/frontInfoRenderer';
+export {default as AsideItem} from './Organismos/asideItemList';

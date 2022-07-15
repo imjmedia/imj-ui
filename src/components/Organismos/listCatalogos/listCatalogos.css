@@ -1,0 +1,65 @@
+html{
+    font-size: 62.5%;
+}
+.ContenedorList{
+    background-color: #fff;
+    width: 120rem;
+    height: 20rem;
+    border-bottom: .2rem solid #000;
+    border-radius: 0 0 2rem 0;
+    margin: 0 auto;
+}
+.ContenidoListMode{
+    height: 20rem;
+}
+.ImagenListMode{
+    height: 100%;
+}
+.ImagenListMode img{
+    height: 15rem;
+    width: 20rem;
+    object-fit: cover;
+    border-radius: 2rem;
+    margin-top: 2.5rem;
+}
+.Flexbox.ContenidoListMode, .AlignCenter{
+    align-items: center;
+}
+.ButtonBorderBlack{
+    border: .3rem solid #000;
+    height: 3rem;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    width: 50%;
+    margin-left: 1.5rem;
+    margin-top: .5rem;
+}
+.ButtonBorderBlack p{
+    margin-block: 0;
+    padding-top: .5rem;
+}
+.ButtonBorderBlack:hover{
+    border: .3rem solid #000;
+    background-color: #000000;
+    height: 3rem;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    width: 50%;
+    margin-left: 1.5rem;
+    margin-top: .5rem;
+    color: #fff;
+    cursor: pointer;
+}
+.ButtonsAsideList{
+    max-width: 90%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.ButtonsAsideList>div:not(:last-of-type){
+    margin-right: 2rem;
+}
+.EtiquetaIdentificacionListMode{
+    position: relative;
+    top: -13rem;
+    left: -4rem;
+}
