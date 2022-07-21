@@ -34,3 +34,5 @@ export {default as ListCatalogos} from './Organismos/listCatalogos/listCatalogos
 export {default as FrontIdRenderer} from './Organismos/frontIdRenderer';
 export {default as FrontInfoSitioRenderer} from './Organismos/frontInfoRenderer';
 export {default as AsideItem} from './Organismos/asideItemList';
+
+export {default as FormaPrevRutas} from './Organismos/formaPrevRutas';

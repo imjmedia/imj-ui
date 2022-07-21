@@ -41,6 +41,11 @@ a{
 
 /*UTILIDADES*/
     /*Utilidades Display*/
+.ShadowCards{
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: -.5rem .5rem 2rem #cdcdcd90 ;
+}
 .Flexbox{
     display:flex;
     align-items: baseline;
@@ -156,6 +161,7 @@ a{
 }
 .PaddingBottomMedio{
     padding-bottom: .5rem;
+    border-style: ;
 }
 .PaddingTop2{
     padding-top: 2rem;
@@ -166,6 +172,9 @@ a{
 }
 .AlignLeft{
     text-align: left;
+}
+.AlignTop{
+    align-items: flex-start;
 }
 .JustifyCenter {
     justify-content: center;
