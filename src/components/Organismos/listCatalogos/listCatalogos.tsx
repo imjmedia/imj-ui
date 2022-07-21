@@ -13,6 +13,7 @@ interface ListCatalogosProps{
         'muro' |
         'indoors' |
         'urbanos';
+    data?: any;
 }
 const ListCatalogos = (props:ListCatalogosProps) => {
     const Aside = props.asideItemRenderer; // <AsideItem/> //SE COLOCAN LOS BOTONES Y LA PROPIEDAD DE ACTIVO
@@ -23,10 +24,10 @@ const ListCatalogos = (props:ListCatalogosProps) => {
     return (
         <div className="ContenedorList">
             <div className="Columnas2 AlignCenter">
-                {FrontId}
+                {<FrontId data={props.data}/>}
                 <div className="Columnas2">
-                    {FrontInfoSitio}
-                    {Aside}
+                    {<FrontInfoSitio data={props.data}/>}
+                    {<Aside data={props.data}/>}
                 </div>
             </div>
             <div className="EtiquetaIdentificacionListMode">
