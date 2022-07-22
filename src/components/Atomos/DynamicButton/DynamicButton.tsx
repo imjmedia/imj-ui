@@ -17,24 +17,24 @@ import previsualizar from "../../Img/Botones/previsualizar.svg";
 import trafico from "../../Img/Botones/trafico.svg";
 import vaciar from "../../Img/Botones/vaciar.svg";
 import menu from "../../Img/Botones/menu.svg";
-import cerrar from "../../Img/iconos/cerrar.svg";
+import cerrar from "../../Img/Iconos/cerrar.svg";
 import encendido from "../../Img/Botones/encendido.svg"
 import usuarioNuevo from "../../Img/Botones/usuarioNuevo.svg"
 import menuDarkMode from "../../Img/Botones/menuDarkMode.svg";
 
 /*importación de Íconos*/
-import bloqueado from "../../Img/iconos/bloqueado.svg";
-import etiqueta from "../../Img/iconos/etiqueta.svg";
-import etiquetaAzul from "../../Img/iconos/etiquetaAzul.svg";
-import etiquetaAmarillo from "../../Img/iconos/etiquetaAmarillo.svg";
-import etiquetaRojo from "../../Img/iconos/etiquetaRojo.svg";
-import etiquetaMagenta from "../../Img/iconos/etiquetaMagenta.svg";
-import iluminacion from "../../Img/iconos/iluminacion.svg";
-import material from "../../Img/iconos/material.svg";
-import nicho from "../../Img/iconos/nicho.svg";
-import ubicaciongeografica from "../../Img/iconos/ubicaciongeografica.svg";
-import hombres from "../../Img/iconos/hombres.svg";
-import mujeres from "../../Img/iconos/mujeres.svg";
+import bloqueado from "../../Img/Iconos/bloqueado.svg";
+import etiqueta from "../../Img/Iconos/etiqueta.svg";
+import etiquetaAzul from "../../Img/Iconos/etiquetaAzul.svg";
+import etiquetaAmarillo from "../../Img/Iconos/etiquetaAmarillo.svg";
+import etiquetaRojo from "../../Img/Iconos/etiquetaRojo.svg";
+import etiquetaMagenta from "../../Img/Iconos/etiquetaMagenta.svg";
+import iluminacion from "../../Img/Iconos/iluminacion.svg";
+import material from "../../Img/Iconos/material.svg";
+import nicho from "../../Img/Iconos/nicho.svg";
+import ubicaciongeografica from "../../Img/Iconos/ubicaciongeografica.svg";
+import hombres from "../../Img/Iconos/hombres.svg";
+import mujeres from "../../Img/Iconos/mujeres.svg";
 
 interface DynaButtProps {
     type: 

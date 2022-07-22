@@ -10,7 +10,7 @@ import noImagen from '../../Img/img/noImagen.jpg';
 import '../../../index.css'
 import '../formaPrevRutas/index.css'
 
-interface FichaRutasProps{
+interface FichaRutasMapsProps{
     imagen?: any;
     clave?: string;
     ruta?: string;
@@ -33,7 +33,7 @@ interface FichaRutasProps{
         'indoors';
     derrotero?: string;
 }
-export const FichaRutas = (props:FichaRutasProps) => {
+const FichaRutasMap = (props:FichaRutasMapsProps) => {
     return (
         <div style={{ width: '80rem', height: '60rem', position: 'absolute' }}>
             <div className="ContenedorSuperiorFicha" style={{ marginTop: '2rem' }}>
@@ -159,3 +159,5 @@ export const FichaRutas = (props:FichaRutasProps) => {
         </div>
     )
 }
+
+export default FichaRutasMap;

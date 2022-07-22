@@ -36,4 +36,5 @@ export {default as FrontInfoSitioRenderer} from './Organismos/frontInfoRenderer'
 export {default as AsideItem} from './Organismos/asideItemList';
 
 export {default as FormaPrevRutas} from './Organismos/formaPrevRutas';
+export {default as FichaRutasMap} from './Organismos/formaPrevRutasMap';
 export {default as FichaSitios} from './Organismos/formaPrevSitios';
