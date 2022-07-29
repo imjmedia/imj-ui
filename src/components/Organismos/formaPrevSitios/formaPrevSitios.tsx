@@ -49,17 +49,18 @@ interface FichaSitiosProps{
     usuarios?: string | number;
     alcance?: string | number;
     frecuencia?: string | number;
+    imagen?: string;
     onClickCarrito?: ()=>void;
 
 }
 
 const FichaSitios = (props:FichaSitiosProps) => {
-    const {modo, onClickCarrito, tipoMedio, clave, tipo, nseA, nseB, nseC, nseD, nseE, edad13, edad18, edad26, edad41, edad55, direccion, colonia, cdEdo, vialidad, alto, ancho, material, acabados, iluminacion, vista, nicho, implementaciones, totalMujeres, totalHombres, porcentajeHombres, porcentajeMujeres, impactos, usuarios, totalImpactos, totalUsuarios, alcance, frecuencia} = props
+    const {modo, onClickCarrito,imagen, tipoMedio, clave, tipo, nseA, nseB, nseC, nseD, nseE, edad13, edad18, edad26, edad41, edad55, direccion, colonia, cdEdo, vialidad, alto, ancho, material, acabados, iluminacion, vista, nicho, implementaciones, totalMujeres, totalHombres, porcentajeHombres, porcentajeMujeres, impactos, usuarios, totalImpactos, totalUsuarios, alcance, frecuencia} = props
     return (
         <div style={{ width: '80rem', height: '60rem', position:'absolute'}}>
             <div className="ContenedorSuperiorFicha" style={{ marginTop: '2rem'}}>
                 <div className="ImagenPrevCards">
-                    <img style={{ backgroundColor: 'red' }} />
+                    <img src={imagen}/>
                 </div>
                 <div className="InfoSupeDerPrevCards">
                     <div className="LogoPrevCards">

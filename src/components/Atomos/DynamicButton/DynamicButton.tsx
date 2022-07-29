@@ -21,15 +21,22 @@ import cerrar from "../../Img/Iconos/cerrar.svg";
 import encendido from "../../Img/Botones/encendido.svg"
 import usuarioNuevo from "../../Img/Botones/usuarioNuevo.svg"
 import menuDarkMode from "../../Img/Botones/menuDarkMode.svg";
+import bloqueado from "../../Img/Botones/bloqueado.svg";
+import noBloqueado from "../../Img/Botones/noBloqueado.svg";
+import agregar from "../../Img/Botones/agregar.svg";
+import iluminacion from '../../Img/Botones/iluminacion.svg'
+import noIluminado from '../../Img/Botones/noIluminado.svg'
+
+
 
 /*importación de Íconos*/
-import bloqueado from "../../Img/Iconos/bloqueado.svg";
+// import bloqueado from "../../Img/Iconos/bloqueado.svg";
 import etiqueta from "../../Img/Iconos/etiqueta.svg";
 import etiquetaAzul from "../../Img/Iconos/etiquetaAzul.svg";
 import etiquetaAmarillo from "../../Img/Iconos/etiquetaAmarillo.svg";
 import etiquetaRojo from "../../Img/Iconos/etiquetaRojo.svg";
 import etiquetaMagenta from "../../Img/Iconos/etiquetaMagenta.svg";
-import iluminacion from "../../Img/Iconos/iluminacion.svg";
+// import iluminacion from "../../Img/Iconos/iluminacion.svg";
 import material from "../../Img/Iconos/material.svg";
 import nicho from "../../Img/Iconos/nicho.svg";
 import ubicaciongeografica from "../../Img/Iconos/ubicaciongeografica.svg";
@@ -89,7 +96,13 @@ interface DynaButtProps {
         'hombres' | 
         'mujeres'|
         'encendido' | 
-        'usuarioNuevo';
+        'usuarioNuevo' |
+        'agregar' |
+        'bloqueado' |
+        'noBloqueado' |
+        'iluminacion' |
+        'noIluminado'
+        ;
     
     onClick?: 
         any;
@@ -118,7 +131,13 @@ const buttonsArr:buttonsArrInterface = {
     'menu': menu,
     'cerrar': cerrar,
     'encendido': encendido,
-    'usuarioNuevo': usuarioNuevo
+    'usuarioNuevo': usuarioNuevo,
+    'bloqueado': bloqueado,
+    'noBloqueado': noBloqueado,
+    'iluminacion': iluminacion,
+    'noIluminado': noIluminado,
+    'agregar': agregar,
+
 }
 
 const iconsArr:buttonsArrInterface ={

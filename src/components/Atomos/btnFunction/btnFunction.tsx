@@ -30,6 +30,11 @@ interface BtnFunctionProps{
     'cerrar' |
     'encendido' |
     'usuarioNuevo' |
+    'agregar' |
+    'bloqueado' |
+    'noBloqueado' |
+    'iluminacion' |
+    'noIluminado' |
     any;
 }
 
