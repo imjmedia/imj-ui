@@ -18,6 +18,7 @@ export { default as FormularioVisualizaPauta } from './Organismos/FormularioVisu
 
 export {default as AsideItemRenderer} from './Atomos/assideItemRenderer';
 export { default as AsideBotonesVisualizaPauta } from './Organismos/AsideBotonesVisualizaPauta';
+export {default as PieGraphics} from './Organismos/pieGraphics';
 
 export { default as CardsRecorrido } from './Organismos/CardsRecorrido';
 export { default as CardsCatalogos } from './Organismos/CardsCatalogos';
@@ -36,5 +37,5 @@ export {default as FrontInfoSitioRenderer} from './Organismos/frontInfoRenderer'
 export {default as AsideItem} from './Organismos/asideItemList';
 
 export {default as FormaPrevRutas} from './Organismos/formaPrevRutas';
-export {default as FichaRutasMap} from './Organismos/formaPrevRutasMap';
+export {default as FichaRutasMap} from './Organismos/fichaPrevRutasMap';
 export {default as FichaSitios} from './Organismos/formaPrevSitios';

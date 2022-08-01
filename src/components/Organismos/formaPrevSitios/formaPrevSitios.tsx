@@ -1,5 +1,5 @@
 import React from "react";
-import { getColorMedio, getModo } from "../../../utils/utils";
+import { getColorMedio, getModo, porcentaje } from "../../../utils/utils";
 import BtnFunction from "../../Atomos/btnFunction";
 import Logo from "../../Atomos/Logo";
 import TextField from "../../Atomos/TextField";
@@ -7,14 +7,15 @@ import TitlesCards from "../../Atomos/TitlesCards";
 import mujeres from '../../Img/Iconos/mujeres.svg';
 import hombres from '../../Img/Iconos/hombres.svg';
 import '../../../index.css';
+import PieGraphics from "../pieGraphics/pieGraphics";
 
-interface FichaSitiosProps{
+interface FichaSitiosProps {
     modo?: string;//'Dark' | ''
-    tipoMedio?: 
-        'espectacular' | 
-        'muro' |
-        'indoors' | 
-        'urbanos';
+    tipoMedio?:
+    'espectacular' |
+    'muro' |
+    'indoors' |
+    'urbanos';
     clave?: string;
     tipo?: string;
     nseA?: string | number;
@@ -28,245 +29,104 @@ interface FichaSitiosProps{
     edad41?: string | number;
     edad55?: string | number;
     direccion?: string;
-    colonia?: string;
-    cdEdo?: string;
-    vialidad?: string;
-    alto?: string | number;
-    ancho?: string | number;
-    material?: string;
-    acabados?: string;
-    iluminacion?: string | boolean;
     vista?: string;
     nicho?: string;
     implementaciones?: string | boolean;
-    totalMujeres?: string | number;
-    totalHombres?: string | number;
-    porcentajeMujeres?: string | number;
-    porcentajeHombres?: string | number;
-    totalUsuarios?: string | number;
-    totalImpactos?: string | number;
+    female_users?: string | number;
+    male_users?: string | number;
+    latitud?: string | number;
+    longitud?: string | number;
     impactos?: string | number;
-    usuarios?: string | number;
     alcance?: string | number;
     frecuencia?: string | number;
     imagen?: string;
-    onClickCarrito?: ()=>void;
+    onClickCarrito?: () => void;
 
 }
 
-const FichaSitios = (props:FichaSitiosProps) => {
-    const {modo, onClickCarrito,imagen, tipoMedio, clave, tipo, nseA, nseB, nseC, nseD, nseE, edad13, edad18, edad26, edad41, edad55, direccion, colonia, cdEdo, vialidad, alto, ancho, material, acabados, iluminacion, vista, nicho, implementaciones, totalMujeres, totalHombres, porcentajeHombres, porcentajeMujeres, impactos, usuarios, totalImpactos, totalUsuarios, alcance, frecuencia} = props
-    return (
-        <div style={{ width: '80rem', height: '60rem', position:'absolute'}}>
-            <div className="ContenedorSuperiorFicha" style={{ marginTop: '2rem'}}>
-                <div className="ImagenPrevCards">
-                    <img src={imagen}/>
-                </div>
-                <div className="InfoSupeDerPrevCards">
-                    <div className="LogoPrevCards">
-                        <div style={{position:'absolute', left:'4rem', top:'4rem'}} className='ShadowCards'>
-                            <BtnFunction button='carrito' color='Amarillo' onClick={onClickCarrito}/>
-                        </div>
-                        <Logo logo="ByImj" modo={modo} />
-                    </div>
-                    <div className={"EncabezadoCard BorderBottom" + getColorMedio(tipoMedio)}>
-                        <TitlesCards
-                            modo={modo}
-                            clave={clave || 'undefined'}
-                            type={tipo || 'undefined'}
-                        />
-                    </div>
-                    <div className={"InfoPorcentajesPrevCards" + getModo(modo)}>
-                        <h3>Afluecia por Nivel Socieconómico</h3>
-                        <div className="Columnas2 Wrap">
-                            <div className="FontSize12">
-                                <TextField
-                                    type='description'
-                                    description={'NSE A: ' + (nseA || 0) + '%'}
-                                    labelColor='Azul'
-                                />
-                            </div>
-                            <div className="FontSize12">
-                                <TextField
-                                    type='description'
-                                    description={'NSE B: ' + (nseB || 0) + '%'}
-                                    labelColor='Rojo'
-                                />
-                            </div>
-                            <div className="FontSize12">
-                                <TextField
-                                    type='description'
-                                    description={'NSE C: ' + (nseC || 0) + '%'}
-                                    labelColor='Aqua'
-                                />
-                            </div>
-                            <div className="FontSize12">
-                                <TextField
-                                    type='description'
-                                    description={'NSE D: ' + (nseD || 0) + '%'}
-                                    labelColor='Magenta'
-                                />
-                            </div>
-                            <div className="FontSize12 UltimoCampoPrev">
-                                <TextField
-                                    type='description'
-                                    description={'NSE E: ' + (nseE || 0) + '%'}
-                                    labelColor='Amarillo'
-                                />
-                            </div>
-                        </div>
-                    </div>
-                    <div className={"InfoPorcentajesPrevCards" + getModo(modo)}>
-                        <h3>Afluecia por Rango de edad</h3>
-                        <div className="Columnas2 Wrap">
-                            <div className="FontSize12">
-                                <TextField
-                                    type='description'
-                                    description={'13-17: ' + (edad13 || 0) + '%'}
-                                    labelColor='Azul'
-                                />
-                            </div>
-                            <div className="FontSize12">
-                                <TextField
-                                    type='description'
-                                    description={'18-25: ' + (edad18 || 0) + '%'}
-                                    labelColor='Rojo'
-                                />
-                            </div>
-                            <div className="FontSize12">
-                                <TextField
-                                    type='description'
-                                    description={'26-40: ' + (edad26 || 0) + '%'}
-                                    labelColor='Aqua'
-                                />
-                            </div>
-                            <div className="FontSize12">
-                                <TextField
-                                    type='description'
-                                    description={'41-55: ' + (edad41 || 0) + '%'}
-                                    labelColor='Magenta'
-                                />
-                            </div>
-                            <div className="FontSize12 UltimoCampoPrev">
-                                <TextField
-                                    type='description'
-                                    description={'55 o +: ' + (edad55 || 0) + '%'}
-                                    labelColor='Amarillo'
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+const FichaSitios = (props: FichaSitiosProps) => {
 
-                <div className={"ContenedorInferiorFicha" + getModo(modo)} style={{width:'95%', margin:'-2.5rem auto 0 auto',marginTop:'-2.5rem'}}>
-                    <div className="Columnas3">
-                        <div className="InfoUbicaPrevCards">
-                            <div className="TextOverflowDescription">
-                                <TextField
-                                    type='titleAndDescription'
-                                    title='Dirección: '
-                                    description={direccion || 'undefined'}
-                                />
-                            </div>
-                            <TextField
-                                type='titleAndDescription'
-                                title='Colonia: '
-                                description={colonia || 'undefined'}
-                            />
-                            <TextField
-                                type='titleAndDescription'
-                                title='Cd. y Edo.: '
-                                description={cdEdo || 'undefined'}
-                            />
-                            <TextField
-                                type='titleAndDescription'
-                                title='Vialidad: '
-                                description={vialidad || 'undefined'}
-                            />
-                        </div>
-                        <div className="IfoEspecificacionesPrevCards">
-                            <TextField
-                                type='titleAndDescription'
-                                title='Medidas: '
-                                description={(alto || 0) + 'm ' + (ancho || 0) + 'm'}
-                                labelColor={getColorMedio(tipoMedio)}
-                            />
-                            <TextField
-                                type='titleAndDescription'
-                                title='Material: '
-                                description={material || 'undefined'}
-                            />
-                            <TextField
-                                type='titleAndDescription'
-                                title='Acabado: '
-                                description={acabados || 'undefined'}
-                            />
-                            <TextField
-                                type='titleAndDescription'
-                                title='Iluminación: '
-                                description={iluminacion || '?'}
-                            />
-                            <TextField
-                                type='titleAndDescription'
-                                title='Tipo de vista: '
-                                description={vista || '?'}
-                            />
-                            <TextField
-                                type='titleAndDescription'
-                                title='Nicho: '
-                                description={nicho || 'undefined'}
-                            />
-                            <TextField
-                                type='titleAndDescription'
-                                title='Impl. Especiales: '
-                                description={implementaciones || '?'}
-                                labelColor={getColorMedio(tipoMedio)}
-                            />
-                        </div>
-                        <div className="Columnas2" style={{ maxWidth: '95%' }}>
-                            <div>
-                                <div className="Flexbox" style={{ marginBottom: '-.5rem', alignItems: 'center' }}>
-                                    <img src={mujeres} alt="" style={{ maxHeight: '2.5rem' }} />
-                                    <p>Mujeres: {totalMujeres || 0}</p>
-                                </div>
-                                <div className="DisplayBlock">
-                                    <TextField
-                                        type='description'
-                                        description={porcentajeMujeres || 0}
-                                        labelColor='Magenta'
+    const { modo, onClickCarrito, imagen, tipoMedio, clave, tipo, nseA, nseB, nseC, nseD, nseE, edad13, edad18, edad26, edad41, edad55, direccion, latitud, longitud, male_users, female_users, impactos, alcance, frecuencia } = props
+    const stylesImpactos = () => {
+        return { gridColumn: '1/3', border: '.2rem solid #525252', padding: '1rem', borderRadius: '1rem', width: '80%', margin: '1rem auto', fontSize: '1.2rem' }
+    }
+    return (
+        <div className="ContenedorRutasPrev" style={{ width: '65vw', height: '82.5vh' }}>
+            <div className="Columnas2Prev" style={{ height: '100%' }}>
+                <div style={{ width: '100%', gridColumn: '1/2' }}>
+                    <div className="MapaRutas" style={{ minHeight: '44vh', height: '40vh', width: '100%', margin: '0 0 0 2rem' }}>
+                        {imagen}
+                    </div>
+                    <div style={{ position: 'absolute', top: '0', left: '0', margin: '4rem 0 0 5.5rem' }}>
+                        <BtnFunction button='carrito' color='Amarillo' onClick={onClickCarrito} />
+                    </div>
+                    <div className="ContenidoIdentificacion" style={{ paddingLeft: '2rem', gridColumn: '1/2', width: '100%' }}>
+                        <div className="Columnas2Prev" style={{ maxWidth: '95%', margin: '0 auto' }}>
+                            <div className="ContenidoInfoPrev" style={{ width: '100%', gridColumn: '1/2' }}>
+                                <div className={"EncabezadoCard BorderBottom" + getColorMedio(tipoMedio)} />
+                                <div className="Flexbox" style={{ alignItems: 'center' }}>
+                                    <TitlesCards
+                                        modo={modo}
+                                        clave={clave}
+                                        type={tipo}
                                     />
                                 </div>
                             </div>
-                            <div>
-                                <div className="Flexbox" style={{ marginBottom: '-.5rem', alignItems: 'center' }}>
+                            <div className="RowPadding1">
+                                <TextField
+                                    type='titleAndDescription'
+                                    title='Dirección:'
+                                    description={direccion}
+                                />
+                            </div>
+                            <div className="RowPadding1">
+                                <TextField
+                                    type='titleAndDescription'
+                                    title='Latitud:'
+                                    description={latitud}
+                                />
+                                <TextField
+                                    type='titleAndDescription'
+                                    title='Longitud:'
+                                    description={longitud}
+                                />
+                            </div>
+                        </div>
+                        <div className="Columnas2 ContenedorSombra" style={{ minWidth: '18rem', height: '100%', gridColumn: '2/3', padding: '0 1rem', margin: '0' }}>
+                            <h4 style={stylesImpactos()}>Big Data</h4>
+                            <div style={{ paddingTop: '0' }}>
+                                <div className="Flexbox" style={{ marginBottom: '-.5rem', alignItems: 'center', justifyContent: 'center' }}>
                                     <img src={hombres} alt="" style={{ maxHeight: '2.5rem' }} />
-                                    <p>Hombres: {totalHombres || 0}</p>
+                                    <p style={{ fontWeight: 'bold' }}>Hombres</p>
                                 </div>
                                 <div className="DisplayBlock">
                                     <TextField
                                         type='description'
-                                        description={porcentajeHombres || 0}
+                                        description={male_users || 0}
                                         labelColor='Azul'
                                     />
                                 </div>
                             </div>
                             <div>
-                                <p style={{ fontWeight: 'bold' }}>Descripción</p>
+                                <div className="Flexbox" style={{ marginBottom: '-.5rem', alignItems: 'center', justifyContent: 'center' }}>
+                                    <img src={mujeres} alt="" style={{ maxHeight: '2.5rem' }} />
+                                    <p style={{ fontWeight: 'bold' }}>Mujeres</p>
+                                </div>
                                 <div className="DisplayBlock">
                                     <TextField
-                                        type='Alcance'
-                                        description={alcance || 0}
-                                        labelColor='Rojo'
+                                        type='description'
+                                        description={female_users || 0}
+                                        labelColor='Magenta'
                                     />
                                 </div>
                             </div>
                             <div>
-                                <p>Impactos: {totalImpactos || 0}</p>
+                                <p style={{ fontWeight: 'bold' }}>Alcance</p>
                                 <div className="DisplayBlock">
                                     <TextField
                                         type='description'
-                                        description={impactos || 0}
-                                        labelColor='Verde'
+                                        description={alcance || 0}
+                                        labelColor='Aqua'
                                     />
                                 </div>
                             </div>
@@ -276,17 +136,17 @@ const FichaSitios = (props:FichaSitiosProps) => {
                                     <TextField
                                         type='description'
                                         description={frecuencia || 0}
-                                        labelColor='Azul'
+                                        labelColor='Rojo'
                                     />
                                 </div>
                             </div>
-                            <div>
-                                <p>Usuarios: {totalUsuarios || 0}</p>
+                            <div style={{ gridColumn: '1/3', marginBottom: '2rem' }}>
+                                <p style={{ fontWeight: 'bold' }}>Impactos</p>
                                 <div className="DisplayBlock">
                                     <TextField
                                         type='description'
-                                        description={usuarios || 0}
-                                        labelColor='Morado'
+                                        description={impactos || 0}
+                                        labelColor='Amarillo'
                                     />
                                 </div>
                             </div>
@@ -294,8 +154,83 @@ const FichaSitios = (props:FichaSitiosProps) => {
                     </div>
                 </div>
             </div>
+            <div className='ContenedorSombra' style={{ display: 'flex', flexDirection: 'column', gridColumn: '3/4', width: '95%', height: '95%', padding: '0 1rem' }}>
+                <div style={{ marginBottom: '2rem', marginTop: '5rem', }}>
+                    <Logo
+                        logo='ByImj'
+                        style={{ height: '6rem', marginLeft: '1rem' }}
+                    />
+                </div>
+                <div >
+                    <h4 style={stylesImpactos()}>Impacto por nivel Socieconómico</h4>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <PieGraphics
+                            type='nse'
+                            nseA={porcentaje([nseA, nseB, nseC, nseD, nseE], nseA) || 1}
+                            nseB={porcentaje([nseA, nseB, nseC, nseD, nseE], nseB) || 0}
+                            nseC={porcentaje([nseA, nseB, nseC, nseD, nseE], nseC) || 0}
+                            nseD={porcentaje([nseA, nseB, nseC, nseD, nseE], nseD) || 0}
+                            nseE={porcentaje([nseA, nseB, nseC, nseD, nseE], nseE) || 0}
+                        />
+                        <div style={{ width: '50%', marginLeft: '2rem' }}>
+                            <p className='StylesGraphics C-Azul'>
+                                NSE A:
+                                <span className="NumerosGraphics">{nseA || 0}</span></p>
+                            <p className='StylesGraphics C-Rojo'>
+                                NSE B:
+                                <span className="NumerosGraphics">{nseB || 0}</span>
+                            </p>
+                            <p className='StylesGraphics C-Aqua'>
+                                NSE C:
+                                <span className="NumerosGraphics">{nseC || 0}</span>
+                            </p>
+                            <p className='StylesGraphics C-Magenta'>
+                                NSE D:
+                                <span className="NumerosGraphics">{nseD || 0}</span>
+                            </p>
+                            <p className='StylesGraphics C-Amarillo'>
+                                NSE E:
+                                <span className="NumerosGraphics">{nseE || 0}</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 style={stylesImpactos()}>Impacto por rango de edad</h4>
+                    <div style={{ marginBottom: '2rem', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
+                        <PieGraphics
+                            type='edad'
+                            edad13={porcentaje([edad13, edad18, edad26, edad41, edad55], edad13) || 1}
+                            edad18={porcentaje([edad13, edad18, edad26, edad41, edad55], edad18) || 0}
+                            edad26={porcentaje([edad13, edad18, edad26, edad41, edad55], edad26) || 0}
+                            edad41={porcentaje([edad13, edad18, edad26, edad41, edad55], edad41) || 0}
+                            edad55={porcentaje([edad13, edad18, edad26, edad41, edad55], edad55) || 0}
+                        />
+                        <div style={{ width: '40%' }}>
+                            <p className='StylesGraphics C-Azul'>
+                                13 - 17:
+                                <span className="NumerosGraphics">{edad13 || 0}</span>
+                            </p>
+                            <p className='StylesGraphics C-Rojo'>
+                                18 - 25:
+                                <span className="NumerosGraphics">{edad18 || 0}</span>
+                            </p>
+                            <p className='StylesGraphics C-Aqua'>
+                                26 - 41:
+                                <span className="NumerosGraphics">{edad26 || 0}</span>
+                            </p>
+                            <p className='StylesGraphics C-Magenta'>
+                                41 - 55:<span className="NumerosGraphics">{edad41 || 0}</span>
+                            </p>
+                            <p className='StylesGraphics C-Amarillo'>
+                                55 o +:
+                                <span className="NumerosGraphics">{edad55 || 0}</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
-
 export default FichaSitios;

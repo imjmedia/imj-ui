@@ -795,7 +795,7 @@ a{
 
 /*GRAFICAS CARDS*/
 .GraficasCards{
-    width: 24rem;
+    width: 13rem;
 }
 .CardsPorcentajes p, .CardsPorcentajesDarkMode p{
     font-size: 1rem;
@@ -1861,4 +1861,48 @@ a{
 }
 .CampoUnico > .InputDatos{
     min-width: 100%;
+}
+
+
+.StylesGraphics{
+    font-weight: bold; 
+    font-size: 1.2rem; 
+    text-align: left; 
+    margin-block:0;
+}
+.NumerosGraphics{
+    font-weight: normal; 
+    margin-left: .5rem;
+}
+.C-Azul{
+    color: #126EFA;
+}
+.C-Rojo{
+    color: #FC3D38;
+}
+.C-Aqua{
+    color: #1CB5B2;
+}
+.C-Magenta{
+    color: #D11787;
+}
+.C-Amarillo{
+    color: #FCB23B;
+}
+.Columnas2Prev{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display:grid;
+    grid-template-columns: 70% auto;
+    justify-content: center;
+    margin-top: 2rem;
+    grid-gap: 0;
+}
+.ContenedorSombra{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: -.5rem .5rem 2rem #cdcdcd90 ;
 }

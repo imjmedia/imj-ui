@@ -1,88 +1,99 @@
 import React from "react";
-import '../../../index.css'
-import './index.css'
-import { getColorMedio} from "../../../utils/utils";
-import TitlesCards from "../../Atomos/TitlesCards";
+import { getColorMedio, getModo } from "../../../utils/utils";
+import BtnFunction from "../../Atomos/btnFunction";
+import Logo from "../../Atomos/Logo";
 import TextField from "../../Atomos/TextField";
+import TitlesCards from "../../Atomos/TitlesCards";
 import mujeres from '../../Img/Iconos/mujeres.svg';
 import hombres from '../../Img/Iconos/hombres.svg';
+import noImagen from '../../Img/img/noImagen.jpg';
+import '../../../index.css'
+import '../formaPrevRutas/index.css'
 
-interface FormaPrevRutasProps {
-    modo?: string; //'Dark' | ''
+interface FichaRutasMapsProps{
+    imagen?: any;
     clave?: string;
     ruta?: string;
-    inicio?: string;
-    ubicacion?: string;
-    destino?: string;
-    kilometraje?: string | number;
     totalMujeres?: string | number;
     porcentajeMujeres?: string | number;
     totalHombres?: string | number;
     porcentajeHombres?: string | number;
     alcance?: string | number;
     frecuencia?: string | number;
-    impactos?: string | number;
+    impactosRuta?: string | number;
+    impactosTotales?: string | number;
+    modo?: string;
+    inicio?: string;
+    destino?: string;
+    kilometraje?: string | number;
+    tipoMedio?: 
+        'espectacular'|  
+        'muro' |
+        'urbanos' |
+        'indoors';
     derrotero?: string;
-    mapa?: any;
-    data?: any;
+    tipoExhibicion?: string;
 }
-const FormaPrevRutas = (props:FormaPrevRutasProps) => {
-    const Mapa = props.mapa
-    const {modo, clave, ruta, inicio, ubicacion, destino, kilometraje, derrotero, totalMujeres, porcentajeMujeres, totalHombres, porcentajeHombres, alcance, frecuencia, impactos} = props;
+const FichaRutasMap = (props:FichaRutasMapsProps) => {
     return (
-        <div className="ContenedorRutasPrev">
-            <div className="MapaRutas">
-                {<Mapa data={props.data} />}
-            </div>
+        <div className="ContenedorRutasPrev" style={{ maxWidth: '60vw' }}>
+
             <div className="Columnas2PrevRutas AlignTop">
-                <div className="ContenidoIdentificacion">
+                <div className="ContenidoIdentificacion" style={{paddingLeft:'2rem'}}>
                     <div className={"EncabezadoCard BorderBottom" + getColorMedio('urbanos')}>
-                        <TitlesCards
-                            modo={modo}
-                            clave={clave}
-                            type={ruta}
+                        <Logo
+                            logo='ByImj'
+                            style={{ height: '6rem', marginLeft:'-16rem', marginBottom:'2rem'}}
                         />
+                        <div className="Flexbox" style={{ alignItems: 'center' }}>
+                            <TitlesCards
+                                modo={props.modo}
+                                clave={props.clave}
+                                type={props.ruta}
+                            />
+                        </div>
                     </div>
                     <div className="ColumnasRutas" style={{ marginTop: '1rem' }}>
                         <div>
                             <TextField
                                 type='titleAndDescription'
                                 title='Inicio: '
-                                description={inicio}
+                                description={props.inicio}
                             />
                         </div>
                         <div>
                             <TextField
                                 type='titleAndDescription'
-                                title='Ubicación: '
-                                description={ubicacion}
+                                title='Tipo de Exhibición: '
+                                description={props.tipoExhibicion}
                             />
                         </div>
                         <div>
                             <TextField
                                 type='titleAndDescription'
-                                title={destino}
+                                title='Destino: '
+                                description={props.destino}
                             />
                         </div>
                         <div>
                             <TextField
                                 type='titleAndDescription'
                                 title='Kilometraje: '
-                                description={kilometraje}
+                                description={props.kilometraje}
                             />
                         </div>
                     </div>
-                    <div className="" style={{ marginTop: '2rem', marginBottom: '2rem',}}>
+                    <div className="" style={{ marginTop: '2rem', marginBottom: '2rem', }}>
                         <div className="Metricas">
                             <div>
                                 <div className="Flexbox" style={{ marginBottom: '-.5rem', alignItems: 'center' }}>
                                     <img src={mujeres} alt="" style={{ maxHeight: '2.5rem' }} />
-                                    <p>Mujeres: {totalMujeres || 0}</p>
+                                    <p style={{ fontWeight: 'bold' }}>Mujeres: {props.totalMujeres}</p>
                                 </div>
                                 <div className="DisplayBlock">
                                     <TextField
                                         type='description'
-                                        description={porcentajeMujeres || 0}
+                                        description={props.porcentajeMujeres}
                                         labelColor='Magenta'
                                     />
                                 </div>
@@ -90,12 +101,12 @@ const FormaPrevRutas = (props:FormaPrevRutasProps) => {
                             <div>
                                 <div className="Flexbox" style={{ marginBottom: '-.5rem', alignItems: 'center' }}>
                                     <img src={hombres} alt="" style={{ maxHeight: '2.5rem' }} />
-                                    <p>Hombres: {totalHombres || 0}</p>
+                                    <p style={{ fontWeight: 'bold' }}>Hombres: {props.totalHombres}</p>
                                 </div>
                                 <div className="DisplayBlock">
                                     <TextField
                                         type='description'
-                                        description={porcentajeHombres || 0}
+                                        description={props.porcentajeHombres}
                                         labelColor='Azul'
                                     />
                                 </div>
@@ -105,41 +116,56 @@ const FormaPrevRutas = (props:FormaPrevRutasProps) => {
                                 <div className="DisplayBlock">
                                     <TextField
                                         type='description'
-                                        description={alcance || 0}
+                                        description={props.alcance}
                                         labelColor='Rojo'
                                     />
                                 </div>
                             </div>
                             <div>
-                            <p style={{ fontWeight: 'bold' }}>Frecuencia</p>
+                                <p style={{ fontWeight: 'bold' }}>Frecuencia</p>
                                 <div className="DisplayBlock">
                                     <TextField
                                         type='description'
-                                        description={frecuencia || 0}
+                                        description={props.frecuencia}
                                         labelColor='Verde'
                                     />
                                 </div>
                             </div>
                             <div>
-                                <p style={{ fontWeight: 'bold' }}>Impactos</p>
+                                <p style={{ fontWeight: 'bold' }}>Impactos de ruta</p>
                                 <div className="DisplayBlock">
                                     <TextField
                                         type='description'
-                                        description={impactos || 0}
-                                        labelColor='Azul'
+                                        description={props.impactosRuta || 0}
+                                        labelColor='Morado'
+                                    />
+                                </div>
+                            </div>
+                            <div>
+                                <p style={{ fontWeight: 'bold' }}>Impactos totales</p>
+                                <div className="DisplayBlock">
+                                    <TextField
+                                        type='description'
+                                        description={props.impactosTotales || 0}
+                                        labelColor='Magenta'
                                     />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="DerroteroRuta" style={{ height: '90%' }}>
-                    <div>
-                        <TextField
-                            type='titleAndDescription'
-                            title='Derrotero: '
-                            description={derrotero}
-                        />
+                <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                    <div className="MapaRutas" style={{ minHeight: '20rem', height: 'auto', width: 'auto', minWidth: '100%' }}>
+                        {props.imagen}
+                    </div>
+                    <div className="DerroteroRuta">
+                        <div>
+                            <TextField
+                                type='titleAndDescription'
+                                title='Derrotero: '
+                                description='5to tramo 20 de noviembre, tambores y mazas consulado S.A. de C.V., Rehabilitacion bucal vázquez y especialistas, roveedora de tracto partes y accesorios S.A. de C.V., Refriclimas industriales, fyrepsa, gruas mg '
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -147,4 +173,4 @@ const FormaPrevRutas = (props:FormaPrevRutasProps) => {
     )
 }
 
-export default FormaPrevRutas;
+export default FichaRutasMap;

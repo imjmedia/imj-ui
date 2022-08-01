@@ -15,3 +15,14 @@ export const getColorMedio = (tipoMedio:any) => {
       default: return('Gris')
   }
 }
+
+/* Obtener porcentaje */
+export const porcentaje = (numeros: any, porcentaje: any) => {
+  const array = numeros;
+  let sum = 0;
+  for (let i = 0; i < array.length; i++) {
+      sum += array[i]
+  }
+  const porcentajes = (porcentaje * 100) / sum
+  return porcentajes.toFixed(2) + '%'
+}

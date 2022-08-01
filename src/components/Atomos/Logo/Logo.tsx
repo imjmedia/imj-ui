@@ -10,6 +10,7 @@ import { getModo } from "../../../utils/utils";
 
 interface LogoProps{
     logo: 'Imj' | 'Obp' | 'ByImj'
+    style?: any;
     modo?: string | any
 }
 const Logo = (props:LogoProps) => {
@@ -17,21 +18,21 @@ const Logo = (props:LogoProps) => {
     switch (logo) {
         case 'Imj':
             if (getModo(props.modo) === 'DarkMode'){
-                return <img src={ImjDarkMode} alt=""/>
+                return <img src={ImjDarkMode} alt="" style={props.style}/>
             } else {
-                return <img src={Imj} alt=""/>
+                return <img src={Imj} alt="" style={props.style}/>
             }
         case 'Obp':
             if (getModo(props.modo) === 'DarkMode'){
-                return <img src={ObpDarkMode} alt=""/>
+                return <img src={ObpDarkMode} alt="" style={props.style}/>
             } else {
-                return <img src={Obp} alt=""/>
+                return <img src={Obp} alt="" style={props.style}/>
             }
             case 'ByImj':
             if (getModo(props.modo) === 'DarkMode'){
-                return <img src={ByImjDarkMode} alt=""/>
+                return <img src={ByImjDarkMode} alt="" style={props.style}/>
             } else {
-                return <img src={ByImj} alt=""/>
+                return <img src={ByImj} alt="" style={props.style}/>
             }
         default: return <></>
     }

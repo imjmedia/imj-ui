@@ -1,3 +1,3 @@
 import './index.css';
 export * from './components';
-export { getColorMedio , getModo } from './utils/utils';
+export { getColorMedio , getModo, porcentaje } from './utils/utils';

@@ -2,7 +2,7 @@
   "name": "@imjmedia/imj-ui",
   "author": "Victor Galván",
   "license": "ISC",
-  "version": "0.0.42",
+  "version": "0.0.43",
   "description": "Components Library",
   "main": "dist/cjs/index.js",
   "types": "dist/index.d.ts",
@@ -63,7 +63,7 @@
   },
   "dependencies": {
     "chart": "^0.1.2",
-    "chart.js": "^3.8.0",
+    "chart.js": "^3.8.2",
     "postcss": "^8.4.14",
     "react-chartjs-2": "^4.2.0",
     "tslib": "^2.4.0"
