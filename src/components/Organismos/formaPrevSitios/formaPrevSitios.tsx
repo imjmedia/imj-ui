@@ -45,7 +45,7 @@ interface FichaSitiosProps {
     ancho?: string | number;
     material?: string;
     acabados?: string;
-    imagen?: string;
+    imagen?: string | any;
     onClickCarrito?: () => void;
 
 }
@@ -63,7 +63,7 @@ const FichaSitios = (props: FichaSitiosProps) => {
             <div className="Columnas2Prev" style={{ height: '100%' }}>
                 <div style={{ width: '100%', gridColumn: '1/2' }}>
                     <div className="MapaRutas" style={{ minHeight: '44vh', height: '40vh', width: '100%', margin: '0 0 0 0', position: 'relative' }}>
-                        {imagen}
+                        <img src={imagen}/>
                     </div>
                     <div style={{ position: 'absolute', top: '4rem', left: '4rem' }}>
                         <BtnFunction button='carrito' color='Amarillo' onClick={onClickCarrito} />

@@ -156,14 +156,14 @@ const FichaRutasMap = (props:FichaRutasMapsProps) => {
                 </div>
                 <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                     <div className="MapaRutas" style={{ minHeight: '20rem', height: 'auto', width: 'auto', minWidth: '100%' }}>
-                        {props.imagen}
+                        <img src={props.imagen} />
                     </div>
                     <div className="DerroteroRuta">
                         <div>
                             <TextField
                                 type='titleAndDescription'
                                 title='Derrotero: '
-                                description='5to tramo 20 de noviembre, tambores y mazas consulado S.A. de C.V., Rehabilitacion bucal vázquez y especialistas, roveedora de tracto partes y accesorios S.A. de C.V., Refriclimas industriales, fyrepsa, gruas mg '
+                                description={props.derrotero}
                             />
                         </div>
                     </div>
