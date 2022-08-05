@@ -36,12 +36,13 @@ interface BtnFunctionProps{
     'iluminacion' |
     'noIluminado' |
     any;
+    id?: string;
 }
 
 
 const BtnFunction = (props: BtnFunctionProps) => {
     return(
-        <div onClick={props.onClick}>
+        <div onClick={props.onClick} id={props.id}>
             <DynamicButton
                 type='buttons'
                 button={props.button}

@@ -106,6 +106,8 @@ interface DynaButtProps {
     
     onClick?: 
         any;
+    
+        id?: string;
 }
 
 interface buttonsArrInterface {
@@ -198,7 +200,7 @@ const DynamicButton = (props:DynaButtProps) => {
     if (type === 'buttons') {
         if (data.size === 'Chico') {
             return (
-                <div className={"Btn" + data.size + " Btn" + data.color} onClick={props.onClick}>
+                <div className={"Btn" + data.size + " Btn" + data.color} onClick={props.onClick} id={props.id}>
                     <p>
                         {data.button}
                     </p>
@@ -206,7 +208,7 @@ const DynamicButton = (props:DynaButtProps) => {
             )
         } else {
             return (
-                <div className={'Btn' + data.size + " Btn" + data.color} onClick={props.onClick}>
+                <div className={'Btn' + data.size + " Btn" + data.color} onClick={props.onClick} id={props.id}>
                     <TypeButton name={data.button} />
                 </div>
             )
@@ -214,13 +216,13 @@ const DynamicButton = (props:DynaButtProps) => {
     } else {
         if (data.button === 'etiqueta') {
             return (
-                <div className={"Icono"}>
-                    <img src={iconsArr[arregloEtiqueta]} alt="" />
+                <div className={"Icono"}id={props.id}>
+                    <img src={iconsArr[arregloEtiqueta]} alt=""  />
                 </div>
             )
         } else {
             return (
-                <div className={"Icono Icono" + data.color}>
+                <div className={"Icono Icono" + data.color} id={props.id}>
                     <TypeButton name={data.button} />
                 </div>
             )

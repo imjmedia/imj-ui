@@ -8,6 +8,7 @@ interface ButtonProps{
     fontSize: string;
     legend?: string;
     click?: any;
+    id?: string;
 }
 const Button=(props:ButtonProps)=>{
     const medidas = {
@@ -17,6 +18,7 @@ const Button=(props:ButtonProps)=>{
         width: props.width || 'auto'
     }
     const click = props.onClick
+    const id= props.id
     return(
         <button 
         style={{
@@ -33,6 +35,7 @@ const Button=(props:ButtonProps)=>{
             cursor: 'pointer'
             }}
             onClick = {(click)}
+            id={id}
             >
             {props.legend}          
         </button>      
