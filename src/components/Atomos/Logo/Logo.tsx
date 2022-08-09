@@ -1,6 +1,7 @@
 import React from "react";
 import Imj from '../../Img/Logos/Imj.svg';
 import ByImj from '../../Img/Logos/ByImj.svg';
+import ByImjSimple from '../../Img/Logos/ByImjSimple.svg';
 import  Obp from "../../Img/Logos/Obp.svg";
 import  ByImjDarkMode from "../../Img/Logos/ByImjDarkMode.svg";
 import  ImjDarkMode from "../../Img/Logos/ImjDarkMode.svg";
@@ -9,7 +10,7 @@ import { getModo } from "../../../utils/utils";
 
 
 interface LogoProps{
-    logo: 'Imj' | 'Obp' | 'ByImj'
+    logo: 'Imj' | 'Obp' | 'ByImj' | 'ByImjSimple'
     style?: any;
     modo?: string | any
 }
@@ -33,6 +34,12 @@ const Logo = (props:LogoProps) => {
                 return <img src={ByImjDarkMode} alt="" style={props.style}/>
             } else {
                 return <img src={ByImj} alt="" style={props.style}/>
+            }
+            case 'ByImjSimple':
+            if (getModo(props.modo) === 'DarkMode'){
+                return <img src={ByImjSimple} alt="" style={props.style}/>
+            } else {
+                return <img src={ByImjSimple} alt="" style={props.style}/>
             }
         default: return <></>
     }
