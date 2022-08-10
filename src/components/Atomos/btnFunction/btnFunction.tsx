@@ -35,6 +35,7 @@ interface BtnFunctionProps{
     'noBloqueado' |
     'iluminacion' |
     'noIluminado' |
+    'logOut' |
     any;
     id?: string;
 }

@@ -26,6 +26,7 @@ import noBloqueado from "../../Img/Botones/noBloqueado.svg";
 import agregar from "../../Img/Botones/agregar.svg";
 import iluminacion from '../../Img/Botones/iluminacion.svg'
 import noIluminado from '../../Img/Botones/noIluminado.svg'
+import logOut from '../../Img/Botones/logOut.svg'
 
 
 
@@ -101,7 +102,8 @@ interface DynaButtProps {
         'bloqueado' |
         'noBloqueado' |
         'iluminacion' |
-        'noIluminado'
+        'noIluminado' |
+        'logOut'
         ;
     
     onClick?: 
@@ -139,7 +141,7 @@ const buttonsArr:buttonsArrInterface = {
     'iluminacion': iluminacion,
     'noIluminado': noIluminado,
     'agregar': agregar,
-
+    'logOut': logOut,
 }
 
 const iconsArr:buttonsArrInterface ={

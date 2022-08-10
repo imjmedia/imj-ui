@@ -1,5 +1,5 @@
 import React from "react";
-import { getColorMedio, getModo } from "../../../utils/utils";
+import { getColorMedio, getModo, porcentaje } from "../../../utils/utils";
 import BtnFunction from "../../Atomos/btnFunction";
 import Logo from "../../Atomos/Logo";
 import TextField from "../../Atomos/TextField";
@@ -39,12 +39,12 @@ const FichaRutasMap = (props:FichaRutasMapsProps) => {
         <div className="ContenedorRutasPrev" style={{ maxWidth: '60vw' }}>
 
             <div className="Columnas2PrevRutas AlignTop">
-                <div className="ContenidoIdentificacion" style={{paddingLeft:'2rem'}}>
+                <div className="ContenidoIdentificacion" style={{ paddingLeft: '1rem' }}>
+                    <Logo
+                        logo='ByImj'
+                        style={{height:'7rem', display:'flex', marginLeft:'2rem'}}
+                    />
                     <div className={"EncabezadoCard BorderBottom" + getColorMedio('urbanos')}>
-                        <Logo
-                            logo='ByImj'
-                            style={{ height: '6rem', marginLeft:'-16rem', marginBottom:'2rem'}}
-                        />
                         <div className="Flexbox" style={{ alignItems: 'center' }}>
                             <TitlesCards
                                 modo={props.modo}
@@ -88,12 +88,12 @@ const FichaRutasMap = (props:FichaRutasMapsProps) => {
                             <div>
                                 <div className="Flexbox" style={{ marginBottom: '-.5rem', alignItems: 'center' }}>
                                     <img src={mujeres} alt="" style={{ maxHeight: '2.5rem' }} />
-                                    <p style={{ fontWeight: 'bold' }}>Mujeres: {props.totalMujeres}</p>
+                                    <p style={{ fontWeight: 'bold' }}>Mujeres: {props.totalMujeres || 0}</p>
                                 </div>
                                 <div className="DisplayBlock">
                                     <TextField
                                         type='description'
-                                        description={props.porcentajeMujeres}
+                                        description={porcentaje([props.totalMujeres, props.totalHombres],props.totalMujeres) || 0}
                                         labelColor='Magenta'
                                     />
                                 </div>
@@ -101,12 +101,12 @@ const FichaRutasMap = (props:FichaRutasMapsProps) => {
                             <div>
                                 <div className="Flexbox" style={{ marginBottom: '-.5rem', alignItems: 'center' }}>
                                     <img src={hombres} alt="" style={{ maxHeight: '2.5rem' }} />
-                                    <p style={{ fontWeight: 'bold' }}>Hombres: {props.totalHombres}</p>
+                                    <p style={{ fontWeight: 'bold' }}>Hombres: {props.totalHombres || 0}</p>
                                 </div>
                                 <div className="DisplayBlock">
                                     <TextField
                                         type='description'
-                                        description={props.porcentajeHombres}
+                                        description={porcentaje([props.totalMujeres, props.totalHombres],props.totalHombres) || 0}
                                         labelColor='Azul'
                                     />
                                 </div>
@@ -116,7 +116,7 @@ const FichaRutasMap = (props:FichaRutasMapsProps) => {
                                 <div className="DisplayBlock">
                                     <TextField
                                         type='description'
-                                        description={props.alcance}
+                                        description={props.alcance || 0}
                                         labelColor='Rojo'
                                     />
                                 </div>
@@ -126,7 +126,7 @@ const FichaRutasMap = (props:FichaRutasMapsProps) => {
                                 <div className="DisplayBlock">
                                     <TextField
                                         type='description'
-                                        description={props.frecuencia}
+                                        description={props.frecuencia || 0}
                                         labelColor='Verde'
                                     />
                                 </div>
@@ -155,8 +155,8 @@ const FichaRutasMap = (props:FichaRutasMapsProps) => {
                     </div>
                 </div>
                 <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-                    <div className="MapaRutas" style={{ minHeight: '20rem', height: 'auto', width: 'auto', minWidth: '100%' }}>
-                        <img src={props.imagen} />
+                    <div className="MapaRutas" style={{height: '23rem', width: '38rem', background:'#ffffff00'}}>
+                        <img src={props.imagen || noImagen} alt="" style={{height: '23rem', width: '36rem', objectFit:'cover', borderRadius:'2rem'}}/>
                     </div>
                     <div className="DerroteroRuta">
                         <div>

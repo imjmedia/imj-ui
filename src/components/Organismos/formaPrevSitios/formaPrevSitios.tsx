@@ -6,8 +6,9 @@ import TextField from "../../Atomos/TextField";
 import TitlesCards from "../../Atomos/TitlesCards";
 import mujeres from '../../Img/Iconos/mujeres.svg';
 import hombres from '../../Img/Iconos/hombres.svg';
+import noImage from '../../Img/Img/noImage.jpg';
 import '../../../index.css';
-import PieGraphics from "../pieGraphics/pieGraphics";
+// import PieGraphics from "../pieGraphics/pieGraphics";
 import PropertyBtn from "../../Atomos/PropertyBtn";
 
 interface FichaSitiosProps {
@@ -47,7 +48,6 @@ interface FichaSitiosProps {
     acabados?: string;
     imagen?: string | any;
     onClickCarrito?: () => void;
-
 }
 
 const FichaSitios = (props: FichaSitiosProps) => {
@@ -55,17 +55,29 @@ const FichaSitios = (props: FichaSitiosProps) => {
     const stylesImpactos = () => {
         return { gridColumn: '1/3', border: '.2rem solid #525252', padding: '1rem', borderRadius: '1rem', width: '80%', margin: '1rem auto', fontSize: '1.2rem' }
     }
+    const porcentajesInfinia = (color:string) => {
+        return {
+            backgroundColor: color ,
+            padding: '.3rem',
+            display: 'block',
+            borderRadius: '.5rem',
+            minWidth: '100%',
+            margin: '.5rem 0',
+            paddingLeft: '2rem',
+            color: '#fff',
+        }
+    }
 
-    const { imagen, onClickCarrito, modo, clave, direccion, latitud, longitud, ancho, alto, material, acabados, male_users, female_users, alcance, frecuencia, impactos, nseA, nseB, nseC, nseD, nseE, edad13, edad18, edad26, edad41, edad55, iluminacion, implementaciones } = props;
+    const { imagen, onClickCarrito, modo, clave, direccion, latitud, longitud, ancho, alto, material, acabados, male_users, female_users, alcance, frecuencia, impactos, porcentajeNseA, porcentajeNseB, porcentajeNseC, porcentajeNseD, porcentajeNseE, nseA, nseB, nseC, nseD, nseE, porcentajeEdad13, porcentajeEdad18, porcentajeEdad26, porcentajeEdad41, porcentajeEdad55, edad13, edad18, edad26, edad41, edad55, iluminacion, implementaciones } = props;
     // const imagen = 'props.imagen'
     return (
         <div className="ContenedorRutasPrev" style={{ width: '65vw', height: '82.5vh' }}>
             <div className="Columnas2Prev" style={{ height: '100%' }}>
-                <div style={{ width: '100%', gridColumn: '1/2' }}>
+                <div style={{ width: '100%', gridColumn: '1/2', position: 'relative' }}>
                     <div className="MapaRutas" style={{ minHeight: '44vh', height: '40vh', width: '100%', margin: '0 0 0 0', position: 'relative' }}>
-                        <img src={imagen}/>
+                        <img src={imagen || noImage} alt="" style={{ minHeight: '44vh', height: '40vh', width: '100%', objectFit: 'cover', borderRadius: '2rem' }} />
                     </div>
-                    <div style={{ position: 'absolute', top: '4rem', left: '4rem' }}>
+                    <div style={{ position: 'absolute', top: '2rem', left: '2rem' }}>
                         <BtnFunction button='carrito' color='Amarillo' onClick={onClickCarrito} />
                     </div>
                     <div className="ContenidoIdentificacion" style={{ paddingLeft: '2rem', gridColumn: '1/2', width: '100%' }}>
@@ -189,68 +201,52 @@ const FichaSitios = (props: FichaSitiosProps) => {
                     </div>
                     <div >
                         <h4 style={stylesImpactos()}>Impacto por nivel Socieconómico</h4>
-                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <PieGraphics
-                                type='nse'
-                                nseA={porcentaje([nseA, nseB, nseC, nseD, nseE], nseA) || 1}
-                                nseB={porcentaje([nseA, nseB, nseC, nseD, nseE], nseB) || 0}
-                                nseC={porcentaje([nseA, nseB, nseC, nseD, nseE], nseC) || 0}
-                                nseD={porcentaje([nseA, nseB, nseC, nseD, nseE], nseD) || 0}
-                                nseE={porcentaje([nseA, nseB, nseC, nseD, nseE], nseE) || 0}
-                            />
-                            <div style={{ width: '50%', marginLeft: '2rem' }}>
-                                <p className='StylesGraphics C-Azul'>
+                        <div>
+                            <div style={{ width: '83%', marginLeft: '1rem' }}>
+                                <p className='StylesGraphics C-Azul' style={porcentajesInfinia('#126EFA')}>
                                     NSE A:
-                                    <span className="NumerosGraphics">{nseA || 0}</span></p>
-                                <p className='StylesGraphics C-Rojo'>
+                                    <span className="NumerosGraphics">{porcentaje([nseA, nseB,nseC,nseD,nseE], nseA) || 0}</span></p>
+                                <p className='StylesGraphics C-Rojo' style={porcentajesInfinia('#FC3D38')}>
                                     NSE B:
-                                    <span className="NumerosGraphics">{nseB || 0}</span>
+                                    <span className="NumerosGraphics" >{porcentaje([nseA, nseB,nseC,nseD,nseE], nseB) || 0}</span>
                                 </p>
-                                <p className='StylesGraphics C-Aqua'>
+                                <p className='StylesGraphics C-Aqua' style={porcentajesInfinia('#1CB5B2')}>
                                     NSE C:
-                                    <span className="NumerosGraphics">{nseC || 0}</span>
+                                    <span className="NumerosGraphics">{porcentaje([nseA, nseB,nseC,nseD,nseE], nseC) || 0}</span>
                                 </p>
-                                <p className='StylesGraphics C-Magenta'>
+                                <p className='StylesGraphics C-Magenta' style={porcentajesInfinia('#D11787')}>
                                     NSE D:
-                                    <span className="NumerosGraphics">{nseD || 0}</span>
+                                    <span className="NumerosGraphics">{porcentaje([nseA, nseB,nseC,nseD,nseE], nseD) || 0}</span>
                                 </p>
-                                <p className='StylesGraphics C-Amarillo'>
+                                <p className='StylesGraphics C-Amarillo' style={porcentajesInfinia('#FCB23B')}>
                                     NSE E:
-                                    <span className="NumerosGraphics">{nseE || 0}</span>
+                                    <span className="NumerosGraphics">{porcentaje([nseA, nseB,nseC,nseD,nseE], nseE) || 0}</span>
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div>
                         <h4 style={stylesImpactos()}>Impacto por rango de edad</h4>
-                        <div style={{ marginBottom: '2rem', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
-                            <PieGraphics
-                                type='edad'
-                                edad13={porcentaje([edad13, edad18, edad26, edad41, edad55], edad13) || 1}
-                                edad18={porcentaje([edad13, edad18, edad26, edad41, edad55], edad18) || 0}
-                                edad26={porcentaje([edad13, edad18, edad26, edad41, edad55], edad26) || 0}
-                                edad41={porcentaje([edad13, edad18, edad26, edad41, edad55], edad41) || 0}
-                                edad55={porcentaje([edad13, edad18, edad26, edad41, edad55], edad55) || 0}
-                            />
-                            <div style={{ width: '40%' }}>
-                                <p className='StylesGraphics C-Azul'>
+                        <div>
+                            <div style={{ width: '83%', marginLeft: '1rem' }}>
+                                <p className='StylesGraphics C-Azul' style={porcentajesInfinia('#126EFA')}>
                                     13 - 17:
-                                    <span className="NumerosGraphics">{edad13 || 0}</span>
+                                    <span className="NumerosGraphics">{porcentaje([edad13,edad18,edad26,edad41, edad55],edad13) || 0}</span>
                                 </p>
-                                <p className='StylesGraphics C-Rojo'>
+                                <p className='StylesGraphics C-Rojo' style={porcentajesInfinia('#FC3D38')}>
                                     18 - 25:
-                                    <span className="NumerosGraphics">{edad18 || 0}</span>
+                                    <span className="NumerosGraphics">{porcentaje([edad13,edad18,edad26,edad41, edad55],edad18) || 0}</span>
                                 </p>
-                                <p className='StylesGraphics C-Aqua'>
+                                <p className='StylesGraphics C-Aqua' style={porcentajesInfinia('#1CB5B2')}>
                                     26 - 41:
-                                    <span className="NumerosGraphics">{edad26 || 0}</span>
+                                    <span className="NumerosGraphics">{porcentaje([edad13,edad18,edad26,edad41, edad55],edad26) || 0}</span>
                                 </p>
-                                <p className='StylesGraphics C-Magenta'>
-                                    41 - 55:<span className="NumerosGraphics">{edad41 || 0}</span>
+                                <p className='StylesGraphics C-Magenta' style={porcentajesInfinia('#D11787')}>
+                                    41 - 55:<span className="NumerosGraphics">{porcentaje([edad13,edad18,edad26,edad41, edad55],edad41) || 0}</span>
                                 </p>
-                                <p className='StylesGraphics C-Amarillo'>
+                                <p className='StylesGraphics C-Amarillo' style={porcentajesInfinia('#FCB23B')}>
                                     55 o +:
-                                    <span className="NumerosGraphics">{edad55 || 0}</span>
+                                    <span className="NumerosGraphics">{porcentaje([edad13,edad18,edad26,edad41, edad55],edad55) || 0}</span>
                                 </p>
                             </div>
                         </div>
