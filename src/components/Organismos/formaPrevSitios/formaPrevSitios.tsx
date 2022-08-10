@@ -6,7 +6,7 @@ import TextField from "../../Atomos/TextField";
 import TitlesCards from "../../Atomos/TitlesCards";
 import mujeres from '../../Img/Iconos/mujeres.svg';
 import hombres from '../../Img/Iconos/hombres.svg';
-import noImage from '../../Img/Img/noImage.jpg';
+import noImagen from '../../Img/Img/noImagen.jpg';
 import '../../../index.css';
 // import PieGraphics from "../pieGraphics/pieGraphics";
 import PropertyBtn from "../../Atomos/PropertyBtn";
@@ -75,7 +75,7 @@ const FichaSitios = (props: FichaSitiosProps) => {
             <div className="Columnas2Prev" style={{ height: '100%' }}>
                 <div style={{ width: '100%', gridColumn: '1/2', position: 'relative' }}>
                     <div className="MapaRutas" style={{ minHeight: '44vh', height: '40vh', width: '100%', margin: '0 0 0 0', position: 'relative' }}>
-                        <img src={imagen || noImage} alt="" style={{ minHeight: '44vh', height: '40vh', width: '100%', objectFit: 'cover', borderRadius: '2rem' }} />
+                        <img src={imagen || noImagen} alt="" style={{ minHeight: '44vh', height: '40vh', width: '100%', objectFit: 'cover', borderRadius: '2rem' }} />
                     </div>
                     <div style={{ position: 'absolute', top: '2rem', left: '2rem' }}>
                         <BtnFunction button='carrito' color='Amarillo' onClick={onClickCarrito} />
