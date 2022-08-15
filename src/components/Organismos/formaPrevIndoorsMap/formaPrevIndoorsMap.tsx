@@ -1,8 +1,10 @@
-import { prependOnceListener } from "process";
 import React, { useState } from "react";
+import '../../../index.css';
+import BtnFunction from "../../Atomos/btnFunction";
+import PrecioCosto from "../../Atomos/PrecioCosto";
+import PropertyBtn from "../../Atomos/PropertyBtn";
+import TextField from "../../Atomos/TextField";
 import noImagen from '../../Img/Img/noImagen.jpg';
-import { BtnFunction, PrecioCosto, PropertyBtn, TextField } from '../componentes.tsx';
-import '../estilos.css';
 import './formaPrevIndoorsMap.css';
 
 interface PrevIndoorsProps {
