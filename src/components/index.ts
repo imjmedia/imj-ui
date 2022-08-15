@@ -39,3 +39,5 @@ export {default as AsideItem} from './Organismos/asideItemList';
 export {default as FormaPrevRutas} from './Organismos/formaPrevRutas';
 export {default as FichaRutasMap} from './Organismos/fichaPrevRutasMap';
 export {default as FichaSitios} from './Organismos/formaPrevSitios';
+export {default as PrevIndoorsMap} from './Organismos/formaPrevIndoorsMap';
+

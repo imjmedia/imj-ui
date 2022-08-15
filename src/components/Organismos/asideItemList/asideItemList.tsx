@@ -1,7 +1,7 @@
 import React from "react";
+import '../../../index.css';
 import PropertyBtn from "../../Atomos/PropertyBtn";
-import '../../../index.css'
-import '../listCatalogos/listCatalogos.css'
+import '../listCatalogos/listCatalogos.css';
 
 interface AsideItemProps{
     botones: any;
@@ -9,7 +9,7 @@ interface AsideItemProps{
 }
 const AsideItem = (props:AsideItemProps) => {
     const boton = props.botones
-    const botones = boton.map((e:any) => (<div>{e}</div>))
+    const botones = boton.map((e:any,index:any) => (<div key={index}>{e}</div>))
     return (
         <div>
             <div className="Flexbox ButtonsAsideList">

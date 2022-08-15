@@ -1,48 +1,49 @@
 import React, { useEffect, useState } from "react";
 import '../../../index.css';
 
-import graficas from "../../Img/Botones/graficas.svg";
+import agregar from "../../Img/Botones/agregar.svg";
 import arrastrar from "../../Img/Botones/arrastrar.svg";
+import bloqueado from "../../Img/Botones/bloqueado.svg";
 import busqueda from "../../Img/Botones/busqueda.svg";
 import carrito from "../../Img/Botones/carrito.svg";
+import cerrarBorder from '../../Img/Botones/cerrarBorder.svg';
 import circulo from "../../Img/Botones/circulo.svg";
 import descargar from "../../Img/Botones/descargar.svg";
 import editar from "../../Img/Botones/editar.svg";
+import encendido from "../../Img/Botones/encendido.svg";
 import excel from "../../Img/Botones/excel.svg";
+import graficas from "../../Img/Botones/graficas.svg";
 import guardar from "../../Img/Botones/guardar.svg";
+import iluminacion from '../../Img/Botones/iluminacion.svg';
 import kml from "../../Img/Botones/kml.svg";
+import logOut from '../../Img/Botones/logOut.svg';
+import menu from "../../Img/Botones/menu.svg";
+import menuDarkMode from "../../Img/Botones/menuDarkMode.svg";
+import noBloqueado from "../../Img/Botones/noBloqueado.svg";
+import noIluminado from '../../Img/Botones/noIluminado.svg';
 import pauta from "../../Img/Botones/pauta.svg";
 import pdf from "../../Img/Botones/pdf.svg";
 import previsualizar from "../../Img/Botones/previsualizar.svg";
 import trafico from "../../Img/Botones/trafico.svg";
+import usuarioNuevo from "../../Img/Botones/usuarioNuevo.svg";
 import vaciar from "../../Img/Botones/vaciar.svg";
-import menu from "../../Img/Botones/menu.svg";
 import cerrar from "../../Img/Iconos/cerrar.svg";
-import encendido from "../../Img/Botones/encendido.svg"
-import usuarioNuevo from "../../Img/Botones/usuarioNuevo.svg"
-import menuDarkMode from "../../Img/Botones/menuDarkMode.svg";
-import bloqueado from "../../Img/Botones/bloqueado.svg";
-import noBloqueado from "../../Img/Botones/noBloqueado.svg";
-import agregar from "../../Img/Botones/agregar.svg";
-import iluminacion from '../../Img/Botones/iluminacion.svg'
-import noIluminado from '../../Img/Botones/noIluminado.svg'
-import logOut from '../../Img/Botones/logOut.svg'
 
 
 
 /*importación de Íconos*/
 // import bloqueado from "../../Img/Iconos/bloqueado.svg";
 import etiqueta from "../../Img/Iconos/etiqueta.svg";
-import etiquetaAzul from "../../Img/Iconos/etiquetaAzul.svg";
 import etiquetaAmarillo from "../../Img/Iconos/etiquetaAmarillo.svg";
-import etiquetaRojo from "../../Img/Iconos/etiquetaRojo.svg";
+import etiquetaAzul from "../../Img/Iconos/etiquetaAzul.svg";
 import etiquetaMagenta from "../../Img/Iconos/etiquetaMagenta.svg";
+import etiquetaRojo from "../../Img/Iconos/etiquetaRojo.svg";
 // import iluminacion from "../../Img/Iconos/iluminacion.svg";
+import hombres from "../../Img/Iconos/hombres.svg";
 import material from "../../Img/Iconos/material.svg";
+import mujeres from "../../Img/Iconos/mujeres.svg";
 import nicho from "../../Img/Iconos/nicho.svg";
 import ubicaciongeografica from "../../Img/Iconos/ubicaciongeografica.svg";
-import hombres from "../../Img/Iconos/hombres.svg";
-import mujeres from "../../Img/Iconos/mujeres.svg";
 
 interface DynaButtProps {
     type: 
@@ -103,7 +104,8 @@ interface DynaButtProps {
         'noBloqueado' |
         'iluminacion' |
         'noIluminado' |
-        'logOut'
+        'logOut' |
+        'cerrarBorder'
         ;
     
     onClick?: 
@@ -142,6 +144,7 @@ const buttonsArr:buttonsArrInterface = {
     'noIluminado': noIluminado,
     'agregar': agregar,
     'logOut': logOut,
+    'cerrarBorder': cerrarBorder,
 }
 
 const iconsArr:buttonsArrInterface ={

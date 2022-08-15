@@ -1,5 +1,5 @@
 import React from "react";
-import {getModo} from '../../../utils/utils'
+import { getModo } from '../../../utils/utils';
 
 interface asideItemRendererProps{
     modo?: 'Dark' | '';
