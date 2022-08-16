@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import "./multiRangeSlider.css";
+import "./doubleRange.css";
 
 interface DoubleRangeProps{
   min?: number;
