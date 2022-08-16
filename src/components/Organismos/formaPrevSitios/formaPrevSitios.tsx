@@ -1,13 +1,13 @@
 import React from "react";
+import '../../../index.css';
 import { getColorMedio, getModo, porcentaje } from "../../../utils/utils";
 import BtnFunction from "../../Atomos/btnFunction";
 import Logo from "../../Atomos/Logo";
 import TextField from "../../Atomos/TextField";
 import TitlesCards from "../../Atomos/TitlesCards";
-import mujeres from '../../Img/Iconos/mujeres.svg';
 import hombres from '../../Img/Iconos/hombres.svg';
+import mujeres from '../../Img/Iconos/mujeres.svg';
 import noImagen from '../../Img/Img/noImagen.jpg';
-import '../../../index.css';
 // import PieGraphics from "../pieGraphics/pieGraphics";
 import PropertyBtn from "../../Atomos/PropertyBtn";
 
@@ -68,7 +68,7 @@ const FichaSitios = (props: FichaSitiosProps) => {
         }
     }
 
-    const { imagen, onClickCarrito, modo, clave, direccion, latitud, longitud, ancho, alto, material, acabados, male_users, female_users, alcance, frecuencia, impactos, porcentajeNseA, porcentajeNseB, porcentajeNseC, porcentajeNseD, porcentajeNseE, nseA, nseB, nseC, nseD, nseE, porcentajeEdad13, porcentajeEdad18, porcentajeEdad26, porcentajeEdad41, porcentajeEdad55, edad13, edad18, edad26, edad41, edad55, iluminacion, implementaciones } = props;
+    const { imagen, onClickCarrito, modo, clave, direccion, latitud, longitud, ancho, alto, material, acabados, male_users, female_users, alcance, frecuencia, impactos, nseA, nseB, nseC, nseD, nseE, edad13, edad18, edad26, edad41, edad55, iluminacion, implementaciones } = props;
     // const imagen = 'props.imagen'
     return (
         <div className="ContenedorRutasPrev" style={{ width: '65vw', height: '82.5vh' }}>
