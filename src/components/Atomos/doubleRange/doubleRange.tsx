@@ -8,8 +8,8 @@ interface DoubleRangeProps{
 }
 
 const MultiRangeSlider = ({ min, max, onChange }:any) => {
-  const [minVal, setMinVal] = useState(min);
-  const [maxVal, setMaxVal] = useState(max);
+  const [minVal, setMinVal] = useState(min || 0);
+  const [maxVal, setMaxVal] = useState(max || 1000);
   const minValRef = useRef(min);
   const maxValRef = useRef(max);
   // eslint-disable-next-line no-mixed-operators
