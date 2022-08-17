@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import "./doubleRange.css";
 
-interface DoubleRangeProps{
+type DoubleRangeProps = {
   min?: number;
   max?: number;
   onChange?: any;
