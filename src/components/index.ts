@@ -12,7 +12,6 @@ export { default as Button } from './Atomos/Button';
 export {default as BtnFunction} from './Atomos/btnFunction';
 export { default as DynamicButton } from './Atomos/DynamicButton';
 export {default as ModalBtn} from './Atomos/modalFunction';
-export{default as DoubleRange}from'./Atomos/doubleRange';
 
 export { default as EtiquetaVisualizaPauta } from './Moleculas/EtiquetaVisualizaPauta';
 export { default as FormularioVisualizaPauta } from './Organismos/FormularioVisualizaPauta';
