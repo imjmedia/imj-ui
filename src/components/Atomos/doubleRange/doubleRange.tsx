@@ -12,7 +12,8 @@ const MultiRangeSlider = ({ min, max, onChange }:any) => {
   const [maxVal, setMaxVal] = useState(max);
   const minValRef = useRef(min);
   const maxValRef = useRef(max);
-  const range = useRef(onChange);
+  // eslint-disable-next-line no-mixed-operators
+  const range = useRef<HTMLDivElement>(null);
 
   // Convert to percentage
   const getPercent = useCallback(
@@ -27,7 +28,8 @@ const MultiRangeSlider = ({ min, max, onChange }:any) => {
     const minPercent = getPercent(minVal);
     const maxPercent = getPercent(maxValRef.current);
     if (range.current) {
-      range.current.setAttribute('style', `left: ${minPercent}%; width:${maxPercent - minPercent}%;`)
+      range.current?.setAttribute('style', `left: ${minPercent}%; width:${maxPercent - minPercent}%;`)
+      // range.current?.style.left = `${minPercent}%`;
     }
   }, [minVal, maxVal, getPercent]);
 
