@@ -37,6 +37,13 @@ interface BtnFunctionProps{
     'noIluminado' |
     'logOut' |
     'cerrarBorder' |
+    'indoors' |
+    'indoorsNegro' |
+    'sitios' |
+    'sitiosNegro' |
+    'urbanos' |
+    'urbanosNegro' |
+    'cerrarBorder' |
     any;
     id?: string;
 }

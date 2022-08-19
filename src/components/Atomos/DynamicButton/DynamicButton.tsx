@@ -27,7 +27,12 @@ import previsualizar from "../../Img/Botones/previsualizar.svg";
 import trafico from "../../Img/Botones/trafico.svg";
 import usuarioNuevo from "../../Img/Botones/usuarioNuevo.svg";
 import vaciar from "../../Img/Botones/vaciar.svg";
-import cerrar from "../../Img/Iconos/cerrar.svg";
+import { default as cerrar, default as indoors } from "../../Img/Iconos/cerrar.svg";
+import indoorsNegro from "../../Img/Iconos/indoorsNegro.svg";
+import sitios from "../../Img/Iconos/sitios.svg";
+import sitiosNegro from "../../Img/Iconos/sitiosNegro.svg";
+import urbanos from "../../Img/Iconos/urbanos.svg";
+import urbanosNegro from "../../Img/Iconos/urbanosNegro.svg";
 
 
 
@@ -105,7 +110,14 @@ interface DynaButtProps {
         'iluminacion' |
         'noIluminado' |
         'logOut' |
-        'cerrarBorder'
+        'indoors' |
+        'indoorsNegro' |
+        'sitios' |
+        'sitiosNegro' |
+        'urbanos' |
+        'urbanosNegro' |
+        'cerrarBorder' |
+        string
         ;
     
     onClick?: 
@@ -145,6 +157,12 @@ const buttonsArr:buttonsArrInterface = {
     'agregar': agregar,
     'logOut': logOut,
     'cerrarBorder': cerrarBorder,
+    'sitios': sitios,
+    'sitiosNegro': sitiosNegro,
+    'indoors': indoors,
+    'indoorsNegro': indoorsNegro,
+    'urbanos': urbanos,
+    'urbanosNegro': urbanosNegro,
 }
 
 const iconsArr:buttonsArrInterface ={
