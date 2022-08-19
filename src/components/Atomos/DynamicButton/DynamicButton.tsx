@@ -15,6 +15,8 @@ import excel from "../../Img/Botones/excel.svg";
 import graficas from "../../Img/Botones/graficas.svg";
 import guardar from "../../Img/Botones/guardar.svg";
 import iluminacion from '../../Img/Botones/iluminacion.svg';
+import indoors from "../../Img/Botones/indoors.svg";
+import indoorsNegro from "../../Img/Botones/indoorsNegro.svg";
 import kml from "../../Img/Botones/kml.svg";
 import logOut from '../../Img/Botones/logOut.svg';
 import menu from "../../Img/Botones/menu.svg";
@@ -24,15 +26,14 @@ import noIluminado from '../../Img/Botones/noIluminado.svg';
 import pauta from "../../Img/Botones/pauta.svg";
 import pdf from "../../Img/Botones/pdf.svg";
 import previsualizar from "../../Img/Botones/previsualizar.svg";
+import sitios from "../../Img/Botones/sitios.svg";
+import sitiosNegro from "../../Img/Botones/sitiosNegro.svg";
 import trafico from "../../Img/Botones/trafico.svg";
+import urbanos from "../../Img/Botones/urbanos.svg";
+import urbanosNegro from "../../Img/Botones/urbanosNegro.svg";
 import usuarioNuevo from "../../Img/Botones/usuarioNuevo.svg";
 import vaciar from "../../Img/Botones/vaciar.svg";
-import { default as cerrar, default as indoors } from "../../Img/Iconos/cerrar.svg";
-import indoorsNegro from "../../Img/Iconos/indoorsNegro.svg";
-import sitios from "../../Img/Iconos/sitios.svg";
-import sitiosNegro from "../../Img/Iconos/sitiosNegro.svg";
-import urbanos from "../../Img/Iconos/urbanos.svg";
-import urbanosNegro from "../../Img/Iconos/urbanosNegro.svg";
+import cerrar from "../../Img/Iconos/cerrar.svg";
 
 
 
