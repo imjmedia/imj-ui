@@ -3,6 +3,8 @@ import '../../../index.css';
 
 import agregar from "../../Img/Botones/agregar.svg";
 import arrastrar from "../../Img/Botones/arrastrar.svg";
+import arrastrarEjes from "../../Img/Botones/arrastrarEjes.svg";
+import arrastrarMano from "../../Img/Botones/arrastrarMano.svg";
 import bloqueado from "../../Img/Botones/bloqueado.svg";
 import busqueda from "../../Img/Botones/busqueda.svg";
 import carrito from "../../Img/Botones/carrito.svg";
@@ -10,6 +12,7 @@ import cerrarBorder from '../../Img/Botones/cerrarBorder.svg';
 import circulo from "../../Img/Botones/circulo.svg";
 import descargar from "../../Img/Botones/descargar.svg";
 import editar from "../../Img/Botones/editar.svg";
+import editarCuaderno from "../../Img/Botones/editarCuaderno.svg";
 import encendido from "../../Img/Botones/encendido.svg";
 import excel from "../../Img/Botones/excel.svg";
 import graficas from "../../Img/Botones/graficas.svg";
@@ -26,13 +29,21 @@ import noIluminado from '../../Img/Botones/noIluminado.svg';
 import pauta from "../../Img/Botones/pauta.svg";
 import pdf from "../../Img/Botones/pdf.svg";
 import previsualizar from "../../Img/Botones/previsualizar.svg";
+import previsualizarDocumento from "../../Img/Botones/previsualizarDocumento.svg";
+import revertirVaciar from "../../Img/Botones/revertirVaciar.svg";
 import sitios from "../../Img/Botones/sitios.svg";
 import sitiosNegro from "../../Img/Botones/sitiosNegro.svg";
+import subir from "../../Img/Botones/subir.svg";
 import trafico from "../../Img/Botones/trafico.svg";
 import urbanos from "../../Img/Botones/urbanos.svg";
+import urbanosFront from "../../Img/Botones/urbanosFront.svg";
 import urbanosNegro from "../../Img/Botones/urbanosNegro.svg";
 import usuarioNuevo from "../../Img/Botones/usuarioNuevo.svg";
 import vaciar from "../../Img/Botones/vaciar.svg";
+import validadorFalse from "../../Img/Botones/validadorFalse.svg";
+import validadorTrue from "../../Img/Botones/validadorTrue.svg";
+import vallas from "../../Img/Botones/vallas.svg";
+import vallasFront from "../../Img/Botones/vallasFront.svg";
 import cerrar from "../../Img/Iconos/cerrar.svg";
 
 
@@ -118,6 +129,17 @@ interface DynaButtProps {
         'urbanos' |
         'urbanosNegro' |
         'cerrarBorder' |
+        'arrastrarEjes'|
+        'arrastrarMano'|
+        'editarCuaderno'|
+        'previsualizarDocumento'|
+        'revertirVaciar'|
+        'subir'|
+        'urbanosFront'|
+        'validadorFalse'|
+        'validadorTrue'|
+        'vallas'|
+        'vallasFront'|
         string
         ;
     
@@ -164,6 +186,18 @@ const buttonsArr:buttonsArrInterface = {
     'indoorsNegro': indoorsNegro,
     'urbanos': urbanos,
     'urbanosNegro': urbanosNegro,
+    'arrastrarEjes': arrastrarEjes,
+    'arrastrarMano': arrastrarMano,
+    'editarCuaderno': editarCuaderno,
+    'previsualizarDocumento': previsualizarDocumento,
+    'revertirVaciar': revertirVaciar,
+    'subir': subir,
+    'urbanosFront': urbanosFront,
+    'validadorFalse': validadorFalse,
+    'validadorTrue': validadorTrue,
+    'vallas': vallas,
+    'vallasFront': vallasFront,
+
 }
 
 const iconsArr:buttonsArrInterface ={

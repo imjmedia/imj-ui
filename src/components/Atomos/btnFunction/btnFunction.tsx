@@ -44,6 +44,17 @@ interface BtnFunctionProps{
     'urbanos' |
     'urbanosNegro' |
     'cerrarBorder' |
+    'arrastrarEjes'|
+    'arrastrarMano'|
+    'editarCuaderno'|
+    'previsualizarDocumento'|
+    'revertirVaciar'|
+    'subir'|
+    'urbanosFront'|
+    'validadorFalse'|
+    'validadorTrue'|
+    'vallas'|
+    'vallasFront'|
     any;
     id?: string;
 }
