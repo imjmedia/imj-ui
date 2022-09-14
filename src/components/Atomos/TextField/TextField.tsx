@@ -2,11 +2,16 @@ import React from "react";
 import '../../../index.css';
 import { getModo } from "../../../utils/utils";
 
+// interface TextFieldProps{
+//     // type: 'title' | 'description' | 'titleAndDescription' | any;
+//     // title?: string | any;
+//     description?: string | any;
+//     // labelColor?: 'Amarillo' | 'Azul' | 'Rojo' | 'Verde' | 'Magenta' | 'Gris' | 'Aqua' | 'Morado' | any;
+//     labelColor?: string;
+//     modo?:string;
+// }
 interface TextFieldProps{
-    // type: 'title' | 'description' | 'titleAndDescription' | any;
-    // title?: string | any;
     description?: string | any;
-    // labelColor?: 'Amarillo' | 'Azul' | 'Rojo' | 'Verde' | 'Magenta' | 'Gris' | 'Aqua' | 'Morado' | any;
     labelColor?: string;
     title?:string;
     style?: any;
