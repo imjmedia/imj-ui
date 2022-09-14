@@ -1,9 +1,9 @@
 import React from "react";
-import TitlesCards from '../../Atomos/TitlesCards';
+import '../../../index.css';
 import { getColorMedio, getModo } from "../../../utils/utils";
-import TextField from "../../Atomos/TextField";
 import PropertyBtn from "../../Atomos/PropertyBtn";
-import '../../../index.css'
+import TextField from "../../Atomos/TextField";
+import TitlesCards from '../../Atomos/TitlesCards';
 
 interface FrontItemRendererRutasImjProps{
     modo?:
@@ -38,7 +38,6 @@ const FrontItemRendererRutasImj = (props:FrontItemRendererRutasImjProps) =>{
                 <div className="DireccionCards">
                     <TextField
                         modo={props.modo}
-                        type = 'titleAndDescription' 
                         title = 'Clave: '
                         description = {props.clave || 'undefined'}
                     />
@@ -46,13 +45,11 @@ const FrontItemRendererRutasImj = (props:FrontItemRendererRutasImjProps) =>{
                 <div className="RowPadding1">
                     <TextField
                         modo={props.modo}
-                        type = 'titleAndDescription'
                         title = 'Inicio: '
                         description = {props.inicioRuta || 'undefined'}                       
                     />
                     <TextField
                         modo={props.modo}
-                        type = 'titleAndDescription'
                         title = 'Destino: '
                         description = {props.destinoRuta || 'undefined'}
                     />
@@ -60,7 +57,6 @@ const FrontItemRendererRutasImj = (props:FrontItemRendererRutasImjProps) =>{
                 <div className="RowPadding1">
                     <TextField
                         modo={props.modo}
-                        type = 'titleAndDescription'
                         title = 'Ubicación: '
                         description = {props.ubicacion || 'undefined'}
                     />
@@ -68,7 +64,6 @@ const FrontItemRendererRutasImj = (props:FrontItemRendererRutasImjProps) =>{
                 <div className="RowPadding1">
                 <TextField
                     modo={props.modo}
-                    type = 'titleAndDescription'
                     title = 'Kilometraje: '
                     description = {(props.kilometraje || '0')+'km'}
                     labelColor ={getColorMedio(props.tipoMedio)}

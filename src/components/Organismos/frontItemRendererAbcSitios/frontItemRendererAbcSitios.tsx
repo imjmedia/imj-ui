@@ -1,9 +1,9 @@
 import React from "react";
-import TitlesCards from "../../Atomos/TitlesCards";
-import TextField from "../../Atomos/TextField";
-import PropertyBtn from "../../Atomos/PropertyBtn";
+import '../../../index.css';
 import { getColorMedio, getModo } from "../../../utils/utils";
-import '../../../index.css'
+import PropertyBtn from "../../Atomos/PropertyBtn";
+import TextField from "../../Atomos/TextField";
+import TitlesCards from "../../Atomos/TitlesCards";
 
 interface FrontItemRendererAbcSitiosProps{
     tipoMedio?: 
@@ -43,7 +43,6 @@ const FrontItemRendererAbcSitios =(props:FrontItemRendererAbcSitiosProps)=>{
                 <div className="DireccionCards">
                     <TextField
                         modo={props.modo}
-                        type = 'titleAndDescription'
                         title = 'Dirección: '
                         description = {props.direccion || 'undefined'}
                     />
@@ -51,13 +50,11 @@ const FrontItemRendererAbcSitios =(props:FrontItemRendererAbcSitiosProps)=>{
                 <div className="Columnas2 RowPadding1">
                     <TextField
                         modo={props.modo}
-                        type = 'titleAndDescription'
                         title = 'Ubicación: '
                         description = {props.ubicacion || 'undefined'}                       
                     />
                     <TextField
                         modo={props.modo}
-                        type = 'titleAndDescription'
                         title = 'Vista: '
                         description = {props.vista || 'undefined'}
                     />
@@ -65,7 +62,6 @@ const FrontItemRendererAbcSitios =(props:FrontItemRendererAbcSitiosProps)=>{
                 <div className="Flexbox MedidasCards">
                     <TextField
                         modo={props.modo}
-                        type = 'titleAndDescription'
                         title = 'Medidas: '
                         description = {(props.ancho || '0')+ 'm x '+ (props.alto || '0')+'m'}
                         labelColor ={getColorMedio(props.tipoMedio)}
@@ -74,7 +70,6 @@ const FrontItemRendererAbcSitios =(props:FrontItemRendererAbcSitiosProps)=>{
                 <div className="RowPadding1">
                     <TextField
                         modo={props.modo}
-                        type = 'titleAndDescription'
                         title = 'Implementaciones especiales: '
                         description = {props.implementaciones || '?'}
                         labelColor ={getColorMedio(props.tipoMedio)}

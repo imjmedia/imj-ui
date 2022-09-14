@@ -1,11 +1,11 @@
 import React from "react";
-import '../../../index.css'
-import './index.css'
-import { getColorMedio} from "../../../utils/utils";
-import TitlesCards from "../../Atomos/TitlesCards";
+import '../../../index.css';
+import { getColorMedio } from "../../../utils/utils";
 import TextField from "../../Atomos/TextField";
-import mujeres from '../../Img/Iconos/mujeres.svg';
+import TitlesCards from "../../Atomos/TitlesCards";
 import hombres from '../../Img/Iconos/hombres.svg';
+import mujeres from '../../Img/Iconos/mujeres.svg';
+import './index.css';
 
 interface FormaPrevRutasProps {
     modo?: string; //'Dark' | ''
@@ -46,27 +46,23 @@ const FormaPrevRutas = (props:FormaPrevRutasProps) => {
                     <div className="ColumnasRutas" style={{ marginTop: '1rem' }}>
                         <div>
                             <TextField
-                                type='titleAndDescription'
                                 title='Inicio: '
                                 description={inicio}
                             />
                         </div>
                         <div>
                             <TextField
-                                type='titleAndDescription'
                                 title='Ubicación: '
                                 description={ubicacion}
                             />
                         </div>
                         <div>
                             <TextField
-                                type='titleAndDescription'
                                 title={destino}
                             />
                         </div>
                         <div>
                             <TextField
-                                type='titleAndDescription'
                                 title='Kilometraje: '
                                 description={kilometraje}
                             />
@@ -81,7 +77,6 @@ const FormaPrevRutas = (props:FormaPrevRutasProps) => {
                                 </div>
                                 <div className="DisplayBlock">
                                     <TextField
-                                        type='description'
                                         description={porcentajeMujeres || 0}
                                         labelColor='Magenta'
                                     />
@@ -94,7 +89,6 @@ const FormaPrevRutas = (props:FormaPrevRutasProps) => {
                                 </div>
                                 <div className="DisplayBlock">
                                     <TextField
-                                        type='description'
                                         description={porcentajeHombres || 0}
                                         labelColor='Azul'
                                     />
@@ -104,7 +98,6 @@ const FormaPrevRutas = (props:FormaPrevRutasProps) => {
                                 <p style={{ fontWeight: 'bold' }}>Alcance</p>
                                 <div className="DisplayBlock">
                                     <TextField
-                                        type='description'
                                         description={alcance || 0}
                                         labelColor='Rojo'
                                     />
@@ -114,7 +107,6 @@ const FormaPrevRutas = (props:FormaPrevRutasProps) => {
                             <p style={{ fontWeight: 'bold' }}>Frecuencia</p>
                                 <div className="DisplayBlock">
                                     <TextField
-                                        type='description'
                                         description={frecuencia || 0}
                                         labelColor='Verde'
                                     />
@@ -124,7 +116,6 @@ const FormaPrevRutas = (props:FormaPrevRutasProps) => {
                                 <p style={{ fontWeight: 'bold' }}>Impactos</p>
                                 <div className="DisplayBlock">
                                     <TextField
-                                        type='description'
                                         description={impactos || 0}
                                         labelColor='Azul'
                                     />
@@ -136,7 +127,6 @@ const FormaPrevRutas = (props:FormaPrevRutasProps) => {
                 <div className="DerroteroRuta" style={{ height: '90%' }}>
                     <div>
                         <TextField
-                            type='titleAndDescription'
                             title='Derrotero: '
                             description={derrotero}
                         />

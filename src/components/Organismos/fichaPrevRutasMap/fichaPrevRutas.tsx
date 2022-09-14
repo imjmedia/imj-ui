@@ -1,14 +1,14 @@
 import React from "react";
+import '../../../index.css';
 import { getColorMedio, getModo, porcentaje } from "../../../utils/utils";
 import BtnFunction from "../../Atomos/btnFunction";
 import Logo from "../../Atomos/Logo";
 import TextField from "../../Atomos/TextField";
 import TitlesCards from "../../Atomos/TitlesCards";
-import mujeres from '../../Img/Iconos/mujeres.svg';
 import hombres from '../../Img/Iconos/hombres.svg';
+import mujeres from '../../Img/Iconos/mujeres.svg';
 import noImagen from '../../Img/img/noImagen.jpg';
-import '../../../index.css'
-import '../formaPrevRutas/index.css'
+import '../formaPrevRutas/index.css';
 
 interface FichaRutasMapsProps{
     imagen?: any;
@@ -56,28 +56,24 @@ const FichaRutasMap = (props:FichaRutasMapsProps) => {
                     <div className="ColumnasRutas" style={{ marginTop: '1rem' }}>
                         <div>
                             <TextField
-                                type='titleAndDescription'
                                 title='Inicio: '
                                 description={props.inicio}
                             />
                         </div>
                         <div>
                             <TextField
-                                type='titleAndDescription'
                                 title='Tipo de Exhibición: '
                                 description={props.tipoExhibicion}
                             />
                         </div>
                         <div>
                             <TextField
-                                type='titleAndDescription'
                                 title='Destino: '
                                 description={props.destino}
                             />
                         </div>
                         <div>
                             <TextField
-                                type='titleAndDescription'
                                 title='Kilometraje: '
                                 description={props.kilometraje}
                             />
@@ -92,7 +88,6 @@ const FichaRutasMap = (props:FichaRutasMapsProps) => {
                                 </div>
                                 <div className="DisplayBlock">
                                     <TextField
-                                        type='description'
                                         description={porcentaje([props.totalMujeres, props.totalHombres],props.totalMujeres) || 0}
                                         labelColor='Magenta'
                                     />
@@ -105,7 +100,6 @@ const FichaRutasMap = (props:FichaRutasMapsProps) => {
                                 </div>
                                 <div className="DisplayBlock">
                                     <TextField
-                                        type='description'
                                         description={porcentaje([props.totalMujeres, props.totalHombres],props.totalHombres) || 0}
                                         labelColor='Azul'
                                     />
@@ -115,7 +109,6 @@ const FichaRutasMap = (props:FichaRutasMapsProps) => {
                                 <p style={{ fontWeight: 'bold' }}>Alcance</p>
                                 <div className="DisplayBlock">
                                     <TextField
-                                        type='description'
                                         description={props.alcance || 0}
                                         labelColor='Rojo'
                                     />
@@ -125,7 +118,6 @@ const FichaRutasMap = (props:FichaRutasMapsProps) => {
                                 <p style={{ fontWeight: 'bold' }}>Frecuencia</p>
                                 <div className="DisplayBlock">
                                     <TextField
-                                        type='description'
                                         description={props.frecuencia || 0}
                                         labelColor='Verde'
                                     />
@@ -135,7 +127,6 @@ const FichaRutasMap = (props:FichaRutasMapsProps) => {
                                 <p style={{ fontWeight: 'bold' }}>Impactos de ruta</p>
                                 <div className="DisplayBlock">
                                     <TextField
-                                        type='description'
                                         description={props.impactosRuta || 0}
                                         labelColor='Morado'
                                     />
@@ -145,7 +136,6 @@ const FichaRutasMap = (props:FichaRutasMapsProps) => {
                                 <p style={{ fontWeight: 'bold' }}>Impactos totales</p>
                                 <div className="DisplayBlock">
                                     <TextField
-                                        type='description'
                                         description={props.impactosTotales || 0}
                                         labelColor='Magenta'
                                     />
@@ -161,7 +151,6 @@ const FichaRutasMap = (props:FichaRutasMapsProps) => {
                     <div className="DerroteroRuta">
                         <div>
                             <TextField
-                                type='titleAndDescription'
                                 title='Derrotero: '
                                 description={props.derrotero}
                             />

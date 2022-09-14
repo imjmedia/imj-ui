@@ -1,10 +1,10 @@
 import React from "react";
-import TitlesCards from "../../Atomos/TitlesCards";
-import TextField from "../../Atomos/TextField";
+import '../../../index.css';
+import { getColorMedio, getModo } from "../../../utils/utils";
 import Inputs from "../../Atomos/Inputs";
 import PrecioCosto from "../../Atomos/PrecioCosto";
-import { getColorMedio, getModo } from "../../../utils/utils";
-import '../../../index.css';
+import TextField from "../../Atomos/TextField";
+import TitlesCards from "../../Atomos/TitlesCards";
 
 interface FrontItemRendererVisualizaPautaProps{
     tipoMedio?:
@@ -38,7 +38,6 @@ const FrontItemRendererVisualizaPauta = (props:FrontItemRendererVisualizaPautaPr
                 <div className="DireccionCards">
                     <TextField
                         modo={props.modo} 
-                        type = 'titleAndDescription'
                         title = 'Dirección: '
                         description = {props.direccion || 'undefined'}
                     />
@@ -47,7 +46,6 @@ const FrontItemRendererVisualizaPauta = (props:FrontItemRendererVisualizaPautaPr
                     <div>
                         <TextField
                             modo={props.modo}
-                        type = 'titleAndDescription'
                         title = 'Medidas: '
                         description = {(props.ancho || 0)+ 'm x '+ (props.alto || 0)+'m'}
                         labelColor ={getColorMedio(props.tipoMedio)}
@@ -58,7 +56,6 @@ const FrontItemRendererVisualizaPauta = (props:FrontItemRendererVisualizaPautaPr
                     <div className="CampoFechaInicioFin">
                         <TextField
                             modo={props.modo}
-                            type = 'title'
                             title = 'Fecha de inicio'
                         />
                         <Inputs
@@ -70,7 +67,6 @@ const FrontItemRendererVisualizaPauta = (props:FrontItemRendererVisualizaPautaPr
                     <div className="CampoFechaInicioFin">
                         <TextField
                             modo={props.modo}
-                            type='title'
                             title = 'Fecha de fin'
                         />
                         <Inputs
@@ -84,7 +80,6 @@ const FrontItemRendererVisualizaPauta = (props:FrontItemRendererVisualizaPautaPr
                     <div className="CampoFechaInicioFin">
                         <TextField
                             modo={props.modo} 
-                            type = 'title'
                             title='Descuento'  
                         />
                         <Inputs
@@ -119,14 +114,12 @@ const FrontItemRendererVisualizaPauta = (props:FrontItemRendererVisualizaPautaPr
                 <div className="TitleDescriptionCards">
                     <TextField
                         modo={props.modo} 
-                        type = 'title'
                         title = 'Descripción: '
                     />
                 </div>
                 <div className="DescripcionCards TextOverflowDescription">
                     <TextField
                         modo={props.modo} 
-                        type = 'description'
                         description = {props.descripcion || 'undefined'}
                     />                    
                 </div>
@@ -134,7 +127,6 @@ const FrontItemRendererVisualizaPauta = (props:FrontItemRendererVisualizaPautaPr
                         <div>
                             <TextField
                                 modo={props.modo} 
-                                type = 'description'
                                 description = 'Fecha de inicio'
                             />
                             <Inputs
@@ -146,7 +138,6 @@ const FrontItemRendererVisualizaPauta = (props:FrontItemRendererVisualizaPautaPr
                         <div>
                             <TextField
                                 modo={props.modo} 
-                                type = 'description'
                                 description = 'Fecha de fin'
                             />
                             <Inputs
@@ -160,7 +151,6 @@ const FrontItemRendererVisualizaPauta = (props:FrontItemRendererVisualizaPautaPr
                         <div>
                             <TextField
                                 modo={props.modo}
-                                type = 'description'
                                 description = 'Descuento'
                             />
                             <Inputs

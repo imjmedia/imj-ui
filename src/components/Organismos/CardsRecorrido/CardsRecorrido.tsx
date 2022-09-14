@@ -1,13 +1,13 @@
 import React from "react";
-import TitlesCards from '../../Atomos/TitlesCards';
-import TextField from '../../Atomos/TextField';
-import PropertyBtn from '../../Atomos/PropertyBtn';
 import '../../../index.css';
+import PropertyBtn from '../../Atomos/PropertyBtn';
+import TextField from '../../Atomos/TextField';
+import TitlesCards from '../../Atomos/TitlesCards';
 
+import { getColorMedio, getModo } from "../../../utils/utils";
 import hombres from '../../Img/Iconos/hombres.svg';
 import mujeres from '../../Img/Iconos/mujeres.svg';
 import noImagen from '../../Img/Img/noImagen.jpg';
-import { getColorMedio, getModo } from "../../../utils/utils";
 
 interface CardRecorridoProps{
     modo?: string | any;
@@ -63,20 +63,17 @@ export const CardsRecorrido=(props:CardRecorridoProps)=>{
                     <div className="ContenidoCardsRecorrido">
                         <TextField
                             modo={props.modo}
-                            type = 'titleAndDescription'
                             title = 'Dirección: '
                             description = {props.direccion || 'undefined'}
                         />
                         <div className="Columnas2">
                         <TextField
                             modo={props.modo}
-                            type = 'titleAndDescription'
                             title = 'Ubicación: '
                             description = {props.ubicacion || 'undefined'}
                         />
                         <TextField
                             modo={props.modo}
-                            type = 'titleAndDescription'
                             title = 'Vista: '
                             description = {props.vista || '?'}
                         />
@@ -84,7 +81,6 @@ export const CardsRecorrido=(props:CardRecorridoProps)=>{
                         <div className="Flexbox MedidasCards">
                             <TextField
                                 modo={props.modo}
-                                type = 'titleAndDescription'
                                 title = 'Medidas: '
                                 description = {(props.ancho || '0')+ 'm x '+ (props.alto || '0')+'m'}
                                 labelColor ={getColorMedio(props.tipoMedio)}
@@ -92,14 +88,12 @@ export const CardsRecorrido=(props:CardRecorridoProps)=>{
                         </div>
                         <TextField
                             modo={props.modo}
-                                type = 'titleAndDescription'
                                 title = 'Material: '
                                 description = {props.material || 'undefined'}
                             />
                             <div className="TextOverflowDescription PaddingRight1">
                                 <TextField
                                     modo={props.modo}
-                                    type = 'titleAndDescription'
                                     title = 'Referencias: '
                                     description = {props.descripcion || 'undefined'}
                                 />
@@ -132,7 +126,6 @@ export const CardsRecorrido=(props:CardRecorridoProps)=>{
                             <div className="TotalesPorcentajes">
                                 <TextField
                                     modo={props.modo}
-                                    type = 'description'
                                     description = {props.numeroHombres || '0'}
                                 />
                             </div>
@@ -141,7 +134,6 @@ export const CardsRecorrido=(props:CardRecorridoProps)=>{
                         <div className="Width100 CenterText">
                             <TextField
                                 modo={props.modo} 
-                                type = 'description' 
                                 description = {props.porcentajeHombres || '0'}
                                 labelColor = 'Azul'
                             />
@@ -153,7 +145,6 @@ export const CardsRecorrido=(props:CardRecorridoProps)=>{
                             <div className="TotalesPorcentajes">
                                 <TextField
                                     modo={props.modo}
-                                    type = 'description'
                                     description = {props.numeroMujeres || '0'}
                                 />
                             </div>
@@ -161,7 +152,6 @@ export const CardsRecorrido=(props:CardRecorridoProps)=>{
                         <div className="Width100">
                             <TextField
                                 modo={props.modo} 
-                                type = 'description' 
                                 description = {props.porcentajeMujeres || '0'}
                                 labelColor = 'Magenta'
                             />
@@ -174,7 +164,6 @@ export const CardsRecorrido=(props:CardRecorridoProps)=>{
                             <div className="TotalesPorcentajes">
                                 <TextField
                                     modo={props.modo}
-                                    type = 'description'
                                     description = 'Alcance:'
                                 />
                             </div>
@@ -183,7 +172,6 @@ export const CardsRecorrido=(props:CardRecorridoProps)=>{
                         <div className="Width100 CenterText">
                             <TextField
                                 modo={props.modo} 
-                                type = 'description' 
                                 description = {props.alcance || '0'}
                                 labelColor = 'Rojo'
                             />
@@ -194,7 +182,6 @@ export const CardsRecorrido=(props:CardRecorridoProps)=>{
                             <div className="TotalesPorcentajes">
                                 <TextField
                                     modo={props.modo}
-                                    type = 'description'
                                     description = 'Frecuencia:'
                                 />
                             </div>
@@ -202,7 +189,6 @@ export const CardsRecorrido=(props:CardRecorridoProps)=>{
                         <div className="Width100">
                             <TextField
                                 modo={props.modo} 
-                                type = 'description' 
                                 description = {props.frecuencia || '0'}
                                 labelColor = 'Azul'
                             />
@@ -215,7 +201,6 @@ export const CardsRecorrido=(props:CardRecorridoProps)=>{
                             <div className="TotalesPorcentajes">
                                 <TextField
                                     modo={props.modo}
-                                    type = 'description'
                                     description = 'Total de usuarios:'
                                 />
                             </div>
@@ -224,7 +209,6 @@ export const CardsRecorrido=(props:CardRecorridoProps)=>{
                         <div className="Width100 CenterText">
                             <TextField
                                 modo={props.modo} 
-                                type = 'description' 
                                 description = {props.totalUsuarios || '0'}
                                 labelColor = 'Morado'
                             />
@@ -235,7 +219,6 @@ export const CardsRecorrido=(props:CardRecorridoProps)=>{
                             <div className="TotalesPorcentajes">
                                 <TextField
                                     modo={props.modo}
-                                    type = 'description'
                                     description = 'Total de impactos:'
                                 />
                             </div>
@@ -243,7 +226,6 @@ export const CardsRecorrido=(props:CardRecorridoProps)=>{
                         <div className="Width100">
                             <TextField
                                 modo={props.modo} 
-                                type = 'description' 
                                 description = {props.totalImpactos || '0'}
                                 labelColor = 'Azul'
                             />
@@ -255,31 +237,26 @@ export const CardsRecorrido=(props:CardRecorridoProps)=>{
                             <div className="CamposGraficas">
                                 <TextField
                                     modo={props.modo}
-                                    type = 'description' 
                                     description = {'NSE A: '+ props.totalNseB || '0'}
                                     labelColor = 'Azul'
                                 />
                                 <TextField
                                     modo={props.modo}
-                                    type = 'description' 
                                     description = {'NSE B: '+ props.totalNseB || '0'}
                                     labelColor = 'Rojo'
                                 />
                                 <TextField
                                     modo={props.modo}
-                                    type = 'description' 
                                     description = {'NSE C: '+ props.totalNseC || '0'}
                                     labelColor = 'Aqua'
                                 />
                                 <TextField
                                     modo={props.modo}
-                                    type = 'description' 
                                     description = {'NSE D: '+ props.totalNseD || '0'}
                                     labelColor = 'Magenta'
                                 />
                                 <TextField
                                     modo={props.modo}
-                                    type = 'description' 
                                     description = {'NSE E: '+ props.totalNseE || '0'}
                                     labelColor = 'Amarillo'
                                 />
@@ -290,31 +267,26 @@ export const CardsRecorrido=(props:CardRecorridoProps)=>{
                             <div className="CamposGraficas">
                                 <TextField
                                     modo={props.modo}
-                                    type = 'description' 
                                     description = {'13-17: '+ props.totalEdad13 || '0'}
                                     labelColor = 'Azul'
                                 />
                                 <TextField
                                     modo={props.modo}
-                                    type = 'description' 
                                     description = {'18-25: '+ props.totalEdad18 || '0'}
                                     labelColor = 'Rojo'
                                 />
                                 <TextField
                                     modo={props.modo}
-                                    type = 'description' 
                                     description = {'26-40: '+ props.totalEdad26 || '0'}
                                     labelColor = 'Aqua'
                                 />
                                 <TextField
                                     modo={props.modo}
-                                    type = 'description' 
                                     description = {'41-55: '+ props.totalEdad41 || '0'}
                                     labelColor = 'Magenta'
                                 />
                                 <TextField
                                     modo={props.modo}
-                                    type = 'description' 
                                     description = {'55 o +: '+ props.totalEdad55 || '0'}
                                     labelColor = 'Amarillo'
                                 />

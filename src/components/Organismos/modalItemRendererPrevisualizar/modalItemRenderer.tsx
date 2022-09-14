@@ -1,12 +1,12 @@
 import React from "react";
-import TextField from "../../Atomos/TextField";
+import '../../../index.css';
+import { getColorMedio, getModo } from "../../../utils/utils";
 import Logo from "../../Atomos/Logo";
+import TextField from "../../Atomos/TextField";
 import TitlesCards from "../../Atomos/TitlesCards";
 import hombres from '../../Img/Iconos/hombres.svg';
 import mujeres from '../../Img/Iconos/mujeres.svg';
 import noImagen from '../../Img/Img/noImagen.jpg';
-import { getColorMedio, getModo } from "../../../utils/utils";
-import '../../../index.css'
 
 interface ModalItemRendererPrevisualizarProps {
     imagen?: any;
@@ -85,35 +85,30 @@ const ModalItemRendererPrevisualizar = (props:ModalItemRendererPrevisualizarProp
                     <div className="Columnas2 Wrap">
                         <div className="FontSize12">
                             <TextField
-                                type='description'
                                 description={'NSE A: ' + (props.nseA || 0)+'%'}
                                 labelColor='Azul'
                             />
                         </div>
                         <div className="FontSize12">
                             <TextField
-                                type='description'
                                 description={'NSE B: ' + (props.nseB || 0)+'%'}
                                 labelColor='Rojo'
                             />
                         </div>
                         <div className="FontSize12">
                             <TextField
-                                type='description'
                                 description={'NSE C: ' + (props.nseC || 0)+'%'}
                                 labelColor='Aqua'
                             />
                         </div>
                         <div className="FontSize12">
                             <TextField
-                                type='description'
                                 description={'NSE D: ' + (props.nseD || 0)+'%'}
                                 labelColor='Magenta'
                             />
                         </div>
                         <div className="FontSize12 UltimoCampoPrev">
                             <TextField
-                                type='description'
                                 description={'NSE E: ' + (props.nseE || 0)+'%'}
                                 labelColor='Amarillo'
                             />
@@ -125,35 +120,30 @@ const ModalItemRendererPrevisualizar = (props:ModalItemRendererPrevisualizarProp
                     <div className="Columnas2 Wrap">
                         <div className="FontSize12">
                             <TextField
-                                type='description'
                                 description={'13-17: ' + (props.edad13 || 0)+'%'}
                                 labelColor='Azul'
                             />
                         </div>
                         <div className="FontSize12">
                             <TextField
-                                type='description'
                                 description={'18-25: ' + (props.edad18 || 0)+'%'}
                                 labelColor='Rojo'
                             />
                         </div>
                         <div className="FontSize12">
                             <TextField
-                                type='description'
                                 description={'26-40: ' + (props.edad26 || 0)+'%'}
                                 labelColor='Aqua'
                             />
                         </div>
                         <div className="FontSize12">
                             <TextField
-                                type='description'
                                 description={'41-55: ' + (props.edad41 || 0)+'%'}
                                 labelColor='Magenta'
                             />
                         </div>
                         <div className="FontSize12 UltimoCampoPrev">
                             <TextField
-                                type='description'
                                 description={'55 o +: ' + (props.edad55 || 0)+'%'}
                                 labelColor='Amarillo'
                             />
@@ -166,61 +156,50 @@ const ModalItemRendererPrevisualizar = (props:ModalItemRendererPrevisualizarProp
                     <div className="InfoUbicaPrevCards">
                         <div className="TextOverflowDescription">
                             <TextField
-                                type='titleAndDescription'
                                 title= 'Dirección: '
                                 description={props.direccion || 'undefined'}
                             />
                         </div>
                         <TextField
-                            type='titleAndDescription'
                             title= 'Colonia: '
                             description={props.colonia || 'undefined'}
                         />
                         <TextField
-                            type='titleAndDescription'
                             title= 'Cd. y Edo.: '
                             description={props.cdEdo || 'undefined'}
                         />
                         <TextField
-                            type='titleAndDescription'
                             title= 'Vialidad: '
                             description={props.vialidad || 'undefined'}
                         />
                     </div>
                     <div className="IfoEspecificacionesPrevCards">
                         <TextField
-                            type='titleAndDescription'
                             title= 'Medidas: '
                             description={(props.alto||0)+'m '+ (props.ancho||0)+'m'}
                             labelColor={getColorMedio(props.tipoMedio)}
                         />
                         <TextField
-                            type='titleAndDescription'
                             title= 'Material: '
                             description={props.material || 'undefined'}
                         />
                         <TextField
-                            type='titleAndDescription'
                             title= 'Acabado: '
                             description={props.acabados || 'undefined'}
                         />
                         <TextField
-                            type='titleAndDescription'
                             title= 'Iluminación: '
                             description={props.iluminacion || '?'}
                         />
                         <TextField
-                            type='titleAndDescription'
                             title= 'Tipo de vista: '
                             description={props.vista || '?'}
                         />
                         <TextField
-                            type='titleAndDescription'
                             title= 'Nicho: '
                             description={props.nicho || 'undefined'}
                         />
                         <TextField
-                            type='titleAndDescription'
                             title= 'Impl. Especiales: '
                             description={props.implementaciones || '?'}
                             labelColor={getColorMedio(props.tipoMedio)}
@@ -234,7 +213,6 @@ const ModalItemRendererPrevisualizar = (props:ModalItemRendererPrevisualizarProp
                             </div>
                             <div className="DisplayBlock">
                                 <TextField
-                                    type='description'
                                     description={props.porcentajeMujeres || 0}
                                     labelColor='Magenta'
                                 />
@@ -247,7 +225,6 @@ const ModalItemRendererPrevisualizar = (props:ModalItemRendererPrevisualizarProp
                             </div>
                             <div className="DisplayBlock">
                                 <TextField
-                                    type='description'
                                     description={props.porcentajeHombres || 0}
                                     labelColor='Azul'
                                 />
@@ -257,7 +234,6 @@ const ModalItemRendererPrevisualizar = (props:ModalItemRendererPrevisualizarProp
                             <p style={{fontWeight:'bold'}}>Alcance</p>
                             <div className="DisplayBlock">
                                 <TextField
-                                    type='description'
                                     description={props.alcance || 0}
                                     labelColor='Rojo'
                                 />
@@ -267,7 +243,6 @@ const ModalItemRendererPrevisualizar = (props:ModalItemRendererPrevisualizarProp
                             <p>Impactos: {props.totalImpactos || 0}</p>
                             <div className="DisplayBlock">
                                 <TextField
-                                    type='description'
                                     description={props.impactos || 0}
                                     labelColor='Verde'
                                 />
@@ -277,7 +252,6 @@ const ModalItemRendererPrevisualizar = (props:ModalItemRendererPrevisualizarProp
                             <p style={{fontWeight:'bold'}}>Frecuencia</p>
                             <div className="DisplayBlock">
                                 <TextField
-                                    type='description'
                                     description={props.frecuencia || 0}
                                     labelColor='Azul'
                                 />
@@ -287,7 +261,6 @@ const ModalItemRendererPrevisualizar = (props:ModalItemRendererPrevisualizarProp
                             <p>Usuarios: {props.totalUsuarios || 0}</p>
                             <div className="DisplayBlock">
                                 <TextField
-                                    type='description'
                                     description={props.usuarios || 0}
                                     labelColor='Morado'
                                 />

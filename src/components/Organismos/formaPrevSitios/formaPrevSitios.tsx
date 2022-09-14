@@ -94,34 +94,28 @@ const FichaSitios = (props: FichaSitiosProps) => {
                                 </div>
                                 <div className="RowPadding1">
                                     <TextField
-                                        type='titleAndDescription'
                                         title='Dirección: '
                                         description={direccion || 'Indefinida'}
                                     />
                                 </div>
                                 <div className="Columnas2 RowPadding1">
                                     <TextField
-                                        type='titleAndDescription'
                                         title='Latitud: '
                                         description={latitud || 'Indefinida'}
                                     />
                                     <TextField
-                                        type='titleAndDescription'
                                         title='Longitud: '
                                         description={longitud || 'Indefinida'}
                                     />
                                     <TextField
-                                        type='titleAndDescription'
                                         title='Medidas: '
                                         description={(ancho || 0) + 'm x ' + (alto || 0) + 'm'}
                                     />
                                     <TextField
-                                        type='titleAndDescription'
                                         title='Material: '
                                         description={material || 'Indefinido'}
                                     />
                                     <TextField
-                                        type='titleAndDescription'
                                         title='Acabados: '
                                         description={acabados || 'Indefinidos'}
                                     />
@@ -136,7 +130,6 @@ const FichaSitios = (props: FichaSitiosProps) => {
                                     </div>
                                     <div className="DisplayBlock">
                                         <TextField
-                                            type='description'
                                             description={male_users || 0}
                                             labelColor='Azul'
                                         />
@@ -149,7 +142,6 @@ const FichaSitios = (props: FichaSitiosProps) => {
                                     </div>
                                     <div className="DisplayBlock">
                                         <TextField
-                                            type='description'
                                             description={female_users || 0}
                                             labelColor='Magenta'
                                         />
@@ -159,7 +151,6 @@ const FichaSitios = (props: FichaSitiosProps) => {
                                     <p style={{ fontWeight: 'bold' }}>Alcance</p>
                                     <div className="DisplayBlock">
                                         <TextField
-                                            type='description'
                                             description={alcance || 0}
                                             labelColor='Aqua'
                                         />
@@ -169,7 +160,6 @@ const FichaSitios = (props: FichaSitiosProps) => {
                                     <p style={{ fontWeight: 'bold' }}>Frecuencia</p>
                                     <div className="DisplayBlock">
                                         <TextField
-                                            type='description'
                                             description={frecuencia || 0}
                                             labelColor='Rojo'
                                         />
@@ -179,7 +169,6 @@ const FichaSitios = (props: FichaSitiosProps) => {
                                     <p style={{ fontWeight: 'bold' }}>Impactos</p>
                                     <div className="DisplayBlock">
                                         <TextField
-                                            type='description'
                                             description={impactos || 0}
                                             labelColor='Amarillo'
                                         />

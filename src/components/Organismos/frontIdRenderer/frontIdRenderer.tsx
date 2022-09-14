@@ -1,8 +1,8 @@
 import React from "react";
-import TitlesCards from "../../Atomos/TitlesCards";
-import TextField from "../../Atomos/TextField";
 import '../../../index.css';
-import '../listCatalogos/listCatalogos.css'
+import TextField from "../../Atomos/TextField";
+import TitlesCards from "../../Atomos/TitlesCards";
+import '../listCatalogos/listCatalogos.css';
 
 interface FrontIdRendererProps {
     imagen: any;
@@ -33,7 +33,6 @@ const FrontIdRenderer = (props: FrontIdRendererProps) => {
                     />
                 </div>
                 <TextField
-                    type='titleAndDescription'
                     title='Dirección: '
                     description={props.direccion}
                 />

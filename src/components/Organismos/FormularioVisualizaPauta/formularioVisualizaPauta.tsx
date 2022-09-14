@@ -1,10 +1,9 @@
-import React from "react";
-import TextField from "../../Atomos/TextField";
-import Dropdown from '../../Atomos/dropDown';
-import { useState } from "react";
-import Inputs from "../../Atomos/Inputs";
-import noImagen from '../../Img/Img/noImagen.jpg';
+import React, { useState } from "react";
 import { getModo } from "../../../utils/utils";
+import Dropdown from '../../Atomos/dropDown';
+import Inputs from "../../Atomos/Inputs";
+import TextField from "../../Atomos/TextField";
+import noImagen from '../../Img/Img/noImagen.jpg';
 
 interface FormularioVisualizaPautaProps{
     modo?:any,
@@ -22,7 +21,6 @@ const FormularioVisualizaPauta =(props:FormularioVisualizaPautaProps) =>{
                 <div className="Rows3">
                     <div className="JustifyLeft Responsable ">
                             <TextField
-                              type='title'
                               title = 'Responsable'
                             />
                             <Dropdown
@@ -34,7 +32,6 @@ const FormularioVisualizaPauta =(props:FormularioVisualizaPautaProps) =>{
                 <div className="Rows3">
                     <div className="Campaña JustifyLeft">
                         <TextField
-                            type='title'
                             title = 'Campaña'
                         />
                         <Dropdown
@@ -45,13 +42,11 @@ const FormularioVisualizaPauta =(props:FormularioVisualizaPautaProps) =>{
                     <div className="Empresa JustifyLeft">
                         <div>
                         <TextField
-                            type='title'
                             title = 'Empresa'
                         />
                         </div>
                         <div className="NombreEmpresa">
                             <TextField 
-                                type = 'description'
                                 description = {props.empresa || 'undefined'}
                             />
                         </div>
@@ -59,7 +54,6 @@ const FormularioVisualizaPauta =(props:FormularioVisualizaPautaProps) =>{
                     <div className="Columnas2 ColorSelect">
                         <div className="JustifyLeft">
                             <TextField
-                                type='title'
                                 title = 'Color'
                             />
                             <div className="ColorPicker">
@@ -68,7 +62,6 @@ const FormularioVisualizaPauta =(props:FormularioVisualizaPautaProps) =>{
                         </div>
                         <div className="JustifyLeft">
                             <TextField
-                                type='title'
                                 title = 'Color elegido'
                             />
                             <div className="ColorPicker">
@@ -82,7 +75,6 @@ const FormularioVisualizaPauta =(props:FormularioVisualizaPautaProps) =>{
                     <div className="InicioFinVisualiza Columnas2">
                         <div className="JustifyLeft ">
                             <TextField
-                                type='title'
                                 title = 'Fecha Inicial'
                             />
                             <Inputs
@@ -92,7 +84,6 @@ const FormularioVisualizaPauta =(props:FormularioVisualizaPautaProps) =>{
                         </div>
                         <div className="JustifyLeft ">
                             <TextField
-                                type='title'
                                 title = 'Fecha Final'
                             />
                             <Inputs
@@ -103,7 +94,6 @@ const FormularioVisualizaPauta =(props:FormularioVisualizaPautaProps) =>{
                     </div>
                     <div className="SelectFileVisualiza">
                         <TextField
-                            type='title'
                             title = 'Logotipo'
                         />
                         <input type="file" onChange={(e)=>setLogotipo(e.target.value)}/>
@@ -112,7 +102,6 @@ const FormularioVisualizaPauta =(props:FormularioVisualizaPautaProps) =>{
                         <div className="JustifyLeft ">
                             <div className="DescuentoVisualizaPauta">
                             <TextField
-                                type='title'
                                 title = 'Descuento'
                             />
                             </div>

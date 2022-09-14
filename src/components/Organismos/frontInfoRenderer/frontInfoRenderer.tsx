@@ -1,7 +1,7 @@
 import React from "react";
+import '../../../index.css';
 import TextField from "../../Atomos/TextField";
-import '../../../index.css'
-import '../listCatalogos/listCatalogos.css'
+import '../listCatalogos/listCatalogos.css';
 
 interface FrontInfoSitioRendererProps{
     ubicacion:string;
@@ -17,22 +17,18 @@ const FrontInfoSitioRenderer = (props:FrontInfoSitioRendererProps) => {
     return (
         <div>
             <TextField
-                type='titleAndDescription'
                 title='Ubicación: '
                 description={props.ubicacion}
             />
             <TextField
-                type='titleAndDescription'
                 title='Vista: '
                 description={props.vista}
             />
             <TextField
-                type='titleAndDescription'
                 title='Medida: '
                 description={(props.ancho)+'m x '+(props.alto)+'m'}
             />
             <TextField
-                type='titleAndDescription'
                 title='Implementaciones especiales: '
                 description={props.implementaciones}
             />

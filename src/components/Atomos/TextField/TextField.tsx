@@ -8,8 +8,7 @@ interface TextFieldProps{
     description?: string | any;
     // labelColor?: 'Amarillo' | 'Azul' | 'Rojo' | 'Verde' | 'Magenta' | 'Gris' | 'Aqua' | 'Morado' | any;
     labelColor?: string;
-    titleCampo?:string;
-    descriptionCampo?: string;
+    title?:string;
     style?: any;
     generalLabel?: string;
     modo?:string;
@@ -75,7 +74,7 @@ const secundarioDark ='#BFBFBF'
 const terciario = '#707070'
 const terciarioDark = '#808080'
 export const TextField = (props:TextFieldProps)=> {
-    const {titleCampo, descriptionCampo, style, generalLabel, labelColor, modo} = props;
+    const {title, description, style, generalLabel, labelColor, modo} = props;
     return(
       <div style={style}>
         <span style={
@@ -92,7 +91,7 @@ export const TextField = (props:TextFieldProps)=> {
           color: modo === 'Dark' ? secundarioDark : secundario, 
           fontWeight:'700', 
           textAlign:'left',
-        }}> {titleCampo} {descriptionCampo ? 
+        }}> {title} {description ? 
           <span style={
             generalLabel ?{
               color:'#fff' , 
@@ -108,7 +107,7 @@ export const TextField = (props:TextFieldProps)=> {
                   color:modo === 'Dark' ? terciarioDark : terciario , 
                   fontWeight:'400'
                   }}>
-                    {descriptionCampo}
+                    {description}
             </span> 
               : 
             <></>

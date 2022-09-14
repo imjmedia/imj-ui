@@ -1,10 +1,9 @@
-import React from "react";
-import { useState } from "react";
-import { getColorMedio } from "../../../utils/utils";
-import TextField from "../../Atomos/TextField";
-import PropertyBtn from "../../Atomos/PropertyBtn";
-import DynamicButton from "../../Atomos/DynamicButton";
+import React, { useState } from "react";
 import '../../../index.css';
+import { getColorMedio } from "../../../utils/utils";
+import DynamicButton from "../../Atomos/DynamicButton";
+import PropertyBtn from "../../Atomos/PropertyBtn";
+import TextField from "../../Atomos/TextField";
 
 interface ModalITemRendererEditInventarioProveedoresProps{
     proveedor?: string;
@@ -93,7 +92,6 @@ const ModalITemRendererEditInventarioProveedores = (props:ModalITemRendererEditI
             <div className="InformacionCard">
                 <div className="FlexTextField">
                     <TextField
-                            type='titleAndDescription'
                             title='Dirección: '
                             description={
                                 toggle ? (
@@ -110,7 +108,6 @@ const ModalITemRendererEditInventarioProveedores = (props:ModalITemRendererEditI
                 <div className="Flexbox">    
                     <div className="FlexTextField">
                     <TextField
-                        type='titleAndDescription'
                         title='Ubicación: '
                         description={
                             toggle ? (
@@ -125,7 +122,6 @@ const ModalITemRendererEditInventarioProveedores = (props:ModalITemRendererEditI
                     </div>
                     <div className="FlexTextField">
                         <TextField
-                            type='titleAndDescription'
                             title='Vista: '
                             description={
                                 toggle ? (
@@ -150,7 +146,6 @@ const ModalITemRendererEditInventarioProveedores = (props:ModalITemRendererEditI
                 <div className="RowPadding1">
                     <div className="FlexTextField">
                             <TextField
-                                type='titleAndDescription'
                                 title='Vista: '
                                 description={
                                     toggle ? (
@@ -181,7 +176,6 @@ const ModalITemRendererEditInventarioProveedores = (props:ModalITemRendererEditI
                 <div className="Flexbox MedidasCards">
                     <div className="FlexTextField">
                         <TextField
-                            type='titleAndDescription'
                             title='Ancho: '
                             description={
                                 toggle ? (
@@ -196,7 +190,6 @@ const ModalITemRendererEditInventarioProveedores = (props:ModalITemRendererEditI
                     </div>
                     <div className="FlexTextField">
                         <TextField
-                            type='titleAndDescription'
                             title='Alto: '
                             description={
                                 toggle ? (
@@ -213,7 +206,6 @@ const ModalITemRendererEditInventarioProveedores = (props:ModalITemRendererEditI
                 <div className="RowPadding1">
                     <div className="FlexTextField">
                             <TextField
-                                type='titleAndDescription'
                                 title='Implementaciones especiales: '
                                 description={
                                     toggle ? (

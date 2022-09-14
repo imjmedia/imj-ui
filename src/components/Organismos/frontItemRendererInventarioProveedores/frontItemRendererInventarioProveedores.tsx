@@ -1,8 +1,8 @@
 import React from "react";
+import { getColorMedio, getModo } from "../../../utils/utils";
+import PropertyBtn from "../../Atomos/PropertyBtn";
 import TextField from "../../Atomos/TextField";
 import TitlesCards from "../../Atomos/TitlesCards";
-import PropertyBtn from "../../Atomos/PropertyBtn";
-import { getColorMedio, getModo } from "../../../utils/utils";
 
 interface FrontItemRendererInventarioProveedoresProps{
     modo?:
@@ -45,7 +45,6 @@ const FrontItemRendererInventarioProveedores = (props:FrontItemRendererInventari
                 <div className="DireccionCards">
                     <TextField 
                         modo={props.modo}
-                        type = 'titleAndDescription'
                         title = 'Dirección: '
                         description = {props.direccion ||'undefined'}
                     />
@@ -53,13 +52,11 @@ const FrontItemRendererInventarioProveedores = (props:FrontItemRendererInventari
                 <div className="Columnas2 RowPadding1">
                     <TextField
                         modo={props.modo}
-                    type='titleAndDescription'
                     title = 'Ubicación: '
                     description = {props.ubicacion || 'undefined'}                       
                     />
                     <TextField
                         modo={props.modo}
-                    type='titleAndDescription'
                     title = 'Vista: '
                     description = {props.vista || 'undefined'}
                     />
@@ -67,7 +64,6 @@ const FrontItemRendererInventarioProveedores = (props:FrontItemRendererInventari
                 <div className="RowPadding1">
                     <TextField
                         modo={props.modo}
-                        type='titleAndDescription'
                         title = 'Tipo: '
                         description = {props.tipo || '?'}
                     />
@@ -76,7 +72,6 @@ const FrontItemRendererInventarioProveedores = (props:FrontItemRendererInventari
                     <div>
                         <TextField
                             modo={props.modo}
-                            type='titleAndDescription'
                             title = 'Medidas: '
                             description = {(props.ancho || '0')+ 'm x '+ (props.alto || '0')+'m'}
                             labelColor ={getColorMedio(props.tipoMedio)}
@@ -86,7 +81,6 @@ const FrontItemRendererInventarioProveedores = (props:FrontItemRendererInventari
                 <div className="RowPadding1">
                 <TextField
                     modo={props.modo}
-                    type='titleAndDescription'
                     title = 'Implementaciones especiales: '
                     description = {props.implementaciones || '?'}
                     labelColor ={getColorMedio(props.tipoMedio)}

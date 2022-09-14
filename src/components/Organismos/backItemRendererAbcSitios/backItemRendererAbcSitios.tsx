@@ -1,10 +1,10 @@
 import React from "react";
-import TitlesCards from "../../Atomos/TitlesCards";
-import DynamicButton from "../../Atomos/DynamicButton";
-import TextField from "../../Atomos/TextField";
-import PrecioCosto from "../../Atomos/PrecioCosto";
-import { getColorMedio, getModo } from "../../../utils/utils";
 import '../../../index.css';
+import { getColorMedio, getModo } from "../../../utils/utils";
+import DynamicButton from "../../Atomos/DynamicButton";
+import PrecioCosto from "../../Atomos/PrecioCosto";
+import TextField from "../../Atomos/TextField";
+import TitlesCards from "../../Atomos/TitlesCards";
 
 interface BackItemRendererAbcSitiosProps{
     tipoMedio?:
@@ -53,13 +53,11 @@ const BackItemRendererAbcSitios =(props:BackItemRendererAbcSitiosProps)=>{
                </div>
                <TextField
                modo={props.modo}
-               type = 'titleAndDescription'
                title = 'Longitud: '
                description = {props.longitud || '0'}
                />
                <TextField
                modo={props.modo}
-               type = 'titleAndDescription'
                title = 'Latitud: '
                description = {props.latitud || '0'}
                />
@@ -67,25 +65,21 @@ const BackItemRendererAbcSitios =(props:BackItemRendererAbcSitiosProps)=>{
            <div className="PaddingTopBottom1">
                <TextField
                modo={props.modo}
-               type = 'titleAndDescription'
                title = 'Iluminacion: '
                description = {props.iluminacion || '?'}
                />
                <TextField
                modo={props.modo}
-               type = 'titleAndDescription'
                title = 'Bloqueado: '
                description = {props.bloqueado || '?'}
                />
                <TextField
                modo={props.modo}
-               type = 'titleAndDescription'
                title = 'Nicho: '
                description = {props.nicho || '?'}
                />
                <TextField
                modo={props.modo}
-               type = 'titleAndDescription'
                title = 'Material: '
                description = {props.material || 'undefined'}
                />

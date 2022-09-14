@@ -87,32 +87,27 @@ const PrevIndoorsMap = (props:PrevIndoorsProps) => {
                 </div>
                 <div className="TextOverflowDescription" style={{margin:'1rem auto'}}>
                     <TextField
-                        type='titleAndDescription'
                         title='Descripción: '
                         description={descripcion}
                     />
                 </div>
                 <TextField
-                    type='titleAndDescription'
                     title='Medidas: '
                     description={(ancho || 0) + 'm de ancho x ' +(alto || 0)+ 'm de alto'}
                     labelColor='Amarillo'
                 />
                 <div className="Columnas2" style={{alignItems:'flex-start'}}>
                     <TextField
-                        type='titleAndDescription'
                         title='Ubicación: '
                         description={ubicacion}
                     />
                     <TextField
-                        type='titleAndDescription'
                         title='Nivel de piso: '
                         description={nivelPiso === true? 'Si' : 'No'}
                         labelColor='Amarillo'
                     />
                 </div>
                 <TextField
-                    type='titleAndDescription'
                     title='Material: '
                     description={material}
                 />
