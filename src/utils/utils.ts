@@ -26,3 +26,17 @@ export const porcentaje = (numeros: any, porcentaje: any) => {
   const porcentajes = (porcentaje * 100) / sum
   return porcentajes.toFixed(2) + '%'
 }
+
+/*Coloca el color dependiendo el modo de visualización, Dark ó default*/
+export function modoTipoMedio(tipo:any, modo:any){
+  switch (tipo) {
+    case 'sitios':
+      return modo === 'Dark' ? '#C9322C' : '#FC3D38'
+    case 'urbanos':
+      return modo === 'Dark' ? '#D959A6' : '#D11787'
+    case 'indoors':
+      return modo === 'Dark' ? '#C98E2E' : '#FCB23B'
+    default: 
+      return '#525252'
+  }
+}
