@@ -78,7 +78,7 @@ const secundario ='#575757'
 const secundarioDark ='#BFBFBF'
 const terciario = '#707070'
 const terciarioDark = '#808080'
-export const TextField = (props:TextFieldProps)=> {
+const TextField = (props:TextFieldProps)=> {
     const {title, description, style, generalLabel, labelColor, modo} = props;
     return(
       <div style={style}>

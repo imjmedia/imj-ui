@@ -1,12 +1,12 @@
 import React from "react";
-import Imj from '../../Img/Logos/Imj.svg';
-import ByImj from '../../Img/Logos/ByImj.svg';
-import ByImjSimple from '../../Img/Logos/ByImjSimple.svg';
-import  Obp from "../../Img/Logos/Obp.svg";
-import  ByImjDarkMode from "../../Img/Logos/ByImjDarkMode.svg";
-import  ImjDarkMode from "../../Img/Logos/ImjDarkMode.svg";
-import  ObpDarkMode from "../../Img/Logos/ObpDarkMode.svg";
 import { getModo } from "../../../utils/utils";
+import ByImj from '../../Img/Logos/ByImj.svg';
+import ByImjDarkMode from "../../Img/Logos/ByImjDarkMode.svg";
+import ByImjSimple from '../../Img/Logos/ByImjSimple.svg';
+import Imj from '../../Img/Logos/Imj.svg';
+import ImjDarkMode from "../../Img/Logos/ImjDarkMode.svg";
+import Obp from "../../Img/Logos/Obp.svg";
+import ObpDarkMode from "../../Img/Logos/ObpDarkMode.svg";
 
 
 interface LogoProps{

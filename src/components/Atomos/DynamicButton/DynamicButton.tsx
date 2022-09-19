@@ -22,6 +22,7 @@ import indoors from "../../Img/Botones/indoors.svg";
 import indoorsNegro from "../../Img/Botones/indoorsNegro.svg";
 import kml from "../../Img/Botones/kml.svg";
 import logOut from '../../Img/Botones/logOut.svg';
+import mapa from "../../Img/Botones/mapa.svg";
 import menu from "../../Img/Botones/menu.svg";
 import menuDarkMode from "../../Img/Botones/menuDarkMode.svg";
 import noBloqueado from "../../Img/Botones/noBloqueado.svg";
@@ -140,6 +141,7 @@ interface DynaButtProps {
         'validadorTrue'|
         'vallas'|
         'vallasFront'|
+        'mapa' |    
         string
         ;
     
@@ -197,6 +199,7 @@ const buttonsArr:buttonsArrInterface = {
     'validadorTrue': validadorTrue,
     'vallas': vallas,
     'vallasFront': vallasFront,
+    'mapa': mapa,
 
 }
 

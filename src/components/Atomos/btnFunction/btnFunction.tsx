@@ -55,6 +55,7 @@ interface BtnFunctionProps{
     'validadorTrue'|
     'vallas'|
     'vallasFront'|
+    'mapa'|
     any;
     id?: string;
 }

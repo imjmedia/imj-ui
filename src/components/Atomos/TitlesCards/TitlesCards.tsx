@@ -123,11 +123,11 @@ interface TitlesCardsProps{
             flexWrap:'wrap'
             }}>
             <div style={{width:'100%'}}>
-              <StateProperty 
-                icon={estado} 
-                style={{justifyContent:'right', width:'100%'}} 
-                estado={estado}
-              />
+            <StateProperty 
+              icon={estado} 
+              style={{justifyContent:'center', width:'100%',textAlign:'center'}} 
+              estado={estado}
+            />
             </div>
             <div style={{width:'100%'}}>
               <BodyText 

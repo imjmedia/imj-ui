@@ -13,6 +13,7 @@ export {default as BtnFunction} from './Atomos/btnFunction';
 export { default as DynamicButton } from './Atomos/DynamicButton';
 export {default as ModalBtn} from './Atomos/modalFunction';
 export {default as Buttons} from './Atomos/buttons';
+export {default as ButtonCounter} from './Atomos/buttonCounter';
 
 export { default as EtiquetaVisualizaPauta } from './Moleculas/EtiquetaVisualizaPauta';
 export { default as FormularioVisualizaPauta } from './Organismos/FormularioVisualizaPauta';
