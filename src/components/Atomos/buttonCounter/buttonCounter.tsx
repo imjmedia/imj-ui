@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { validadorTrue } from '../../Img/Botones/validadorTrue.svg';
+import validadorTrue from '../../Img/Botones/validadorTrue.svg';
 import DynamicButton from "../DynamicButton";
 import './buttonCounter.css';
 
@@ -104,8 +104,7 @@ export const ButtonCounter = (props:ButtonCounterProps)=>{
               right:'-.5rem',
               zIndex:'1',
               }}>
-              {/* <img src={validadorTrue} alt="" /> */}
-              {validadorTrue}
+              <img src={validadorTrue} alt="" />
             </div> : <></>}
             <DynamicButton
 							type="buttons"
