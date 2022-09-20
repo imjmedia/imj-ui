@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { validadorTrue } from '../../Img/Botones/validadorTrue.svg';
 import DynamicButton from "../DynamicButton";
 import './buttonCounter.css';
 
@@ -62,13 +63,15 @@ interface ButtonCounterProps {
   onClick?: ()=>void;
   active?: any;
   setActive?: any;
+  setCounter?: any;
   submenus?: any;
-  contador?: Boolean;
+  contador?: boolean;
+  validador?: boolean;
+  setValidador?: any;
 }
-const ButtonCounter = (props:ButtonCounterProps)=>{
-  const {size, button, color, value, onClick,active,setActive,submenus, contador} = props
-  const [counter , setCounter] = useState(true)
-  const colorBorde = (color:any)=>{
+export const ButtonCounter = (props:ButtonCounterProps)=>{
+  const {size, button, color, value, onClick,active,setActive,submenus, contador, setCounter, validador,setValidador} = props
+  const colorBorde = (color:string)=>{
     switch (color) {
       case 'Amarillo': return '#FCB23B'
       case 'Verde': return '#1CBF59'
@@ -83,19 +86,25 @@ const ButtonCounter = (props:ButtonCounterProps)=>{
     <div className="Dropdown-menu">
       <div className="NavigationIcon" style={{position:'absolute'}}>
           <div className={active ? 'MenuToggleIcon active' : 'MenuToggleIcon'}>
-            {counter ?  
-            <div  className='counter'
-            style={{    
+            {contador ?  <div  className='counter'style={{    
               border:`.3rem solid ${colorBorde(color?color : 'Azul')}`,
-              }}
-              >
-              <span style={{
-                display:'grid', 
-                placeItems:'center', 
-                fontWeight:'700'
               }}>
-                {value ? value : '0'}
-              </span>
+              <span style={{display:'grid', placeItems:'center', fontWeight:'700'}}>{value ? value : '00'}</span>
+            </div> : <></>}
+            {validador ?  <div  
+            style={{ 
+              position:'absolute',
+              fontSize:'1.3rem',
+              background:'#FFF',
+              width:'auto',
+              minWidth:'2rem',
+              height:'2rem',
+              borderRadius:'2rem',
+              top:'-.5rem',
+              right:'-.5rem',
+              zIndex:'1',
+              }}>
+              <img src={validadorTrue} alt="" />
             </div> : <></>}
             <DynamicButton
 							type="buttons"
@@ -104,7 +113,8 @@ const ButtonCounter = (props:ButtonCounterProps)=>{
 							size={size ? size : 'Mediano'}
 							onClick={() => {
 								setActive(!active);
-                {contador && setCounter(!counter)}
+                contador && setCounter(!contador)
+                validador && setValidador(!validador)
 							}}
 						/>
           </div>
