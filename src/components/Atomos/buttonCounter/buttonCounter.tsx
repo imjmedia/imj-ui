@@ -104,8 +104,8 @@ export const ButtonCounter = (props:ButtonCounterProps)=>{
               right:'-.5rem',
               zIndex:'1',
               }}>
-              <img src={validadorTrue} alt="" />
-              {/* <img src={require('../../Img/Botones/validadorTrue.svg')} alt="" /> */}
+              {/* <img src={validadorTrue} alt="" /> */}
+              <img src={require('../../Img/Botones/validadorTrue.svg')} alt="" />
             </div> : <></>}
             <DynamicButton
 							type="buttons"
