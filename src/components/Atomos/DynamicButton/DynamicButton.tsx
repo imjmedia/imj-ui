@@ -273,7 +273,7 @@ const DynamicButton = (props:DynaButtProps) => {
                 <div>
                     {props.validador ?  <div  
                     style={{ 
-                    position:'absolute',
+                    position:'relative',
                     fontSize:'1.3rem',
                     background:'#FFF',
                     width:'auto',
