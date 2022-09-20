@@ -277,11 +277,13 @@ const DynamicButton = (props:DynaButtProps) => {
                         position:'absolute',
                         background:'#FFF',
                         minWidth:'2rem',
-                        top:'-.5rem',
-                        right:'-.5rem',
+                        top:'-1rem',
+                        right:'-1rem',
                         borderRadius:'50%',
                         zIndex:'1',
-                        boxShadow:'-.2rem .2rem 2rem #52525220'
+                        boxShadow:'-.2rem .2rem 1rem #52525220',
+                        display: 'grid',
+                        placeItems:'center'
                         }}>
                         <img src={validadorTrue} alt="" style={{width:'2rem',height:'2rem',}}/>
                         </div> : <></>}
