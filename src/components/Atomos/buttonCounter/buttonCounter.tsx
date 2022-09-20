@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-// import { validadorTrue } from '../../Img/Botones/validadorTrue.svg';
+import { validadorTrue } from '../../Img/Botones/validadorTrue.svg';
 import DynamicButton from "../DynamicButton";
 import './buttonCounter.css';
 
-const validadorTrue = require('../../Img/Botones/validadorTrue.svg') as string;
 interface ButtonCounterProps {
   size?: 
     'Grande' |  
@@ -106,6 +105,7 @@ export const ButtonCounter = (props:ButtonCounterProps)=>{
               zIndex:'1',
               }}>
               <img src={validadorTrue} alt="" />
+              {/* <img src={require('../../Img/Botones/validadorTrue.svg')} alt="" /> */}
             </div> : <></>}
             <DynamicButton
 							type="buttons"
