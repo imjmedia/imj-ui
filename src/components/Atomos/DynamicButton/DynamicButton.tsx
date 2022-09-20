@@ -149,6 +149,7 @@ interface DynaButtProps {
         any;
     
         id?: string;
+    validador?: boolean;
 }
 
 interface buttonsArrInterface {
@@ -269,8 +270,25 @@ const DynamicButton = (props:DynaButtProps) => {
             )
         } else {
             return (
-                <div className={'Btn' + data.size + " Btn" + data.color} onClick={props.onClick} id={props.id}>
-                    <TypeButton name={data.button} />
+                <div>
+                    {props.validador ?  <div  
+                    style={{ 
+                    position:'absolute',
+                    fontSize:'1.3rem',
+                    background:'#FFF',
+                    width:'auto',
+                    minWidth:'2rem',
+                    height:'2rem',
+                    borderRadius:'2rem',
+                    top:'-.5rem',
+                    right:'-.5rem',
+                    zIndex:'1',
+                    }}>
+                    <img src={validadorTrue} alt="" />
+                    </div> : <></>}
+                    <div className={'Btn' + data.size + " Btn" + data.color} onClick={props.onClick} id={props.id}>
+                        <TypeButton name={data.button} />
+                    </div>
                 </div>
             )
         }
