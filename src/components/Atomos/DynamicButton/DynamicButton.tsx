@@ -279,7 +279,9 @@ const DynamicButton = (props:DynaButtProps) => {
                         minWidth:'2rem',
                         top:'-.5rem',
                         right:'-.5rem',
+                        borderRadius:'50%',
                         zIndex:'1',
+                        boxShadow:'-.2rem .2rem 2rem #52525220'
                         }}>
                         <img src={validadorTrue} alt="" style={{width:'2rem',height:'2rem',}}/>
                         </div> : <></>}
