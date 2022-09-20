@@ -270,24 +270,22 @@ const DynamicButton = (props:DynaButtProps) => {
             )
         } else {
             return (
-                <div>
-                    {props.validador ?  <div  
-                    style={{ 
-                    position:'relative',
-                    fontSize:'1.3rem',
-                    background:'#FFF',
-                    width:'auto',
-                    minWidth:'2rem',
-                    height:'2rem',
-                    borderRadius:'2rem',
-                    top:'-.5rem',
-                    right:'-.5rem',
-                    zIndex:'1',
-                    }}>
-                    <img src={validadorTrue} alt="" />
-                    </div> : <></>}
-                    <div className={'Btn' + data.size + " Btn" + data.color} onClick={props.onClick} id={props.id}>
-                        <TypeButton name={data.button} />
+                <div style={{position:'relative'}}>
+                    <div>
+                        {props.validador ?  <div
+                        style={{
+                        position:'absolute',
+                        background:'#FFF',
+                        minWidth:'2rem',
+                        top:'-.5rem',
+                        right:'-.5rem',
+                        zIndex:'1',
+                        }}>
+                        <img src={validadorTrue} alt="" style={{width:'2rem',height:'2rem',}}/>
+                        </div> : <></>}
+                        <div className={'Btn' + data.size + " Btn" + data.color} onClick={props.onClick} id={props.id}>
+                            <TypeButton name={data.button} />
+                        </div>
                     </div>
                 </div>
             )
