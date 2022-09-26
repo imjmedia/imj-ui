@@ -6,12 +6,6 @@
 }
 
 /*titles*/
-[title]:hover {
-  background-color: var(--neutro);
-  border-radius: 1rem;
-  font-weight: 400rem;
-  padding: 1rem .5rem;
-}
 /* [title]:hover::after {
   content: attr(title);
   position: absolute;
