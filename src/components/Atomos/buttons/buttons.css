@@ -6,7 +6,13 @@
 }
 
 /*titles*/
-[title]:hover::after {
+[title]:hover {
+  background-color: var(--neutro);
+  border-radius: 1rem;
+  font-weight: 400rem;
+  padding: 1rem .5rem;
+}
+/* [title]:hover::after {
   content: attr(title);
   position: absolute;
   top: -150%;
@@ -32,7 +38,7 @@
   transform: translateX(-50%);
   width: 3rem;
   border-radius:0 0 50% 50% ;
-}
+} */
 /*Generales*/
 .disabled{
   border:none;
