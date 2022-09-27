@@ -56,6 +56,7 @@ interface BtnFunctionProps{
     'vallas'|
     'vallasFront'|
     'mapa'|
+    'share'|
     any;
     id?: string;
 }

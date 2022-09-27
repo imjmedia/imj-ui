@@ -32,6 +32,7 @@ import pdf from "../../Img/Botones/pdf.svg";
 import previsualizar from "../../Img/Botones/previsualizar.svg";
 import previsualizarDocumento from "../../Img/Botones/previsualizarDocumento.svg";
 import revertirVaciar from "../../Img/Botones/revertirVaciar.svg";
+import share from "../../Img/Botones/share.svg";
 import sitios from "../../Img/Botones/sitios.svg";
 import sitiosNegro from "../../Img/Botones/sitiosNegro.svg";
 import subir from "../../Img/Botones/subir.svg";
@@ -141,7 +142,8 @@ interface DynaButtProps {
         'validadorTrue'|
         'vallas'|
         'vallasFront'|
-        'mapa' |    
+        'mapa' |   
+        'share'| 
         string
         ;
     
@@ -201,6 +203,7 @@ const buttonsArr:buttonsArrInterface = {
     'vallas': vallas,
     'vallasFront': vallasFront,
     'mapa': mapa,
+    'share': share,
 
 }
 
