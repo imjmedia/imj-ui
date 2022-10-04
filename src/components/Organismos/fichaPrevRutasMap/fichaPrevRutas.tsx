@@ -8,7 +8,7 @@ import TextField from "../../Atomos/TextField";
 import TitlesCards from "../../Atomos/TitlesCards";
 import hombres from '../../Img/Iconos/hombres.svg';
 import mujeres from '../../Img/Iconos/mujeres.svg';
-import noImagen from '../../Img/img/noImageCards.jpg';
+// import noImagen from '../../Img/img/noImageCards.jpg';
 import '../formaPrevRutas/index.css';
 
 // interface FichaRutasMapsProps{
@@ -192,7 +192,7 @@ interface FichaRutasMapsProps {
 	validador?: any;
 	setValidador?: any;
 }
-const noImage = require('../../imagenes/noImageCards.jpg');
+const noImage = require('../../Img/Img/noImageCards');
 
 export const FichaRutasMap = (props: FichaRutasMapsProps) => {
 	// const [validador, setValidador] = useState(false);
