@@ -1,5 +1,5 @@
 import React from "react";
-import '../../../index.css'
+import '../../../index.css';
 import { getColorMedio } from "../../../utils/utils";
 
 interface PrecioCostoProps{
@@ -15,7 +15,7 @@ const PrecioCosto = (props:PrecioCostoProps) => {
                 <div className={"PrecioCards AlignLeft FontColor"+getColorMedio(props.tipoMedio)}>
                     <p>Precio:</p>
                     <h2>
-                        {'$'+(props.precio || '0')+'.00'}
+                        {props.precio}
                     </h2>             
                 </div>
             )
@@ -24,7 +24,7 @@ const PrecioCosto = (props:PrecioCostoProps) => {
                 <div className={"CostoCards AlignRight FontColor"+getColorMedio(props.tipoMedio)}>
                     <p>Costo:</p>
                     <h2>
-                        {'$'+(props.costo || '0')+'.00'}
+                        {props.costo}
                     </h2>
                 </div>
             )
@@ -34,13 +34,13 @@ const PrecioCosto = (props:PrecioCostoProps) => {
                     <div className="CostoCards">
                         <p>Costo:</p>
                         <h2>
-                            {'$'+(props.costo || '0')+'.00'}
+                            {props.costo}
                         </h2>
                     </div>
                     <div className="PrecioCards">
                         <p>Precio:</p>
                         <h2>
-                            {'$'+(props.precio || '0')+'.00'}
+                            {props.precio}
                         </h2>             
                 </div>
             </div>
