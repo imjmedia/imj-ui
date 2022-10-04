@@ -3,7 +3,7 @@ import { getModo } from "../../../utils/utils";
 import Dropdown from '../../Atomos/dropDown';
 import Inputs from "../../Atomos/Inputs";
 import TextField from "../../Atomos/TextField";
-import noImagen from '../../Img/Img/noImagen.jpg';
+import noImagen from '../../Img/Img/noImageCards.jpg';
 
 interface FormularioVisualizaPautaProps{
     modo?:any,

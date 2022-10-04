@@ -6,7 +6,7 @@ import TextField from "../../Atomos/TextField";
 import TitlesCards from "../../Atomos/TitlesCards";
 import hombres from '../../Img/Iconos/hombres.svg';
 import mujeres from '../../Img/Iconos/mujeres.svg';
-import noImagen from '../../Img/Img/noImagen.jpg';
+import noImagen from '../../Img/Img/noImageCards.jpg';
 
 interface ModalItemRendererPrevisualizarProps {
     imagen?: any;

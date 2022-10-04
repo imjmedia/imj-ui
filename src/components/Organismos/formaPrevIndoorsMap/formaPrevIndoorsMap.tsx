@@ -4,7 +4,7 @@ import BtnFunction from "../../Atomos/btnFunction";
 import PrecioCosto from "../../Atomos/PrecioCosto";
 import PropertyBtn from "../../Atomos/PropertyBtn";
 import TextField from "../../Atomos/TextField";
-import noImagen from '../../Img/Img/noImagen.jpg';
+import noImagen from '../../Img/Img/noImageCards.jpg';
 import './formaPrevIndoorsMap.css';
 
 interface PrevIndoorsProps {
