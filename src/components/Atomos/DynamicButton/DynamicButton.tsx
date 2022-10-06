@@ -23,10 +23,13 @@ import indoorsNegro from "../../Img/Botones/indoorsNegro.svg";
 import kml from "../../Img/Botones/kml.svg";
 import logOut from '../../Img/Botones/logOut.svg';
 import mapa from "../../Img/Botones/mapa.svg";
+import maximizar from "../../Img/Botones/maximizar.svg";
 import menu from "../../Img/Botones/menu.svg";
 import menuDarkMode from "../../Img/Botones/menuDarkMode.svg";
+import minimizar from "../../Img/Botones/minimizar.svg";
 import noBloqueado from "../../Img/Botones/noBloqueado.svg";
 import noIluminado from '../../Img/Botones/noIluminado.svg';
+import orientar from "../../Img/Botones/orientar.svg";
 import pauta from "../../Img/Botones/pauta.svg";
 import pdf from "../../Img/Botones/pdf.svg";
 import previsualizar from "../../Img/Botones/previsualizar.svg";
@@ -144,6 +147,9 @@ interface DynaButtProps {
         'vallasFront'|
         'mapa' |   
         'share'| 
+        'orientar'| 
+        'minimizar'| 
+        'maximizar'| 
         string
         ;
     
@@ -204,6 +210,9 @@ const buttonsArr:buttonsArrInterface = {
     'vallasFront': vallasFront,
     'mapa': mapa,
     'share': share,
+    'orientar': orientar,
+    'minimizar': minimizar,
+    'maximizar': maximizar,
 
 }
 

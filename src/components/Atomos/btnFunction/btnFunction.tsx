@@ -57,6 +57,9 @@ interface BtnFunctionProps{
     'vallasFront'|
     'mapa'|
     'share'|
+    'orientar'| 
+    'minimizar'| 
+    'maximizar'| 
     any;
     id?: string;
 }
