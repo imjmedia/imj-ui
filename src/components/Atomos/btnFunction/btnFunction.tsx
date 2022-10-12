@@ -62,17 +62,24 @@ interface BtnFunctionProps{
     'maximizar'| 
     any;
     id?: string;
+    style?:any;
+    title?: string;
+    size?: 'Grande' | 'Mediano' | 'Chico';
 }
 
 
 const BtnFunction = (props: BtnFunctionProps) => {
     return(
-        <div onClick={props.onClick} id={props.id}>
+        <div>
             <DynamicButton
+                id={props.id}
+                onClick={props.onClick}
                 type='buttons'
                 button={props.button}
-                size = 'grande'
+                size = {props.size ? props.size :'grande'}
                 color = {props.color}
+                style={props.style}
+                title={props.title}
             />
         </div>
     )
