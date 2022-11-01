@@ -3,6 +3,7 @@ import { getModo } from "../../../utils/utils";
 import ByImj from '../../Img/Logos/ByImj.svg';
 import ByImjDarkMode from "../../Img/Logos/ByImjDarkMode.svg";
 import ByImjSimple from '../../Img/Logos/ByImjSimple.svg';
+import ByImjSimpleDark from '../../Img/Logos/ByImjSimpleDark.svg';
 import Imj from '../../Img/Logos/Imj.svg';
 import ImjDarkMode from "../../Img/Logos/ImjDarkMode.svg";
 import Obp from "../../Img/Logos/Obp.svg";
@@ -39,7 +40,7 @@ const Logo = (props:LogoProps) => {
             if (getModo(props.modo) === 'DarkMode'){
                 return <img src={ByImjSimple} alt="" style={props.style}/>
             } else {
-                return <img src={ByImjSimple} alt="" style={props.style}/>
+                return <img src={ByImjSimpleDark} alt="" style={props.style}/>
             }
         default: return <></>
     }
