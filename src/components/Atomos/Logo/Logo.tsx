@@ -38,9 +38,9 @@ const Logo = (props:LogoProps) => {
             }
             case 'ByImjSimple':
             if (getModo(props.modo) === 'DarkMode'){
-                return <img src={ByImjSimple} alt="" style={props.style}/>
-            } else {
                 return <img src={ByImjSimpleDark} alt="" style={props.style}/>
+            } else {
+                return <img src={ByImjSimple} alt="" style={props.style}/>
             }
         default: return <></>
     }
