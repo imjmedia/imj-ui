@@ -2,7 +2,7 @@
   "name": "@imjmedia/imj-ui",
   "author": "Victor Galván",
   "license": "ISC",
-  "version": "0.0.85",
+  "version": "0.0.86",
   "description": "Components Library",
   "main": "dist/cjs/index.js",
   "types": "dist/index.d.ts",

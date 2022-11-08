@@ -15,6 +15,7 @@ import editar from "../../Img/Botones/editar.svg";
 import editarCuaderno from "../../Img/Botones/editarCuaderno.svg";
 import encendido from "../../Img/Botones/encendido.svg";
 import excel from "../../Img/Botones/excel.svg";
+import flecha from "../../Img/Botones/flecha.svg";
 import graficas from "../../Img/Botones/graficas.svg";
 import guardar from "../../Img/Botones/guardar.svg";
 import iluminacion from '../../Img/Botones/iluminacion.svg';
@@ -150,6 +151,7 @@ interface DynaButtProps {
         'orientar'| 
         'minimizar'| 
         'maximizar'| 
+        'flecha'| 
         string
         ;
     
@@ -215,6 +217,7 @@ const buttonsArr:buttonsArrInterface = {
     'orientar': orientar,
     'minimizar': minimizar,
     'maximizar': maximizar,
+    'flecha': flecha,
 
 }
 

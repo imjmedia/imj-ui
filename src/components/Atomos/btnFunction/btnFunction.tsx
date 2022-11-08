@@ -60,6 +60,7 @@ interface BtnFunctionProps{
     'orientar'| 
     'minimizar'| 
     'maximizar'| 
+    'flecha'| 
     any;
     id?: string;
     style?:any;
