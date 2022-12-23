@@ -30,6 +30,12 @@
 	background-color: #fcb23b;
 	max-width: 17rem;
 }
+.MenuToggleIcon.active ~ .MenuIcon:first-child a:hover {
+	border-radius: 2rem 2rem 0 0 ;
+}
+.MenuToggleIcon.active ~ .MenuIcon:last-child a:hover {
+	border-radius: 0 0 2rem 2rem ;
+}
 .MenuIcon {
 	position: absolute;
 	width: 17rem;
